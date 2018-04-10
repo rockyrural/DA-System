@@ -1,0 +1,101 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="coversheet">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DANo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCNo" type="xs:string" minOccurs="0" />
+              <xs:element name="DAFileNo" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppName" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppAddr" type="xs:string" minOccurs="0" />
+              <xs:element name="DAApp" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppEmail" type="xs:string" minOccurs="0" />
+              <xs:element name="DADesc" type="xs:string" minOccurs="0" />
+              <xs:element name="DAEstCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="PIN" type="xs:int" minOccurs="0" />
+              <xs:element name="DAPropNo" type="xs:string" minOccurs="0" />
+              <xs:element name="DALot" type="xs:string" minOccurs="0" />
+              <xs:element name="DADP" type="xs:string" minOccurs="0" />
+              <xs:element name="DASection" type="xs:string" minOccurs="0" />
+              <xs:element name="Street" type="xs:string" minOccurs="0" />
+              <xs:element name="DAOwnersName" type="xs:string" minOccurs="0" />
+              <xs:element name="DAOwnersPAddr" type="xs:string" minOccurs="0" />
+              <xs:element name="DAOwner" type="xs:string" minOccurs="0" />
+              <xs:element name="DARegoDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DAToPlannerDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DAAdvisedDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DACommDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DACompletedDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Sec68q1" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Sec68q2" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Sec68q3" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Sec68q4" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Sec68q5" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Sec68q6" type="xs:boolean" minOccurs="0" />
+              <xs:element name="Sec68q7" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S144" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S201" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S205" type="xs:boolean" minOccurs="0" />
+              <xs:element name="FishDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S44" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WasteDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S17A" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S17C" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S17D" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S171" type="xs:boolean" minOccurs="0" />
+              <xs:element name="PollDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="P3A" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RiverDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S10" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S13A" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S18F" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S20B" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S20CA" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S20L" type="xs:boolean" minOccurs="0" />
+              <xs:element name="S116" type="xs:boolean" minOccurs="0" />
+              <xs:element name="P8" type="xs:boolean" minOccurs="0" />
+              <xs:element name="WaterDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S58" type="xs:boolean" minOccurs="0" />
+              <xs:element name="HeritageDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S15" type="xs:boolean" minOccurs="0" />
+              <xs:element name="MineDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S138" type="xs:boolean" minOccurs="0" />
+              <xs:element name="RoadsDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S90" type="xs:boolean" minOccurs="0" />
+              <xs:element name="NatDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CCOwnerBuilder" type="xs:int" minOccurs="0" />
+              <xs:element name="CCOwnerBuilderNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCLicBuilder" type="xs:int" minOccurs="0" />
+              <xs:element name="CCLicBuilderName" type="xs:string" minOccurs="0" />
+              <xs:element name="CCLicBuilderNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCLicBuilderPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="CCInsuranceNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCLongServiceLevy" type="xs:string" minOccurs="0" />
+              <xs:element name="CoPCAname" type="xs:string" minOccurs="0" />
+              <xs:element name="Officer" type="xs:string" minOccurs="0" />
+              <xs:element name="Insurance" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalityCode" type="xs:string" minOccurs="0" />
+              <xs:element name="SumFees" type="xs:decimal" minOccurs="0" />
+              <xs:element name="ReceiptDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="ReceiptNo" type="xs:string" minOccurs="0" />
+              <xs:element name="SumRefund" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CompRecNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CompReceiptDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CompFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TravelFee" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CCSumFees" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CCReceiptDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CCReceiptNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCRefundAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="EnlightenMap" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

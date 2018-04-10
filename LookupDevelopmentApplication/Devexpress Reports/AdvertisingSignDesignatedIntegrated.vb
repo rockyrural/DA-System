@@ -1,0 +1,3 @@
+﻿Public Class AdvertisingSignDesignatedIntegrated
+
+End Class

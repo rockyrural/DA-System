@@ -1,0 +1,45 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Section94">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="S94ID" type="xs:int" minOccurs="0" />
+              <xs:element name="DANo" type="xs:string" minOccurs="0" />
+              <xs:element name="S94Code" type="xs:string" minOccurs="0" />
+              <xs:element name="S94ContCalc" type="xs:decimal" minOccurs="0" />
+              <xs:element name="S94CalcNote" type="xs:string" minOccurs="0" />
+              <xs:element name="S94Type" type="xs:string" minOccurs="0" />
+              <xs:element name="S94RefAmt" type="xs:decimal" minOccurs="0" />
+              <xs:element name="S94RefDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="S94RefNo" type="xs:string" minOccurs="0" />
+              <xs:element name="S94RefNotes" type="xs:string" minOccurs="0" />
+              <xs:element name="Payments" type="xs:decimal" minOccurs="0" />
+              <xs:element name="s94Plan" type="xs:string" minOccurs="0" />
+              <xs:element name="s94Subplan" type="xs:string" minOccurs="0" />
+              <xs:element name="S94TrustNo" type="xs:string" minOccurs="0" />
+              <xs:element name="S94TypeC" type="xs:short" minOccurs="0" />
+              <xs:element name="DAOwnersName" type="xs:string" minOccurs="0" />
+              <xs:element name="DAOwnersPAddr" type="xs:string" minOccurs="0" />
+              <xs:element name="DAOwnersTown" type="xs:string" minOccurs="0" />
+              <xs:element name="DAApp" type="xs:string" minOccurs="0" />
+              <xs:element name="DADesc" type="xs:string" minOccurs="0" />
+              <xs:element name="DAFileNo" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppName" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppAddr" type="xs:string" minOccurs="0" />
+              <xs:element name="rfnumber" type="xs:string" minOccurs="0" />
+              <xs:element name="RateYear" type="xs:string" minOccurs="0" />
+              <xs:element name="DAProp" type="xs:string" minOccurs="0" />
+              <xs:element name="Paym" type="xs:double" minOccurs="0" />
+              <xs:element name="Section94Plan" type="xs:string" minOccurs="0" />
+              <xs:element name="Outstanding" type="xs:double" minOccurs="0" />
+              <xs:element name="PaymtDistrib" type="xs:double" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

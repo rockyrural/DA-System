@@ -1,0 +1,39 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CCAppd">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DANo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCNo" type="xs:string" minOccurs="0" />
+              <xs:element name="DAPropNo" type="xs:string" minOccurs="0" />
+              <xs:element name="DALot" type="xs:string" minOccurs="0" />
+              <xs:element name="DADP" type="xs:string" minOccurs="0" />
+              <xs:element name="PropStreet" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalityCode" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppName" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppAddr" type="xs:string" minOccurs="0" />
+              <xs:element name="AppTown" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="DAOwnersName" type="xs:string" minOccurs="0" />
+              <xs:element name="DAOwnersPAddr" type="xs:string" minOccurs="0" />
+              <xs:element name="OwnersTown" type="xs:string" minOccurs="0" />
+              <xs:element name="DAOwnersPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="CCLicBuilderName" type="xs:string" minOccurs="0" />
+              <xs:element name="CCLicBuilderNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCLicBuilderPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="DADesc" type="xs:string" minOccurs="0" />
+              <xs:element name="DAEstCost" type="xs:decimal" minOccurs="0" />
+              <xs:element name="DARegoDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DAFileNo" type="xs:string" minOccurs="0" />
+              <xs:element name="DAAppTypeId" type="xs:int" minOccurs="0" />
+              <xs:element name="PIN" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

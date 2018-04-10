@@ -1,0 +1,137 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="DocumentFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\rec\record\</Value>
+    </Setting>
+    <Setting Name="cnLIMES" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=REC;Initial Catalog=Property;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=REC;Initial Catalog=Property;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="ARCHIVE" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\rec\archive\</Value>
+    </Setting>
+    <Setting Name="HASHBIN" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\rec\DocumentStorage\</Value>
+    </Setting>
+    <Setting Name="cnEASE" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=REC;Initial Catalog=Record;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=REC;Initial Catalog=Record;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="DraftDocumentsFolder" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\fs\common\db\Development\DraftDocs\</Value>
+    </Setting>
+    <Setting Name="EASEOUTPUTFOLDER" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\REC\RecordsDocs\ScannedDocs\</Value>
+    </Setting>
+    <Setting Name="GarbageEmail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">CarbageRequestMail@eurocoast.nsw.gov.au</Value>
+    </Setting>
+    <Setting Name="ReportLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\fs\common\db\development\reports\</Value>
+    </Setting>
+    <Setting Name="DefaultPrinter" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FirstTray" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="OtherTray" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="EaseDocLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">c:\records\</Value>
+    </Setting>
+    <Setting Name="DocumentGateway" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\REC\RecordsDocs\ScannedDocs\</Value>
+    </Setting>
+    <Setting Name="AdvertPrinter" Type="System.String" Scope="User">
+      <Value Profile="(Default)" />
+    </Setting>
+    <Setting Name="FirstPageTray" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">265</Value>
+    </Setting>
+    <Setting Name="PtherPagesTray" Type="System.Int32" Scope="Application">
+      <Value Profile="(Default)">263</Value>
+    </Setting>
+    <Setting Name="ServerName" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">REC</Value>
+    </Setting>
+    <Setting Name="GarbageMailCC" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">robyn.burrett@eurocoast.nsw.gov.au</Value>
+    </Setting>
+    <Setting Name="connectionString" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=REC;Initial Catalog=DevelopmentSQL;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=REC;Initial Catalog=DevelopmentSQL;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="TestDraftDocuemnts" Type="System.String" Scope="User">
+      <Value Profile="(Default)">c:\temp\</Value>
+    </Setting>
+    <Setting Name="ImageStorageLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\REC\MultimediaStorage\</Value>
+    </Setting>
+    <Setting Name="ImageArchiveStorage" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\REC\MultimediaARCHIVE\</Value>
+    </Setting>
+    <Setting Name="MMConnection" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=rec;Initial Catalog=Multimedia;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=rec;Initial Catalog=Multimedia;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="SignatureLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\fs\common\DB\Development\Reports\Signatures\</Value>
+    </Setting>
+    <Setting Name="OSMSemail" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">OSMS@eurocoast.nsw.gov.au</Value>
+    </Setting>
+    <Setting Name="LSLtemplate" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\fs\common\db\development\CouncilReturnTemplate_V5_C0562.xlsx</Value>
+    </Setting>
+    <Setting Name="cnnLogon" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=REC;Initial Catalog=logon;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=REC;Initial Catalog=logon;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="ConstructionCertificates" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\fs\common\DB\Development\ConditionDocs\</Value>
+    </Setting>
+    <Setting Name="DataConnection" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=REC;Initial Catalog=DevelopmentSQL;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=REC;Initial Catalog=DevelopmentSQL;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="cnDAsystem" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Data Source=REC;Initial Catalog=DevelopmentSQL;Integrated Security=True&lt;/ConnectionString&gt;
+  &lt;ProviderName&gt;System.Data.SqlClient&lt;/ProviderName&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Data Source=REC;Initial Catalog=DevelopmentSQL;Integrated Security=True</Value>
+    </Setting>
+    <Setting Name="PlanLocation" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">\\rec\daplans\</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>
