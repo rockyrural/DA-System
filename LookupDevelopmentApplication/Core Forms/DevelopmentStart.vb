@@ -1,31 +1,27 @@
+Imports System.ComponentModel
 Imports System.Data.SqlClient
-
-Imports WORD = Microsoft.Office.Interop.Word
-
+Imports System.Deployment.Application
 Imports System.IO
-
+Imports System.Runtime.InteropServices
+Imports System.Text
+Imports System.Threading
 Imports CrystalDecisions.CrystalReports.Engine
+Imports DevExpress.LookAndFeel
+Imports DevExpress.XtraEditors
+Imports DevExpress.XtraEditors.Controls
+Imports DevExpress.XtraGrid.Columns
+Imports DevExpress.XtraGrid.Views.Grid
+Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
+Imports DevExpress.XtraReports.UI
+Imports DevExpress.XtraSplashScreen
+Imports ADDINFO = ClassAdditionalInformation.AdditionalInfo
+'Imports ADwrapper = ActiveDirectoryWrapper.PC.ADWrapper
+Imports ADHelpr = ADHelper.ADHelper
 'Imports CrystalDecisions.ReportSource
 'Imports CrystalDecisions.Shared
 
 Imports COMP = Compliance.ComplianceApp
-Imports ADDINFO = ClassAdditionalInformation.AdditionalInfo
-Imports System.Drawing.Printing
-'Imports ADwrapper = ActiveDirectoryWrapper.PC.ADWrapper
-Imports ADHelpr = ADHelper.ADHelper
-Imports System.Runtime.InteropServices
-Imports System.Text
-Imports System.Deployment.Application
-Imports DevExpress.XtraEditors
-Imports DevExpress.XtraGrid.Views.Grid
-Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
-Imports DevExpress.XtraGrid.Columns
-Imports DevExpress.XtraEditors.Controls
-Imports DevExpress.XtraReports.UI
-Imports DevExpress.LookAndFeel
-Imports System.ComponentModel
-Imports DevExpress.XtraSplashScreen
-Imports System.Threading
+Imports WORD = Microsoft.Office.Interop.Word
 
 Public Class DevelopmentStart
 
@@ -256,6 +252,8 @@ Public Class DevelopmentStart
         LoadLookupEdit(Me.cboDAtype3, "usp_LoadUpDevTypeList")
         'LoadLetterTypeCombo()
         LoadLookupEdit(Me.cboDevUse, "usp_LoadUpDevUseList")
+        LoadLookupEdit(cboIntendedLandUse, "usp_SELECT_LoadIntendLandUseList")
+        LoadLookupEdit(cboAttachmentStatus, "usp_SELECT_ListOfAttachmentTypes")
         ''LoadCombo(Me.cboIntDevActs , "usp_LoadUpIntegratedDevelopmentActList")
         LoadLookupEdit(Me.cboDAlocalityCode, "usp_LoadUpLocalityCodesList")
         ''LoadCombo(cboAssessmentType, "usp_LoadUpDADefaultConditionsList")
@@ -2007,8 +2005,8 @@ Public Class DevelopmentStart
 
 
 
-            ' sUserID = My.User.Name.Substring(4)
-            sUserID = "cbarton"
+            sUserID = My.User.Name.Substring(4)
+            'sUserID = "kralph"
 
 #End If
 
@@ -3309,7 +3307,7 @@ Public Class DevelopmentStart
         End Using
     End Sub
 
-      Private Sub RemoveOldMapData(DANo As string)
+    Private Sub RemoveOldMapData(DANo As String)
 
 
         Using cn As New SqlConnection(My.Settings.connectionString)
@@ -5312,15 +5310,15 @@ Public Class DevelopmentStart
     'End Sub
 
 
-    Private Function GetReferralConditions As DataTable
+    Private Function GetReferralConditions() As DataTable
 
         Dim objDT As New DataTable
 
-        Using cn As New SqlConnection(my.settings.cnDAsystem)
+        Using cn As New SqlConnection(My.Settings.cnDAsystem)
             Try
                 cn.Open()
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in FunctionName routine - form " & Me.name)
+                MessageBox.Show(ex.Message, " in FunctionName routine - form " & Me.Name)
 
             End Try
 
@@ -5357,7 +5355,7 @@ Public Class DevelopmentStart
 
 
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in FunctionName routine - form " & Me.name)
+                MessageBox.Show(ex.Message, " in FunctionName routine - form " & Me.Name)
 
             End Try
         End Using
@@ -5425,11 +5423,11 @@ Public Class DevelopmentStart
 
                     Dim rept As New ReferralResponse
 
-                    rept.DataSource=objDT
+                    rept.DataSource = objDT
 
-                    rept.ReferralConditions=GetReferralConditions
+                    rept.ReferralConditions = GetReferralConditions()
 
-                    rept.CreateDocument
+                    rept.CreateDocument()
 
                     Using printTool As New ReportPrintTool(rept)
                         ' Invoke the Ribbon Print Preview form modally, 
@@ -9466,6 +9464,7 @@ Public Class DevelopmentStart
                         txtBASIXthermal.Text = objDataRow.Item("BasixThermal").ToString
                         txtBASIXenergy.Text = objDataRow.Item("BasixEnergy").ToString
                         txtBASIXwater.Text = objDataRow.Item("BasixWater").ToString
+                        radOccupancy.EditValue = CType(objDataRow.Item("occupancyStatus"), Integer)
 
 
                         'Description
@@ -9485,7 +9484,7 @@ Public Class DevelopmentStart
                             'cboDevType.EditValue = objDataRow.Item("DevType").ToString
                             cboDevType.EditValue = CInt(objDataRow.Item("DADevTypeId"))
 
-                            Dim editor As DevExpress.XtraEditors.LookUpEdit = CType(cboDevType, DevExpress.XtraEditors.LookUpEdit)
+                            Dim editor As LookUpEdit = CType(cboDevType, LookUpEdit)
                             Dim row As DataRowView = CType(editor.Properties.GetDataSourceRowByKeyValue(editor.EditValue), DataRowView)
                             Dim value As Object = row("NewDwellingsReports")
 
@@ -9495,6 +9494,18 @@ Public Class DevelopmentStart
                             lblNoDwellings.Visible = isReport
 
 
+                            txtExistingDwelings.Visible = isReport
+                            lblExistingDwellings.Visible = isReport
+
+                            txtDemolishedDwelings.Visible = isReport
+                            lblNoDemolishedDwellings.Visible = isReport
+
+                            cboAttachmentStatus.Visible = isReport
+                            lblAttachement.Visible = isReport
+
+                            radOccupancy.Visible = isReport
+                            lblOccupancy.Visible = isReport
+
                         Else
 
                             cboDevType.EditValue = Nothing
@@ -9502,12 +9513,38 @@ Public Class DevelopmentStart
                             nudDwellings.Visible = False
                             lblNoDwellings.Visible = False
 
+                            txtExistingDwelings.Visible = False
+                            lblExistingDwellings.Visible = False
+
+                            txtDemolishedDwelings.Visible = False
+                            lblNoDemolishedDwellings.Visible = False
+
+                            cboAttachmentStatus.Visible = False
+                            lblAttachement.Visible = False
+
+                            radOccupancy.Visible = False
+                            lblOccupancy.Visible = False
+
+
                         End If
 
                         nudDwellings.Text = objDataRow.Item("NumberOfDwellings").ToString
+                        txtExistingDwelings.Text = objDataRow.Item("ExistingDwelings").ToString
+                        txtDemolishedDwelings.Text = objDataRow.Item("DemolishedDwelings").ToString
+
+
+                        If Not IsDBNull(objDataRow.Item("AttachmentStatus")) Then
+
+                            cboAttachmentStatus.EditValue = CInt(objDataRow.Item("AttachmentStatus"))
+
+                        Else
+                            cboAttachmentStatus.EditValue = Nothing
+                        End If
+
 
 
                         If Not IsDBNull(objDataRow.Item("DADevUseId")) Then
+
                             cboDevUse.EditValue = CInt(objDataRow.Item("DADevUseId"))
 
                         Else
@@ -9515,7 +9552,17 @@ Public Class DevelopmentStart
                         End If
 
 
+                        If Not IsDBNull(objDataRow.Item("IntendLandUse")) Then
+
+                            cboIntendedLandUse.EditValue = CInt(objDataRow.Item("IntendLandUse"))
+
+                        Else
+                            cboIntendedLandUse.EditValue = Nothing
+                        End If
+
+
                         If Not IsDBNull(objDataRow.Item("IntDevYN")) Then
+
                             cboIntDevYN.EditValue = objDataRow.Item("IntDevYN").ToString
 
                         Else
@@ -9524,6 +9571,7 @@ Public Class DevelopmentStart
 
 
                         If Not IsDBNull(objDataRow.Item("DesignatedYN")) Then
+
                             cboDesignatedYN.EditValue = objDataRow.Item("DesignatedYN").ToString
 
                         Else
@@ -9531,6 +9579,7 @@ Public Class DevelopmentStart
                         End If
 
                         txtDADesc.Text = objDataRow.Item("DADesc").ToString
+
                         txtModDesc.Text = objDataRow.Item("ModDesc").ToString
 
                         txtCurrentLandUse.Text = objDataRow.Item("CurrentLandUse").ToString
@@ -10152,8 +10201,16 @@ Public Class DevelopmentStart
 
 
                         .Parameters.Add("@NODWELLINGS", SqlDbType.Int).Value = CType(nudDwellings.Text, Integer)
+                        If txtExistingDwelings.Text <> String.Empty Then .Parameters.Add("@ExistingDwelings", SqlDbType.Int).Value = CType(txtExistingDwelings.Text, Integer)
+                        If txtDemolishedDwelings.Text <> String.Empty Then .Parameters.Add("@DemolishedDwelings", SqlDbType.Int).Value = CType(txtDemolishedDwelings.Text, Integer)
 
                         If Not cboDevUse.EditValue Is Nothing Then .Parameters.Add("@USEID", SqlDbType.Int).Value = CInt(Me.cboDevUse.EditValue)
+
+                        If Not cboIntendedLandUse.EditValue Is Nothing Then .Parameters.Add("@IntendedLandUse", SqlDbType.Int).Value = CInt(Me.cboIntendedLandUse.EditValue)
+                        If Not cboAttachmentStatus.EditValue Is Nothing Then .Parameters.Add("@AttachmentStatus", SqlDbType.Int).Value = CInt(Me.cboAttachmentStatus.EditValue)
+
+
+
                         .Parameters.Add("@DESC", SqlDbType.NVarChar).Value = Me.txtDADesc.Text
                         .Parameters.Add("@MODDESC", SqlDbType.NVarChar).Value = Me.txtModDesc.Text
 
@@ -10198,6 +10255,8 @@ Public Class DevelopmentStart
                         .Parameters.Add("@BASIXTHERMAL", SqlDbType.NVarChar).Value = Me.txtBASIXthermal.Text
                         .Parameters.Add("@BASIXENERGY", SqlDbType.NVarChar).Value = Me.txtBASIXenergy.Text
                         .Parameters.Add("@BASIXWATER", SqlDbType.NVarChar).Value = Me.txtBASIXwater.Text
+                        .Parameters.Add("@occupancyStatus", SqlDbType.Int).Value = radOccupancy.EditValue
+
 
 
                         .ExecuteNonQuery()
@@ -11946,6 +12005,18 @@ Public Class DevelopmentStart
         nudDwellings.Visible = isReport
         lblNoDwellings.Visible = isReport
 
+        txtExistingDwelings.Visible = isReport
+        lblExistingDwellings.Visible = isReport
+
+        txtDemolishedDwelings.Visible = isReport
+        lblNoDemolishedDwellings.Visible = isReport
+
+        cboAttachmentStatus.Visible = isReport
+        lblAttachement.Visible = isReport
+
+        radOccupancy.Visible = isReport
+        lblOccupancy.Visible = isReport
+
 
         If isReport = True Then
 
@@ -11954,11 +12025,16 @@ Public Class DevelopmentStart
                 Case 0, 4, 5, 6, 9, 10, 19, 20, 28, 35, 36, 37, 39, 46, 48
 
                     nudDwellings.EditValue = 1
+                    txtExistingDwelings.EditValue = 0
+                    txtDemolishedDwelings.EditValue = 0
+                    radOccupancy.EditValue=1
 
                 Case Else
 
                     nudDwellings.EditValue = 0
-
+                    txtExistingDwelings.EditValue = 0
+                    txtDemolishedDwelings.EditValue = 0
+                    radOccupancy.EditValue=nothing
 
             End Select
 
@@ -13761,6 +13837,29 @@ Public Class DevelopmentStart
         End With
 
     End Sub
+
+    Private Sub cboDevUse_EditValueChanged(sender As Object, e As EventArgs) Handles cboDevUse.EditValueChanged
+        If cboDevUse.IsLoading Or LoadingForm Then Return
+
+        Select Case CInt(cboDevUse.EditValue)
+
+            Case 1 : cboIntendedLandUse.EditValue = 1
+
+            Case Else : cboIntendedLandUse.EditValue = 2
+
+        End Select
+
+
+
+    End Sub
+
+    Private Sub cboDevType_HelpRequested(sender As Object, hlpevent As HelpEventArgs) Handles cboDevType.HelpRequested
+
+    End Sub
+
+
+
+
 
 
 

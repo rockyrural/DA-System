@@ -1,19 +1,12 @@
 ﻿Imports System.Data.SqlClient
-Imports WORD = Microsoft.Office.Interop.Word
-Imports fso = System.IO
-
-Imports System.IO
-
 Imports CrystalDecisions.CrystalReports.Engine
-Imports CrystalDecisions.ReportSource
 Imports CrystalDecisions.Shared
-
-Imports ADDINFO = ClassAdditionalInformation.AdditionalInfo
-Imports SB = System.Text.StringBuilder
-
-Imports ADHelpr = ADHelper.ADHelper
 Imports DevExpress.XtraEditors
 Imports DevExpress.XtraEditors.Controls
+Imports ADHelpr = ADHelper.ADHelper
+Imports fso = System.IO
+Imports SB = System.Text.StringBuilder
+Imports WORD = Microsoft.Office.Interop.Word
 
 Public Class NewAssessmentForm
 
@@ -43,10 +36,53 @@ Public Class NewAssessmentForm
         End Set
     End Property
 
+    Private _NAR As Boolean
+    Public WriteOnly Property NAR() As Boolean
+        Set(ByVal value As Boolean)
+            _NAR = value
+        End Set
+    End Property
+
+    Private _ApplicantName As String
+    Public WriteOnly Property ApplicantName() As String
+
+        Set(ByVal value As String)
+            _ApplicantName = value
+        End Set
+    End Property
+
+    Private _ApplicantAddress As String
+    Public WriteOnly Property ApplicantAddress() As String
+
+        Set(ByVal value As String)
+            _ApplicantAddress = value
+        End Set
+    End Property
+
+    Private _ApplicantTown As String
+    Public WriteOnly Property ApplicantTown() As String
+        Set(ByVal value As String)
+            _ApplicantTown = value
+        End Set
+    End Property
+
+    Private _ApplicantPostCode As String
+    Public WriteOnly Property ApplicantPostCode() As String
+
+        Set(ByVal value As String)
+            _ApplicantPostCode = value
+        End Set
+    End Property
+
 #End Region
 
 #Region "Declarations"
     Private ErrorProvider As System.Windows.Forms.ErrorProvider
+    'Private CNR As New CentalNamesInterface.CentralNames
+
+
+
+
     Private Const iNAME As Integer = 0
     Private Const iADDRESS As Integer = 1
     Private Const iFILENO As Integer = 2
@@ -929,7 +965,11 @@ Public Class NewAssessmentForm
                         cboApplicationConclResult.EditValue = objAssessRow.Item("ApplicationConclResult").ToString
                         txtApplicationConclreasons.Text = objAssessRow.Item("ApplicationConclreasons").ToString
                         cboAssessmentDecision.EditValue = objAssessRow.Item("AssessmentDecision").ToString
+
+                        lupConflict.EditValue = objAssessRow.Item("ConflictOfInterest").ToString
+
                         cboAuthority.EditValue = objAssessRow.Item("AuthorityCode").ToString
+
                         If Not IsDBNull(objAssessRow.Item("PropDetermDate")) Then dteConclusionDate.EditValue = CDate(objAssessRow.Item("PropDetermDate"))
 
                         cboModSec96Comply.EditValue = objAssessRow.Item("Modsec96ComplyYN").ToString
@@ -1389,11 +1429,27 @@ Public Class NewAssessmentForm
             .ValueMember = "Key"
         End With
 
-        Dim colModAssessmentDecision As LookUpColumnInfoCollection = cboModAssessmentDecision.Properties.Columns
-        colModAssessmentDecision.Add(New LookUpColumnInfo("Name", 0))
-        colModAssessmentDecision.Add(New LookUpColumnInfo("Key", 0))
 
-        colModAssessmentDecision.Item(1).Visible = False
+
+        Dim conflictOfInterest As New ArrayList
+
+        ' Add division structure entries to the arraylist
+        With conflictOfInterest
+            .Add(New YesNoAnswer("Yes", "Y"))
+            .Add(New YesNoAnswer("No", "N"))
+        End With
+
+        With lupConflict.Properties
+            .DataSource = conflictOfInterest
+            .DisplayMember = "Name"
+            .ValueMember = "Key"
+        End With
+
+        Dim colConflict As LookUpColumnInfoCollection = lupConflict.Properties.Columns
+        colConflict.Add(New LookUpColumnInfo("Name", 0))
+        colConflict.Add(New LookUpColumnInfo("Key", 0))
+
+        colConflict.Item(1).Visible = False
 
         LoadConclusionRecomendation()
 
@@ -1479,7 +1535,16 @@ Public Class NewAssessmentForm
 
 
     Private Sub btnAddNewVariationType_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        'TODO: Write  code for btnAddNewVariationType button
+
+        With My.Forms.MaintainVariations
+
+            .ShowDialog()
+
+            .Dispose()
+
+        End With
+
+        LoadUpVariationResultCombo()
 
     End Sub
 
@@ -2047,7 +2112,7 @@ Public Class NewAssessmentForm
 
         If Not OKtoProceed Then
 
-            MessageBox.Show("Unable to update check with Bob is a modification =" & modification.ToString, "ERROR STATE", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            'MessageBox.Show("Unable to update check with Bob is a modification =" & modification.ToString, "ERROR STATE", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
             Return
 
@@ -2103,6 +2168,10 @@ Public Class NewAssessmentForm
 
                         If cboModSec96Comply.EditValue IsNot Nothing Then .Parameters.Add("@Modsec96ComplyYN", SqlDbType.NVarChar).Value = Me.cboModSec96Comply.EditValue.ToString
                         If cboModSec79Satisfactory.EditValue IsNot Nothing Then .Parameters.Add("@Modsec79SatisYN", SqlDbType.NVarChar).Value = Me.cboModSec79Satisfactory.EditValue.ToString
+
+                        .Parameters.Add("@Conflict", SqlDbType.VarChar).Value = lupConflict.EditValue.ToString
+
+
                         .ExecuteNonQuery()
 
 
@@ -2194,6 +2263,22 @@ Public Class NewAssessmentForm
             ErrorProvider.SetError(Me.ApplicationConclreasonsTextBox, "")
 
         End If
+
+
+
+        If lupConflict.Text="" Then
+            With ErrorProvider
+                .SetIconAlignment(lupConflict, ErrorIconAlignment.MiddleRight)
+                .SetError(lupConflict, "You MUST select either Yes or No!")
+            End With
+            result = False
+        Else
+            ErrorProvider.SetError(lupConflict, "")
+
+        End If
+
+
+
         Return result
     End Function
 
@@ -2291,10 +2376,32 @@ Public Class NewAssessmentForm
 
         End If
 
+        If lupConflict.Text = "" Then
+            With ErrorProvider
+                .SetIconAlignment(lupConflict, ErrorIconAlignment.MiddleRight)
+                .SetError(lupConflict, "You MUST select either Yes or No!")
+                sbMsg.Append("You MUST indicate whether you have a conflict of Interest")
+            End With
+            result = False
+        Else
+            ErrorProvider.SetError(lupConflict, "")
+
+        End If
+
+
+
+
+
         If sbMsg.ToString <> String.Empty Then
 
             MessageBox.Show(sbMsg.ToString, "Following Fields need to be completed", MessageBoxButtons.OK, MessageBoxIcon.Information)
         End If
+
+
+
+
+
+
 
         Return result
 
@@ -3746,6 +3853,12 @@ Public Class NewAssessmentForm
 
     End Sub
 
+    Private Sub RetrieveAssociatesList(ByVal ApplicationNo As Integer)
+
+
+
+    End Sub
+
     Private Sub btnFinaliseDoc_Click(sender As System.Object, e As System.EventArgs) Handles btnFinaliseDoc.Click
 
 
@@ -4516,6 +4629,11 @@ Public Class NewAssessmentForm
 
         LoadPlansToView()
 
+
+
+    End Sub
+
+    Private Sub lupConflict_EditValueChanged(sender As Object, e As EventArgs) Handles lupConflict.EditValueChanged
 
     End Sub
 End Class

@@ -685,7 +685,7 @@ Public Class FeeReconciliationToNavision
 
                 If words(0).Length <= 10  Then
 
-                    TheDate =cdate(words(0))
+                    TheDate =cdate(words(0).Substring(2,7))
 
                Else
                     TheDate =cdate(words(0).Substring(0,9))

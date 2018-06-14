@@ -1,21 +1,16 @@
 ﻿Imports System.Data.SqlClient
-
-Imports WORD = Microsoft.Office.Interop.Word
-Imports ADDINFO = ClassAdditionalInformation.AdditionalInfo
-Imports CrystalDecisions.CrystalReports.Engine
-Imports CrystalDecisions.ReportSource
-Imports CrystalDecisions.Shared
 Imports System.IO
-Imports ADHelpr = ADHelper.ADHelper
-Imports DevExpress.XtraEditors
-Imports DevExpress.LookAndFeel
-Imports DevExpress.XtraReports.UI
-Imports DevExpress.XtraEditors.DXErrorProvider.DXErrorProvider
-Imports DevExpress.XtraEditors.Controls
 Imports System.Text
+Imports CrystalDecisions.CrystalReports.Engine
+Imports CrystalDecisions.Shared
+Imports DevExpress.LookAndFeel
+Imports DevExpress.XtraEditors
+Imports DevExpress.XtraEditors.Controls
 Imports DevExpress.XtraGrid.Views.Grid
-Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
-Imports DevExpress.XtraGrid.Columns
+Imports DevExpress.XtraReports.UI
+Imports ADDINFO = ClassAdditionalInformation.AdditionalInfo
+Imports ADHelpr = ADHelper.ADHelper
+Imports WORD = Microsoft.Office.Interop.Word
 
 Public Class IssueConstructionCertificate
 
@@ -277,6 +272,10 @@ Public Class IssueConstructionCertificate
 
                     If objDT.Rows.Count > 0 Then
 
+                        isloading = True
+
+
+
                         Dim objDataRow As DataRow = objDT.Rows.Item(0)
 
                         txtCCno.Text = objDataRow.Item("CCAppNo").ToString
@@ -297,6 +296,8 @@ Public Class IssueConstructionCertificate
                         lblOfficer.Tag = objDataRow.Item("CCOfficerID").ToString
 
                         'textbox1.Text = objDataRow.Item("CCClassId").ToString
+
+
 
                         If Not IsDBNull(objDataRow.Item("CCBuildSolId")) Then cboBldgSolution.EditValue = NZ(objDataRow.Item("CCBuildSolId"))
 
@@ -401,6 +402,10 @@ Public Class IssueConstructionCertificate
 
             End Try
         End Using
+
+        isloading = False
+
+
 
     End Sub
 
@@ -631,7 +636,7 @@ Public Class IssueConstructionCertificate
 
                 Dim cb As SimpleButton = DirectCast(ctrl, SimpleButton)
                 Select Case cb.Name
-                    Case "btnViewOfficers", "btnAddFee", "btnAddRefund", "btnAddNote", "btnEditStatus"
+                    Case "btnViewOfficers", "btnAddFee", "btnAddRefund", "btnAddNote", "btnEditStatus","btnViewBldgSolutions"
                         cb.Enabled = True
 
                     Case "btnEditPayment", "btnRemoveFee", "btnEditRefund", "btnRemoveRefund"
@@ -672,7 +677,7 @@ Public Class IssueConstructionCertificate
                 Dim cb As RadioGroup = DirectCast(ctrl, RadioGroup)
                 cb.ReadOnly = Not bLock
 
-            ElseIf TypeOf ctrl Is buttonEdit Then
+            ElseIf TypeOf ctrl Is ButtonEdit Then
 
                 Dim cb As ButtonEdit = DirectCast(ctrl, ButtonEdit)
                 cb.ReadOnly = True
@@ -6653,6 +6658,50 @@ Public Class IssueConstructionCertificate
             .Dispose()
         End With
     End Sub
+
+    Private Sub cboBldgSolution_EditValueChanged(sender As Object, e As EventArgs) Handles cboBldgSolution.EditValueChanged
+
+        If cboBldgSolution.IsLoading Or isloading Then Return
+
+        If cboBldgSolution.EditValue = 2 Then
+
+
+            With My.Forms.NCCBuildingSolutionsList
+
+                .DANumber = txtDANo.Text
+
+                .EditForm=false
+
+                .ShowDialog()
+
+                .Dispose()
+
+            End With
+
+
+        End If
+
+
+    End Sub
+
+    Private Sub btnViewBldgSolutions_Click(sender As Object, e As EventArgs) Handles btnViewBldgSolutions.Click
+
+        With My.Forms.NCCBuildingSolutionsList
+
+            .DANumber = txtDANo.Text
+
+            .EditForm=True
+
+            .ShowDialog()
+
+            .Dispose()
+
+        End With
+
+
+    End Sub
+
+
 
 
 
