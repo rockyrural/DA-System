@@ -1,9 +1,6 @@
-Imports SQL = System.Data.SqlClient
-Imports WORD = Microsoft.Office.Interop.Word
+Imports System.Data.SqlClient
 Imports System.IO
-
-
-Imports system.data.sqlclient
+Imports WORD = Microsoft.Office.Interop.Word
 Module CreateWordDocuments
 
 
@@ -131,6 +128,7 @@ Module CreateWordDocuments
 
 
                         .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = AppNo
+                        .Parameters.Add("@USERID", SqlDbType.NVarChar).Value = sUserID
 
                     End With
 
@@ -1388,6 +1386,7 @@ Module CreateWordDocuments
                         .CommandText = Sproc
 
                         .Parameters.Add("@APPID", SqlDbType.NVarChar).Value = AppNo
+                        .Parameters.Add("@USERID", SqlDbType.NVarChar).Value = sUserID
                     End With
 
                     Dim objDT As New DataTable

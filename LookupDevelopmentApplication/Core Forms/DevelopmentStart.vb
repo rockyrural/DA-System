@@ -3530,6 +3530,7 @@ Public Class DevelopmentStart
 
 
                         .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = AppNo
+                        .Parameters.Add("@USERID", SqlDbType.NVarChar).Value = sUserID
 
                     End With
 
@@ -3609,6 +3610,7 @@ Public Class DevelopmentStart
 
 
                         .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = AppNo
+                        .Parameters.Add("@USRID", SqlDbType.NVarChar).Value = sUserID
 
                     End With
 
@@ -10912,7 +10914,7 @@ Public Class DevelopmentStart
                     With cmd
                         .Connection = cn
                         .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_SELECT_DevTypes_For_Combo"
+                        .CommandText = "usp_SELECT_DOP_DEV_TYPES_For_Combo"
 
                     End With
 
@@ -12027,14 +12029,14 @@ Public Class DevelopmentStart
                     nudDwellings.EditValue = 1
                     txtExistingDwelings.EditValue = 0
                     txtDemolishedDwelings.EditValue = 0
-                    radOccupancy.EditValue=1
+                    radOccupancy.EditValue = 1
 
                 Case Else
 
                     nudDwellings.EditValue = 0
                     txtExistingDwelings.EditValue = 0
                     txtDemolishedDwelings.EditValue = 0
-                    radOccupancy.EditValue=nothing
+                    radOccupancy.EditValue = Nothing
 
             End Select
 

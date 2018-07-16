@@ -1,6 +1,5 @@
 Imports System.Data.SqlClient
 Imports System.IO
-Imports DevExpress.XtraEditors
 Imports DevExpress.XtraEditors.Controls
 
 Public Class AddNewDA
@@ -428,6 +427,7 @@ Public Class AddNewDA
                         .CommandText = "usp_CreateNewDa"
 
                         .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = NewDANumber
+                        .Parameters.Add("@USERID", SqlDbType.NVarChar).Value = sUserID
                         .Parameters.Add("@DATypeId", SqlDbType.Int).Value = CInt(cboAppType.EditValue)
                         .Parameters.Add("@DARegoDt", SqlDbType.SmallDateTime)
                         If Not dtRego.EditValue Is Nothing Then .Parameters("@DARegoDt").Value = Format(CDate(dtRego.EditValue), "dd/MM/yyyy")
@@ -485,6 +485,7 @@ Public Class AddNewDA
                         .CommandText = "usp_CreateModifiedDA"
 
                         .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = NewDANumber
+                        .Parameters.Add("@USERID", SqlDbType.NVarChar).Value = sUserID
                         .Parameters.Add("@ORGDANO", SqlDbType.NVarChar).Value = Me.lblOriginalDANumber.Text
                         .Parameters.Add("@OFFCERID", SqlDbType.Int).Value = CInt(cboDAOfficer.EditValue)
                         .Parameters.Add("@DATypeid", SqlDbType.Int).Value = CInt(cboAppType.EditValue)
@@ -744,7 +745,7 @@ Public Class AddNewDA
     End Function
     Private Sub txtModeNumber_Validating(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles txtModeNumber.Validating
 
-        If thisNumberIsAlreadyInUse Then
+        If thisNumberIsAlreadyInUse() Then
 
             MessageBox.Show("This suffix has already been used, please re-key", "Number exists", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
