@@ -90,9 +90,9 @@ Public Class ReportViewer
 
                     'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
                     'Dim mylist As DataSet = New DataSet
-                    'adapter.Fill(mylist, "MayoralReceived")
+                    'adapter.Fill(mylist, "occupCert")
 
-                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\Devexpress Reports\MayoralReceived.xsd")
+                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\Devexpress Reports\occupCertByTown.xsd")
 
 
                     Select Case _rept

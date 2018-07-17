@@ -121,7 +121,13 @@
     <value>17, 17</value>
   </metadata>
   <data name="SqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InVzcF9ycHRfRmluYWxPY2NzQnlUb3duIj48RmllbGQgTmFtZT0iTG9jYWxpdHlDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBTm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGV2VHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQSU4iIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTdG9ybVdhdGVyVHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEUE51bSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InVzcF9TRUxFQ1RfREFfQWR2ZXJ0X1VuaW9uIj48RmllbGQgTmFtZT0iTG9jYWxpdHlDb2RlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkxvdERQX2Zvcm1hdHRlZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJTdHJlZXRfRm9ybWF0dGVkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBRGVzYyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEQU5vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBRmlsZU5vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0cmVldE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29uZERlc2MiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+  <metadata name="GridLoadDCP_DArecordsTableAdapter1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 56</value>
+  </metadata>
+  <data name="lblCouncilHasApproved.Text" xml:space="preserve">
+    <value>Council has approved the following Development Applications and Complying Development Certificates. Notice of these consents is given in accordance with Section 101 of the Environmental Planning and Assessment Act 1979. They are available for public inspection without charge at Council’s customer service centre:  </value>
   </data>
   <data name="$this.DataSourceSchema" xml:space="preserve">
     <value>&lt;?xml version="1.0"?&gt;
@@ -129,15 +135,17 @@
   &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
     &lt;xs:complexType&gt;
       &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
-        &lt;xs:element name="occupCert"&gt;
+        &lt;xs:element name="consents"&gt;
           &lt;xs:complexType&gt;
             &lt;xs:sequence&gt;
               &lt;xs:element name="LocalityCode" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="LotDP_formatted" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="Street_Formatted" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DADesc" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="DANo" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="DevType" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="PIN" type="xs:int" minOccurs="0" /&gt;
-              &lt;xs:element name="StormWaterType" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="DPNum" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DAFileNo" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="StreetName" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="CondDesc" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;

@@ -968,6 +968,12 @@
     <Compile Include="Reports\ABSReportSetup.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Reports\AdvertisingConcentList.Designer.vb">
+      <DependentUpon>AdvertisingConcentList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AdvertisingConcentList.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\ApplicationCounter.Designer.vb">
       <DependentUpon>ApplicationCounter.vb</DependentUpon>
     </Compile>
@@ -1571,6 +1577,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ABSReportSetup.resx">
       <DependentUpon>ABSReportSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AdvertisingConcentList.resx">
+      <DependentUpon>AdvertisingConcentList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ApplicationCounter.resx">
       <DependentUpon>ApplicationCounter.vb</DependentUpon>

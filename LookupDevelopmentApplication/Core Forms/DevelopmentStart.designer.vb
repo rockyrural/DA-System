@@ -185,6 +185,14 @@ Partial Class DevelopmentStart
         Me.chkDADesc2 = New System.Windows.Forms.CheckBox()
         Me.chkDesc1 = New System.Windows.Forms.CheckBox()
         Me.grpDescription = New DevExpress.XtraEditors.GroupControl()
+        Me.lblOccupancy = New System.Windows.Forms.Label()
+        Me.radOccupancy = New DevExpress.XtraEditors.RadioGroup()
+        Me.lblAttachement = New System.Windows.Forms.Label()
+        Me.cboAttachmentStatus = New DevExpress.XtraEditors.LookUpEdit()
+        Me.txtDemolishedDwelings = New DevExpress.XtraEditors.TextEdit()
+        Me.lblNoDemolishedDwellings = New System.Windows.Forms.Label()
+        Me.txtExistingDwelings = New DevExpress.XtraEditors.TextEdit()
+        Me.lblExistingDwellings = New System.Windows.Forms.Label()
         Me.Label50 = New System.Windows.Forms.Label()
         Me.cboIntendedLandUse = New DevExpress.XtraEditors.LookUpEdit()
         Me.nudDwellings = New DevExpress.XtraEditors.TextEdit()
@@ -735,14 +743,6 @@ Partial Class DevelopmentStart
         Me.txtSearch = New System.Windows.Forms.TextBox()
         Me.cboSearchType = New System.Windows.Forms.ComboBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.txtExistingDwelings = New DevExpress.XtraEditors.TextEdit()
-        Me.lblExistingDwellings = New System.Windows.Forms.Label()
-        Me.txtDemolishedDwelings = New DevExpress.XtraEditors.TextEdit()
-        Me.lblNoDemolishedDwellings = New System.Windows.Forms.Label()
-        Me.lblAttachement = New System.Windows.Forms.Label()
-        Me.cboAttachmentStatus = New DevExpress.XtraEditors.LookUpEdit()
-        Me.radOccupancy = New DevExpress.XtraEditors.RadioGroup()
-        Me.lblOccupancy = New System.Windows.Forms.Label()
         CurrentLandUseLabel = New System.Windows.Forms.Label()
         Label27 = New System.Windows.Forms.Label()
         OfficerLabel = New System.Windows.Forms.Label()
@@ -752,279 +752,279 @@ Partial Class DevelopmentStart
         DACompletedDtLabel1 = New System.Windows.Forms.Label()
         Label5 = New System.Windows.Forms.Label()
         ConsentPlanNumberLabel = New System.Windows.Forms.Label()
-        Me.MenuStrip1.SuspendLayout
-        CType(Me.tabPanels,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tabPanels.SuspendLayout
-        Me.tpgApplication.SuspendLayout
-        CType(Me.pnlApplicationData,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlApplicationData.SuspendLayout
-        CType(Me.grp,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grp.SuspendLayout
-        CType(Me.grpBasix,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpBasix.SuspendLayout
-        CType(Me.grpFileNumber,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpFileNumber.SuspendLayout
-        CType(Me.grpOwner,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpOwner.SuspendLayout
-        CType(Me.grpPurpose,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpPurpose.SuspendLayout
-        CType(Me.grpDescription,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpDescription.SuspendLayout
-        CType(Me.cboIntendedLandUse.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.nudDwellings.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboBuildingType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDAClass.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboConsentType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDevUse.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDevType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpAdditional,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpAdditional.SuspendLayout
-        CType(Me.cboDAtype1.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDAtype3.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDAType2.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDAClass2.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDAClass1.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDAClass3.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpLand,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpLand.SuspendLayout
-        Me.GroupBox21.SuspendLayout
-        Me.grpPropertyLotAddress.SuspendLayout
-        CType(Me.cboAreaType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDACensusCode.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDAlocalityCode.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpCCSum,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpCCSum.SuspendLayout
-        CType(Me.grpDetails,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpDetails.SuspendLayout
-        CType(Me.txtOfficer.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboSector.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboAppType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgFees.SuspendLayout
-        CType(Me.pnlDisplayFees,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplayFees.SuspendLayout
-        CType(Me.GroupControl6,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupControl6.SuspendLayout
-        CType(Me.grdDARefundsPaid,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwDARefundsPaid,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.GroupControl4,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupControl4.SuspendLayout
-        CType(Me.grdPaymentsReceived,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwPaymentsReceived,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgSection68.SuspendLayout
-        CType(Me.pnlDisplaySect68IntDev,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplaySect68IntDev.SuspendLayout
-        CType(Me.GroupBox9,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox9.SuspendLayout
-        CType(Me.grdIntDev,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwIntDev,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboIntDevActs.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.mskDateAct.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.mskDateAct.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grp68,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grp68.SuspendLayout
-        Me.tpgReferrals.SuspendLayout
-        CType(Me.pnlDisplayReferrals,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplayReferrals.SuspendLayout
-        CType(Me.grpMain,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpMain.SuspendLayout
-        CType(Me.DaysElapsedTextBox.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboRefCodeId.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RefRetDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RefRetDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.Refdt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.Refdt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpIntDesig,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpIntDesig.SuspendLayout
-        CType(Me.cboReferralsIntProvision.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpRFS,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpRFS.SuspendLayout
-        CType(Me.txtRFSSubLots.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboRFSSubDivisionType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpEngineers,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpEngineers.SuspendLayout
-        CType(Me.EngDueReturnDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.EngDueReturnDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtEngInternalComments.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtRefComm.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpSepp71,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpSepp71.SuspendLayout
-        CType(Me.chksepp71.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDesignatedYN.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboIntDevYN.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.pnlButtons,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlButtons.SuspendLayout
-        CType(Me.dgvLoadListReferrals,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwLoadListReferrals,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtRefResponse.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgStatus.SuspendLayout
-        CType(Me.pnlDisplayStatus,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplayStatus.SuspendLayout
-        CType(Me.GroupControl10,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupControl10.SuspendLayout
-        CType(Me.txtDesignatedText.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtDepartPlanning.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtAdvertSignIntDetails.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtDepotAddress.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboAdvertSignDepot.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.GroupBox18,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox18.SuspendLayout
-        CType(Me.grpAssessment,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpAssessment.SuspendLayout
-        CType(Me.DAToTypingDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAToTypingDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAToPlannerDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAToPlannerDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DASiteInspectedDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DASiteInspectedDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.PreAssessCompleteDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.PreAssessCompleteDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RefToPlanCom.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RefToPlanCom.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpNotification,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpNotification.SuspendLayout
-        CType(Me.DACompletedDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DACompletedDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DACommDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DACommDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAAdvisedDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAAdvisedDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpDetermination,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpDetermination.SuspendLayout
-        CType(Me.DAPermExDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAPermExDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboProgressCode.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAOccDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAOccDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboReasonOver40.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAConsentPubDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAConsentPubDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDADecisionId.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDAAuthorityId.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAFreeTreeDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAFreeTreeDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.ConsentPostedDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.ConsentPostedDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAAppNotDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DAAppNotDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DADetermDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.DADetermDt.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgDocuments.SuspendLayout
-        CType(Me.pnlDisplayDocs,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplayDocs.SuspendLayout
-        CType(Me.GroupBox32,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox32.SuspendLayout
-        CType(Me.grdDocumentsList,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwDocumentsList,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemPictureEdit1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgVariations.SuspendLayout
-        CType(Me.pnlDisplayVariations,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplayVariations.SuspendLayout
-        CType(Me.GroupBox28,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox28.SuspendLayout
-        CType(Me.grdVariations,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwVariations,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemMemoEdit4,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemMemoEdit5,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox8.SuspendLayout
-        CType(Me.cboVariationAuthority.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboVariationResult.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.variationDecisionDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.variationDecisionDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox29.SuspendLayout
-        CType(Me.cboVariationType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgSubmissions.SuspendLayout
-        CType(Me.pnlDisplaySubmisions,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplaySubmisions.SuspendLayout
-        CType(Me.GroupBox30,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox30.SuspendLayout
-        CType(Me.GroupControl8,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupControl8.SuspendLayout
-        CType(Me.grdSubmissionDrafts,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwSubmissionDrafts,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grdSubmissionandObjections,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwSubmissionandObjections,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox31.SuspendLayout
-        CType(Me.cboSubmissionType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.SubRecdDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.SubRecdDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgPCAConditions.SuspendLayout
-        CType(Me.pnlDisplayPCAconditions,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplayPCAconditions.SuspendLayout
-        CType(Me.GroupBox36,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox36.SuspendLayout
-        CType(Me.grdOneOffConditions,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwOneOffConditions,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemMemoEdit6,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.GroupBox35,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupBox35.SuspendLayout
-        CType(Me.grdSTDCond,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwSTDCond,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgFileNotes.SuspendLayout
-        CType(Me.pnlDisplayFileNotes,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplayFileNotes.SuspendLayout
-        CType(Me.GroupControl2,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupControl2.SuspendLayout
-        CType(Me.GroupControl5,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupControl5.SuspendLayout
-        CType(Me.grdFileNotes,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwFileNotes,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemMemoEdit3,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemMemoEdit2,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpFileNotes,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpFileNotes.SuspendLayout
-        CType(Me.cboNotesOfficer.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboNoteType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.NoteDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.NoteDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgBuildLetters.SuspendLayout
-        CType(Me.pnlBuildLetters,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlBuildLetters.SuspendLayout
-        CType(Me.cboAssessmentType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.GroupControl1,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupControl1.SuspendLayout
-        CType(Me.cboOtherDocs.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.GroupControl9,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupControl9.SuspendLayout
-        CType(Me.dgvOneUpConditions,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwOneUpConditions,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.RepositoryItemMemoEdit1,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.GroupControl3,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.GroupControl3.SuspendLayout
-        CType(Me.dgvSTDConditions,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwSTDConditions,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboSTDconditions.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboConsentDocType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpLetters,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpLetters.SuspendLayout
-        CType(Me.grdDraftDocs,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwDraftDocs,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgAssociated.SuspendLayout
-        CType(Me.pnlDisplayAssociatedApps,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplayAssociatedApps.SuspendLayout
-        CType(Me.grdAssociatedApps,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.gvwAssociatedApps,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.tpgEnlighten.SuspendLayout
-        CType(Me.pnlDisplayEnlighten,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlDisplayEnlighten.SuspendLayout
-        CType(Me.picEnlightenMap,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.pnlSearch,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlSearch.SuspendLayout
-        CType(Me.pnlEditButtons,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.pnlEditButtons.SuspendLayout
-        Me.grpSearch.SuspendLayout
-        CType(Me.mskEndDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.mskEndDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.mskStartDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.mskStartDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtExistingDwelings.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtDemolishedDwelings.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboAttachmentStatus.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.radOccupancy.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.SuspendLayout
+        Me.MenuStrip1.SuspendLayout()
+        CType(Me.tabPanels, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tabPanels.SuspendLayout()
+        Me.tpgApplication.SuspendLayout()
+        CType(Me.pnlApplicationData, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlApplicationData.SuspendLayout()
+        CType(Me.grp, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grp.SuspendLayout()
+        CType(Me.grpBasix, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpBasix.SuspendLayout()
+        CType(Me.grpFileNumber, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpFileNumber.SuspendLayout()
+        CType(Me.grpOwner, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpOwner.SuspendLayout()
+        CType(Me.grpPurpose, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpPurpose.SuspendLayout()
+        CType(Me.grpDescription, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpDescription.SuspendLayout()
+        CType(Me.radOccupancy.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboAttachmentStatus.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDemolishedDwelings.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtExistingDwelings.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboIntendedLandUse.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nudDwellings.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboBuildingType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDAClass.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboConsentType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDevUse.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDevType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpAdditional, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpAdditional.SuspendLayout()
+        CType(Me.cboDAtype1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDAtype3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDAType2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDAClass2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDAClass1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDAClass3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpLand, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpLand.SuspendLayout()
+        Me.GroupBox21.SuspendLayout()
+        Me.grpPropertyLotAddress.SuspendLayout()
+        CType(Me.cboAreaType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDACensusCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDAlocalityCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpCCSum, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpCCSum.SuspendLayout()
+        CType(Me.grpDetails, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpDetails.SuspendLayout()
+        CType(Me.txtOfficer.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboSector.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboAppType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgFees.SuspendLayout()
+        CType(Me.pnlDisplayFees, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplayFees.SuspendLayout()
+        CType(Me.GroupControl6, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl6.SuspendLayout()
+        CType(Me.grdDARefundsPaid, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwDARefundsPaid, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl4, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl4.SuspendLayout()
+        CType(Me.grdPaymentsReceived, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwPaymentsReceived, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgSection68.SuspendLayout()
+        CType(Me.pnlDisplaySect68IntDev, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplaySect68IntDev.SuspendLayout()
+        CType(Me.GroupBox9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox9.SuspendLayout()
+        CType(Me.grdIntDev, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwIntDev, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboIntDevActs.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.mskDateAct.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.mskDateAct.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grp68, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grp68.SuspendLayout()
+        Me.tpgReferrals.SuspendLayout()
+        CType(Me.pnlDisplayReferrals, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplayReferrals.SuspendLayout()
+        CType(Me.grpMain, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpMain.SuspendLayout()
+        CType(Me.DaysElapsedTextBox.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboRefCodeId.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RefRetDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RefRetDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Refdt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Refdt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpIntDesig, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpIntDesig.SuspendLayout()
+        CType(Me.cboReferralsIntProvision.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpRFS, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpRFS.SuspendLayout()
+        CType(Me.txtRFSSubLots.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboRFSSubDivisionType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpEngineers, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpEngineers.SuspendLayout()
+        CType(Me.EngDueReturnDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.EngDueReturnDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtEngInternalComments.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtRefComm.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpSepp71, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpSepp71.SuspendLayout()
+        CType(Me.chksepp71.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDesignatedYN.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboIntDevYN.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pnlButtons, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlButtons.SuspendLayout()
+        CType(Me.dgvLoadListReferrals, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwLoadListReferrals, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtRefResponse.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgStatus.SuspendLayout()
+        CType(Me.pnlDisplayStatus, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplayStatus.SuspendLayout()
+        CType(Me.GroupControl10, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl10.SuspendLayout()
+        CType(Me.txtDesignatedText.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDepartPlanning.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtAdvertSignIntDetails.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtDepotAddress.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboAdvertSignDepot.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupBox18, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox18.SuspendLayout()
+        CType(Me.grpAssessment, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpAssessment.SuspendLayout()
+        CType(Me.DAToTypingDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAToTypingDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAToPlannerDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAToPlannerDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DASiteInspectedDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DASiteInspectedDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PreAssessCompleteDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PreAssessCompleteDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RefToPlanCom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RefToPlanCom.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpNotification, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpNotification.SuspendLayout()
+        CType(Me.DACompletedDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DACompletedDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DACommDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DACommDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAAdvisedDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAAdvisedDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpDetermination, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpDetermination.SuspendLayout()
+        CType(Me.DAPermExDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAPermExDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboProgressCode.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAOccDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAOccDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboReasonOver40.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAConsentPubDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAConsentPubDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDADecisionId.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboDAAuthorityId.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAFreeTreeDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAFreeTreeDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ConsentPostedDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.ConsentPostedDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAAppNotDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DAAppNotDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DADetermDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DADetermDt.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgDocuments.SuspendLayout()
+        CType(Me.pnlDisplayDocs, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplayDocs.SuspendLayout()
+        CType(Me.GroupBox32, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox32.SuspendLayout()
+        CType(Me.grdDocumentsList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwDocumentsList, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemPictureEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgVariations.SuspendLayout()
+        CType(Me.pnlDisplayVariations, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplayVariations.SuspendLayout()
+        CType(Me.GroupBox28, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox28.SuspendLayout()
+        CType(Me.grdVariations, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwVariations, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemMemoEdit4, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemMemoEdit5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox8.SuspendLayout()
+        CType(Me.cboVariationAuthority.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboVariationResult.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.variationDecisionDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.variationDecisionDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox29.SuspendLayout()
+        CType(Me.cboVariationType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgSubmissions.SuspendLayout()
+        CType(Me.pnlDisplaySubmisions, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplaySubmisions.SuspendLayout()
+        CType(Me.GroupBox30, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox30.SuspendLayout()
+        CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl8.SuspendLayout()
+        CType(Me.grdSubmissionDrafts, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwSubmissionDrafts, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grdSubmissionandObjections, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwSubmissionandObjections, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox31.SuspendLayout()
+        CType(Me.cboSubmissionType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SubRecdDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.SubRecdDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgPCAConditions.SuspendLayout()
+        CType(Me.pnlDisplayPCAconditions, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplayPCAconditions.SuspendLayout()
+        CType(Me.GroupBox36, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox36.SuspendLayout()
+        CType(Me.grdOneOffConditions, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwOneOffConditions, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemMemoEdit6, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupBox35, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupBox35.SuspendLayout()
+        CType(Me.grdSTDCond, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwSTDCond, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgFileNotes.SuspendLayout()
+        CType(Me.pnlDisplayFileNotes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplayFileNotes.SuspendLayout()
+        CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl2.SuspendLayout()
+        CType(Me.GroupControl5, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl5.SuspendLayout()
+        CType(Me.grdFileNotes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwFileNotes, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemMemoEdit3, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemMemoEdit2, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpFileNotes, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpFileNotes.SuspendLayout()
+        CType(Me.cboNotesOfficer.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboNoteType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NoteDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.NoteDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgBuildLetters.SuspendLayout()
+        CType(Me.pnlBuildLetters, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlBuildLetters.SuspendLayout()
+        CType(Me.cboAssessmentType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl1.SuspendLayout()
+        CType(Me.cboOtherDocs.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl9, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl9.SuspendLayout()
+        CType(Me.dgvOneUpConditions, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwOneUpConditions, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.GroupControl3.SuspendLayout()
+        CType(Me.dgvSTDConditions, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwSTDConditions, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboSTDconditions.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.cboConsentDocType.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.grpLetters, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.grpLetters.SuspendLayout()
+        CType(Me.grdDraftDocs, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwDraftDocs, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgAssociated.SuspendLayout()
+        CType(Me.pnlDisplayAssociatedApps, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplayAssociatedApps.SuspendLayout()
+        CType(Me.grdAssociatedApps, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.gvwAssociatedApps, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.tpgEnlighten.SuspendLayout()
+        CType(Me.pnlDisplayEnlighten, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlDisplayEnlighten.SuspendLayout()
+        CType(Me.picEnlightenMap, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.pnlSearch, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlSearch.SuspendLayout()
+        CType(Me.pnlEditButtons, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.pnlEditButtons.SuspendLayout()
+        Me.grpSearch.SuspendLayout()
+        CType(Me.mskEndDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.mskEndDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.mskStartDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.mskStartDate.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
         '
         'CurrentLandUseLabel
         '
-        CurrentLandUseLabel.AutoSize = true
+        CurrentLandUseLabel.AutoSize = True
         CurrentLandUseLabel.Location = New System.Drawing.Point(13, 177)
         CurrentLandUseLabel.Name = "CurrentLandUseLabel"
         CurrentLandUseLabel.Size = New System.Drawing.Size(69, 13)
@@ -1033,7 +1033,7 @@ Partial Class DevelopmentStart
         '
         'Label27
         '
-        Label27.AutoSize = true
+        Label27.AutoSize = True
         Label27.Location = New System.Drawing.Point(386, 244)
         Label27.Name = "Label27"
         Label27.Size = New System.Drawing.Size(113, 13)
@@ -1042,7 +1042,7 @@ Partial Class DevelopmentStart
         '
         'OfficerLabel
         '
-        OfficerLabel.AutoSize = true
+        OfficerLabel.AutoSize = True
         OfficerLabel.Location = New System.Drawing.Point(17, 86)
         OfficerLabel.Name = "OfficerLabel"
         OfficerLabel.Size = New System.Drawing.Size(92, 13)
@@ -1051,7 +1051,7 @@ Partial Class DevelopmentStart
         '
         'CoPCAnameLabel
         '
-        CoPCAnameLabel.AutoSize = true
+        CoPCAnameLabel.AutoSize = True
         CoPCAnameLabel.Location = New System.Drawing.Point(5, 62)
         CoPCAnameLabel.Name = "CoPCAnameLabel"
         CoPCAnameLabel.Size = New System.Drawing.Size(109, 13)
@@ -1060,7 +1060,7 @@ Partial Class DevelopmentStart
         '
         'DADecisionLabel
         '
-        DADecisionLabel.AutoSize = true
+        DADecisionLabel.AutoSize = True
         DADecisionLabel.Location = New System.Drawing.Point(183, 33)
         DADecisionLabel.Name = "DADecisionLabel"
         DADecisionLabel.Size = New System.Drawing.Size(59, 13)
@@ -1069,7 +1069,7 @@ Partial Class DevelopmentStart
         '
         'CCAppNoLabel
         '
-        CCAppNoLabel.AutoSize = true
+        CCAppNoLabel.AutoSize = True
         CCAppNoLabel.Location = New System.Drawing.Point(24, 33)
         CCAppNoLabel.Name = "CCAppNoLabel"
         CCAppNoLabel.Size = New System.Drawing.Size(49, 13)
@@ -1078,10 +1078,10 @@ Partial Class DevelopmentStart
         '
         'DACompletedDtLabel1
         '
-        DACompletedDtLabel1.AutoSize = true
-        DACompletedDtLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(192,Byte),Integer))
+        DACompletedDtLabel1.AutoSize = True
+        DACompletedDtLabel1.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         DACompletedDtLabel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        DACompletedDtLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        DACompletedDtLabel1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         DACompletedDtLabel1.Location = New System.Drawing.Point(411, 14)
         DACompletedDtLabel1.Name = "DACompletedDtLabel1"
         DACompletedDtLabel1.Size = New System.Drawing.Size(55, 18)
@@ -1090,7 +1090,7 @@ Partial Class DevelopmentStart
         '
         'Label5
         '
-        Label5.AutoSize = true
+        Label5.AutoSize = True
         Label5.Location = New System.Drawing.Point(734, 155)
         Label5.Name = "Label5"
         Label5.Size = New System.Drawing.Size(113, 13)
@@ -1099,7 +1099,7 @@ Partial Class DevelopmentStart
         '
         'ConsentPlanNumberLabel
         '
-        ConsentPlanNumberLabel.AutoSize = true
+        ConsentPlanNumberLabel.AutoSize = True
         ConsentPlanNumberLabel.Location = New System.Drawing.Point(8, 13)
         ConsentPlanNumberLabel.Name = "ConsentPlanNumberLabel"
         ConsentPlanNumberLabel.Size = New System.Drawing.Size(114, 13)
@@ -1138,7 +1138,7 @@ Partial Class DevelopmentStart
         Me.mnuPageSetup.Name = "mnuPageSetup"
         Me.mnuPageSetup.Size = New System.Drawing.Size(208, 22)
         Me.mnuPageSetup.Text = "Printer Setup"
-        Me.mnuPageSetup.Visible = false
+        Me.mnuPageSetup.Visible = False
         '
         'mnuCreateTemplate
         '
@@ -1476,7 +1476,7 @@ Partial Class DevelopmentStart
         Me.ApprovedUnderDelegatedAuthorityToolStripMenuItem.Name = "ApprovedUnderDelegatedAuthorityToolStripMenuItem"
         Me.ApprovedUnderDelegatedAuthorityToolStripMenuItem.Size = New System.Drawing.Size(299, 22)
         Me.ApprovedUnderDelegatedAuthorityToolStripMenuItem.Text = "Approved Under Delegated Authority"
-        Me.ApprovedUnderDelegatedAuthorityToolStripMenuItem.Visible = false
+        Me.ApprovedUnderDelegatedAuthorityToolStripMenuItem.Visible = False
         '
         'LiquidTradeWasteApplicationsToolStripMenuItem
         '
@@ -1558,7 +1558,7 @@ Partial Class DevelopmentStart
         '
         'mnuLinked
         '
-        Me.mnuLinked.Enabled = false
+        Me.mnuLinked.Enabled = False
         Me.mnuLinked.Name = "mnuLinked"
         Me.mnuLinked.Size = New System.Drawing.Size(123, 20)
         Me.mnuLinked.Text = "Linked Applications"
@@ -1566,7 +1566,7 @@ Partial Class DevelopmentStart
         'mnuImages
         '
         Me.mnuImages.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.mnuOldSystemImages, Me.mnuCurrentImages, Me.mnuVideos})
-        Me.mnuImages.Enabled = false
+        Me.mnuImages.Enabled = False
         Me.mnuImages.Name = "mnuImages"
         Me.mnuImages.Size = New System.Drawing.Size(57, 20)
         Me.mnuImages.Text = "Images"
@@ -1591,35 +1591,35 @@ Partial Class DevelopmentStart
         '
         'mnuSec94
         '
-        Me.mnuSec94.Enabled = false
+        Me.mnuSec94.Enabled = False
         Me.mnuSec94.Name = "mnuSec94"
         Me.mnuSec94.Size = New System.Drawing.Size(52, 20)
         Me.mnuSec94.Text = "Sec 94"
         '
         'mnuCompliance
         '
-        Me.mnuCompliance.Enabled = false
+        Me.mnuCompliance.Enabled = False
         Me.mnuCompliance.Name = "mnuCompliance"
         Me.mnuCompliance.Size = New System.Drawing.Size(83, 20)
         Me.mnuCompliance.Text = "Compliance"
         '
         'mnuOtherApplication
         '
-        Me.mnuOtherApplication.Enabled = false
+        Me.mnuOtherApplication.Enabled = False
         Me.mnuOtherApplication.Name = "mnuOtherApplication"
         Me.mnuOtherApplication.Size = New System.Drawing.Size(145, 20)
         Me.mnuOtherApplication.Text = "Construction Certificate"
         '
         'mnuEngDetailsPostConsent
         '
-        Me.mnuEngDetailsPostConsent.Enabled = false
+        Me.mnuEngDetailsPostConsent.Enabled = False
         Me.mnuEngDetailsPostConsent.Name = "mnuEngDetailsPostConsent"
         Me.mnuEngDetailsPostConsent.Size = New System.Drawing.Size(150, 20)
         Me.mnuEngDetailsPostConsent.Text = "Eng Details Post Consent"
         '
         'menuAssessmentApplication
         '
-        Me.menuAssessmentApplication.Enabled = false
+        Me.menuAssessmentApplication.Enabled = False
         Me.menuAssessmentApplication.Name = "menuAssessmentApplication"
         Me.menuAssessmentApplication.Size = New System.Drawing.Size(81, 20)
         Me.menuAssessmentApplication.Text = "Assessment"
@@ -1632,7 +1632,7 @@ Partial Class DevelopmentStart
         '
         'ImageList1
         '
-        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"),System.Windows.Forms.ImageListStreamer)
+        Me.ImageList1.ImageStream = CType(resources.GetObject("ImageList1.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList1.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList1.Images.SetKeyName(0, "")
         Me.ImageList1.Images.SetKeyName(1, "")
@@ -1656,7 +1656,7 @@ Partial Class DevelopmentStart
         '
         'ImageList3
         '
-        Me.ImageList3.ImageStream = CType(resources.GetObject("ImageList3.ImageStream"),System.Windows.Forms.ImageListStreamer)
+        Me.ImageList3.ImageStream = CType(resources.GetObject("ImageList3.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList3.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList3.Images.SetKeyName(0, "PowerShot S1 IS.ico")
         Me.ImageList3.Images.SetKeyName(1, "Tips.ico")
@@ -1669,7 +1669,7 @@ Partial Class DevelopmentStart
         '
         'ImageList4
         '
-        Me.ImageList4.ImageStream = CType(resources.GetObject("ImageList4.ImageStream"),System.Windows.Forms.ImageListStreamer)
+        Me.ImageList4.ImageStream = CType(resources.GetObject("ImageList4.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList4.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList4.Images.SetKeyName(0, "PowerShot S1 IS.ico")
         Me.ImageList4.Images.SetKeyName(1, "Tips.ico")
@@ -1682,7 +1682,7 @@ Partial Class DevelopmentStart
         '
         'ImageList5
         '
-        Me.ImageList5.ImageStream = CType(resources.GetObject("ImageList5.ImageStream"),System.Windows.Forms.ImageListStreamer)
+        Me.ImageList5.ImageStream = CType(resources.GetObject("ImageList5.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList5.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList5.Images.SetKeyName(0, "Camera.ico")
         Me.ImageList5.Images.SetKeyName(1, "Google2.png")
@@ -1691,7 +1691,7 @@ Partial Class DevelopmentStart
         '
         'ImageList2
         '
-        Me.ImageList2.ImageStream = CType(resources.GetObject("ImageList2.ImageStream"),System.Windows.Forms.ImageListStreamer)
+        Me.ImageList2.ImageStream = CType(resources.GetObject("ImageList2.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.ImageList2.TransparentColor = System.Drawing.Color.Transparent
         Me.ImageList2.Images.SetKeyName(0, "Camera.ico")
         Me.ImageList2.Images.SetKeyName(1, "Google2.png")
@@ -1699,7 +1699,7 @@ Partial Class DevelopmentStart
         '
         'imgSmll
         '
-        Me.imgSmll.ImageStream = CType(resources.GetObject("imgSmll.ImageStream"),System.Windows.Forms.ImageListStreamer)
+        Me.imgSmll.ImageStream = CType(resources.GetObject("imgSmll.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.imgSmll.TransparentColor = System.Drawing.Color.Transparent
         Me.imgSmll.Images.SetKeyName(0, "CloseWorkrerquest.ico")
         Me.imgSmll.Images.SetKeyName(1, "TAMS.ico")
@@ -1707,7 +1707,7 @@ Partial Class DevelopmentStart
         '
         'imlNavigation
         '
-        Me.imlNavigation.ImageStream = CType(resources.GetObject("imlNavigation.ImageStream"),System.Windows.Forms.ImageListStreamer)
+        Me.imlNavigation.ImageStream = CType(resources.GetObject("imlNavigation.ImageStream"), System.Windows.Forms.ImageListStreamer)
         Me.imlNavigation.TransparentColor = System.Drawing.Color.Transparent
         Me.imlNavigation.Images.SetKeyName(0, "Selection Bar Selected.bmp")
         Me.imlNavigation.Images.SetKeyName(1, "Selection Bar Unselected.bmp")
@@ -1720,7 +1720,7 @@ Partial Class DevelopmentStart
         Me.Button1.Size = New System.Drawing.Size(40, 23)
         Me.Button1.TabIndex = 40
         Me.Button1.Text = "Use"
-        Me.Button1.UseVisualStyleBackColor = true
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'tabPanels
         '
@@ -1738,7 +1738,7 @@ Partial Class DevelopmentStart
         'tpgApplication
         '
         Me.tpgApplication.Controls.Add(Me.pnlApplicationData)
-        Me.tpgApplication.ImageOptions.Image = CType(resources.GetObject("tpgApplication.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgApplication.ImageOptions.Image = CType(resources.GetObject("tpgApplication.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgApplication.Name = "tpgApplication"
         Me.tpgApplication.Size = New System.Drawing.Size(1211, 820)
         Me.tpgApplication.Text = "Application Details"
@@ -1746,7 +1746,7 @@ Partial Class DevelopmentStart
         'pnlApplicationData
         '
         Me.pnlApplicationData.Appearance.BackColor = System.Drawing.Color.Transparent
-        Me.pnlApplicationData.Appearance.Options.UseBackColor = true
+        Me.pnlApplicationData.Appearance.Options.UseBackColor = True
         Me.pnlApplicationData.Controls.Add(Me.grp)
         Me.pnlApplicationData.Controls.Add(Me.grpBasix)
         Me.pnlApplicationData.Controls.Add(Me.grpFileNumber)
@@ -1792,15 +1792,15 @@ Partial Class DevelopmentStart
         Me.txtAppName.BackColor = System.Drawing.SystemColors.Info
         Me.txtAppName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAppName.Location = New System.Drawing.Point(61, 28)
-        Me.txtAppName.Multiline = true
+        Me.txtAppName.Multiline = True
         Me.txtAppName.Name = "txtAppName"
-        Me.txtAppName.ReadOnly = true
+        Me.txtAppName.ReadOnly = True
         Me.txtAppName.Size = New System.Drawing.Size(219, 45)
         Me.txtAppName.TabIndex = 3
         '
         'Label9
         '
-        Me.Label9.AutoSize = true
+        Me.Label9.AutoSize = True
         Me.Label9.Location = New System.Drawing.Point(5, 73)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(50, 13)
@@ -1809,7 +1809,7 @@ Partial Class DevelopmentStart
         '
         'Label11
         '
-        Me.Label11.AutoSize = true
+        Me.Label11.AutoSize = True
         Me.Label11.Location = New System.Drawing.Point(5, 108)
         Me.Label11.Name = "Label11"
         Me.Label11.Size = New System.Drawing.Size(37, 13)
@@ -1818,7 +1818,7 @@ Partial Class DevelopmentStart
         '
         'Label8
         '
-        Me.Label8.AutoSize = true
+        Me.Label8.AutoSize = True
         Me.Label8.Location = New System.Drawing.Point(5, 29)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(38, 13)
@@ -1827,7 +1827,7 @@ Partial Class DevelopmentStart
         '
         'Label12
         '
-        Me.Label12.AutoSize = true
+        Me.Label12.AutoSize = True
         Me.Label12.Location = New System.Drawing.Point(5, 130)
         Me.Label12.Name = "Label12"
         Me.Label12.Size = New System.Drawing.Size(41, 13)
@@ -1840,13 +1840,13 @@ Partial Class DevelopmentStart
         Me.txtAppPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAppPhone.Location = New System.Drawing.Point(61, 129)
         Me.txtAppPhone.Name = "txtAppPhone"
-        Me.txtAppPhone.ReadOnly = true
+        Me.txtAppPhone.ReadOnly = True
         Me.txtAppPhone.Size = New System.Drawing.Size(192, 21)
         Me.txtAppPhone.TabIndex = 6
         '
         'Label19
         '
-        Me.Label19.AutoSize = true
+        Me.Label19.AutoSize = True
         Me.Label19.Location = New System.Drawing.Point(5, 152)
         Me.Label19.Name = "Label19"
         Me.Label19.Size = New System.Drawing.Size(39, 13)
@@ -1859,7 +1859,7 @@ Partial Class DevelopmentStart
         Me.txtAppPcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAppPcode.Location = New System.Drawing.Point(241, 107)
         Me.txtAppPcode.Name = "txtAppPcode"
-        Me.txtAppPcode.ReadOnly = true
+        Me.txtAppPcode.ReadOnly = True
         Me.txtAppPcode.Size = New System.Drawing.Size(39, 21)
         Me.txtAppPcode.TabIndex = 125
         '
@@ -1869,7 +1869,7 @@ Partial Class DevelopmentStart
         Me.txtAppTown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAppTown.Location = New System.Drawing.Point(61, 107)
         Me.txtAppTown.Name = "txtAppTown"
-        Me.txtAppTown.ReadOnly = true
+        Me.txtAppTown.ReadOnly = True
         Me.txtAppTown.Size = New System.Drawing.Size(173, 21)
         Me.txtAppTown.TabIndex = 5
         '
@@ -1879,7 +1879,7 @@ Partial Class DevelopmentStart
         Me.txtAppemail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAppemail.Location = New System.Drawing.Point(61, 151)
         Me.txtAppemail.Name = "txtAppemail"
-        Me.txtAppemail.ReadOnly = true
+        Me.txtAppemail.ReadOnly = True
         Me.txtAppemail.Size = New System.Drawing.Size(329, 21)
         Me.txtAppemail.TabIndex = 7
         '
@@ -1888,15 +1888,15 @@ Partial Class DevelopmentStart
         Me.txtAppAddress.BackColor = System.Drawing.SystemColors.Info
         Me.txtAppAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAppAddress.Location = New System.Drawing.Point(61, 72)
-        Me.txtAppAddress.Multiline = true
+        Me.txtAppAddress.Multiline = True
         Me.txtAppAddress.Name = "txtAppAddress"
-        Me.txtAppAddress.ReadOnly = true
+        Me.txtAppAddress.ReadOnly = True
         Me.txtAppAddress.Size = New System.Drawing.Size(219, 36)
         Me.txtAppAddress.TabIndex = 4
         '
         'btnKeep1
         '
-        Me.btnKeep1.ImageOptions.Image = CType(resources.GetObject("btnKeep1.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnKeep1.ImageOptions.Image = CType(resources.GetObject("btnKeep1.ImageOptions.Image"), System.Drawing.Image)
         Me.btnKeep1.Location = New System.Drawing.Point(329, 60)
         Me.btnKeep1.Name = "btnKeep1"
         Me.btnKeep1.Size = New System.Drawing.Size(61, 28)
@@ -1905,7 +1905,7 @@ Partial Class DevelopmentStart
         '
         'btnUse1
         '
-        Me.btnUse1.ImageOptions.Image = CType(resources.GetObject("btnUse1.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnUse1.ImageOptions.Image = CType(resources.GetObject("btnUse1.ImageOptions.Image"), System.Drawing.Image)
         Me.btnUse1.Location = New System.Drawing.Point(329, 95)
         Me.btnUse1.Name = "btnUse1"
         Me.btnUse1.Size = New System.Drawing.Size(61, 29)
@@ -1938,13 +1938,13 @@ Partial Class DevelopmentStart
         Me.txtBASIXRcptNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBASIXRcptNo.Location = New System.Drawing.Point(63, 74)
         Me.txtBASIXRcptNo.Name = "txtBASIXRcptNo"
-        Me.txtBASIXRcptNo.ReadOnly = true
+        Me.txtBASIXRcptNo.ReadOnly = True
         Me.txtBASIXRcptNo.Size = New System.Drawing.Size(81, 21)
         Me.txtBASIXRcptNo.TabIndex = 1
         '
         'Label54
         '
-        Me.Label54.AutoSize = true
+        Me.Label54.AutoSize = True
         Me.Label54.Location = New System.Drawing.Point(4, 76)
         Me.Label54.Name = "Label54"
         Me.Label54.Size = New System.Drawing.Size(53, 13)
@@ -1953,15 +1953,15 @@ Partial Class DevelopmentStart
         '
         'chkBASIXRecd
         '
-        Me.chkBASIXRecd.AutoSize = true
+        Me.chkBASIXRecd.AutoSize = True
         Me.chkBASIXRecd.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkBASIXRecd.Enabled = false
+        Me.chkBASIXRecd.Enabled = False
         Me.chkBASIXRecd.Location = New System.Drawing.Point(4, 25)
         Me.chkBASIXRecd.Name = "chkBASIXRecd"
         Me.chkBASIXRecd.Size = New System.Drawing.Size(55, 17)
         Me.chkBASIXRecd.TabIndex = 0
         Me.chkBASIXRecd.Text = "BASIX"
-        Me.chkBASIXRecd.UseVisualStyleBackColor = true
+        Me.chkBASIXRecd.UseVisualStyleBackColor = True
         '
         'txtBASIXCertNo
         '
@@ -1969,13 +1969,13 @@ Partial Class DevelopmentStart
         Me.txtBASIXCertNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBASIXCertNo.Location = New System.Drawing.Point(63, 49)
         Me.txtBASIXCertNo.Name = "txtBASIXCertNo"
-        Me.txtBASIXCertNo.ReadOnly = true
+        Me.txtBASIXCertNo.ReadOnly = True
         Me.txtBASIXCertNo.Size = New System.Drawing.Size(81, 21)
         Me.txtBASIXCertNo.TabIndex = 0
         '
         'Label55
         '
-        Me.Label55.AutoSize = true
+        Me.Label55.AutoSize = True
         Me.Label55.Location = New System.Drawing.Point(4, 52)
         Me.Label55.Name = "Label55"
         Me.Label55.Size = New System.Drawing.Size(52, 13)
@@ -1984,7 +1984,7 @@ Partial Class DevelopmentStart
         '
         'Label56
         '
-        Me.Label56.AutoSize = true
+        Me.Label56.AutoSize = True
         Me.Label56.Location = New System.Drawing.Point(4, 151)
         Me.Label56.Name = "Label56"
         Me.Label56.Size = New System.Drawing.Size(45, 13)
@@ -1993,7 +1993,7 @@ Partial Class DevelopmentStart
         '
         'Label63
         '
-        Me.Label63.AutoSize = true
+        Me.Label63.AutoSize = True
         Me.Label63.Location = New System.Drawing.Point(4, 101)
         Me.Label63.Name = "Label63"
         Me.Label63.Size = New System.Drawing.Size(41, 13)
@@ -2002,7 +2002,7 @@ Partial Class DevelopmentStart
         '
         'Label67
         '
-        Me.Label67.AutoSize = true
+        Me.Label67.AutoSize = True
         Me.Label67.Location = New System.Drawing.Point(4, 126)
         Me.Label67.Name = "Label67"
         Me.Label67.Size = New System.Drawing.Size(49, 13)
@@ -2015,7 +2015,7 @@ Partial Class DevelopmentStart
         Me.txtBASIXwater.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBASIXwater.Location = New System.Drawing.Point(63, 99)
         Me.txtBASIXwater.Name = "txtBASIXwater"
-        Me.txtBASIXwater.ReadOnly = true
+        Me.txtBASIXwater.ReadOnly = True
         Me.txtBASIXwater.Size = New System.Drawing.Size(46, 21)
         Me.txtBASIXwater.TabIndex = 2
         '
@@ -2025,7 +2025,7 @@ Partial Class DevelopmentStart
         Me.txtBASIXthermal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBASIXthermal.Location = New System.Drawing.Point(63, 124)
         Me.txtBASIXthermal.Name = "txtBASIXthermal"
-        Me.txtBASIXthermal.ReadOnly = true
+        Me.txtBASIXthermal.ReadOnly = True
         Me.txtBASIXthermal.Size = New System.Drawing.Size(64, 21)
         Me.txtBASIXthermal.TabIndex = 3
         '
@@ -2035,7 +2035,7 @@ Partial Class DevelopmentStart
         Me.txtBASIXenergy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtBASIXenergy.Location = New System.Drawing.Point(63, 149)
         Me.txtBASIXenergy.Name = "txtBASIXenergy"
-        Me.txtBASIXenergy.ReadOnly = true
+        Me.txtBASIXenergy.ReadOnly = True
         Me.txtBASIXenergy.Size = New System.Drawing.Size(46, 21)
         Me.txtBASIXenergy.TabIndex = 4
         '
@@ -2055,7 +2055,7 @@ Partial Class DevelopmentStart
         '
         'btnRemoveFile
         '
-        Me.btnRemoveFile.ImageOptions.Image = CType(resources.GetObject("btnRemoveFile.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveFile.ImageOptions.Image = CType(resources.GetObject("btnRemoveFile.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveFile.Location = New System.Drawing.Point(106, 85)
         Me.btnRemoveFile.Name = "btnRemoveFile"
         Me.btnRemoveFile.Size = New System.Drawing.Size(75, 34)
@@ -2064,7 +2064,7 @@ Partial Class DevelopmentStart
         '
         'btnAddFile
         '
-        Me.btnAddFile.ImageOptions.Image = CType(resources.GetObject("btnAddFile.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddFile.ImageOptions.Image = CType(resources.GetObject("btnAddFile.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddFile.Location = New System.Drawing.Point(106, 26)
         Me.btnAddFile.Name = "btnAddFile"
         Me.btnAddFile.Size = New System.Drawing.Size(75, 34)
@@ -2073,8 +2073,8 @@ Partial Class DevelopmentStart
         '
         'txtFile
         '
-        Me.txtFile.AcceptsReturn = true
-        Me.txtFile.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(192,Byte),Integer))
+        Me.txtFile.AcceptsReturn = True
+        Me.txtFile.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.txtFile.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFile.Cursor = System.Windows.Forms.Cursors.IBeam
         Me.txtFile.ForeColor = System.Drawing.SystemColors.WindowText
@@ -2102,7 +2102,7 @@ Partial Class DevelopmentStart
         '
         'Label59
         '
-        Me.Label59.AutoSize = true
+        Me.Label59.AutoSize = True
         Me.Label59.BackColor = System.Drawing.SystemColors.Control
         Me.Label59.Cursor = System.Windows.Forms.Cursors.Default
         Me.Label59.ForeColor = System.Drawing.SystemColors.WindowText
@@ -2115,8 +2115,8 @@ Partial Class DevelopmentStart
         '
         'lblDesignated
         '
-        Me.lblDesignated.AutoSize = true
-        Me.lblDesignated.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblDesignated.AutoSize = True
+        Me.lblDesignated.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblDesignated.ForeColor = System.Drawing.Color.Red
         Me.lblDesignated.Location = New System.Drawing.Point(1010, 420)
         Me.lblDesignated.Name = "lblDesignated"
@@ -2125,8 +2125,8 @@ Partial Class DevelopmentStart
         '
         'lblAdvertising
         '
-        Me.lblAdvertising.AutoSize = true
-        Me.lblAdvertising.Font = New System.Drawing.Font("Microsoft Sans Serif", 9!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblAdvertising.AutoSize = True
+        Me.lblAdvertising.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblAdvertising.ForeColor = System.Drawing.Color.Blue
         Me.lblAdvertising.Location = New System.Drawing.Point(1010, 396)
         Me.lblAdvertising.Name = "lblAdvertising"
@@ -2159,13 +2159,13 @@ Partial Class DevelopmentStart
         Me.txtDAOwnersPcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDAOwnersPcode.Location = New System.Drawing.Point(245, 113)
         Me.txtDAOwnersPcode.Name = "txtDAOwnersPcode"
-        Me.txtDAOwnersPcode.ReadOnly = true
+        Me.txtDAOwnersPcode.ReadOnly = True
         Me.txtDAOwnersPcode.Size = New System.Drawing.Size(35, 21)
         Me.txtDAOwnersPcode.TabIndex = 49
         '
         'Label23
         '
-        Me.Label23.AutoSize = true
+        Me.Label23.AutoSize = True
         Me.Label23.Location = New System.Drawing.Point(5, 37)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(38, 13)
@@ -2174,7 +2174,7 @@ Partial Class DevelopmentStart
         '
         'Label24
         '
-        Me.Label24.AutoSize = true
+        Me.Label24.AutoSize = True
         Me.Label24.Location = New System.Drawing.Point(5, 79)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(50, 13)
@@ -2183,7 +2183,7 @@ Partial Class DevelopmentStart
         '
         'Label25
         '
-        Me.Label25.AutoSize = true
+        Me.Label25.AutoSize = True
         Me.Label25.Location = New System.Drawing.Point(5, 116)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(37, 13)
@@ -2192,7 +2192,7 @@ Partial Class DevelopmentStart
         '
         'Label26
         '
-        Me.Label26.AutoSize = true
+        Me.Label26.AutoSize = True
         Me.Label26.Location = New System.Drawing.Point(5, 140)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(41, 13)
@@ -2201,12 +2201,12 @@ Partial Class DevelopmentStart
         '
         'txtDAOwnersName
         '
-        Me.txtDAOwnersName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(215,Byte),Integer))
+        Me.txtDAOwnersName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(215, Byte), Integer))
         Me.txtDAOwnersName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDAOwnersName.Location = New System.Drawing.Point(61, 35)
-        Me.txtDAOwnersName.Multiline = true
+        Me.txtDAOwnersName.Multiline = True
         Me.txtDAOwnersName.Name = "txtDAOwnersName"
-        Me.txtDAOwnersName.ReadOnly = true
+        Me.txtDAOwnersName.ReadOnly = True
         Me.txtDAOwnersName.Size = New System.Drawing.Size(219, 38)
         Me.txtDAOwnersName.TabIndex = 0
         '
@@ -2215,9 +2215,9 @@ Partial Class DevelopmentStart
         Me.txtDAOwnersAddress.BackColor = System.Drawing.SystemColors.Info
         Me.txtDAOwnersAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDAOwnersAddress.Location = New System.Drawing.Point(61, 72)
-        Me.txtDAOwnersAddress.Multiline = true
+        Me.txtDAOwnersAddress.Multiline = True
         Me.txtDAOwnersAddress.Name = "txtDAOwnersAddress"
-        Me.txtDAOwnersAddress.ReadOnly = true
+        Me.txtDAOwnersAddress.ReadOnly = True
         Me.txtDAOwnersAddress.Size = New System.Drawing.Size(219, 42)
         Me.txtDAOwnersAddress.TabIndex = 1
         '
@@ -2227,7 +2227,7 @@ Partial Class DevelopmentStart
         Me.txtDAOwnersTown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDAOwnersTown.Location = New System.Drawing.Point(61, 113)
         Me.txtDAOwnersTown.Name = "txtDAOwnersTown"
-        Me.txtDAOwnersTown.ReadOnly = true
+        Me.txtDAOwnersTown.ReadOnly = True
         Me.txtDAOwnersTown.Size = New System.Drawing.Size(177, 21)
         Me.txtDAOwnersTown.TabIndex = 2
         '
@@ -2237,13 +2237,13 @@ Partial Class DevelopmentStart
         Me.txtDAOwnersPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDAOwnersPhone.Location = New System.Drawing.Point(61, 139)
         Me.txtDAOwnersPhone.Name = "txtDAOwnersPhone"
-        Me.txtDAOwnersPhone.ReadOnly = true
+        Me.txtDAOwnersPhone.ReadOnly = True
         Me.txtDAOwnersPhone.Size = New System.Drawing.Size(123, 21)
         Me.txtDAOwnersPhone.TabIndex = 3
         '
         'btnUse2
         '
-        Me.btnUse2.ImageOptions.Image = CType(resources.GetObject("btnUse2.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnUse2.ImageOptions.Image = CType(resources.GetObject("btnUse2.ImageOptions.Image"), System.Drawing.Image)
         Me.btnUse2.Location = New System.Drawing.Point(329, 105)
         Me.btnUse2.Name = "btnUse2"
         Me.btnUse2.Size = New System.Drawing.Size(61, 29)
@@ -2252,7 +2252,7 @@ Partial Class DevelopmentStart
         '
         'btnKeep2
         '
-        Me.btnKeep2.ImageOptions.Image = CType(resources.GetObject("btnKeep2.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnKeep2.ImageOptions.Image = CType(resources.GetObject("btnKeep2.ImageOptions.Image"), System.Drawing.Image)
         Me.btnKeep2.Location = New System.Drawing.Point(329, 72)
         Me.btnKeep2.Name = "btnKeep2"
         Me.btnKeep2.Size = New System.Drawing.Size(61, 29)
@@ -2278,91 +2278,91 @@ Partial Class DevelopmentStart
         '
         'chkDADesc8
         '
-        Me.chkDADesc8.AutoSize = true
-        Me.chkDADesc8.Enabled = false
+        Me.chkDADesc8.AutoSize = True
+        Me.chkDADesc8.Enabled = False
         Me.chkDADesc8.Location = New System.Drawing.Point(5, 165)
         Me.chkDADesc8.Name = "chkDADesc8"
         Me.chkDADesc8.Size = New System.Drawing.Size(54, 17)
         Me.chkDADesc8.TabIndex = 7
         Me.chkDADesc8.Text = "Other"
-        Me.chkDADesc8.UseVisualStyleBackColor = true
+        Me.chkDADesc8.UseVisualStyleBackColor = True
         '
         'chkDADesc7
         '
-        Me.chkDADesc7.AutoSize = true
-        Me.chkDADesc7.Enabled = false
+        Me.chkDADesc7.AutoSize = True
+        Me.chkDADesc7.Enabled = False
         Me.chkDADesc7.Location = New System.Drawing.Point(5, 145)
         Me.chkDADesc7.Name = "chkDADesc7"
         Me.chkDADesc7.Size = New System.Drawing.Size(75, 17)
         Me.chkDADesc7.TabIndex = 6
         Me.chkDADesc7.Text = "Demolition"
-        Me.chkDADesc7.UseVisualStyleBackColor = true
+        Me.chkDADesc7.UseVisualStyleBackColor = True
         '
         'chkDADesc6
         '
-        Me.chkDADesc6.AutoSize = true
-        Me.chkDADesc6.Enabled = false
+        Me.chkDADesc6.AutoSize = True
+        Me.chkDADesc6.Enabled = False
         Me.chkDADesc6.Location = New System.Drawing.Point(5, 125)
         Me.chkDADesc6.Name = "chkDADesc6"
         Me.chkDADesc6.Size = New System.Drawing.Size(171, 17)
         Me.chkDADesc6.TabIndex = 5
         Me.chkDADesc6.Text = "Building Additions / Alterations"
-        Me.chkDADesc6.UseVisualStyleBackColor = true
+        Me.chkDADesc6.UseVisualStyleBackColor = True
         '
         'chkDADesc5
         '
-        Me.chkDADesc5.AutoSize = true
-        Me.chkDADesc5.Enabled = false
+        Me.chkDADesc5.AutoSize = True
+        Me.chkDADesc5.Enabled = False
         Me.chkDADesc5.Location = New System.Drawing.Point(5, 105)
         Me.chkDADesc5.Name = "chkDADesc5"
         Me.chkDADesc5.Size = New System.Drawing.Size(158, 17)
         Me.chkDADesc5.TabIndex = 4
         Me.chkDADesc5.Text = "Subdivision of Land/Building"
-        Me.chkDADesc5.UseVisualStyleBackColor = true
+        Me.chkDADesc5.UseVisualStyleBackColor = True
         '
         'chkDADesc4
         '
-        Me.chkDADesc4.AutoSize = true
-        Me.chkDADesc4.Enabled = false
+        Me.chkDADesc4.AutoSize = True
+        Me.chkDADesc4.Enabled = False
         Me.chkDADesc4.Location = New System.Drawing.Point(5, 85)
         Me.chkDADesc4.Name = "chkDADesc4"
         Me.chkDADesc4.Size = New System.Drawing.Size(116, 17)
         Me.chkDADesc4.TabIndex = 3
         Me.chkDADesc4.Text = "Land Clearing/Dam"
-        Me.chkDADesc4.UseVisualStyleBackColor = true
+        Me.chkDADesc4.UseVisualStyleBackColor = True
         '
         'chkDADesc3
         '
-        Me.chkDADesc3.AutoSize = true
-        Me.chkDADesc3.Enabled = false
+        Me.chkDADesc3.AutoSize = True
+        Me.chkDADesc3.Enabled = False
         Me.chkDADesc3.Location = New System.Drawing.Point(5, 65)
         Me.chkDADesc3.Name = "chkDADesc3"
         Me.chkDADesc3.Size = New System.Drawing.Size(127, 17)
         Me.chkDADesc3.TabIndex = 2
         Me.chkDADesc3.Text = "Carrying out of Work"
-        Me.chkDADesc3.UseVisualStyleBackColor = true
+        Me.chkDADesc3.UseVisualStyleBackColor = True
         '
         'chkDADesc2
         '
-        Me.chkDADesc2.AutoSize = true
-        Me.chkDADesc2.Enabled = false
+        Me.chkDADesc2.AutoSize = True
+        Me.chkDADesc2.Enabled = False
         Me.chkDADesc2.Location = New System.Drawing.Point(5, 46)
         Me.chkDADesc2.Name = "chkDADesc2"
         Me.chkDADesc2.Size = New System.Drawing.Size(117, 17)
         Me.chkDADesc2.TabIndex = 1
         Me.chkDADesc2.Text = "Erection of Building"
-        Me.chkDADesc2.UseVisualStyleBackColor = true
+        Me.chkDADesc2.UseVisualStyleBackColor = True
         '
         'chkDesc1
         '
-        Me.chkDesc1.AutoSize = true
-        Me.chkDesc1.Enabled = false
+        Me.chkDesc1.AutoSize = True
+        Me.chkDesc1.Enabled = False
         Me.chkDesc1.Location = New System.Drawing.Point(5, 25)
         Me.chkDesc1.Name = "chkDesc1"
         Me.chkDesc1.Size = New System.Drawing.Size(129, 17)
         Me.chkDesc1.TabIndex = 0
         Me.chkDesc1.Text = "Use of Land / Building"
-        Me.chkDesc1.UseVisualStyleBackColor = true
+        Me.chkDesc1.UseVisualStyleBackColor = True
         '
         'grpDescription
         '
@@ -2407,9 +2407,92 @@ Partial Class DevelopmentStart
         Me.grpDescription.TabIndex = 177
         Me.grpDescription.Text = "Description"
         '
+        'lblOccupancy
+        '
+        Me.lblOccupancy.AutoSize = True
+        Me.lblOccupancy.Location = New System.Drawing.Point(376, 115)
+        Me.lblOccupancy.Name = "lblOccupancy"
+        Me.lblOccupancy.Size = New System.Drawing.Size(64, 13)
+        Me.lblOccupancy.TabIndex = 206
+        Me.lblOccupancy.Text = "Occupancy:"
+        '
+        'radOccupancy
+        '
+        Me.radOccupancy.Location = New System.Drawing.Point(446, 111)
+        Me.radOccupancy.Name = "radOccupancy"
+        Me.radOccupancy.Properties.Appearance.BackColor = System.Drawing.Color.Transparent
+        Me.radOccupancy.Properties.Appearance.Options.UseBackColor = True
+        Me.radOccupancy.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
+        Me.radOccupancy.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Single"), New DevExpress.XtraEditors.Controls.RadioGroupItem(2, "Dual")})
+        Me.radOccupancy.Size = New System.Drawing.Size(116, 22)
+        Me.radOccupancy.TabIndex = 205
+        '
+        'lblAttachement
+        '
+        Me.lblAttachement.AutoSize = True
+        Me.lblAttachement.Location = New System.Drawing.Point(13, 113)
+        Me.lblAttachement.Name = "lblAttachement"
+        Me.lblAttachement.Size = New System.Drawing.Size(97, 13)
+        Me.lblAttachement.TabIndex = 204
+        Me.lblAttachement.Text = "Attachment Status"
+        '
+        'cboAttachmentStatus
+        '
+        Me.cboAttachmentStatus.Location = New System.Drawing.Point(124, 110)
+        Me.cboAttachmentStatus.Name = "cboAttachmentStatus"
+        Me.cboAttachmentStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cboAttachmentStatus.Properties.DisplayMember = "DevUse"
+        Me.cboAttachmentStatus.Properties.NullText = "[Select Attachment Type]"
+        Me.cboAttachmentStatus.Properties.ReadOnly = True
+        Me.cboAttachmentStatus.Properties.ValueMember = "DevUseId"
+        Me.cboAttachmentStatus.Size = New System.Drawing.Size(240, 20)
+        Me.cboAttachmentStatus.TabIndex = 203
+        '
+        'txtDemolishedDwelings
+        '
+        Me.txtDemolishedDwelings.Location = New System.Drawing.Point(518, 66)
+        Me.txtDemolishedDwelings.Name = "txtDemolishedDwelings"
+        Me.txtDemolishedDwelings.Properties.Appearance.Options.UseTextOptions = True
+        Me.txtDemolishedDwelings.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.txtDemolishedDwelings.Properties.Mask.EditMask = "d"
+        Me.txtDemolishedDwelings.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.txtDemolishedDwelings.Properties.ReadOnly = True
+        Me.txtDemolishedDwelings.Size = New System.Drawing.Size(44, 20)
+        Me.txtDemolishedDwelings.TabIndex = 202
+        '
+        'lblNoDemolishedDwellings
+        '
+        Me.lblNoDemolishedDwellings.AutoSize = True
+        Me.lblNoDemolishedDwellings.Location = New System.Drawing.Point(376, 68)
+        Me.lblNoDemolishedDwellings.Name = "lblNoDemolishedDwellings"
+        Me.lblNoDemolishedDwellings.Size = New System.Drawing.Size(140, 13)
+        Me.lblNoDemolishedDwellings.TabIndex = 201
+        Me.lblNoDemolishedDwellings.Text = "No. of dwellings Demolished"
+        '
+        'txtExistingDwelings
+        '
+        Me.txtExistingDwelings.Location = New System.Drawing.Point(518, 45)
+        Me.txtExistingDwelings.Name = "txtExistingDwelings"
+        Me.txtExistingDwelings.Properties.Appearance.Options.UseTextOptions = True
+        Me.txtExistingDwelings.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
+        Me.txtExistingDwelings.Properties.Mask.EditMask = "d"
+        Me.txtExistingDwelings.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
+        Me.txtExistingDwelings.Properties.ReadOnly = True
+        Me.txtExistingDwelings.Size = New System.Drawing.Size(44, 20)
+        Me.txtExistingDwelings.TabIndex = 200
+        '
+        'lblExistingDwellings
+        '
+        Me.lblExistingDwellings.AutoSize = True
+        Me.lblExistingDwellings.Location = New System.Drawing.Point(376, 49)
+        Me.lblExistingDwellings.Name = "lblExistingDwellings"
+        Me.lblExistingDwellings.Size = New System.Drawing.Size(123, 13)
+        Me.lblExistingDwellings.TabIndex = 199
+        Me.lblExistingDwellings.Text = "No. of Existing dwellings"
+        '
         'Label50
         '
-        Me.Label50.AutoSize = true
+        Me.Label50.AutoSize = True
         Me.Label50.Location = New System.Drawing.Point(13, 91)
         Me.Label50.Name = "Label50"
         Me.Label50.Size = New System.Drawing.Size(102, 13)
@@ -2423,7 +2506,7 @@ Partial Class DevelopmentStart
         Me.cboIntendedLandUse.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboIntendedLandUse.Properties.DisplayMember = "DevUse"
         Me.cboIntendedLandUse.Properties.NullText = "[Select Intended Use]"
-        Me.cboIntendedLandUse.Properties.ReadOnly = true
+        Me.cboIntendedLandUse.Properties.ReadOnly = True
         Me.cboIntendedLandUse.Properties.ValueMember = "DevUseId"
         Me.cboIntendedLandUse.Size = New System.Drawing.Size(240, 20)
         Me.cboIntendedLandUse.TabIndex = 197
@@ -2432,17 +2515,17 @@ Partial Class DevelopmentStart
         '
         Me.nudDwellings.Location = New System.Drawing.Point(518, 23)
         Me.nudDwellings.Name = "nudDwellings"
-        Me.nudDwellings.Properties.Appearance.Options.UseTextOptions = true
+        Me.nudDwellings.Properties.Appearance.Options.UseTextOptions = True
         Me.nudDwellings.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
         Me.nudDwellings.Properties.Mask.EditMask = "d"
         Me.nudDwellings.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.nudDwellings.Properties.ReadOnly = true
+        Me.nudDwellings.Properties.ReadOnly = True
         Me.nudDwellings.Size = New System.Drawing.Size(44, 20)
         Me.nudDwellings.TabIndex = 196
         '
         'Label43
         '
-        Me.Label43.AutoSize = true
+        Me.Label43.AutoSize = True
         Me.Label43.Location = New System.Drawing.Point(13, 68)
         Me.Label43.Name = "Label43"
         Me.Label43.Size = New System.Drawing.Size(87, 13)
@@ -2456,7 +2539,7 @@ Partial Class DevelopmentStart
         Me.cboBuildingType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboBuildingType.Properties.DisplayMember = "DevUse"
         Me.cboBuildingType.Properties.NullText = "[Select Type of Building]"
-        Me.cboBuildingType.Properties.ReadOnly = true
+        Me.cboBuildingType.Properties.ReadOnly = True
         Me.cboBuildingType.Properties.ValueMember = "DevUseId"
         Me.cboBuildingType.Size = New System.Drawing.Size(240, 20)
         Me.cboBuildingType.TabIndex = 194
@@ -2468,13 +2551,13 @@ Partial Class DevelopmentStart
         Me.txtCurrentLandUse.Location = New System.Drawing.Point(124, 176)
         Me.txtCurrentLandUse.MaxLength = 225
         Me.txtCurrentLandUse.Name = "txtCurrentLandUse"
-        Me.txtCurrentLandUse.ReadOnly = true
+        Me.txtCurrentLandUse.ReadOnly = True
         Me.txtCurrentLandUse.Size = New System.Drawing.Size(438, 21)
         Me.txtCurrentLandUse.TabIndex = 193
         '
         'lblNoDwellings
         '
-        Me.lblNoDwellings.AutoSize = true
+        Me.lblNoDwellings.AutoSize = True
         Me.lblNoDwellings.Location = New System.Drawing.Point(376, 28)
         Me.lblNoDwellings.Name = "lblNoDwellings"
         Me.lblNoDwellings.Size = New System.Drawing.Size(125, 13)
@@ -2483,7 +2566,7 @@ Partial Class DevelopmentStart
         '
         'chkGiftDonation
         '
-        Me.chkGiftDonation.Enabled = false
+        Me.chkGiftDonation.Enabled = False
         Me.chkGiftDonation.Location = New System.Drawing.Point(501, 240)
         Me.chkGiftDonation.Name = "chkGiftDonation"
         Me.chkGiftDonation.Size = New System.Drawing.Size(19, 21)
@@ -2491,7 +2574,7 @@ Partial Class DevelopmentStart
         '
         'Label94
         '
-        Me.Label94.AutoSize = true
+        Me.Label94.AutoSize = True
         Me.Label94.Location = New System.Drawing.Point(386, 208)
         Me.Label94.Name = "Label94"
         Me.Label94.Size = New System.Drawing.Size(95, 13)
@@ -2500,12 +2583,13 @@ Partial Class DevelopmentStart
         '
         'Label39
         '
-        Me.Label39.AutoSize = true
+        Me.Label39.AutoSize = True
         Me.Label39.Location = New System.Drawing.Point(376, 91)
         Me.Label39.Name = "Label39"
         Me.Label39.Size = New System.Drawing.Size(36, 13)
         Me.Label39.TabIndex = 172
         Me.Label39.Text = "Class:"
+        Me.Label39.Visible = False
         '
         'lblModDesc
         '
@@ -2515,11 +2599,11 @@ Partial Class DevelopmentStart
         Me.lblModDesc.TabIndex = 189
         Me.lblModDesc.Text = "Description of Modifications:"
         Me.lblModDesc.TextAlign = System.Drawing.ContentAlignment.TopRight
-        Me.lblModDesc.Visible = false
+        Me.lblModDesc.Visible = False
         '
         'Label38
         '
-        Me.Label38.AutoSize = true
+        Me.Label38.AutoSize = True
         Me.Label38.Location = New System.Drawing.Point(13, 242)
         Me.Label38.Name = "Label38"
         Me.Label38.Size = New System.Drawing.Size(78, 13)
@@ -2531,16 +2615,16 @@ Partial Class DevelopmentStart
         Me.txtModDesc.BackColor = System.Drawing.SystemColors.Info
         Me.txtModDesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtModDesc.Location = New System.Drawing.Point(124, 267)
-        Me.txtModDesc.Multiline = true
+        Me.txtModDesc.Multiline = True
         Me.txtModDesc.Name = "txtModDesc"
-        Me.txtModDesc.ReadOnly = true
+        Me.txtModDesc.ReadOnly = True
         Me.txtModDesc.Size = New System.Drawing.Size(438, 35)
         Me.txtModDesc.TabIndex = 0
-        Me.txtModDesc.Visible = false
+        Me.txtModDesc.Visible = False
         '
         'Label37
         '
-        Me.Label37.AutoSize = true
+        Me.Label37.AutoSize = True
         Me.Label37.Location = New System.Drawing.Point(13, 206)
         Me.Label37.Name = "Label37"
         Me.Label37.Size = New System.Drawing.Size(83, 13)
@@ -2549,7 +2633,7 @@ Partial Class DevelopmentStart
         '
         'Label36
         '
-        Me.Label36.AutoSize = true
+        Me.Label36.AutoSize = True
         Me.Label36.Location = New System.Drawing.Point(13, 136)
         Me.Label36.Name = "Label36"
         Me.Label36.Size = New System.Drawing.Size(64, 13)
@@ -2558,7 +2642,7 @@ Partial Class DevelopmentStart
         '
         'Label35
         '
-        Me.Label35.AutoSize = true
+        Me.Label35.AutoSize = True
         Me.Label35.Location = New System.Drawing.Point(13, 49)
         Me.Label35.Name = "Label35"
         Me.Label35.Size = New System.Drawing.Size(29, 13)
@@ -2567,7 +2651,7 @@ Partial Class DevelopmentStart
         '
         'Label34
         '
-        Me.Label34.AutoSize = true
+        Me.Label34.AutoSize = True
         Me.Label34.Location = New System.Drawing.Point(13, 28)
         Me.Label34.Name = "Label34"
         Me.Label34.Size = New System.Drawing.Size(35, 13)
@@ -2580,7 +2664,7 @@ Partial Class DevelopmentStart
         Me.txtDAFloor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDAFloor.Location = New System.Drawing.Point(489, 205)
         Me.txtDAFloor.Name = "txtDAFloor"
-        Me.txtDAFloor.ReadOnly = true
+        Me.txtDAFloor.ReadOnly = True
         Me.txtDAFloor.Size = New System.Drawing.Size(73, 21)
         Me.txtDAFloor.TabIndex = 11
         '
@@ -2588,10 +2672,10 @@ Partial Class DevelopmentStart
         '
         Me.txtDAestCost.BackColor = System.Drawing.SystemColors.Info
         Me.txtDAestCost.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDAestCost.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.txtDAestCost.Font = New System.Drawing.Font("Calibri", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtDAestCost.Location = New System.Drawing.Point(124, 203)
         Me.txtDAestCost.Name = "txtDAestCost"
-        Me.txtDAestCost.ReadOnly = true
+        Me.txtDAestCost.ReadOnly = True
         Me.txtDAestCost.Size = New System.Drawing.Size(134, 31)
         Me.txtDAestCost.TabIndex = 9
         Me.txtDAestCost.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -2601,9 +2685,9 @@ Partial Class DevelopmentStart
         Me.txtDADesc.BackColor = System.Drawing.SystemColors.Info
         Me.txtDADesc.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDADesc.Location = New System.Drawing.Point(124, 137)
-        Me.txtDADesc.Multiline = true
+        Me.txtDADesc.Multiline = True
         Me.txtDADesc.Name = "txtDADesc"
-        Me.txtDADesc.ReadOnly = true
+        Me.txtDADesc.ReadOnly = True
         Me.txtDADesc.Size = New System.Drawing.Size(438, 37)
         Me.txtDADesc.TabIndex = 8
         '
@@ -2614,10 +2698,11 @@ Partial Class DevelopmentStart
         Me.cboDAClass.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDAClass.Properties.DisplayMember = "DAClassification"
         Me.cboDAClass.Properties.NullText = "[Class?]"
-        Me.cboDAClass.Properties.ReadOnly = true
+        Me.cboDAClass.Properties.ReadOnly = True
         Me.cboDAClass.Properties.ValueMember = "DAClassification"
         Me.cboDAClass.Size = New System.Drawing.Size(77, 20)
         Me.cboDAClass.TabIndex = 7
+        Me.cboDAClass.Visible = False
         '
         'cboConsentType
         '
@@ -2626,7 +2711,7 @@ Partial Class DevelopmentStart
         Me.cboConsentType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboConsentType.Properties.DisplayMember = "ConsentType"
         Me.cboConsentType.Properties.NullText = "[Select Consent Type]"
-        Me.cboConsentType.Properties.ReadOnly = true
+        Me.cboConsentType.Properties.ReadOnly = True
         Me.cboConsentType.Properties.ValueMember = "ConsentTypeId"
         Me.cboConsentType.Size = New System.Drawing.Size(240, 20)
         Me.cboConsentType.TabIndex = 10
@@ -2638,7 +2723,7 @@ Partial Class DevelopmentStart
         Me.cboDevUse.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDevUse.Properties.DisplayMember = "DevUse"
         Me.cboDevUse.Properties.NullText = "[Select use]"
-        Me.cboDevUse.Properties.ReadOnly = true
+        Me.cboDevUse.Properties.ReadOnly = True
         Me.cboDevUse.Properties.ValueMember = "DevUseId"
         Me.cboDevUse.Size = New System.Drawing.Size(240, 20)
         Me.cboDevUse.TabIndex = 6
@@ -2650,7 +2735,7 @@ Partial Class DevelopmentStart
         Me.cboDevType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDevType.Properties.DisplayMember = "DevType"
         Me.cboDevType.Properties.NullText = "[Select Type]"
-        Me.cboDevType.Properties.ReadOnly = true
+        Me.cboDevType.Properties.ReadOnly = True
         Me.cboDevType.Properties.ValueMember = "DevTypeId"
         Me.cboDevType.Size = New System.Drawing.Size(240, 20)
         Me.cboDevType.TabIndex = 5
@@ -2678,25 +2763,27 @@ Partial Class DevelopmentStart
         '
         'Label42
         '
-        Me.Label42.AutoSize = true
+        Me.Label42.AutoSize = True
         Me.Label42.Location = New System.Drawing.Point(273, 68)
         Me.Label42.Name = "Label42"
         Me.Label42.Size = New System.Drawing.Size(36, 13)
         Me.Label42.TabIndex = 38
         Me.Label42.Text = "Class:"
+        Me.Label42.Visible = False
         '
         'Label41
         '
-        Me.Label41.AutoSize = true
+        Me.Label41.AutoSize = True
         Me.Label41.Location = New System.Drawing.Point(273, 48)
         Me.Label41.Name = "Label41"
         Me.Label41.Size = New System.Drawing.Size(36, 13)
         Me.Label41.TabIndex = 37
         Me.Label41.Text = "Class:"
+        Me.Label41.Visible = False
         '
         'Label46
         '
-        Me.Label46.AutoSize = true
+        Me.Label46.AutoSize = True
         Me.Label46.Location = New System.Drawing.Point(5, 48)
         Me.Label46.Name = "Label46"
         Me.Label46.Size = New System.Drawing.Size(35, 13)
@@ -2705,7 +2792,7 @@ Partial Class DevelopmentStart
         '
         'Label45
         '
-        Me.Label45.AutoSize = true
+        Me.Label45.AutoSize = True
         Me.Label45.Location = New System.Drawing.Point(5, 68)
         Me.Label45.Name = "Label45"
         Me.Label45.Size = New System.Drawing.Size(35, 13)
@@ -2714,7 +2801,7 @@ Partial Class DevelopmentStart
         '
         'Label44
         '
-        Me.Label44.AutoSize = true
+        Me.Label44.AutoSize = True
         Me.Label44.Location = New System.Drawing.Point(5, 29)
         Me.Label44.Name = "Label44"
         Me.Label44.Size = New System.Drawing.Size(35, 13)
@@ -2728,19 +2815,20 @@ Partial Class DevelopmentStart
         Me.cboDAtype1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDAtype1.Properties.DisplayMember = "DevType"
         Me.cboDAtype1.Properties.NullText = "[Select Type]"
-        Me.cboDAtype1.Properties.ReadOnly = true
+        Me.cboDAtype1.Properties.ReadOnly = True
         Me.cboDAtype1.Properties.ValueMember = "DevTypeId"
         Me.cboDAtype1.Size = New System.Drawing.Size(196, 20)
         Me.cboDAtype1.TabIndex = 0
         '
         'Label40
         '
-        Me.Label40.AutoSize = true
+        Me.Label40.AutoSize = True
         Me.Label40.Location = New System.Drawing.Point(273, 28)
         Me.Label40.Name = "Label40"
         Me.Label40.Size = New System.Drawing.Size(36, 13)
         Me.Label40.TabIndex = 28
         Me.Label40.Text = "Class:"
+        Me.Label40.Visible = False
         '
         'cboDAtype3
         '
@@ -2749,7 +2837,7 @@ Partial Class DevelopmentStart
         Me.cboDAtype3.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDAtype3.Properties.DisplayMember = "DevType"
         Me.cboDAtype3.Properties.NullText = "[Select Type]"
-        Me.cboDAtype3.Properties.ReadOnly = true
+        Me.cboDAtype3.Properties.ReadOnly = True
         Me.cboDAtype3.Properties.ValueMember = "DevTypeId"
         Me.cboDAtype3.Size = New System.Drawing.Size(196, 20)
         Me.cboDAtype3.TabIndex = 2
@@ -2761,7 +2849,7 @@ Partial Class DevelopmentStart
         Me.cboDAType2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDAType2.Properties.DisplayMember = "DevType"
         Me.cboDAType2.Properties.NullText = "[Select Type]"
-        Me.cboDAType2.Properties.ReadOnly = true
+        Me.cboDAType2.Properties.ReadOnly = True
         Me.cboDAType2.Properties.ValueMember = "DevTypeId"
         Me.cboDAType2.Size = New System.Drawing.Size(196, 20)
         Me.cboDAType2.TabIndex = 1
@@ -2773,10 +2861,11 @@ Partial Class DevelopmentStart
         Me.cboDAClass2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDAClass2.Properties.DisplayMember = "DAClassification"
         Me.cboDAClass2.Properties.NullText = "[Class?]"
-        Me.cboDAClass2.Properties.ReadOnly = true
+        Me.cboDAClass2.Properties.ReadOnly = True
         Me.cboDAClass2.Properties.ValueMember = "DAClassification"
         Me.cboDAClass2.Size = New System.Drawing.Size(67, 20)
         Me.cboDAClass2.TabIndex = 4
+        Me.cboDAClass2.Visible = False
         '
         'cboDAClass1
         '
@@ -2785,10 +2874,11 @@ Partial Class DevelopmentStart
         Me.cboDAClass1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDAClass1.Properties.DisplayMember = "DAClassification"
         Me.cboDAClass1.Properties.NullText = "[Class?]"
-        Me.cboDAClass1.Properties.ReadOnly = true
+        Me.cboDAClass1.Properties.ReadOnly = True
         Me.cboDAClass1.Properties.ValueMember = "DAClassification"
         Me.cboDAClass1.Size = New System.Drawing.Size(67, 20)
         Me.cboDAClass1.TabIndex = 3
+        Me.cboDAClass1.Visible = False
         '
         'cboDAClass3
         '
@@ -2797,10 +2887,11 @@ Partial Class DevelopmentStart
         Me.cboDAClass3.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDAClass3.Properties.DisplayMember = "DAClassification"
         Me.cboDAClass3.Properties.NullText = "[Class?]"
-        Me.cboDAClass3.Properties.ReadOnly = true
+        Me.cboDAClass3.Properties.ReadOnly = True
         Me.cboDAClass3.Properties.ValueMember = "DAClassification"
         Me.cboDAClass3.Size = New System.Drawing.Size(67, 20)
         Me.cboDAClass3.TabIndex = 5
+        Me.cboDAClass3.Visible = False
         '
         'grpLand
         '
@@ -2823,12 +2914,12 @@ Partial Class DevelopmentStart
         Me.GroupBox21.Name = "GroupBox21"
         Me.GroupBox21.Size = New System.Drawing.Size(185, 156)
         Me.GroupBox21.TabIndex = 158
-        Me.GroupBox21.TabStop = false
+        Me.GroupBox21.TabStop = False
         Me.GroupBox21.Text = "Associated "
         '
         'btnRetrieveProperty
         '
-        Me.btnRetrieveProperty.ImageOptions.Image = CType(resources.GetObject("btnRetrieveProperty.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRetrieveProperty.ImageOptions.Image = CType(resources.GetObject("btnRetrieveProperty.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRetrieveProperty.Location = New System.Drawing.Point(12, 98)
         Me.btnRetrieveProperty.Name = "btnRetrieveProperty"
         Me.btnRetrieveProperty.Size = New System.Drawing.Size(75, 31)
@@ -2837,7 +2928,7 @@ Partial Class DevelopmentStart
         '
         'btnRemovePIN
         '
-        Me.btnRemovePIN.ImageOptions.Image = CType(resources.GetObject("btnRemovePIN.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemovePIN.ImageOptions.Image = CType(resources.GetObject("btnRemovePIN.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemovePIN.Location = New System.Drawing.Point(97, 44)
         Me.btnRemovePIN.Name = "btnRemovePIN"
         Me.btnRemovePIN.Size = New System.Drawing.Size(75, 23)
@@ -2846,7 +2937,7 @@ Partial Class DevelopmentStart
         '
         'btnAddPIN
         '
-        Me.btnAddPIN.ImageOptions.Image = CType(resources.GetObject("btnAddPIN.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddPIN.ImageOptions.Image = CType(resources.GetObject("btnAddPIN.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddPIN.Location = New System.Drawing.Point(99, 16)
         Me.btnAddPIN.Name = "btnAddPIN"
         Me.btnAddPIN.Size = New System.Drawing.Size(75, 23)
@@ -2856,7 +2947,7 @@ Partial Class DevelopmentStart
         'lstPINs
         '
         Me.lstPINs.DisplayMember = "PIN"
-        Me.lstPINs.FormattingEnabled = true
+        Me.lstPINs.FormattingEnabled = True
         Me.lstPINs.Location = New System.Drawing.Point(14, 19)
         Me.lstPINs.Name = "lstPINs"
         Me.lstPINs.Size = New System.Drawing.Size(73, 69)
@@ -2885,11 +2976,11 @@ Partial Class DevelopmentStart
         Me.grpPropertyLotAddress.Name = "grpPropertyLotAddress"
         Me.grpPropertyLotAddress.Size = New System.Drawing.Size(321, 156)
         Me.grpPropertyLotAddress.TabIndex = 157
-        Me.grpPropertyLotAddress.TabStop = false
+        Me.grpPropertyLotAddress.TabStop = False
         '
         'Label22
         '
-        Me.Label22.AutoSize = true
+        Me.Label22.AutoSize = True
         Me.Label22.Location = New System.Drawing.Point(159, 46)
         Me.Label22.Name = "Label22"
         Me.Label22.Size = New System.Drawing.Size(34, 13)
@@ -2902,7 +2993,7 @@ Partial Class DevelopmentStart
         Me.cboAreaType.Name = "cboAreaType"
         Me.cboAreaType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboAreaType.Properties.NullText = "[Type?]"
-        Me.cboAreaType.Properties.ReadOnly = true
+        Me.cboAreaType.Properties.ReadOnly = True
         Me.cboAreaType.Size = New System.Drawing.Size(62, 20)
         Me.cboAreaType.TabIndex = 3
         '
@@ -2912,7 +3003,7 @@ Partial Class DevelopmentStart
         Me.txtArea.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtArea.Location = New System.Drawing.Point(193, 42)
         Me.txtArea.Name = "txtArea"
-        Me.txtArea.ReadOnly = true
+        Me.txtArea.ReadOnly = True
         Me.txtArea.Size = New System.Drawing.Size(42, 21)
         Me.txtArea.TabIndex = 29
         '
@@ -2922,14 +3013,14 @@ Partial Class DevelopmentStart
         Me.cboDACensusCode.Name = "cboDACensusCode"
         Me.cboDACensusCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDACensusCode.Properties.DisplayMember = "PNM"
-        Me.cboDACensusCode.Properties.ReadOnly = true
+        Me.cboDACensusCode.Properties.ReadOnly = True
         Me.cboDACensusCode.Properties.ValueMember = "PAR"
         Me.cboDACensusCode.Size = New System.Drawing.Size(200, 20)
         Me.cboDACensusCode.TabIndex = 6
         '
         'Label14
         '
-        Me.Label14.AutoSize = true
+        Me.Label14.AutoSize = True
         Me.Label14.Location = New System.Drawing.Point(6, 130)
         Me.Label14.Name = "Label14"
         Me.Label14.Size = New System.Drawing.Size(74, 13)
@@ -2942,7 +3033,7 @@ Partial Class DevelopmentStart
         Me.cboDAlocalityCode.Name = "cboDAlocalityCode"
         Me.cboDAlocalityCode.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDAlocalityCode.Properties.DisplayMember = "LocalityCode"
-        Me.cboDAlocalityCode.Properties.ReadOnly = true
+        Me.cboDAlocalityCode.Properties.ReadOnly = True
         Me.cboDAlocalityCode.Properties.ValueMember = "LocalityCodeId"
         Me.cboDAlocalityCode.Size = New System.Drawing.Size(200, 20)
         Me.cboDAlocalityCode.TabIndex = 5
@@ -2953,7 +3044,7 @@ Partial Class DevelopmentStart
         Me.txtLot.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtLot.Location = New System.Drawing.Point(61, 17)
         Me.txtLot.Name = "txtLot"
-        Me.txtLot.ReadOnly = true
+        Me.txtLot.ReadOnly = True
         Me.txtLot.Size = New System.Drawing.Size(50, 21)
         Me.txtLot.TabIndex = 0
         '
@@ -2963,7 +3054,7 @@ Partial Class DevelopmentStart
         Me.txtDP.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDP.Location = New System.Drawing.Point(147, 17)
         Me.txtDP.Name = "txtDP"
-        Me.txtDP.ReadOnly = true
+        Me.txtDP.ReadOnly = True
         Me.txtDP.Size = New System.Drawing.Size(119, 21)
         Me.txtDP.TabIndex = 1
         '
@@ -2973,7 +3064,7 @@ Partial Class DevelopmentStart
         Me.txtSection.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSection.Location = New System.Drawing.Point(61, 42)
         Me.txtSection.Name = "txtSection"
-        Me.txtSection.ReadOnly = true
+        Me.txtSection.ReadOnly = True
         Me.txtSection.Size = New System.Drawing.Size(88, 21)
         Me.txtSection.TabIndex = 2
         '
@@ -2983,7 +3074,7 @@ Partial Class DevelopmentStart
         Me.txtStreetNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtStreetNo.Location = New System.Drawing.Point(61, 73)
         Me.txtStreetNo.Name = "txtStreetNo"
-        Me.txtStreetNo.ReadOnly = true
+        Me.txtStreetNo.ReadOnly = True
         Me.txtStreetNo.Size = New System.Drawing.Size(41, 21)
         Me.txtStreetNo.TabIndex = 4
         '
@@ -2993,13 +3084,13 @@ Partial Class DevelopmentStart
         Me.txtStreetName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtStreetName.Location = New System.Drawing.Point(104, 73)
         Me.txtStreetName.Name = "txtStreetName"
-        Me.txtStreetName.ReadOnly = true
+        Me.txtStreetName.ReadOnly = True
         Me.txtStreetName.Size = New System.Drawing.Size(192, 21)
         Me.txtStreetName.TabIndex = 4
         '
         'Label16
         '
-        Me.Label16.AutoSize = true
+        Me.Label16.AutoSize = True
         Me.Label16.Location = New System.Drawing.Point(7, 21)
         Me.Label16.Name = "Label16"
         Me.Label16.Size = New System.Drawing.Size(26, 13)
@@ -3008,7 +3099,7 @@ Partial Class DevelopmentStart
         '
         'Label17
         '
-        Me.Label17.AutoSize = true
+        Me.Label17.AutoSize = True
         Me.Label17.Location = New System.Drawing.Point(115, 21)
         Me.Label17.Name = "Label17"
         Me.Label17.Size = New System.Drawing.Size(24, 13)
@@ -3017,7 +3108,7 @@ Partial Class DevelopmentStart
         '
         'Label21
         '
-        Me.Label21.AutoSize = true
+        Me.Label21.AutoSize = True
         Me.Label21.Location = New System.Drawing.Point(9, 102)
         Me.Label21.Name = "Label21"
         Me.Label21.Size = New System.Drawing.Size(47, 13)
@@ -3026,7 +3117,7 @@ Partial Class DevelopmentStart
         '
         'Label18
         '
-        Me.Label18.AutoSize = true
+        Me.Label18.AutoSize = True
         Me.Label18.Location = New System.Drawing.Point(7, 46)
         Me.Label18.Name = "Label18"
         Me.Label18.Size = New System.Drawing.Size(46, 13)
@@ -3035,7 +3126,7 @@ Partial Class DevelopmentStart
         '
         'Label20
         '
-        Me.Label20.AutoSize = true
+        Me.Label20.AutoSize = True
         Me.Label20.Location = New System.Drawing.Point(7, 75)
         Me.Label20.Name = "Label20"
         Me.Label20.Size = New System.Drawing.Size(41, 13)
@@ -3094,8 +3185,8 @@ Partial Class DevelopmentStart
         '
         'lblOwnerBuilder
         '
-        Me.lblOwnerBuilder.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.lblOwnerBuilder.Appearance.Options.UseFont = true
+        Me.lblOwnerBuilder.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lblOwnerBuilder.Appearance.Options.UseFont = True
         Me.lblOwnerBuilder.Location = New System.Drawing.Point(762, 20)
         Me.lblOwnerBuilder.Name = "lblOwnerBuilder"
         Me.lblOwnerBuilder.Size = New System.Drawing.Size(78, 13)
@@ -3116,7 +3207,7 @@ Partial Class DevelopmentStart
         Me.txtCCInsuranceNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCCInsuranceNo.Location = New System.Drawing.Point(762, 62)
         Me.txtCCInsuranceNo.Name = "txtCCInsuranceNo"
-        Me.txtCCInsuranceNo.ReadOnly = true
+        Me.txtCCInsuranceNo.ReadOnly = True
         Me.txtCCInsuranceNo.Size = New System.Drawing.Size(129, 21)
         Me.txtCCInsuranceNo.TabIndex = 6
         '
@@ -3126,10 +3217,10 @@ Partial Class DevelopmentStart
         Me.txtCCLicBuilderName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCCLicBuilderName.Location = New System.Drawing.Point(762, 38)
         Me.txtCCLicBuilderName.Name = "txtCCLicBuilderName"
-        Me.txtCCLicBuilderName.ReadOnly = true
+        Me.txtCCLicBuilderName.ReadOnly = True
         Me.txtCCLicBuilderName.Size = New System.Drawing.Size(205, 21)
         Me.txtCCLicBuilderName.TabIndex = 8
-        Me.txtCCLicBuilderName.Visible = false
+        Me.txtCCLicBuilderName.Visible = False
         '
         'txtCCOwnerBuilderNo
         '
@@ -3137,10 +3228,10 @@ Partial Class DevelopmentStart
         Me.txtCCOwnerBuilderNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCCOwnerBuilderNo.Location = New System.Drawing.Point(762, 38)
         Me.txtCCOwnerBuilderNo.Name = "txtCCOwnerBuilderNo"
-        Me.txtCCOwnerBuilderNo.ReadOnly = true
+        Me.txtCCOwnerBuilderNo.ReadOnly = True
         Me.txtCCOwnerBuilderNo.Size = New System.Drawing.Size(205, 21)
         Me.txtCCOwnerBuilderNo.TabIndex = 7
-        Me.txtCCOwnerBuilderNo.Visible = false
+        Me.txtCCOwnerBuilderNo.Visible = False
         '
         'CCValueTextBox
         '
@@ -3148,7 +3239,7 @@ Partial Class DevelopmentStart
         Me.CCValueTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CCValueTextBox.Location = New System.Drawing.Point(762, 86)
         Me.CCValueTextBox.Name = "CCValueTextBox"
-        Me.CCValueTextBox.ReadOnly = true
+        Me.CCValueTextBox.ReadOnly = True
         Me.CCValueTextBox.Size = New System.Drawing.Size(100, 21)
         Me.CCValueTextBox.TabIndex = 9
         '
@@ -3158,7 +3249,7 @@ Partial Class DevelopmentStart
         Me.OfficerTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.OfficerTextBox.Location = New System.Drawing.Point(119, 84)
         Me.OfficerTextBox.Name = "OfficerTextBox"
-        Me.OfficerTextBox.ReadOnly = true
+        Me.OfficerTextBox.ReadOnly = True
         Me.OfficerTextBox.Size = New System.Drawing.Size(379, 21)
         Me.OfficerTextBox.TabIndex = 3
         '
@@ -3169,7 +3260,7 @@ Partial Class DevelopmentStart
         Me.CoPCAnameTextBox.ForeColor = System.Drawing.Color.Navy
         Me.CoPCAnameTextBox.Location = New System.Drawing.Point(119, 60)
         Me.CoPCAnameTextBox.Name = "CoPCAnameTextBox"
-        Me.CoPCAnameTextBox.ReadOnly = true
+        Me.CoPCAnameTextBox.ReadOnly = True
         Me.CoPCAnameTextBox.Size = New System.Drawing.Size(458, 21)
         Me.CoPCAnameTextBox.TabIndex = 2
         '
@@ -3179,7 +3270,7 @@ Partial Class DevelopmentStart
         Me.DADecisionTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.DADecisionTextBox.Location = New System.Drawing.Point(246, 30)
         Me.DADecisionTextBox.Name = "DADecisionTextBox"
-        Me.DADecisionTextBox.ReadOnly = true
+        Me.DADecisionTextBox.ReadOnly = True
         Me.DADecisionTextBox.Size = New System.Drawing.Size(221, 21)
         Me.DADecisionTextBox.TabIndex = 1
         '
@@ -3189,7 +3280,7 @@ Partial Class DevelopmentStart
         Me.CCAppNoTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.CCAppNoTextBox.Location = New System.Drawing.Point(75, 30)
         Me.CCAppNoTextBox.Name = "CCAppNoTextBox"
-        Me.CCAppNoTextBox.ReadOnly = true
+        Me.CCAppNoTextBox.ReadOnly = True
         Me.CCAppNoTextBox.Size = New System.Drawing.Size(100, 21)
         Me.CCAppNoTextBox.TabIndex = 0
         '
@@ -3238,14 +3329,14 @@ Partial Class DevelopmentStart
         Me.cboSector.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboSector.Properties.DisplayMember = "DAAppType"
         Me.cboSector.Properties.NullText = "[Select Sector]"
-        Me.cboSector.Properties.ReadOnly = true
+        Me.cboSector.Properties.ReadOnly = True
         Me.cboSector.Properties.ValueMember = "DAAppTypeId"
         Me.cboSector.Size = New System.Drawing.Size(131, 20)
         Me.cboSector.TabIndex = 157
         '
         'Label33
         '
-        Me.Label33.AutoSize = true
+        Me.Label33.AutoSize = True
         Me.Label33.Location = New System.Drawing.Point(233, 81)
         Me.Label33.Name = "Label33"
         Me.Label33.Size = New System.Drawing.Size(42, 13)
@@ -3254,7 +3345,7 @@ Partial Class DevelopmentStart
         '
         'btnEnlighten
         '
-        Me.btnEnlighten.Enabled = false
+        Me.btnEnlighten.Enabled = False
         Me.btnEnlighten.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnEnlighten.ImageKey = "enlighten.ico"
         Me.btnEnlighten.ImageList = Me.ImageList5
@@ -3264,11 +3355,11 @@ Partial Class DevelopmentStart
         Me.btnEnlighten.TabIndex = 155
         Me.btnEnlighten.Text = "Enlighten"
         Me.btnEnlighten.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnEnlighten.UseVisualStyleBackColor = true
+        Me.btnEnlighten.UseVisualStyleBackColor = True
         '
         'btnGoogle
         '
-        Me.btnGoogle.Enabled = false
+        Me.btnGoogle.Enabled = False
         Me.btnGoogle.ImageAlign = System.Drawing.ContentAlignment.TopCenter
         Me.btnGoogle.ImageKey = "Google2.png"
         Me.btnGoogle.ImageList = Me.ImageList2
@@ -3278,13 +3369,13 @@ Partial Class DevelopmentStart
         Me.btnGoogle.TabIndex = 154
         Me.btnGoogle.Text = "Google Maps"
         Me.btnGoogle.TextAlign = System.Drawing.ContentAlignment.BottomCenter
-        Me.btnGoogle.UseVisualStyleBackColor = true
+        Me.btnGoogle.UseVisualStyleBackColor = True
         '
         'btnViewOfficers
         '
         Me.btnViewOfficers.Appearance.ForeColor = System.Drawing.Color.Blue
-        Me.btnViewOfficers.Appearance.Options.UseForeColor = true
-        Me.btnViewOfficers.ImageOptions.Image = CType(resources.GetObject("btnViewOfficers.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnViewOfficers.Appearance.Options.UseForeColor = True
+        Me.btnViewOfficers.ImageOptions.Image = CType(resources.GetObject("btnViewOfficers.ImageOptions.Image"), System.Drawing.Image)
         Me.btnViewOfficers.Location = New System.Drawing.Point(474, 126)
         Me.btnViewOfficers.Name = "btnViewOfficers"
         Me.btnViewOfficers.Size = New System.Drawing.Size(61, 23)
@@ -3293,7 +3384,7 @@ Partial Class DevelopmentStart
         '
         'Label4
         '
-        Me.Label4.AutoSize = true
+        Me.Label4.AutoSize = True
         Me.Label4.Location = New System.Drawing.Point(25, 83)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(63, 13)
@@ -3306,14 +3397,14 @@ Partial Class DevelopmentStart
         Me.txtDADecision.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDADecision.Location = New System.Drawing.Point(287, 103)
         Me.txtDADecision.Name = "txtDADecision"
-        Me.txtDADecision.ReadOnly = true
+        Me.txtDADecision.ReadOnly = True
         Me.txtDADecision.Size = New System.Drawing.Size(181, 21)
         Me.txtDADecision.TabIndex = 10
         '
         'lblType
         '
-        Me.lblType.AutoSize = true
-        Me.lblType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblType.AutoSize = True
+        Me.lblType.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblType.Location = New System.Drawing.Point(230, 58)
         Me.lblType.Name = "lblType"
         Me.lblType.Size = New System.Drawing.Size(0, 13)
@@ -3325,7 +3416,7 @@ Partial Class DevelopmentStart
         Me.dtRego.Location = New System.Drawing.Point(96, 81)
         Me.dtRego.Mask = "00/00/0000"
         Me.dtRego.Name = "dtRego"
-        Me.dtRego.ReadOnly = true
+        Me.dtRego.ReadOnly = True
         Me.dtRego.Size = New System.Drawing.Size(65, 21)
         Me.dtRego.TabIndex = 8
         Me.dtRego.ValidatingType = GetType(Date)
@@ -3334,19 +3425,19 @@ Partial Class DevelopmentStart
         '
         Me.cboAppType.Location = New System.Drawing.Point(96, 54)
         Me.cboAppType.Name = "cboAppType"
-        Me.cboAppType.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(245,Byte),Integer), CType(CType(245,Byte),Integer), CType(CType(247,Byte),Integer))
-        Me.cboAppType.Properties.Appearance.Options.UseBackColor = true
+        Me.cboAppType.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(CType(CType(245, Byte), Integer), CType(CType(245, Byte), Integer), CType(CType(247, Byte), Integer))
+        Me.cboAppType.Properties.Appearance.Options.UseBackColor = True
         Me.cboAppType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboAppType.Properties.DisplayMember = "DAAppType"
         Me.cboAppType.Properties.NullText = "[Select Type]"
-        Me.cboAppType.Properties.ReadOnly = true
+        Me.cboAppType.Properties.ReadOnly = True
         Me.cboAppType.Properties.ValueMember = "DAAppTypeId"
         Me.cboAppType.Size = New System.Drawing.Size(131, 20)
         Me.cboAppType.TabIndex = 140
         '
         'lblOfficer
         '
-        Me.lblOfficer.AutoSize = true
+        Me.lblOfficer.AutoSize = True
         Me.lblOfficer.Location = New System.Drawing.Point(243, 129)
         Me.lblOfficer.Name = "lblOfficer"
         Me.lblOfficer.Size = New System.Drawing.Size(44, 13)
@@ -3355,16 +3446,16 @@ Partial Class DevelopmentStart
         '
         'Label1
         '
-        Me.Label1.AutoSize = true
+        Me.Label1.AutoSize = True
         Me.Label1.Location = New System.Drawing.Point(178, 29)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(45, 13)
         Me.Label1.TabIndex = 134
-        Me.Label1.Text = "CC No,:"
+        Me.Label1.Text = "CC No.:"
         '
         'Label6
         '
-        Me.Label6.AutoSize = true
+        Me.Label6.AutoSize = True
         Me.Label6.Location = New System.Drawing.Point(244, 105)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(42, 13)
@@ -3373,7 +3464,7 @@ Partial Class DevelopmentStart
         '
         'Label2
         '
-        Me.Label2.AutoSize = true
+        Me.Label2.AutoSize = True
         Me.Label2.Location = New System.Drawing.Point(37, 104)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(47, 13)
@@ -3382,7 +3473,7 @@ Partial Class DevelopmentStart
         '
         'Label3
         '
-        Me.Label3.AutoSize = true
+        Me.Label3.AutoSize = True
         Me.Label3.Location = New System.Drawing.Point(48, 56)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(35, 13)
@@ -3391,7 +3482,7 @@ Partial Class DevelopmentStart
         '
         'Label10
         '
-        Me.Label10.AutoSize = true
+        Me.Label10.AutoSize = True
         Me.Label10.Location = New System.Drawing.Point(37, 30)
         Me.Label10.Name = "Label10"
         Me.Label10.Size = New System.Drawing.Size(45, 13)
@@ -3400,15 +3491,15 @@ Partial Class DevelopmentStart
         '
         'chkSec94
         '
-        Me.chkSec94.AutoSize = true
+        Me.chkSec94.AutoSize = True
         Me.chkSec94.CheckAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.chkSec94.Enabled = false
+        Me.chkSec94.Enabled = False
         Me.chkSec94.Location = New System.Drawing.Point(334, 29)
         Me.chkSec94.Name = "chkSec94"
         Me.chkSec94.Size = New System.Drawing.Size(92, 17)
         Me.chkSec94.TabIndex = 2
         Me.chkSec94.Text = "Sec94 Applies"
-        Me.chkSec94.UseVisualStyleBackColor = true
+        Me.chkSec94.UseVisualStyleBackColor = True
         '
         'txtFileNo
         '
@@ -3416,7 +3507,7 @@ Partial Class DevelopmentStart
         Me.txtFileNo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtFileNo.Location = New System.Drawing.Point(96, 103)
         Me.txtFileNo.Name = "txtFileNo"
-        Me.txtFileNo.ReadOnly = true
+        Me.txtFileNo.ReadOnly = True
         Me.txtFileNo.Size = New System.Drawing.Size(131, 21)
         Me.txtFileNo.TabIndex = 9
         '
@@ -3426,7 +3517,7 @@ Partial Class DevelopmentStart
         Me.txtCCno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtCCno.Location = New System.Drawing.Point(225, 28)
         Me.txtCCno.Name = "txtCCno"
-        Me.txtCCno.ReadOnly = true
+        Me.txtCCno.ReadOnly = True
         Me.txtCCno.Size = New System.Drawing.Size(79, 21)
         Me.txtCCno.TabIndex = 1
         '
@@ -3436,14 +3527,14 @@ Partial Class DevelopmentStart
         Me.txtDANo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtDANo.Location = New System.Drawing.Point(96, 28)
         Me.txtDANo.Name = "txtDANo"
-        Me.txtDANo.ReadOnly = true
+        Me.txtDANo.ReadOnly = True
         Me.txtDANo.Size = New System.Drawing.Size(79, 21)
         Me.txtDANo.TabIndex = 0
         '
         'tpgFees
         '
         Me.tpgFees.Controls.Add(Me.pnlDisplayFees)
-        Me.tpgFees.ImageOptions.Image = CType(resources.GetObject("tpgFees.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgFees.ImageOptions.Image = CType(resources.GetObject("tpgFees.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgFees.Name = "tpgFees"
         Me.tpgFees.Size = New System.Drawing.Size(1211, 820)
         Me.tpgFees.Text = "Fees"
@@ -3466,8 +3557,8 @@ Partial Class DevelopmentStart
         '
         'btnRemoveRefund
         '
-        Me.btnRemoveRefund.Enabled = false
-        Me.btnRemoveRefund.ImageOptions.Image = CType(resources.GetObject("btnRemoveRefund.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveRefund.Enabled = False
+        Me.btnRemoveRefund.ImageOptions.Image = CType(resources.GetObject("btnRemoveRefund.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveRefund.Location = New System.Drawing.Point(922, 639)
         Me.btnRemoveRefund.Name = "btnRemoveRefund"
         Me.btnRemoveRefund.Size = New System.Drawing.Size(104, 39)
@@ -3476,8 +3567,8 @@ Partial Class DevelopmentStart
         '
         'btnEditRefund
         '
-        Me.btnEditRefund.Enabled = false
-        Me.btnEditRefund.ImageOptions.Image = CType(resources.GetObject("btnEditRefund.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditRefund.Enabled = False
+        Me.btnEditRefund.ImageOptions.Image = CType(resources.GetObject("btnEditRefund.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditRefund.Location = New System.Drawing.Point(922, 512)
         Me.btnEditRefund.Name = "btnEditRefund"
         Me.btnEditRefund.Size = New System.Drawing.Size(104, 39)
@@ -3486,7 +3577,7 @@ Partial Class DevelopmentStart
         '
         'btnAddRefund
         '
-        Me.btnAddRefund.ImageOptions.Image = CType(resources.GetObject("btnAddRefund.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddRefund.ImageOptions.Image = CType(resources.GetObject("btnAddRefund.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddRefund.Location = New System.Drawing.Point(922, 467)
         Me.btnAddRefund.Name = "btnAddRefund"
         Me.btnAddRefund.Size = New System.Drawing.Size(104, 39)
@@ -3523,16 +3614,16 @@ Partial Class DevelopmentStart
         Me.gvwDARefundsPaid.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colRefundPayment, Me.colRefundAmt, Me.colRefundDt, Me.colRefundCheque, Me.colRefundNotes, Me.colRefundTypeId, Me.colRefundIDX})
         Me.gvwDARefundsPaid.GridControl = Me.grdDARefundsPaid
         Me.gvwDARefundsPaid.Name = "gvwDARefundsPaid"
-        Me.gvwDARefundsPaid.OptionsBehavior.Editable = false
-        Me.gvwDARefundsPaid.OptionsBehavior.ReadOnly = true
-        Me.gvwDARefundsPaid.OptionsView.ShowGroupPanel = false
+        Me.gvwDARefundsPaid.OptionsBehavior.Editable = False
+        Me.gvwDARefundsPaid.OptionsBehavior.ReadOnly = True
+        Me.gvwDARefundsPaid.OptionsView.ShowGroupPanel = False
         '
         'colRefundPayment
         '
         Me.colRefundPayment.Caption = "Payment"
         Me.colRefundPayment.FieldName = "Payment"
         Me.colRefundPayment.Name = "colRefundPayment"
-        Me.colRefundPayment.Visible = true
+        Me.colRefundPayment.Visible = True
         Me.colRefundPayment.VisibleIndex = 0
         Me.colRefundPayment.Width = 332
         '
@@ -3543,7 +3634,7 @@ Partial Class DevelopmentStart
         Me.colRefundAmt.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colRefundAmt.FieldName = "RefundAmt"
         Me.colRefundAmt.Name = "colRefundAmt"
-        Me.colRefundAmt.Visible = true
+        Me.colRefundAmt.Visible = True
         Me.colRefundAmt.VisibleIndex = 1
         Me.colRefundAmt.Width = 106
         '
@@ -3552,7 +3643,7 @@ Partial Class DevelopmentStart
         Me.colRefundDt.Caption = "Refunded"
         Me.colRefundDt.FieldName = "RefundDt"
         Me.colRefundDt.Name = "colRefundDt"
-        Me.colRefundDt.Visible = true
+        Me.colRefundDt.Visible = True
         Me.colRefundDt.VisibleIndex = 2
         Me.colRefundDt.Width = 98
         '
@@ -3561,7 +3652,7 @@ Partial Class DevelopmentStart
         Me.colRefundCheque.Caption = "Cheque"
         Me.colRefundCheque.FieldName = "RefundCheque"
         Me.colRefundCheque.Name = "colRefundCheque"
-        Me.colRefundCheque.Visible = true
+        Me.colRefundCheque.Visible = True
         Me.colRefundCheque.VisibleIndex = 3
         Me.colRefundCheque.Width = 90
         '
@@ -3570,7 +3661,7 @@ Partial Class DevelopmentStart
         Me.colRefundNotes.Caption = "Notes"
         Me.colRefundNotes.FieldName = "Refund Notes"
         Me.colRefundNotes.Name = "colRefundNotes"
-        Me.colRefundNotes.Visible = true
+        Me.colRefundNotes.Visible = True
         Me.colRefundNotes.VisibleIndex = 4
         Me.colRefundNotes.Width = 240
         '
@@ -3591,13 +3682,13 @@ Partial Class DevelopmentStart
         Me.txtDifference.BackColor = System.Drawing.SystemColors.Info
         Me.txtDifference.Location = New System.Drawing.Point(667, 290)
         Me.txtDifference.Name = "txtDifference"
-        Me.txtDifference.ReadOnly = true
+        Me.txtDifference.ReadOnly = True
         Me.txtDifference.Size = New System.Drawing.Size(100, 21)
         Me.txtDifference.TabIndex = 77
         '
         'Label60
         '
-        Me.Label60.AutoSize = true
+        Me.Label60.AutoSize = True
         Me.Label60.Location = New System.Drawing.Point(134, 293)
         Me.Label60.Name = "Label60"
         Me.Label60.Size = New System.Drawing.Size(74, 13)
@@ -3606,7 +3697,7 @@ Partial Class DevelopmentStart
         '
         'Label61
         '
-        Me.Label61.AutoSize = true
+        Me.Label61.AutoSize = True
         Me.Label61.Location = New System.Drawing.Point(362, 293)
         Me.Label61.Name = "Label61"
         Me.Label61.Size = New System.Drawing.Size(70, 13)
@@ -3615,7 +3706,7 @@ Partial Class DevelopmentStart
         '
         'Label62
         '
-        Me.Label62.AutoSize = true
+        Me.Label62.AutoSize = True
         Me.Label62.Location = New System.Drawing.Point(570, 293)
         Me.Label62.Name = "Label62"
         Me.Label62.Size = New System.Drawing.Size(92, 13)
@@ -3627,7 +3718,7 @@ Partial Class DevelopmentStart
         Me.txtReceipts.BackColor = System.Drawing.SystemColors.Info
         Me.txtReceipts.Location = New System.Drawing.Point(211, 290)
         Me.txtReceipts.Name = "txtReceipts"
-        Me.txtReceipts.ReadOnly = true
+        Me.txtReceipts.ReadOnly = True
         Me.txtReceipts.Size = New System.Drawing.Size(87, 21)
         Me.txtReceipts.TabIndex = 75
         '
@@ -3636,14 +3727,14 @@ Partial Class DevelopmentStart
         Me.txtRefunds.BackColor = System.Drawing.SystemColors.Info
         Me.txtRefunds.Location = New System.Drawing.Point(435, 290)
         Me.txtRefunds.Name = "txtRefunds"
-        Me.txtRefunds.ReadOnly = true
+        Me.txtRefunds.ReadOnly = True
         Me.txtRefunds.Size = New System.Drawing.Size(100, 21)
         Me.txtRefunds.TabIndex = 76
         '
         'btnRemoveFee
         '
-        Me.btnRemoveFee.Enabled = false
-        Me.btnRemoveFee.ImageOptions.Image = CType(resources.GetObject("btnRemoveFee.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveFee.Enabled = False
+        Me.btnRemoveFee.ImageOptions.Image = CType(resources.GetObject("btnRemoveFee.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveFee.Location = New System.Drawing.Point(922, 302)
         Me.btnRemoveFee.Name = "btnRemoveFee"
         Me.btnRemoveFee.Size = New System.Drawing.Size(104, 39)
@@ -3652,8 +3743,8 @@ Partial Class DevelopmentStart
         '
         'btnEditPayment
         '
-        Me.btnEditPayment.Enabled = false
-        Me.btnEditPayment.ImageOptions.Image = CType(resources.GetObject("btnEditPayment.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditPayment.Enabled = False
+        Me.btnEditPayment.ImageOptions.Image = CType(resources.GetObject("btnEditPayment.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditPayment.Location = New System.Drawing.Point(922, 175)
         Me.btnEditPayment.Name = "btnEditPayment"
         Me.btnEditPayment.Size = New System.Drawing.Size(104, 39)
@@ -3662,7 +3753,7 @@ Partial Class DevelopmentStart
         '
         'btnAddFee
         '
-        Me.btnAddFee.ImageOptions.Image = CType(resources.GetObject("btnAddFee.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddFee.ImageOptions.Image = CType(resources.GetObject("btnAddFee.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddFee.Location = New System.Drawing.Point(922, 130)
         Me.btnAddFee.Name = "btnAddFee"
         Me.btnAddFee.Size = New System.Drawing.Size(104, 39)
@@ -3693,16 +3784,16 @@ Partial Class DevelopmentStart
         Me.gvwPaymentsReceived.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colRecdpayment, Me.colReceiptAmt, Me.colReceiptDt, Me.colReceiptNo, Me.colReceiptNotes, Me.colInspectionPaid, Me.colInspTypeId, Me.colPaymentId})
         Me.gvwPaymentsReceived.GridControl = Me.grdPaymentsReceived
         Me.gvwPaymentsReceived.Name = "gvwPaymentsReceived"
-        Me.gvwPaymentsReceived.OptionsBehavior.Editable = false
-        Me.gvwPaymentsReceived.OptionsBehavior.ReadOnly = true
-        Me.gvwPaymentsReceived.OptionsView.ShowGroupPanel = false
+        Me.gvwPaymentsReceived.OptionsBehavior.Editable = False
+        Me.gvwPaymentsReceived.OptionsBehavior.ReadOnly = True
+        Me.gvwPaymentsReceived.OptionsView.ShowGroupPanel = False
         '
         'colRecdpayment
         '
         Me.colRecdpayment.Caption = "Payment"
         Me.colRecdpayment.FieldName = "Payment"
         Me.colRecdpayment.Name = "colRecdpayment"
-        Me.colRecdpayment.Visible = true
+        Me.colRecdpayment.Visible = True
         Me.colRecdpayment.VisibleIndex = 0
         Me.colRecdpayment.Width = 166
         '
@@ -3713,7 +3804,7 @@ Partial Class DevelopmentStart
         Me.colReceiptAmt.DisplayFormat.FormatType = DevExpress.Utils.FormatType.Numeric
         Me.colReceiptAmt.FieldName = "ReceiptAmt"
         Me.colReceiptAmt.Name = "colReceiptAmt"
-        Me.colReceiptAmt.Visible = true
+        Me.colReceiptAmt.Visible = True
         Me.colReceiptAmt.VisibleIndex = 1
         Me.colReceiptAmt.Width = 97
         '
@@ -3722,7 +3813,7 @@ Partial Class DevelopmentStart
         Me.colReceiptDt.Caption = "Date Rec'd"
         Me.colReceiptDt.FieldName = "ReceiptDt"
         Me.colReceiptDt.Name = "colReceiptDt"
-        Me.colReceiptDt.Visible = true
+        Me.colReceiptDt.Visible = True
         Me.colReceiptDt.VisibleIndex = 2
         Me.colReceiptDt.Width = 108
         '
@@ -3731,7 +3822,7 @@ Partial Class DevelopmentStart
         Me.colReceiptNo.Caption = "Receipt No"
         Me.colReceiptNo.FieldName = "ReceiptNo"
         Me.colReceiptNo.Name = "colReceiptNo"
-        Me.colReceiptNo.Visible = true
+        Me.colReceiptNo.Visible = True
         Me.colReceiptNo.VisibleIndex = 3
         Me.colReceiptNo.Width = 79
         '
@@ -3740,7 +3831,7 @@ Partial Class DevelopmentStart
         Me.colReceiptNotes.Caption = "Receipt Notes"
         Me.colReceiptNotes.FieldName = "ReceiptNotes"
         Me.colReceiptNotes.Name = "colReceiptNotes"
-        Me.colReceiptNotes.Visible = true
+        Me.colReceiptNotes.Visible = True
         Me.colReceiptNotes.VisibleIndex = 4
         Me.colReceiptNotes.Width = 309
         '
@@ -3749,7 +3840,7 @@ Partial Class DevelopmentStart
         Me.colInspectionPaid.Caption = "Inspect Paid"
         Me.colInspectionPaid.FieldName = "InspectionsPaid"
         Me.colInspectionPaid.Name = "colInspectionPaid"
-        Me.colInspectionPaid.Visible = true
+        Me.colInspectionPaid.Visible = True
         Me.colInspectionPaid.VisibleIndex = 5
         Me.colInspectionPaid.Width = 109
         '
@@ -3768,7 +3859,7 @@ Partial Class DevelopmentStart
         'tpgSection68
         '
         Me.tpgSection68.Controls.Add(Me.pnlDisplaySect68IntDev)
-        Me.tpgSection68.ImageOptions.Image = CType(resources.GetObject("tpgSection68.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgSection68.ImageOptions.Image = CType(resources.GetObject("tpgSection68.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgSection68.Name = "tpgSection68"
         Me.tpgSection68.Size = New System.Drawing.Size(1211, 820)
         Me.tpgSection68.Text = "Section 69 (Int. Dev.)"
@@ -3814,9 +3905,9 @@ Partial Class DevelopmentStart
         Me.gvwIntDev.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn12, Me.colTheAct, Me.colCheckDate})
         Me.gvwIntDev.GridControl = Me.grdIntDev
         Me.gvwIntDev.Name = "gvwIntDev"
-        Me.gvwIntDev.OptionsBehavior.Editable = false
-        Me.gvwIntDev.OptionsBehavior.ReadOnly = true
-        Me.gvwIntDev.OptionsView.ShowGroupPanel = false
+        Me.gvwIntDev.OptionsBehavior.Editable = False
+        Me.gvwIntDev.OptionsBehavior.ReadOnly = True
+        Me.gvwIntDev.OptionsView.ShowGroupPanel = False
         '
         'GridColumn12
         '
@@ -3829,7 +3920,7 @@ Partial Class DevelopmentStart
         Me.colTheAct.Caption = "Act"
         Me.colTheAct.FieldName = "TheAct"
         Me.colTheAct.Name = "colTheAct"
-        Me.colTheAct.Visible = true
+        Me.colTheAct.Visible = True
         Me.colTheAct.VisibleIndex = 0
         Me.colTheAct.Width = 471
         '
@@ -3838,14 +3929,14 @@ Partial Class DevelopmentStart
         Me.colCheckDate.Caption = "Date"
         Me.colCheckDate.FieldName = "CheckDate"
         Me.colCheckDate.Name = "colCheckDate"
-        Me.colCheckDate.Visible = true
+        Me.colCheckDate.Visible = True
         Me.colCheckDate.VisibleIndex = 1
         Me.colCheckDate.Width = 88
         '
         'btnSetIntDevDate
         '
-        Me.btnSetIntDevDate.Enabled = false
-        Me.btnSetIntDevDate.ImageOptions.Image = CType(resources.GetObject("btnSetIntDevDate.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSetIntDevDate.Enabled = False
+        Me.btnSetIntDevDate.ImageOptions.Image = CType(resources.GetObject("btnSetIntDevDate.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSetIntDevDate.Location = New System.Drawing.Point(608, 326)
         Me.btnSetIntDevDate.Name = "btnSetIntDevDate"
         Me.btnSetIntDevDate.Size = New System.Drawing.Size(109, 37)
@@ -3854,22 +3945,22 @@ Partial Class DevelopmentStart
         '
         'btnMaitList
         '
-        Me.btnMaitList.ImageOptions.Image = CType(resources.GetObject("btnMaitList.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnMaitList.ImageOptions.Image = CType(resources.GetObject("btnMaitList.ImageOptions.Image"), System.Drawing.Image)
         Me.btnMaitList.Location = New System.Drawing.Point(608, 50)
         Me.btnMaitList.Name = "btnMaitList"
         Me.btnMaitList.Size = New System.Drawing.Size(109, 37)
         Me.btnMaitList.TabIndex = 100
-        Me.btnMaitList.Text = "Maintain "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"List Of Acts"
+        Me.btnMaitList.Text = "Maintain " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "List Of Acts"
         '
         'btnRemoveIntDev
         '
-        Me.btnRemoveIntDev.Enabled = false
-        Me.btnRemoveIntDev.ImageOptions.Image = CType(resources.GetObject("btnRemoveIntDev.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveIntDev.Enabled = False
+        Me.btnRemoveIntDev.ImageOptions.Image = CType(resources.GetObject("btnRemoveIntDev.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveIntDev.Location = New System.Drawing.Point(608, 157)
         Me.btnRemoveIntDev.Name = "btnRemoveIntDev"
         Me.btnRemoveIntDev.Size = New System.Drawing.Size(138, 37)
         Me.btnRemoveIntDev.TabIndex = 100
-        Me.btnRemoveIntDev.Text = "Remove Integrated "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Devel."
+        Me.btnRemoveIntDev.Text = "Remove Integrated " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Devel."
         '
         'cboIntDevActs
         '
@@ -3882,13 +3973,13 @@ Partial Class DevelopmentStart
         '
         'btnAddIntDev
         '
-        Me.btnAddIntDev.Enabled = false
-        Me.btnAddIntDev.ImageOptions.Image = CType(resources.GetObject("btnAddIntDev.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddIntDev.Enabled = False
+        Me.btnAddIntDev.ImageOptions.Image = CType(resources.GetObject("btnAddIntDev.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddIntDev.Location = New System.Drawing.Point(608, 114)
         Me.btnAddIntDev.Name = "btnAddIntDev"
         Me.btnAddIntDev.Size = New System.Drawing.Size(138, 37)
         Me.btnAddIntDev.TabIndex = 99
-        Me.btnAddIntDev.Text = "Add Integrated"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Devel."
+        Me.btnAddIntDev.Text = "Add Integrated" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Devel."
         '
         'mskDateAct
         '
@@ -3902,7 +3993,7 @@ Partial Class DevelopmentStart
         '
         'Label49
         '
-        Me.Label49.AutoSize = true
+        Me.Label49.AutoSize = True
         Me.Label49.Location = New System.Drawing.Point(493, 44)
         Me.Label49.Name = "Label49"
         Me.Label49.Size = New System.Drawing.Size(61, 13)
@@ -3911,7 +4002,7 @@ Partial Class DevelopmentStart
         '
         'Label7
         '
-        Me.Label7.AutoSize = true
+        Me.Label7.AutoSize = True
         Me.Label7.Location = New System.Drawing.Point(26, 44)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(114, 13)
@@ -3937,8 +4028,8 @@ Partial Class DevelopmentStart
         '
         'btnSave68
         '
-        Me.btnSave68.Enabled = false
-        Me.btnSave68.ImageOptions.Image = CType(resources.GetObject("btnSave68.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSave68.Enabled = False
+        Me.btnSave68.ImageOptions.Image = CType(resources.GetObject("btnSave68.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSave68.Location = New System.Drawing.Point(520, 74)
         Me.btnSave68.Name = "btnSave68"
         Me.btnSave68.Size = New System.Drawing.Size(109, 37)
@@ -3947,17 +4038,17 @@ Partial Class DevelopmentStart
         '
         'chkSec68q7
         '
-        Me.chkSec68q7.AutoSize = true
+        Me.chkSec68q7.AutoSize = True
         Me.chkSec68q7.Location = New System.Drawing.Point(25, 234)
         Me.chkSec68q7.Name = "chkSec68q7"
         Me.chkSec68q7.Size = New System.Drawing.Size(243, 17)
         Me.chkSec68q7.TabIndex = 13
         Me.chkSec68q7.Text = "Operate a mortuary or Undertaker's Business"
-        Me.chkSec68q7.UseVisualStyleBackColor = true
+        Me.chkSec68q7.UseVisualStyleBackColor = True
         '
         'btnEdit68
         '
-        Me.btnEdit68.ImageOptions.Image = CType(resources.GetObject("btnEdit68.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEdit68.ImageOptions.Image = CType(resources.GetObject("btnEdit68.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEdit68.Location = New System.Drawing.Point(520, 31)
         Me.btnEdit68.Name = "btnEdit68"
         Me.btnEdit68.Size = New System.Drawing.Size(109, 37)
@@ -3966,68 +4057,68 @@ Partial Class DevelopmentStart
         '
         'chkSec68q6
         '
-        Me.chkSec68q6.AutoSize = true
+        Me.chkSec68q6.AutoSize = True
         Me.chkSec68q6.Location = New System.Drawing.Point(25, 202)
         Me.chkSec68q6.Name = "chkSec68q6"
         Me.chkSec68q6.Size = New System.Drawing.Size(211, 17)
         Me.chkSec68q6.TabIndex = 12
         Me.chkSec68q6.Text = "Connect to Council's Sewerage system"
-        Me.chkSec68q6.UseVisualStyleBackColor = true
+        Me.chkSec68q6.UseVisualStyleBackColor = True
         '
         'chkSec68q5
         '
-        Me.chkSec68q5.AutoSize = true
+        Me.chkSec68q5.AutoSize = True
         Me.chkSec68q5.Location = New System.Drawing.Point(25, 170)
         Me.chkSec68q5.Name = "chkSec68q5"
         Me.chkSec68q5.Size = New System.Drawing.Size(318, 17)
         Me.chkSec68q5.TabIndex = 11
         Me.chkSec68q5.Text = "Use a Building or Structure as a Place of Public Entertainment"
-        Me.chkSec68q5.UseVisualStyleBackColor = true
+        Me.chkSec68q5.UseVisualStyleBackColor = True
         '
         'chkSec68q4
         '
-        Me.chkSec68q4.AutoSize = true
+        Me.chkSec68q4.AutoSize = True
         Me.chkSec68q4.Location = New System.Drawing.Point(25, 138)
         Me.chkSec68q4.Name = "chkSec68q4"
         Me.chkSec68q4.Size = New System.Drawing.Size(382, 17)
         Me.chkSec68q4.TabIndex = 10
         Me.chkSec68q4.Text = "Operate a Caravan Park, Camping Ground or Manaufactured Home Estate"
-        Me.chkSec68q4.UseVisualStyleBackColor = true
+        Me.chkSec68q4.UseVisualStyleBackColor = True
         '
         'chkSec68q3
         '
-        Me.chkSec68q3.AutoSize = true
+        Me.chkSec68q3.AutoSize = True
         Me.chkSec68q3.Location = New System.Drawing.Point(25, 106)
         Me.chkSec68q3.Name = "chkSec68q3"
         Me.chkSec68q3.Size = New System.Drawing.Size(336, 17)
         Me.chkSec68q3.TabIndex = 9
         Me.chkSec68q3.Text = "Install or alter an on-site Waste Disposal system (eg Septic tank)"
-        Me.chkSec68q3.UseVisualStyleBackColor = true
+        Me.chkSec68q3.UseVisualStyleBackColor = True
         '
         'chkSec68q2
         '
-        Me.chkSec68q2.AutoSize = true
+        Me.chkSec68q2.AutoSize = True
         Me.chkSec68q2.Location = New System.Drawing.Point(25, 74)
         Me.chkSec68q2.Name = "chkSec68q2"
         Me.chkSec68q2.Size = New System.Drawing.Size(190, 17)
         Me.chkSec68q2.TabIndex = 8
         Me.chkSec68q2.Text = "Connect to Council's Water supply"
-        Me.chkSec68q2.UseVisualStyleBackColor = true
+        Me.chkSec68q2.UseVisualStyleBackColor = True
         '
         'chkSec68q1
         '
-        Me.chkSec68q1.AutoSize = true
+        Me.chkSec68q1.AutoSize = True
         Me.chkSec68q1.Location = New System.Drawing.Point(25, 42)
         Me.chkSec68q1.Name = "chkSec68q1"
         Me.chkSec68q1.Size = New System.Drawing.Size(350, 17)
         Me.chkSec68q1.TabIndex = 7
         Me.chkSec68q1.Text = "Install a manufactured Home, Moveable Dwelling or resite Structure"
-        Me.chkSec68q1.UseVisualStyleBackColor = true
+        Me.chkSec68q1.UseVisualStyleBackColor = True
         '
         'tpgReferrals
         '
         Me.tpgReferrals.Controls.Add(Me.pnlDisplayReferrals)
-        Me.tpgReferrals.ImageOptions.Image = CType(resources.GetObject("tpgReferrals.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgReferrals.ImageOptions.Image = CType(resources.GetObject("tpgReferrals.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgReferrals.Name = "tpgReferrals"
         Me.tpgReferrals.Size = New System.Drawing.Size(1211, 820)
         Me.tpgReferrals.Text = "Referrals"
@@ -4078,27 +4169,27 @@ Partial Class DevelopmentStart
         '
         'btnRemovePDF
         '
-        Me.btnRemovePDF.Enabled = false
-        Me.btnRemovePDF.ImageOptions.Image = CType(resources.GetObject("btnRemovePDF.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemovePDF.Enabled = False
+        Me.btnRemovePDF.ImageOptions.Image = CType(resources.GetObject("btnRemovePDF.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemovePDF.Location = New System.Drawing.Point(904, 70)
         Me.btnRemovePDF.Name = "btnRemovePDF"
         Me.btnRemovePDF.Size = New System.Drawing.Size(112, 41)
         Me.btnRemovePDF.TabIndex = 70
-        Me.btnRemovePDF.Text = "Remove "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"PDF/Image"
+        Me.btnRemovePDF.Text = "Remove " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PDF/Image"
         '
         'btnAddPDF
         '
-        Me.btnAddPDF.ImageOptions.Image = CType(resources.GetObject("btnAddPDF.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddPDF.ImageOptions.Image = CType(resources.GetObject("btnAddPDF.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddPDF.Location = New System.Drawing.Point(904, 23)
         Me.btnAddPDF.Name = "btnAddPDF"
         Me.btnAddPDF.Size = New System.Drawing.Size(112, 41)
         Me.btnAddPDF.TabIndex = 69
         Me.btnAddPDF.Tag = "ADD"
-        Me.btnAddPDF.Text = "Add "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"PDF/Image"
+        Me.btnAddPDF.Text = "Add " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "PDF/Image"
         '
         'lblReferralID
         '
-        Me.lblReferralID.AutoSize = true
+        Me.lblReferralID.AutoSize = True
         Me.lblReferralID.ForeColor = System.Drawing.Color.Transparent
         Me.lblReferralID.Location = New System.Drawing.Point(33, 20)
         Me.lblReferralID.Name = "lblReferralID"
@@ -4107,34 +4198,34 @@ Partial Class DevelopmentStart
         '
         'btnView
         '
-        Me.btnView.ImageOptions.Image = CType(resources.GetObject("btnView.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnView.ImageOptions.Image = CType(resources.GetObject("btnView.ImageOptions.Image"), System.Drawing.Image)
         Me.btnView.Location = New System.Drawing.Point(545, 244)
         Me.btnView.Name = "btnView"
         Me.btnView.Size = New System.Drawing.Size(92, 37)
         Me.btnView.TabIndex = 27
         Me.btnView.Text = "View"
-        Me.btnView.Visible = false
+        Me.btnView.Visible = False
         '
         'btnRTA
         '
-        Me.btnRTA.ImageOptions.Image = CType(resources.GetObject("btnRTA.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRTA.ImageOptions.Image = CType(resources.GetObject("btnRTA.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRTA.Location = New System.Drawing.Point(526, 31)
         Me.btnRTA.Name = "btnRTA"
         Me.btnRTA.Size = New System.Drawing.Size(112, 41)
         Me.btnRTA.TabIndex = 26
-        Me.btnRTA.Text = "Print RMS "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Letter"
+        Me.btnRTA.Text = "Print RMS " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Letter"
         '
         'DaysElapsedTextBox
         '
         Me.DaysElapsedTextBox.Location = New System.Drawing.Point(1117, 299)
         Me.DaysElapsedTextBox.Name = "DaysElapsedTextBox"
-        Me.DaysElapsedTextBox.Properties.ReadOnly = true
+        Me.DaysElapsedTextBox.Properties.ReadOnly = True
         Me.DaysElapsedTextBox.Size = New System.Drawing.Size(42, 20)
         Me.DaysElapsedTextBox.TabIndex = 25
         '
         'btnRemoveRefer
         '
-        Me.btnRemoveRefer.ImageOptions.Image = CType(resources.GetObject("btnRemoveRefer.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveRefer.ImageOptions.Image = CType(resources.GetObject("btnRemoveRefer.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveRefer.Location = New System.Drawing.Point(776, 767)
         Me.btnRemoveRefer.Name = "btnRemoveRefer"
         Me.btnRemoveRefer.Size = New System.Drawing.Size(117, 44)
@@ -4143,7 +4234,7 @@ Partial Class DevelopmentStart
         '
         'btnSaveReferralsTab
         '
-        Me.btnSaveReferralsTab.ImageOptions.Image = CType(resources.GetObject("btnSaveReferralsTab.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveReferralsTab.ImageOptions.Image = CType(resources.GetObject("btnSaveReferralsTab.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveReferralsTab.Location = New System.Drawing.Point(1082, 767)
         Me.btnSaveReferralsTab.Name = "btnSaveReferralsTab"
         Me.btnSaveReferralsTab.Size = New System.Drawing.Size(117, 44)
@@ -4152,7 +4243,7 @@ Partial Class DevelopmentStart
         '
         'btnEditReferralsTab
         '
-        Me.btnEditReferralsTab.ImageOptions.Image = CType(resources.GetObject("btnEditReferralsTab.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditReferralsTab.ImageOptions.Image = CType(resources.GetObject("btnEditReferralsTab.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditReferralsTab.Location = New System.Drawing.Point(899, 767)
         Me.btnEditReferralsTab.Name = "btnEditReferralsTab"
         Me.btnEditReferralsTab.Size = New System.Drawing.Size(117, 44)
@@ -4161,7 +4252,7 @@ Partial Class DevelopmentStart
         '
         'btnAddReferral
         '
-        Me.btnAddReferral.ImageOptions.Image = CType(resources.GetObject("btnAddReferral.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddReferral.ImageOptions.Image = CType(resources.GetObject("btnAddReferral.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddReferral.Location = New System.Drawing.Point(653, 767)
         Me.btnAddReferral.Name = "btnAddReferral"
         Me.btnAddReferral.Size = New System.Drawing.Size(117, 44)
@@ -4174,9 +4265,9 @@ Partial Class DevelopmentStart
         Me.cboRefCodeId.Name = "cboRefCodeId"
         Me.cboRefCodeId.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboRefCodeId.Properties.NullText = "[Referred to?]"
-        Me.cboRefCodeId.Properties.ReadOnly = true
-        Me.cboRefCodeId.Properties.ShowFooter = false
-        Me.cboRefCodeId.Properties.ShowHeader = false
+        Me.cboRefCodeId.Properties.ReadOnly = True
+        Me.cboRefCodeId.Properties.ShowFooter = False
+        Me.cboRefCodeId.Properties.ShowHeader = False
         Me.cboRefCodeId.Size = New System.Drawing.Size(225, 20)
         Me.cboRefCodeId.TabIndex = 20
         '
@@ -4187,7 +4278,7 @@ Partial Class DevelopmentStart
         Me.RefRetDt.Name = "RefRetDt"
         Me.RefRetDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RefRetDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RefRetDt.Properties.ReadOnly = true
+        Me.RefRetDt.Properties.ReadOnly = True
         Me.RefRetDt.Size = New System.Drawing.Size(100, 20)
         Me.RefRetDt.TabIndex = 19
         '
@@ -4198,7 +4289,7 @@ Partial Class DevelopmentStart
         Me.Refdt.Name = "Refdt"
         Me.Refdt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.Refdt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.Refdt.Properties.ReadOnly = true
+        Me.Refdt.Properties.ReadOnly = True
         Me.Refdt.Size = New System.Drawing.Size(100, 20)
         Me.Refdt.TabIndex = 18
         '
@@ -4264,7 +4355,7 @@ Partial Class DevelopmentStart
         '
         'btnAddIntegrated
         '
-        Me.btnAddIntegrated.ImageOptions.Image = CType(resources.GetObject("btnAddIntegrated.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddIntegrated.ImageOptions.Image = CType(resources.GetObject("btnAddIntegrated.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddIntegrated.Location = New System.Drawing.Point(127, 194)
         Me.btnAddIntegrated.Name = "btnAddIntegrated"
         Me.btnAddIntegrated.Size = New System.Drawing.Size(98, 43)
@@ -4273,7 +4364,7 @@ Partial Class DevelopmentStart
         '
         'btnRemoveIntegated
         '
-        Me.btnRemoveIntegated.ImageOptions.Image = CType(resources.GetObject("btnRemoveIntegated.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveIntegated.ImageOptions.Image = CType(resources.GetObject("btnRemoveIntegated.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveIntegated.Location = New System.Drawing.Point(19, 194)
         Me.btnRemoveIntegated.Name = "btnRemoveIntegated"
         Me.btnRemoveIntegated.Size = New System.Drawing.Size(98, 43)
@@ -4286,16 +4377,16 @@ Partial Class DevelopmentStart
         Me.cboReferralsIntProvision.Name = "cboReferralsIntProvision"
         Me.cboReferralsIntProvision.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboReferralsIntProvision.Properties.NullText = "[Select Integrated Type]"
-        Me.cboReferralsIntProvision.Properties.ReadOnly = true
-        Me.cboReferralsIntProvision.Properties.ShowFooter = false
-        Me.cboReferralsIntProvision.Properties.ShowHeader = false
+        Me.cboReferralsIntProvision.Properties.ReadOnly = True
+        Me.cboReferralsIntProvision.Properties.ShowFooter = False
+        Me.cboReferralsIntProvision.Properties.ShowHeader = False
         Me.cboReferralsIntProvision.Size = New System.Drawing.Size(206, 20)
         Me.cboReferralsIntProvision.TabIndex = 57
         '
         'lstIntegrated
         '
         Me.lstIntegrated.DisplayMember = "IntActName"
-        Me.lstIntegrated.FormattingEnabled = true
+        Me.lstIntegrated.FormattingEnabled = True
         Me.lstIntegrated.Location = New System.Drawing.Point(19, 28)
         Me.lstIntegrated.Name = "lstIntegrated"
         Me.lstIntegrated.Size = New System.Drawing.Size(206, 134)
@@ -4315,19 +4406,19 @@ Partial Class DevelopmentStart
         Me.grpRFS.Size = New System.Drawing.Size(550, 103)
         Me.grpRFS.TabIndex = 9
         Me.grpRFS.Text = "Rural Fire Service"
-        Me.grpRFS.Visible = false
+        Me.grpRFS.Visible = False
         '
         'txtRFSSubLots
         '
         Me.txtRFSSubLots.Location = New System.Drawing.Point(133, 49)
         Me.txtRFSSubLots.Name = "txtRFSSubLots"
-        Me.txtRFSSubLots.Properties.ReadOnly = true
+        Me.txtRFSSubLots.Properties.ReadOnly = True
         Me.txtRFSSubLots.Size = New System.Drawing.Size(30, 20)
         Me.txtRFSSubLots.TabIndex = 5
         '
         'btnPrintRFSSub
         '
-        Me.btnPrintRFSSub.ImageOptions.Image = CType(resources.GetObject("btnPrintRFSSub.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnPrintRFSSub.ImageOptions.Image = CType(resources.GetObject("btnPrintRFSSub.ImageOptions.Image"), System.Drawing.Image)
         Me.btnPrintRFSSub.Location = New System.Drawing.Point(400, 38)
         Me.btnPrintRFSSub.Name = "btnPrintRFSSub"
         Me.btnPrintRFSSub.Size = New System.Drawing.Size(137, 41)
@@ -4336,7 +4427,7 @@ Partial Class DevelopmentStart
         '
         'btnPrintRFSOther
         '
-        Me.btnPrintRFSOther.ImageOptions.Image = CType(resources.GetObject("btnPrintRFSOther.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnPrintRFSOther.ImageOptions.Image = CType(resources.GetObject("btnPrintRFSOther.ImageOptions.Image"), System.Drawing.Image)
         Me.btnPrintRFSOther.Location = New System.Drawing.Point(242, 38)
         Me.btnPrintRFSOther.Name = "btnPrintRFSOther"
         Me.btnPrintRFSOther.Size = New System.Drawing.Size(137, 41)
@@ -4349,8 +4440,8 @@ Partial Class DevelopmentStart
         Me.cboRFSSubDivisionType.Name = "cboRFSSubDivisionType"
         Me.cboRFSSubDivisionType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboRFSSubDivisionType.Properties.NullText = "[Type?]"
-        Me.cboRFSSubDivisionType.Properties.ShowFooter = false
-        Me.cboRFSSubDivisionType.Properties.ShowHeader = false
+        Me.cboRFSSubDivisionType.Properties.ShowFooter = False
+        Me.cboRFSSubDivisionType.Properties.ShowHeader = False
         Me.cboRFSSubDivisionType.Size = New System.Drawing.Size(100, 20)
         Me.cboRFSSubDivisionType.TabIndex = 2
         '
@@ -4396,7 +4487,7 @@ Partial Class DevelopmentStart
         Me.EngDueReturnDate.Name = "EngDueReturnDate"
         Me.EngDueReturnDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.EngDueReturnDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.EngDueReturnDate.Properties.ReadOnly = true
+        Me.EngDueReturnDate.Properties.ReadOnly = True
         Me.EngDueReturnDate.Size = New System.Drawing.Size(96, 20)
         Me.EngDueReturnDate.TabIndex = 8
         '
@@ -4404,10 +4495,10 @@ Partial Class DevelopmentStart
         '
         Me.txtEngInternalComments.Location = New System.Drawing.Point(14, 33)
         Me.txtEngInternalComments.Name = "txtEngInternalComments"
-        Me.txtEngInternalComments.Properties.Appearance.Options.UseTextOptions = true
+        Me.txtEngInternalComments.Properties.Appearance.Options.UseTextOptions = True
         Me.txtEngInternalComments.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
-        Me.txtEngInternalComments.Properties.AutoHeight = false
-        Me.txtEngInternalComments.Properties.ReadOnly = true
+        Me.txtEngInternalComments.Properties.AutoHeight = False
+        Me.txtEngInternalComments.Properties.ReadOnly = True
         Me.txtEngInternalComments.Size = New System.Drawing.Size(415, 52)
         Me.txtEngInternalComments.TabIndex = 7
         '
@@ -4415,10 +4506,10 @@ Partial Class DevelopmentStart
         '
         Me.txtRefComm.Location = New System.Drawing.Point(22, 223)
         Me.txtRefComm.Name = "txtRefComm"
-        Me.txtRefComm.Properties.Appearance.Options.UseTextOptions = true
+        Me.txtRefComm.Properties.Appearance.Options.UseTextOptions = True
         Me.txtRefComm.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
-        Me.txtRefComm.Properties.AutoHeight = false
-        Me.txtRefComm.Properties.ReadOnly = true
+        Me.txtRefComm.Properties.AutoHeight = False
+        Me.txtRefComm.Properties.ReadOnly = True
         Me.txtRefComm.Size = New System.Drawing.Size(615, 21)
         Me.txtRefComm.TabIndex = 5
         '
@@ -4439,7 +4530,7 @@ Partial Class DevelopmentStart
         Me.chksepp71.Location = New System.Drawing.Point(23, 18)
         Me.chksepp71.Name = "chksepp71"
         Me.chksepp71.Properties.Caption = "Integrated Development?"
-        Me.chksepp71.Properties.ReadOnly = true
+        Me.chksepp71.Properties.ReadOnly = True
         Me.chksepp71.Size = New System.Drawing.Size(161, 19)
         Me.chksepp71.TabIndex = 70
         '
@@ -4449,7 +4540,7 @@ Partial Class DevelopmentStart
         Me.cboDesignatedYN.Name = "cboDesignatedYN"
         Me.cboDesignatedYN.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboDesignatedYN.Properties.NullText = "[Select]"
-        Me.cboDesignatedYN.Properties.ReadOnly = true
+        Me.cboDesignatedYN.Properties.ReadOnly = True
         Me.cboDesignatedYN.Size = New System.Drawing.Size(87, 20)
         Me.cboDesignatedYN.TabIndex = 70
         '
@@ -4459,14 +4550,14 @@ Partial Class DevelopmentStart
         Me.cboIntDevYN.Name = "cboIntDevYN"
         Me.cboIntDevYN.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboIntDevYN.Properties.NullText = "[Select]"
-        Me.cboIntDevYN.Properties.ReadOnly = true
+        Me.cboIntDevYN.Properties.ReadOnly = True
         Me.cboIntDevYN.Size = New System.Drawing.Size(87, 20)
         Me.cboIntDevYN.TabIndex = 71
         '
         'Label28
         '
-        Me.Label28.AutoSize = true
-        Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(192,Byte),Integer))
+        Me.Label28.AutoSize = True
+        Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label28.Location = New System.Drawing.Point(22, 81)
         Me.Label28.Name = "Label28"
         Me.Label28.Size = New System.Drawing.Size(356, 13)
@@ -4475,8 +4566,8 @@ Partial Class DevelopmentStart
         '
         'Label29
         '
-        Me.Label29.AutoSize = true
-        Me.Label29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(192,Byte),Integer))
+        Me.Label29.AutoSize = True
+        Me.Label29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.Label29.Location = New System.Drawing.Point(22, 46)
         Me.Label29.Name = "Label29"
         Me.Label29.Size = New System.Drawing.Size(321, 13)
@@ -4495,7 +4586,7 @@ Partial Class DevelopmentStart
         '
         'btnMailResponse
         '
-        Me.btnMailResponse.ImageOptions.Image = CType(resources.GetObject("btnMailResponse.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnMailResponse.ImageOptions.Image = CType(resources.GetObject("btnMailResponse.ImageOptions.Image"), System.Drawing.Image)
         Me.btnMailResponse.Location = New System.Drawing.Point(16, 99)
         Me.btnMailResponse.Name = "btnMailResponse"
         Me.btnMailResponse.Size = New System.Drawing.Size(112, 41)
@@ -4504,7 +4595,7 @@ Partial Class DevelopmentStart
         '
         'btnReferral
         '
-        Me.btnReferral.ImageOptions.Image = CType(resources.GetObject("btnReferral.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnReferral.ImageOptions.Image = CType(resources.GetObject("btnReferral.ImageOptions.Image"), System.Drawing.Image)
         Me.btnReferral.Location = New System.Drawing.Point(16, 52)
         Me.btnReferral.Name = "btnReferral"
         Me.btnReferral.Size = New System.Drawing.Size(112, 41)
@@ -4513,12 +4604,12 @@ Partial Class DevelopmentStart
         '
         'btnDraftconditions
         '
-        Me.btnDraftconditions.ImageOptions.Image = CType(resources.GetObject("btnDraftconditions.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnDraftconditions.ImageOptions.Image = CType(resources.GetObject("btnDraftconditions.ImageOptions.Image"), System.Drawing.Image)
         Me.btnDraftconditions.Location = New System.Drawing.Point(16, 5)
         Me.btnDraftconditions.Name = "btnDraftconditions"
         Me.btnDraftconditions.Size = New System.Drawing.Size(112, 41)
         Me.btnDraftconditions.TabIndex = 0
-        Me.btnDraftconditions.Text = "Draft "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Conditions"
+        Me.btnDraftconditions.Text = "Draft " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Conditions"
         '
         'dgvLoadListReferrals
         '
@@ -4536,9 +4627,9 @@ Partial Class DevelopmentStart
         Me.gvwLoadListReferrals.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colReferralId, Me.colRefdt, Me.colReferralCode})
         Me.gvwLoadListReferrals.GridControl = Me.dgvLoadListReferrals
         Me.gvwLoadListReferrals.Name = "gvwLoadListReferrals"
-        Me.gvwLoadListReferrals.OptionsBehavior.Editable = false
-        Me.gvwLoadListReferrals.OptionsBehavior.ReadOnly = true
-        Me.gvwLoadListReferrals.OptionsView.ShowGroupPanel = false
+        Me.gvwLoadListReferrals.OptionsBehavior.Editable = False
+        Me.gvwLoadListReferrals.OptionsBehavior.ReadOnly = True
+        Me.gvwLoadListReferrals.OptionsView.ShowGroupPanel = False
         '
         'colReferralId
         '
@@ -4553,7 +4644,7 @@ Partial Class DevelopmentStart
         Me.colRefdt.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.colRefdt.FieldName = "Refdt"
         Me.colRefdt.Name = "colRefdt"
-        Me.colRefdt.Visible = true
+        Me.colRefdt.Visible = True
         Me.colRefdt.VisibleIndex = 0
         Me.colRefdt.Width = 80
         '
@@ -4562,7 +4653,7 @@ Partial Class DevelopmentStart
         Me.colReferralCode.Caption = "Referred to"
         Me.colReferralCode.FieldName = "ReferralCode"
         Me.colReferralCode.Name = "colReferralCode"
-        Me.colReferralCode.Visible = true
+        Me.colReferralCode.Visible = True
         Me.colReferralCode.VisibleIndex = 1
         Me.colReferralCode.Width = 219
         '
@@ -4570,16 +4661,16 @@ Partial Class DevelopmentStart
         '
         Me.txtRefResponse.Location = New System.Drawing.Point(22, 268)
         Me.txtRefResponse.Name = "txtRefResponse"
-        Me.txtRefResponse.Properties.Appearance.Options.UseTextOptions = true
+        Me.txtRefResponse.Properties.Appearance.Options.UseTextOptions = True
         Me.txtRefResponse.Properties.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
-        Me.txtRefResponse.Properties.ReadOnly = true
+        Me.txtRefResponse.Properties.ReadOnly = True
         Me.txtRefResponse.Size = New System.Drawing.Size(615, 543)
         Me.txtRefResponse.TabIndex = 6
         '
         'tpgStatus
         '
         Me.tpgStatus.Controls.Add(Me.pnlDisplayStatus)
-        Me.tpgStatus.ImageOptions.Image = CType(resources.GetObject("tpgStatus.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgStatus.ImageOptions.Image = CType(resources.GetObject("tpgStatus.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgStatus.Name = "tpgStatus"
         Me.tpgStatus.Size = New System.Drawing.Size(1211, 820)
         Me.tpgStatus.Text = "Status"
@@ -4628,8 +4719,8 @@ Partial Class DevelopmentStart
         '
         'btnSaveDesignatedText
         '
-        Me.btnSaveDesignatedText.Enabled = false
-        Me.btnSaveDesignatedText.ImageOptions.Image = CType(resources.GetObject("btnSaveDesignatedText.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveDesignatedText.Enabled = False
+        Me.btnSaveDesignatedText.ImageOptions.Image = CType(resources.GetObject("btnSaveDesignatedText.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveDesignatedText.Location = New System.Drawing.Point(1045, 284)
         Me.btnSaveDesignatedText.Name = "btnSaveDesignatedText"
         Me.btnSaveDesignatedText.Size = New System.Drawing.Size(93, 34)
@@ -4639,7 +4730,7 @@ Partial Class DevelopmentStart
         '
         'btnModifyDesignatedText
         '
-        Me.btnModifyDesignatedText.ImageOptions.Image = CType(resources.GetObject("btnModifyDesignatedText.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnModifyDesignatedText.ImageOptions.Image = CType(resources.GetObject("btnModifyDesignatedText.ImageOptions.Image"), System.Drawing.Image)
         Me.btnModifyDesignatedText.Location = New System.Drawing.Point(650, 284)
         Me.btnModifyDesignatedText.Name = "btnModifyDesignatedText"
         Me.btnModifyDesignatedText.Size = New System.Drawing.Size(93, 34)
@@ -4648,7 +4739,7 @@ Partial Class DevelopmentStart
         '
         'Label32
         '
-        Me.Label32.AutoSize = true
+        Me.Label32.AutoSize = True
         Me.Label32.Location = New System.Drawing.Point(647, 161)
         Me.Label32.Name = "Label32"
         Me.Label32.Size = New System.Drawing.Size(86, 13)
@@ -4665,8 +4756,8 @@ Partial Class DevelopmentStart
         '
         'btnSaveDeptPlanning
         '
-        Me.btnSaveDeptPlanning.Enabled = false
-        Me.btnSaveDeptPlanning.ImageOptions.Image = CType(resources.GetObject("btnSaveDeptPlanning.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveDeptPlanning.Enabled = False
+        Me.btnSaveDeptPlanning.ImageOptions.Image = CType(resources.GetObject("btnSaveDeptPlanning.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveDeptPlanning.Location = New System.Drawing.Point(1045, 114)
         Me.btnSaveDeptPlanning.Name = "btnSaveDeptPlanning"
         Me.btnSaveDeptPlanning.Size = New System.Drawing.Size(93, 34)
@@ -4676,7 +4767,7 @@ Partial Class DevelopmentStart
         '
         'btnModifyDeptPlanning
         '
-        Me.btnModifyDeptPlanning.ImageOptions.Image = CType(resources.GetObject("btnModifyDeptPlanning.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnModifyDeptPlanning.ImageOptions.Image = CType(resources.GetObject("btnModifyDeptPlanning.ImageOptions.Image"), System.Drawing.Image)
         Me.btnModifyDeptPlanning.Location = New System.Drawing.Point(650, 114)
         Me.btnModifyDeptPlanning.Name = "btnModifyDeptPlanning"
         Me.btnModifyDeptPlanning.Size = New System.Drawing.Size(93, 34)
@@ -4685,7 +4776,7 @@ Partial Class DevelopmentStart
         '
         'Label31
         '
-        Me.Label31.AutoSize = true
+        Me.Label31.AutoSize = True
         Me.Label31.Location = New System.Drawing.Point(647, 22)
         Me.Label31.Name = "Label31"
         Me.Label31.Size = New System.Drawing.Size(150, 13)
@@ -4702,7 +4793,7 @@ Partial Class DevelopmentStart
         '
         'btnModifyAdvertAddress
         '
-        Me.btnModifyAdvertAddress.ImageOptions.Image = CType(resources.GetObject("btnModifyAdvertAddress.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnModifyAdvertAddress.ImageOptions.Image = CType(resources.GetObject("btnModifyAdvertAddress.ImageOptions.Image"), System.Drawing.Image)
         Me.btnModifyAdvertAddress.Location = New System.Drawing.Point(511, 284)
         Me.btnModifyAdvertAddress.Name = "btnModifyAdvertAddress"
         Me.btnModifyAdvertAddress.Size = New System.Drawing.Size(93, 34)
@@ -4726,12 +4817,12 @@ Partial Class DevelopmentStart
         '
         'btnDesignIntegr
         '
-        Me.btnDesignIntegr.ImageOptions.Image = CType(resources.GetObject("btnDesignIntegr.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnDesignIntegr.ImageOptions.Image = CType(resources.GetObject("btnDesignIntegr.ImageOptions.Image"), System.Drawing.Image)
         Me.btnDesignIntegr.Location = New System.Drawing.Point(378, 174)
         Me.btnDesignIntegr.Name = "btnDesignIntegr"
         Me.btnDesignIntegr.Size = New System.Drawing.Size(114, 39)
         Me.btnDesignIntegr.TabIndex = 100
-        Me.btnDesignIntegr.Text = "Designated && "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Integrated"
+        Me.btnDesignIntegr.Text = "Designated && " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Integrated"
         '
         'cboAdvertSignDepot
         '
@@ -4744,7 +4835,7 @@ Partial Class DevelopmentStart
         '
         'btnDesignated
         '
-        Me.btnDesignated.ImageOptions.Image = CType(resources.GetObject("btnDesignated.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnDesignated.ImageOptions.Image = CType(resources.GetObject("btnDesignated.ImageOptions.Image"), System.Drawing.Image)
         Me.btnDesignated.Location = New System.Drawing.Point(259, 174)
         Me.btnDesignated.Name = "btnDesignated"
         Me.btnDesignated.Size = New System.Drawing.Size(114, 39)
@@ -4753,25 +4844,25 @@ Partial Class DevelopmentStart
         '
         'btnPrintAdvNotice
         '
-        Me.btnPrintAdvNotice.ImageOptions.Image = CType(resources.GetObject("btnPrintAdvNotice.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnPrintAdvNotice.ImageOptions.Image = CType(resources.GetObject("btnPrintAdvNotice.ImageOptions.Image"), System.Drawing.Image)
         Me.btnPrintAdvNotice.Location = New System.Drawing.Point(139, 174)
         Me.btnPrintAdvNotice.Name = "btnPrintAdvNotice"
         Me.btnPrintAdvNotice.Size = New System.Drawing.Size(114, 39)
         Me.btnPrintAdvNotice.TabIndex = 98
-        Me.btnPrintAdvNotice.Text = "Print Advert. "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Notice"
+        Me.btnPrintAdvNotice.Text = "Print Advert. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Notice"
         '
         'btnPrintAdvert
         '
-        Me.btnPrintAdvert.ImageOptions.Image = CType(resources.GetObject("btnPrintAdvert.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnPrintAdvert.ImageOptions.Image = CType(resources.GetObject("btnPrintAdvert.ImageOptions.Image"), System.Drawing.Image)
         Me.btnPrintAdvert.Location = New System.Drawing.Point(20, 174)
         Me.btnPrintAdvert.Name = "btnPrintAdvert"
         Me.btnPrintAdvert.Size = New System.Drawing.Size(114, 39)
         Me.btnPrintAdvert.TabIndex = 97
-        Me.btnPrintAdvert.Text = "Print Advert. "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Sign"
+        Me.btnPrintAdvert.Text = "Print Advert. " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Sign"
         '
         'Label15
         '
-        Me.Label15.AutoSize = true
+        Me.Label15.AutoSize = True
         Me.Label15.Location = New System.Drawing.Point(14, 22)
         Me.Label15.Name = "Label15"
         Me.Label15.Size = New System.Drawing.Size(151, 13)
@@ -4780,7 +4871,7 @@ Partial Class DevelopmentStart
         '
         'Label86
         '
-        Me.Label86.AutoSize = true
+        Me.Label86.AutoSize = True
         Me.Label86.Location = New System.Drawing.Point(14, 230)
         Me.Label86.Name = "Label86"
         Me.Label86.Size = New System.Drawing.Size(40, 13)
@@ -4789,18 +4880,18 @@ Partial Class DevelopmentStart
         '
         'btnMapMerge
         '
-        Me.btnMapMerge.ImageOptions.Image = CType(resources.GetObject("btnMapMerge.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnMapMerge.ImageOptions.Image = CType(resources.GetObject("btnMapMerge.ImageOptions.Image"), System.Drawing.Image)
         Me.btnMapMerge.Location = New System.Drawing.Point(322, 401)
         Me.btnMapMerge.Name = "btnMapMerge"
         Me.btnMapMerge.Size = New System.Drawing.Size(105, 39)
         Me.btnMapMerge.TabIndex = 103
-        Me.btnMapMerge.Text = "Create DA "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Map Merge"
-        Me.btnMapMerge.Visible = false
+        Me.btnMapMerge.Text = "Create DA " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Map Merge"
+        Me.btnMapMerge.Visible = False
         '
         'btnSaveStatus
         '
-        Me.btnSaveStatus.Enabled = false
-        Me.btnSaveStatus.ImageOptions.Image = CType(resources.GetObject("btnSaveStatus.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveStatus.Enabled = False
+        Me.btnSaveStatus.ImageOptions.Image = CType(resources.GetObject("btnSaveStatus.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveStatus.Location = New System.Drawing.Point(1083, 354)
         Me.btnSaveStatus.Name = "btnSaveStatus"
         Me.btnSaveStatus.Size = New System.Drawing.Size(105, 39)
@@ -4810,8 +4901,8 @@ Partial Class DevelopmentStart
         '
         'btnEditStatus
         '
-        Me.btnEditStatus.Enabled = false
-        Me.btnEditStatus.ImageOptions.Image = CType(resources.GetObject("btnEditStatus.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditStatus.Enabled = False
+        Me.btnEditStatus.ImageOptions.Image = CType(resources.GetObject("btnEditStatus.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditStatus.Location = New System.Drawing.Point(1083, 298)
         Me.btnEditStatus.Name = "btnEditStatus"
         Me.btnEditStatus.Size = New System.Drawing.Size(105, 39)
@@ -4840,7 +4931,7 @@ Partial Class DevelopmentStart
         Me.txtDaysTaken.BackColor = System.Drawing.SystemColors.Info
         Me.txtDaysTaken.Location = New System.Drawing.Point(184, 74)
         Me.txtDaysTaken.Name = "txtDaysTaken"
-        Me.txtDaysTaken.ReadOnly = true
+        Me.txtDaysTaken.ReadOnly = True
         Me.txtDaysTaken.Size = New System.Drawing.Size(46, 21)
         Me.txtDaysTaken.TabIndex = 6
         Me.txtDaysTaken.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -4850,7 +4941,7 @@ Partial Class DevelopmentStart
         Me.txtDaysElapsed.BackColor = System.Drawing.SystemColors.Info
         Me.txtDaysElapsed.Location = New System.Drawing.Point(184, 27)
         Me.txtDaysElapsed.Name = "txtDaysElapsed"
-        Me.txtDaysElapsed.ReadOnly = true
+        Me.txtDaysElapsed.ReadOnly = True
         Me.txtDaysElapsed.Size = New System.Drawing.Size(46, 21)
         Me.txtDaysElapsed.TabIndex = 4
         Me.txtDaysElapsed.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
@@ -4860,14 +4951,14 @@ Partial Class DevelopmentStart
         Me.txtDaysAddinfo.BackColor = System.Drawing.SystemColors.Info
         Me.txtDaysAddinfo.Location = New System.Drawing.Point(184, 46)
         Me.txtDaysAddinfo.Name = "txtDaysAddinfo"
-        Me.txtDaysAddinfo.ReadOnly = true
+        Me.txtDaysAddinfo.ReadOnly = True
         Me.txtDaysAddinfo.Size = New System.Drawing.Size(46, 21)
         Me.txtDaysAddinfo.TabIndex = 5
         Me.txtDaysAddinfo.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
         'Label84
         '
-        Me.Label84.AutoSize = true
+        Me.Label84.AutoSize = True
         Me.Label84.Location = New System.Drawing.Point(13, 30)
         Me.Label84.Name = "Label84"
         Me.Label84.Size = New System.Drawing.Size(166, 13)
@@ -4876,7 +4967,7 @@ Partial Class DevelopmentStart
         '
         'Label85
         '
-        Me.Label85.AutoSize = true
+        Me.Label85.AutoSize = True
         Me.Label85.Location = New System.Drawing.Point(13, 54)
         Me.Label85.Name = "Label85"
         Me.Label85.Size = New System.Drawing.Size(121, 13)
@@ -4885,8 +4976,8 @@ Partial Class DevelopmentStart
         '
         'lblReferralCount
         '
-        Me.lblReferralCount.AutoSize = true
-        Me.lblReferralCount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblReferralCount.AutoSize = True
+        Me.lblReferralCount.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblReferralCount.Location = New System.Drawing.Point(289, 82)
         Me.lblReferralCount.Name = "lblReferralCount"
         Me.lblReferralCount.Size = New System.Drawing.Size(14, 13)
@@ -4896,8 +4987,8 @@ Partial Class DevelopmentStart
         '
         'Label87
         '
-        Me.Label87.AutoSize = true
-        Me.Label87.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label87.AutoSize = True
+        Me.Label87.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label87.Location = New System.Drawing.Point(13, 77)
         Me.Label87.Name = "Label87"
         Me.Label87.Size = New System.Drawing.Size(147, 13)
@@ -4906,7 +4997,7 @@ Partial Class DevelopmentStart
         '
         'Label89
         '
-        Me.Label89.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label89.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label89.Location = New System.Drawing.Point(266, 46)
         Me.Label89.Name = "Label89"
         Me.Label89.Size = New System.Drawing.Size(122, 31)
@@ -4915,8 +5006,8 @@ Partial Class DevelopmentStart
         '
         'Label88
         '
-        Me.Label88.AutoSize = true
-        Me.Label88.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label88.AutoSize = True
+        Me.Label88.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label88.Location = New System.Drawing.Point(266, 27)
         Me.Label88.Name = "Label88"
         Me.Label88.Size = New System.Drawing.Size(58, 13)
@@ -4943,7 +5034,7 @@ Partial Class DevelopmentStart
         '
         'Label72
         '
-        Me.Label72.AutoSize = true
+        Me.Label72.AutoSize = True
         Me.Label72.Location = New System.Drawing.Point(11, 149)
         Me.Label72.Name = "Label72"
         Me.Label72.Size = New System.Drawing.Size(51, 13)
@@ -4952,7 +5043,7 @@ Partial Class DevelopmentStart
         '
         'Label71
         '
-        Me.Label71.AutoSize = true
+        Me.Label71.AutoSize = True
         Me.Label71.Location = New System.Drawing.Point(11, 121)
         Me.Label71.Name = "Label71"
         Me.Label71.Size = New System.Drawing.Size(94, 13)
@@ -4961,7 +5052,7 @@ Partial Class DevelopmentStart
         '
         'Label70
         '
-        Me.Label70.AutoSize = true
+        Me.Label70.AutoSize = True
         Me.Label70.Location = New System.Drawing.Point(11, 93)
         Me.Label70.Name = "Label70"
         Me.Label70.Size = New System.Drawing.Size(88, 13)
@@ -4970,7 +5061,7 @@ Partial Class DevelopmentStart
         '
         'Label69
         '
-        Me.Label69.AutoSize = true
+        Me.Label69.AutoSize = True
         Me.Label69.Location = New System.Drawing.Point(11, 64)
         Me.Label69.Name = "Label69"
         Me.Label69.Size = New System.Drawing.Size(76, 13)
@@ -4979,7 +5070,7 @@ Partial Class DevelopmentStart
         '
         'Label68
         '
-        Me.Label68.AutoSize = true
+        Me.Label68.AutoSize = True
         Me.Label68.Location = New System.Drawing.Point(11, 37)
         Me.Label68.Name = "Label68"
         Me.Label68.Size = New System.Drawing.Size(58, 13)
@@ -4993,7 +5084,7 @@ Partial Class DevelopmentStart
         Me.DAToTypingDt.Name = "DAToTypingDt"
         Me.DAToTypingDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DAToTypingDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DAToTypingDt.Properties.ReadOnly = true
+        Me.DAToTypingDt.Properties.ReadOnly = True
         Me.DAToTypingDt.Size = New System.Drawing.Size(100, 20)
         Me.DAToTypingDt.TabIndex = 100
         '
@@ -5004,7 +5095,7 @@ Partial Class DevelopmentStart
         Me.DAToPlannerDt.Name = "DAToPlannerDt"
         Me.DAToPlannerDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DAToPlannerDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DAToPlannerDt.Properties.ReadOnly = true
+        Me.DAToPlannerDt.Properties.ReadOnly = True
         Me.DAToPlannerDt.Size = New System.Drawing.Size(100, 20)
         Me.DAToPlannerDt.TabIndex = 30
         '
@@ -5015,7 +5106,7 @@ Partial Class DevelopmentStart
         Me.DASiteInspectedDt.Name = "DASiteInspectedDt"
         Me.DASiteInspectedDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DASiteInspectedDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DASiteInspectedDt.Properties.ReadOnly = true
+        Me.DASiteInspectedDt.Properties.ReadOnly = True
         Me.DASiteInspectedDt.Size = New System.Drawing.Size(100, 20)
         Me.DASiteInspectedDt.TabIndex = 97
         '
@@ -5026,7 +5117,7 @@ Partial Class DevelopmentStart
         Me.PreAssessCompleteDate.Name = "PreAssessCompleteDate"
         Me.PreAssessCompleteDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.PreAssessCompleteDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.PreAssessCompleteDate.Properties.ReadOnly = true
+        Me.PreAssessCompleteDate.Properties.ReadOnly = True
         Me.PreAssessCompleteDate.Size = New System.Drawing.Size(100, 20)
         Me.PreAssessCompleteDate.TabIndex = 98
         '
@@ -5037,7 +5128,7 @@ Partial Class DevelopmentStart
         Me.RefToPlanCom.Name = "RefToPlanCom"
         Me.RefToPlanCom.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.RefToPlanCom.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.RefToPlanCom.Properties.ReadOnly = true
+        Me.RefToPlanCom.Properties.ReadOnly = True
         Me.RefToPlanCom.Size = New System.Drawing.Size(100, 20)
         Me.RefToPlanCom.TabIndex = 99
         '
@@ -5065,21 +5156,21 @@ Partial Class DevelopmentStart
         Me.DACompletedDt.Name = "DACompletedDt"
         Me.DACompletedDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DACompletedDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DACompletedDt.Properties.ReadOnly = true
+        Me.DACompletedDt.Properties.ReadOnly = True
         Me.DACompletedDt.Size = New System.Drawing.Size(100, 20)
         Me.DACompletedDt.TabIndex = 110
         '
         'rbNotifyAdvert
         '
-        Me.rbNotifyAdvert.AutoSize = true
-        Me.rbNotifyAdvert.Enabled = false
+        Me.rbNotifyAdvert.AutoSize = True
+        Me.rbNotifyAdvert.Enabled = False
         Me.rbNotifyAdvert.Location = New System.Drawing.Point(177, 24)
         Me.rbNotifyAdvert.Name = "rbNotifyAdvert"
         Me.rbNotifyAdvert.Size = New System.Drawing.Size(103, 17)
         Me.rbNotifyAdvert.TabIndex = 8
-        Me.rbNotifyAdvert.TabStop = true
+        Me.rbNotifyAdvert.TabStop = True
         Me.rbNotifyAdvert.Text = "Notify + Advert'"
-        Me.rbNotifyAdvert.UseVisualStyleBackColor = true
+        Me.rbNotifyAdvert.UseVisualStyleBackColor = True
         '
         'DACommDt
         '
@@ -5088,21 +5179,21 @@ Partial Class DevelopmentStart
         Me.DACommDt.Name = "DACommDt"
         Me.DACommDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DACommDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DACommDt.Properties.ReadOnly = true
+        Me.DACommDt.Properties.ReadOnly = True
         Me.DACommDt.Size = New System.Drawing.Size(100, 20)
         Me.DACommDt.TabIndex = 109
         '
         'rbNotify
         '
-        Me.rbNotify.AutoSize = true
-        Me.rbNotify.Enabled = false
+        Me.rbNotify.AutoSize = True
+        Me.rbNotify.Enabled = False
         Me.rbNotify.Location = New System.Drawing.Point(83, 24)
         Me.rbNotify.Name = "rbNotify"
         Me.rbNotify.Size = New System.Drawing.Size(79, 17)
         Me.rbNotify.TabIndex = 7
-        Me.rbNotify.TabStop = true
+        Me.rbNotify.TabStop = True
         Me.rbNotify.Text = "Notify Only"
-        Me.rbNotify.UseVisualStyleBackColor = true
+        Me.rbNotify.UseVisualStyleBackColor = True
         '
         'DAAdvisedDt
         '
@@ -5111,26 +5202,26 @@ Partial Class DevelopmentStart
         Me.DAAdvisedDt.Name = "DAAdvisedDt"
         Me.DAAdvisedDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DAAdvisedDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DAAdvisedDt.Properties.ReadOnly = true
+        Me.DAAdvisedDt.Properties.ReadOnly = True
         Me.DAAdvisedDt.Size = New System.Drawing.Size(100, 20)
         Me.DAAdvisedDt.TabIndex = 108
         '
         'rbNone
         '
-        Me.rbNone.AutoSize = true
-        Me.rbNone.Enabled = false
+        Me.rbNone.AutoSize = True
+        Me.rbNone.Enabled = False
         Me.rbNone.Location = New System.Drawing.Point(14, 24)
         Me.rbNone.Name = "rbNone"
         Me.rbNone.Size = New System.Drawing.Size(50, 17)
         Me.rbNone.TabIndex = 6
-        Me.rbNone.TabStop = true
+        Me.rbNone.TabStop = True
         Me.rbNone.Text = "None"
-        Me.rbNone.UseVisualStyleBackColor = true
+        Me.rbNone.UseVisualStyleBackColor = True
         '
         'Label93
         '
-        Me.Label93.AutoSize = true
-        Me.Label93.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label93.AutoSize = True
+        Me.Label93.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label93.Location = New System.Drawing.Point(29, 110)
         Me.Label93.Name = "Label93"
         Me.Label93.Size = New System.Drawing.Size(126, 13)
@@ -5139,7 +5230,7 @@ Partial Class DevelopmentStart
         '
         'Label92
         '
-        Me.Label92.AutoSize = true
+        Me.Label92.AutoSize = True
         Me.Label92.Location = New System.Drawing.Point(29, 81)
         Me.Label92.Name = "Label92"
         Me.Label92.Size = New System.Drawing.Size(108, 13)
@@ -5148,7 +5239,7 @@ Partial Class DevelopmentStart
         '
         'Label91
         '
-        Me.Label91.AutoSize = true
+        Me.Label91.AutoSize = True
         Me.Label91.Location = New System.Drawing.Point(29, 52)
         Me.Label91.Name = "Label91"
         Me.Label91.Size = New System.Drawing.Size(96, 13)
@@ -5195,7 +5286,7 @@ Partial Class DevelopmentStart
         Me.DAPermExDt.Name = "DAPermExDt"
         Me.DAPermExDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DAPermExDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DAPermExDt.Properties.ReadOnly = true
+        Me.DAPermExDt.Properties.ReadOnly = True
         Me.DAPermExDt.Size = New System.Drawing.Size(100, 20)
         Me.DAPermExDt.TabIndex = 107
         '
@@ -5215,7 +5306,7 @@ Partial Class DevelopmentStart
         Me.DAOccDt.Name = "DAOccDt"
         Me.DAOccDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DAOccDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DAOccDt.Properties.ReadOnly = true
+        Me.DAOccDt.Properties.ReadOnly = True
         Me.DAOccDt.Size = New System.Drawing.Size(100, 20)
         Me.DAOccDt.TabIndex = 106
         '
@@ -5235,20 +5326,20 @@ Partial Class DevelopmentStart
         Me.DAConsentPubDt.Name = "DAConsentPubDt"
         Me.DAConsentPubDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DAConsentPubDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DAConsentPubDt.Properties.ReadOnly = true
+        Me.DAConsentPubDt.Properties.ReadOnly = True
         Me.DAConsentPubDt.Size = New System.Drawing.Size(100, 20)
         Me.DAConsentPubDt.TabIndex = 105
         '
         'chkAPZYesNo
         '
-        Me.chkAPZYesNo.AutoSize = true
-        Me.chkAPZYesNo.Enabled = false
+        Me.chkAPZYesNo.AutoSize = True
+        Me.chkAPZYesNo.Enabled = False
         Me.chkAPZYesNo.Location = New System.Drawing.Point(323, 80)
         Me.chkAPZYesNo.Name = "chkAPZYesNo"
         Me.chkAPZYesNo.Size = New System.Drawing.Size(203, 17)
         Me.chkAPZYesNo.TabIndex = 22
         Me.chkAPZYesNo.Text = "Asset Protection Zone (APZ) applies?"
-        Me.chkAPZYesNo.UseVisualStyleBackColor = true
+        Me.chkAPZYesNo.UseVisualStyleBackColor = True
         '
         'cboDADecisionId
         '
@@ -5275,13 +5366,13 @@ Partial Class DevelopmentStart
         Me.DAFreeTreeDt.Name = "DAFreeTreeDt"
         Me.DAFreeTreeDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DAFreeTreeDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DAFreeTreeDt.Properties.ReadOnly = true
+        Me.DAFreeTreeDt.Properties.ReadOnly = True
         Me.DAFreeTreeDt.Size = New System.Drawing.Size(100, 20)
         Me.DAFreeTreeDt.TabIndex = 104
         '
         'Label58
         '
-        Me.Label58.AutoSize = true
+        Me.Label58.AutoSize = True
         Me.Label58.Location = New System.Drawing.Point(280, 54)
         Me.Label58.Name = "Label58"
         Me.Label58.Size = New System.Drawing.Size(38, 13)
@@ -5295,13 +5386,13 @@ Partial Class DevelopmentStart
         Me.ConsentPostedDate.Name = "ConsentPostedDate"
         Me.ConsentPostedDate.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.ConsentPostedDate.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.ConsentPostedDate.Properties.ReadOnly = true
+        Me.ConsentPostedDate.Properties.ReadOnly = True
         Me.ConsentPostedDate.Size = New System.Drawing.Size(100, 20)
         Me.ConsentPostedDate.TabIndex = 103
         '
         'Label57
         '
-        Me.Label57.AutoSize = true
+        Me.Label57.AutoSize = True
         Me.Label57.Location = New System.Drawing.Point(242, 31)
         Me.Label57.Name = "Label57"
         Me.Label57.Size = New System.Drawing.Size(77, 13)
@@ -5315,13 +5406,13 @@ Partial Class DevelopmentStart
         Me.DAAppNotDt.Name = "DAAppNotDt"
         Me.DAAppNotDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DAAppNotDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DAAppNotDt.Properties.ReadOnly = true
+        Me.DAAppNotDt.Properties.ReadOnly = True
         Me.DAAppNotDt.Size = New System.Drawing.Size(100, 20)
         Me.DAAppNotDt.TabIndex = 102
         '
         'Label82
         '
-        Me.Label82.AutoSize = true
+        Me.Label82.AutoSize = True
         Me.Label82.Location = New System.Drawing.Point(245, 185)
         Me.Label82.Name = "Label82"
         Me.Label82.Size = New System.Drawing.Size(180, 13)
@@ -5335,13 +5426,13 @@ Partial Class DevelopmentStart
         Me.DADetermDt.Name = "DADetermDt"
         Me.DADetermDt.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DADetermDt.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DADetermDt.Properties.ReadOnly = true
+        Me.DADetermDt.Properties.ReadOnly = True
         Me.DADetermDt.Size = New System.Drawing.Size(100, 20)
         Me.DADetermDt.TabIndex = 101
         '
         'Label81
         '
-        Me.Label81.AutoSize = true
+        Me.Label81.AutoSize = True
         Me.Label81.Location = New System.Drawing.Point(248, 108)
         Me.Label81.Name = "Label81"
         Me.Label81.Size = New System.Drawing.Size(140, 13)
@@ -5350,7 +5441,7 @@ Partial Class DevelopmentStart
         '
         'Label80
         '
-        Me.Label80.AutoSize = true
+        Me.Label80.AutoSize = True
         Me.Label80.Location = New System.Drawing.Point(248, 219)
         Me.Label80.Name = "Label80"
         Me.Label80.Size = New System.Drawing.Size(77, 13)
@@ -5359,7 +5450,7 @@ Partial Class DevelopmentStart
         '
         'Label79
         '
-        Me.Label79.AutoSize = true
+        Me.Label79.AutoSize = True
         Me.Label79.Location = New System.Drawing.Point(10, 199)
         Me.Label79.Name = "Label79"
         Me.Label79.Size = New System.Drawing.Size(100, 13)
@@ -5368,7 +5459,7 @@ Partial Class DevelopmentStart
         '
         'Label78
         '
-        Me.Label78.AutoSize = true
+        Me.Label78.AutoSize = True
         Me.Label78.Location = New System.Drawing.Point(10, 171)
         Me.Label78.Name = "Label78"
         Me.Label78.Size = New System.Drawing.Size(64, 13)
@@ -5377,7 +5468,7 @@ Partial Class DevelopmentStart
         '
         'Label77
         '
-        Me.Label77.AutoSize = true
+        Me.Label77.AutoSize = True
         Me.Label77.Location = New System.Drawing.Point(10, 143)
         Me.Label77.Name = "Label77"
         Me.Label77.Size = New System.Drawing.Size(95, 13)
@@ -5386,7 +5477,7 @@ Partial Class DevelopmentStart
         '
         'Label76
         '
-        Me.Label76.AutoSize = true
+        Me.Label76.AutoSize = True
         Me.Label76.Location = New System.Drawing.Point(10, 115)
         Me.Label76.Name = "Label76"
         Me.Label76.Size = New System.Drawing.Size(99, 13)
@@ -5395,7 +5486,7 @@ Partial Class DevelopmentStart
         '
         'Label75
         '
-        Me.Label75.AutoSize = true
+        Me.Label75.AutoSize = True
         Me.Label75.Location = New System.Drawing.Point(10, 87)
         Me.Label75.Name = "Label75"
         Me.Label75.Size = New System.Drawing.Size(110, 13)
@@ -5404,7 +5495,7 @@ Partial Class DevelopmentStart
         '
         'Label74
         '
-        Me.Label74.AutoSize = true
+        Me.Label74.AutoSize = True
         Me.Label74.Location = New System.Drawing.Point(10, 59)
         Me.Label74.Name = "Label74"
         Me.Label74.Size = New System.Drawing.Size(105, 13)
@@ -5413,7 +5504,7 @@ Partial Class DevelopmentStart
         '
         'Label73
         '
-        Me.Label73.AutoSize = true
+        Me.Label73.AutoSize = True
         Me.Label73.Location = New System.Drawing.Point(10, 31)
         Me.Label73.Name = "Label73"
         Me.Label73.Size = New System.Drawing.Size(88, 13)
@@ -5424,16 +5515,16 @@ Partial Class DevelopmentStart
         '
         Me.txtProgressComment.BackColor = System.Drawing.SystemColors.Info
         Me.txtProgressComment.Location = New System.Drawing.Point(248, 122)
-        Me.txtProgressComment.Multiline = true
+        Me.txtProgressComment.Multiline = True
         Me.txtProgressComment.Name = "txtProgressComment"
-        Me.txtProgressComment.ReadOnly = true
+        Me.txtProgressComment.ReadOnly = True
         Me.txtProgressComment.Size = New System.Drawing.Size(351, 46)
         Me.txtProgressComment.TabIndex = 7
         '
         'tpgDocuments
         '
         Me.tpgDocuments.Controls.Add(Me.pnlDisplayDocs)
-        Me.tpgDocuments.ImageOptions.Image = CType(resources.GetObject("tpgDocuments.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgDocuments.ImageOptions.Image = CType(resources.GetObject("tpgDocuments.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgDocuments.Name = "tpgDocuments"
         Me.tpgDocuments.Size = New System.Drawing.Size(1211, 820)
         Me.tpgDocuments.Text = "Documents"
@@ -5441,7 +5532,7 @@ Partial Class DevelopmentStart
         'pnlDisplayDocs
         '
         Me.pnlDisplayDocs.Appearance.BackColor = System.Drawing.SystemColors.Control
-        Me.pnlDisplayDocs.Appearance.Options.UseBackColor = true
+        Me.pnlDisplayDocs.Appearance.Options.UseBackColor = True
         Me.pnlDisplayDocs.Controls.Add(Me.GroupBox32)
         Me.pnlDisplayDocs.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlDisplayDocs.Location = New System.Drawing.Point(0, 0)
@@ -5466,7 +5557,7 @@ Partial Class DevelopmentStart
         '
         'btnSaveTheNote
         '
-        Me.btnSaveTheNote.ImageOptions.Image = CType(resources.GetObject("btnSaveTheNote.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveTheNote.ImageOptions.Image = CType(resources.GetObject("btnSaveTheNote.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveTheNote.Location = New System.Drawing.Point(405, 705)
         Me.btnSaveTheNote.Name = "btnSaveTheNote"
         Me.btnSaveTheNote.Size = New System.Drawing.Size(111, 35)
@@ -5475,18 +5566,18 @@ Partial Class DevelopmentStart
         '
         'btnRemoveDocument
         '
-        Me.btnRemoveDocument.Enabled = false
-        Me.btnRemoveDocument.ImageOptions.Image = CType(resources.GetObject("btnRemoveDocument.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveDocument.Enabled = False
+        Me.btnRemoveDocument.ImageOptions.Image = CType(resources.GetObject("btnRemoveDocument.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveDocument.Location = New System.Drawing.Point(599, 705)
         Me.btnRemoveDocument.Name = "btnRemoveDocument"
         Me.btnRemoveDocument.Size = New System.Drawing.Size(111, 35)
         Me.btnRemoveDocument.TabIndex = 9
-        Me.btnRemoveDocument.Text = "Remove"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Document"
+        Me.btnRemoveDocument.Text = "Remove" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Document"
         '
         'btnViewPDF
         '
-        Me.btnViewPDF.Enabled = false
-        Me.btnViewPDF.ImageOptions.Image = CType(resources.GetObject("btnViewPDF.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnViewPDF.Enabled = False
+        Me.btnViewPDF.ImageOptions.Image = CType(resources.GetObject("btnViewPDF.ImageOptions.Image"), System.Drawing.Image)
         Me.btnViewPDF.Location = New System.Drawing.Point(716, 705)
         Me.btnViewPDF.Name = "btnViewPDF"
         Me.btnViewPDF.Size = New System.Drawing.Size(111, 35)
@@ -5495,13 +5586,13 @@ Partial Class DevelopmentStart
         '
         'btnViewWord
         '
-        Me.btnViewWord.Enabled = false
-        Me.btnViewWord.ImageOptions.Image = CType(resources.GetObject("btnViewWord.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnViewWord.Enabled = False
+        Me.btnViewWord.ImageOptions.Image = CType(resources.GetObject("btnViewWord.ImageOptions.Image"), System.Drawing.Image)
         Me.btnViewWord.Location = New System.Drawing.Point(839, 705)
         Me.btnViewWord.Name = "btnViewWord"
         Me.btnViewWord.Size = New System.Drawing.Size(111, 35)
         Me.btnViewWord.TabIndex = 7
-        Me.btnViewWord.Text = "Open "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Word Doc"
+        Me.btnViewWord.Text = "Open " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Word Doc"
         '
         'grdDocumentsList
         '
@@ -5518,10 +5609,10 @@ Partial Class DevelopmentStart
         Me.gvwDocumentsList.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colApNo, Me.colApType, Me.colFileName, Me.colFullname, Me.colDocumentDesc, Me.colDateCreated, Me.colDocnotes, Me.colDocMTH, Me.colDocYr, Me.colDocId, Me.colWORDDOC})
         Me.gvwDocumentsList.GridControl = Me.grdDocumentsList
         Me.gvwDocumentsList.Name = "gvwDocumentsList"
-        Me.gvwDocumentsList.OptionsBehavior.Editable = false
-        Me.gvwDocumentsList.OptionsBehavior.ReadOnly = true
-        Me.gvwDocumentsList.OptionsFind.AlwaysVisible = true
-        Me.gvwDocumentsList.OptionsView.ShowGroupPanel = false
+        Me.gvwDocumentsList.OptionsBehavior.Editable = False
+        Me.gvwDocumentsList.OptionsBehavior.ReadOnly = True
+        Me.gvwDocumentsList.OptionsFind.AlwaysVisible = True
+        Me.gvwDocumentsList.OptionsView.ShowGroupPanel = False
         '
         'colApNo
         '
@@ -5546,7 +5637,7 @@ Partial Class DevelopmentStart
         Me.colFullname.Caption = "Author"
         Me.colFullname.FieldName = "Fullname"
         Me.colFullname.Name = "colFullname"
-        Me.colFullname.Visible = true
+        Me.colFullname.Visible = True
         Me.colFullname.VisibleIndex = 0
         Me.colFullname.Width = 117
         '
@@ -5555,7 +5646,7 @@ Partial Class DevelopmentStart
         Me.colDocumentDesc.Caption = "Document"
         Me.colDocumentDesc.FieldName = "DocumentDesc"
         Me.colDocumentDesc.Name = "colDocumentDesc"
-        Me.colDocumentDesc.Visible = true
+        Me.colDocumentDesc.Visible = True
         Me.colDocumentDesc.VisibleIndex = 1
         Me.colDocumentDesc.Width = 177
         '
@@ -5564,7 +5655,7 @@ Partial Class DevelopmentStart
         Me.colDateCreated.Caption = "Created"
         Me.colDateCreated.FieldName = "DateCreated"
         Me.colDateCreated.Name = "colDateCreated"
-        Me.colDateCreated.Visible = true
+        Me.colDateCreated.Visible = True
         Me.colDateCreated.VisibleIndex = 2
         Me.colDateCreated.Width = 89
         '
@@ -5573,7 +5664,7 @@ Partial Class DevelopmentStart
         Me.colDocnotes.Caption = "Notes"
         Me.colDocnotes.FieldName = "notes"
         Me.colDocnotes.Name = "colDocnotes"
-        Me.colDocnotes.Visible = true
+        Me.colDocnotes.Visible = True
         Me.colDocnotes.VisibleIndex = 3
         Me.colDocnotes.Width = 527
         '
@@ -5603,12 +5694,12 @@ Partial Class DevelopmentStart
         '
         'RepositoryItemPictureEdit1
         '
-        Me.RepositoryItemPictureEdit1.InitialImageOptions.Image = CType(resources.GetObject("RepositoryItemPictureEdit1.InitialImageOptions.Image"),System.Drawing.Image)
+        Me.RepositoryItemPictureEdit1.InitialImageOptions.Image = CType(resources.GetObject("RepositoryItemPictureEdit1.InitialImageOptions.Image"), System.Drawing.Image)
         Me.RepositoryItemPictureEdit1.Name = "RepositoryItemPictureEdit1"
         '
         'Label102
         '
-        Me.Label102.AutoSize = true
+        Me.Label102.AutoSize = True
         Me.Label102.Location = New System.Drawing.Point(23, 717)
         Me.Label102.Name = "Label102"
         Me.Label102.Size = New System.Drawing.Size(34, 13)
@@ -5625,7 +5716,7 @@ Partial Class DevelopmentStart
         'tpgVariations
         '
         Me.tpgVariations.Controls.Add(Me.pnlDisplayVariations)
-        Me.tpgVariations.ImageOptions.Image = CType(resources.GetObject("tpgVariations.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgVariations.ImageOptions.Image = CType(resources.GetObject("tpgVariations.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgVariations.Name = "tpgVariations"
         Me.tpgVariations.Size = New System.Drawing.Size(1211, 820)
         Me.tpgVariations.Text = "Variations"
@@ -5666,8 +5757,8 @@ Partial Class DevelopmentStart
         Me.gvwVariations.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colVarID, Me.colVariation, Me.colVariationdetail, Me.colVariationResultDesc, Me.colDelegatedAuthority, Me.colDecisionDate, Me.colUserStamp, Me.colType})
         Me.gvwVariations.GridControl = Me.grdVariations
         Me.gvwVariations.Name = "gvwVariations"
-        Me.gvwVariations.OptionsBehavior.ReadOnly = true
-        Me.gvwVariations.OptionsView.ShowGroupPanel = false
+        Me.gvwVariations.OptionsBehavior.ReadOnly = True
+        Me.gvwVariations.OptionsView.ShowGroupPanel = False
         Me.gvwVariations.RowHeight = 50
         '
         'colVarID
@@ -5678,14 +5769,14 @@ Partial Class DevelopmentStart
         '
         'colVariation
         '
-        Me.colVariation.AppearanceCell.Options.UseTextOptions = true
+        Me.colVariation.AppearanceCell.Options.UseTextOptions = True
         Me.colVariation.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colVariation.Caption = "Type"
         Me.colVariation.FieldName = "Variation"
         Me.colVariation.Name = "colVariation"
-        Me.colVariation.OptionsColumn.AllowEdit = false
-        Me.colVariation.OptionsColumn.ReadOnly = true
-        Me.colVariation.Visible = true
+        Me.colVariation.OptionsColumn.AllowEdit = False
+        Me.colVariation.OptionsColumn.ReadOnly = True
+        Me.colVariation.Visible = True
         Me.colVariation.VisibleIndex = 0
         Me.colVariation.Width = 99
         '
@@ -5695,76 +5786,76 @@ Partial Class DevelopmentStart
         Me.colVariationdetail.ColumnEdit = Me.RepositoryItemMemoEdit4
         Me.colVariationdetail.FieldName = "detail"
         Me.colVariationdetail.Name = "colVariationdetail"
-        Me.colVariationdetail.Visible = true
+        Me.colVariationdetail.Visible = True
         Me.colVariationdetail.VisibleIndex = 1
         Me.colVariationdetail.Width = 385
         '
         'RepositoryItemMemoEdit4
         '
-        Me.RepositoryItemMemoEdit4.Appearance.Options.UseTextOptions = true
+        Me.RepositoryItemMemoEdit4.Appearance.Options.UseTextOptions = True
         Me.RepositoryItemMemoEdit4.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.RepositoryItemMemoEdit4.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.RepositoryItemMemoEdit4.Name = "RepositoryItemMemoEdit4"
         '
         'colVariationResultDesc
         '
-        Me.colVariationResultDesc.AppearanceCell.Options.UseTextOptions = true
+        Me.colVariationResultDesc.AppearanceCell.Options.UseTextOptions = True
         Me.colVariationResultDesc.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colVariationResultDesc.Caption = "Result"
         Me.colVariationResultDesc.ColumnEdit = Me.RepositoryItemMemoEdit5
         Me.colVariationResultDesc.FieldName = "VariationResultDesc"
         Me.colVariationResultDesc.Name = "colVariationResultDesc"
-        Me.colVariationResultDesc.OptionsColumn.AllowEdit = false
-        Me.colVariationResultDesc.OptionsColumn.ReadOnly = true
-        Me.colVariationResultDesc.Visible = true
+        Me.colVariationResultDesc.OptionsColumn.AllowEdit = False
+        Me.colVariationResultDesc.OptionsColumn.ReadOnly = True
+        Me.colVariationResultDesc.Visible = True
         Me.colVariationResultDesc.VisibleIndex = 2
         Me.colVariationResultDesc.Width = 92
         '
         'RepositoryItemMemoEdit5
         '
-        Me.RepositoryItemMemoEdit5.Appearance.Options.UseTextOptions = true
+        Me.RepositoryItemMemoEdit5.Appearance.Options.UseTextOptions = True
         Me.RepositoryItemMemoEdit5.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.RepositoryItemMemoEdit5.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.RepositoryItemMemoEdit5.Name = "RepositoryItemMemoEdit5"
-        Me.RepositoryItemMemoEdit5.ReadOnly = true
+        Me.RepositoryItemMemoEdit5.ReadOnly = True
         Me.RepositoryItemMemoEdit5.ScrollBars = System.Windows.Forms.ScrollBars.Horizontal
         '
         'colDelegatedAuthority
         '
-        Me.colDelegatedAuthority.AppearanceCell.Options.UseTextOptions = true
+        Me.colDelegatedAuthority.AppearanceCell.Options.UseTextOptions = True
         Me.colDelegatedAuthority.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colDelegatedAuthority.Caption = "Authority"
         Me.colDelegatedAuthority.FieldName = "DelegatedAuthority"
         Me.colDelegatedAuthority.Name = "colDelegatedAuthority"
-        Me.colDelegatedAuthority.OptionsColumn.AllowEdit = false
-        Me.colDelegatedAuthority.OptionsColumn.ReadOnly = true
-        Me.colDelegatedAuthority.Visible = true
+        Me.colDelegatedAuthority.OptionsColumn.AllowEdit = False
+        Me.colDelegatedAuthority.OptionsColumn.ReadOnly = True
+        Me.colDelegatedAuthority.Visible = True
         Me.colDelegatedAuthority.VisibleIndex = 3
         Me.colDelegatedAuthority.Width = 92
         '
         'colDecisionDate
         '
-        Me.colDecisionDate.AppearanceCell.Options.UseTextOptions = true
+        Me.colDecisionDate.AppearanceCell.Options.UseTextOptions = True
         Me.colDecisionDate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colDecisionDate.Caption = "Decision"
         Me.colDecisionDate.FieldName = "DecisionDate"
         Me.colDecisionDate.Name = "colDecisionDate"
-        Me.colDecisionDate.OptionsColumn.AllowEdit = false
-        Me.colDecisionDate.OptionsColumn.ReadOnly = true
-        Me.colDecisionDate.Visible = true
+        Me.colDecisionDate.OptionsColumn.AllowEdit = False
+        Me.colDecisionDate.OptionsColumn.ReadOnly = True
+        Me.colDecisionDate.Visible = True
         Me.colDecisionDate.VisibleIndex = 4
         Me.colDecisionDate.Width = 92
         '
         'colUserStamp
         '
-        Me.colUserStamp.AppearanceCell.Options.UseTextOptions = true
+        Me.colUserStamp.AppearanceCell.Options.UseTextOptions = True
         Me.colUserStamp.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colUserStamp.Caption = "User Stamp"
         Me.colUserStamp.FieldName = "UserStamp"
         Me.colUserStamp.Name = "colUserStamp"
-        Me.colUserStamp.OptionsColumn.AllowEdit = false
-        Me.colUserStamp.OptionsColumn.ReadOnly = true
-        Me.colUserStamp.Visible = true
+        Me.colUserStamp.OptionsColumn.AllowEdit = False
+        Me.colUserStamp.OptionsColumn.ReadOnly = True
+        Me.colUserStamp.Visible = True
         Me.colUserStamp.VisibleIndex = 5
         Me.colUserStamp.Width = 99
         '
@@ -5788,7 +5879,7 @@ Partial Class DevelopmentStart
         Me.GroupBox8.Name = "GroupBox8"
         Me.GroupBox8.Size = New System.Drawing.Size(284, 168)
         Me.GroupBox8.TabIndex = 2
-        Me.GroupBox8.TabStop = false
+        Me.GroupBox8.TabStop = False
         Me.GroupBox8.Text = "Response"
         '
         'cboVariationAuthority
@@ -5797,7 +5888,7 @@ Partial Class DevelopmentStart
         Me.cboVariationAuthority.Name = "cboVariationAuthority"
         Me.cboVariationAuthority.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboVariationAuthority.Properties.NullText = "[Select Authority]"
-        Me.cboVariationAuthority.Properties.ReadOnly = true
+        Me.cboVariationAuthority.Properties.ReadOnly = True
         Me.cboVariationAuthority.Size = New System.Drawing.Size(150, 20)
         Me.cboVariationAuthority.TabIndex = 46
         '
@@ -5807,14 +5898,14 @@ Partial Class DevelopmentStart
         Me.cboVariationResult.Name = "cboVariationResult"
         Me.cboVariationResult.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboVariationResult.Properties.NullText = "[Select Result]"
-        Me.cboVariationResult.Properties.ReadOnly = true
+        Me.cboVariationResult.Properties.ReadOnly = True
         Me.cboVariationResult.Size = New System.Drawing.Size(150, 20)
         Me.cboVariationResult.TabIndex = 45
         '
         'btnSaveVariationResponse
         '
-        Me.btnSaveVariationResponse.Enabled = false
-        Me.btnSaveVariationResponse.ImageOptions.Image = CType(resources.GetObject("btnSaveVariationResponse.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveVariationResponse.Enabled = False
+        Me.btnSaveVariationResponse.ImageOptions.Image = CType(resources.GetObject("btnSaveVariationResponse.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveVariationResponse.Location = New System.Drawing.Point(186, 114)
         Me.btnSaveVariationResponse.Name = "btnSaveVariationResponse"
         Me.btnSaveVariationResponse.Size = New System.Drawing.Size(84, 37)
@@ -5823,8 +5914,8 @@ Partial Class DevelopmentStart
         '
         'btneditVariationResponse
         '
-        Me.btneditVariationResponse.Enabled = false
-        Me.btneditVariationResponse.ImageOptions.Image = CType(resources.GetObject("btneditVariationResponse.ImageOptions.Image"),System.Drawing.Image)
+        Me.btneditVariationResponse.Enabled = False
+        Me.btneditVariationResponse.ImageOptions.Image = CType(resources.GetObject("btneditVariationResponse.ImageOptions.Image"), System.Drawing.Image)
         Me.btneditVariationResponse.Location = New System.Drawing.Point(186, 23)
         Me.btneditVariationResponse.Name = "btneditVariationResponse"
         Me.btneditVariationResponse.Size = New System.Drawing.Size(84, 37)
@@ -5843,7 +5934,7 @@ Partial Class DevelopmentStart
         '
         'Label100
         '
-        Me.Label100.AutoSize = true
+        Me.Label100.AutoSize = True
         Me.Label100.Location = New System.Drawing.Point(14, 67)
         Me.Label100.Name = "Label100"
         Me.Label100.Size = New System.Drawing.Size(56, 13)
@@ -5852,7 +5943,7 @@ Partial Class DevelopmentStart
         '
         'Label99
         '
-        Me.Label99.AutoSize = true
+        Me.Label99.AutoSize = True
         Me.Label99.Location = New System.Drawing.Point(14, 22)
         Me.Label99.Name = "Label99"
         Me.Label99.Size = New System.Drawing.Size(41, 13)
@@ -5861,7 +5952,7 @@ Partial Class DevelopmentStart
         '
         'Label101
         '
-        Me.Label101.AutoSize = true
+        Me.Label101.AutoSize = True
         Me.Label101.Location = New System.Drawing.Point(14, 110)
         Me.Label101.Name = "Label101"
         Me.Label101.Size = New System.Drawing.Size(76, 13)
@@ -5884,7 +5975,7 @@ Partial Class DevelopmentStart
         Me.GroupBox29.Name = "GroupBox29"
         Me.GroupBox29.Size = New System.Drawing.Size(801, 309)
         Me.GroupBox29.TabIndex = 1
-        Me.GroupBox29.TabStop = false
+        Me.GroupBox29.TabStop = False
         '
         'cboVariationType
         '
@@ -5892,14 +5983,14 @@ Partial Class DevelopmentStart
         Me.cboVariationType.Name = "cboVariationType"
         Me.cboVariationType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboVariationType.Properties.NullText = "[Select Variation Type]"
-        Me.cboVariationType.Properties.ReadOnly = true
+        Me.cboVariationType.Properties.ReadOnly = True
         Me.cboVariationType.Size = New System.Drawing.Size(175, 20)
         Me.cboVariationType.TabIndex = 49
         '
         'btnRemoveVariation
         '
-        Me.btnRemoveVariation.Enabled = false
-        Me.btnRemoveVariation.ImageOptions.Image = CType(resources.GetObject("btnRemoveVariation.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveVariation.Enabled = False
+        Me.btnRemoveVariation.ImageOptions.Image = CType(resources.GetObject("btnRemoveVariation.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveVariation.Location = New System.Drawing.Point(222, 249)
         Me.btnRemoveVariation.Name = "btnRemoveVariation"
         Me.btnRemoveVariation.Size = New System.Drawing.Size(99, 38)
@@ -5908,8 +5999,8 @@ Partial Class DevelopmentStart
         '
         'btnSaveVariation
         '
-        Me.btnSaveVariation.Enabled = false
-        Me.btnSaveVariation.ImageOptions.Image = CType(resources.GetObject("btnSaveVariation.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveVariation.Enabled = False
+        Me.btnSaveVariation.ImageOptions.Image = CType(resources.GetObject("btnSaveVariation.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveVariation.Location = New System.Drawing.Point(338, 249)
         Me.btnSaveVariation.Name = "btnSaveVariation"
         Me.btnSaveVariation.Size = New System.Drawing.Size(99, 38)
@@ -5918,8 +6009,8 @@ Partial Class DevelopmentStart
         '
         'btnEditVariation
         '
-        Me.btnEditVariation.Enabled = false
-        Me.btnEditVariation.ImageOptions.Image = CType(resources.GetObject("btnEditVariation.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditVariation.Enabled = False
+        Me.btnEditVariation.ImageOptions.Image = CType(resources.GetObject("btnEditVariation.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditVariation.Location = New System.Drawing.Point(113, 249)
         Me.btnEditVariation.Name = "btnEditVariation"
         Me.btnEditVariation.Size = New System.Drawing.Size(99, 38)
@@ -5928,7 +6019,7 @@ Partial Class DevelopmentStart
         '
         'btnAddVariation
         '
-        Me.btnAddVariation.ImageOptions.Image = CType(resources.GetObject("btnAddVariation.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddVariation.ImageOptions.Image = CType(resources.GetObject("btnAddVariation.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddVariation.Location = New System.Drawing.Point(8, 249)
         Me.btnAddVariation.Name = "btnAddVariation"
         Me.btnAddVariation.Size = New System.Drawing.Size(99, 38)
@@ -5937,16 +6028,16 @@ Partial Class DevelopmentStart
         '
         'btnAddNewVariationType
         '
-        Me.btnAddNewVariationType.ImageOptions.Image = CType(resources.GetObject("btnAddNewVariationType.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddNewVariationType.ImageOptions.Image = CType(resources.GetObject("btnAddNewVariationType.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddNewVariationType.Location = New System.Drawing.Point(8, 60)
         Me.btnAddNewVariationType.Name = "btnAddNewVariationType"
         Me.btnAddNewVariationType.Size = New System.Drawing.Size(120, 35)
         Me.btnAddNewVariationType.TabIndex = 44
-        Me.btnAddNewVariationType.Text = "Add New"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" ""Type"" Code"
+        Me.btnAddNewVariationType.Text = "Add New" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & " ""Type"" Code"
         '
         'lblID
         '
-        Me.lblID.AutoSize = true
+        Me.lblID.AutoSize = True
         Me.lblID.ForeColor = System.Drawing.Color.Transparent
         Me.lblID.Location = New System.Drawing.Point(471, 82)
         Me.lblID.Name = "lblID"
@@ -5955,7 +6046,7 @@ Partial Class DevelopmentStart
         '
         'Label98
         '
-        Me.Label98.AutoSize = true
+        Me.Label98.AutoSize = True
         Me.Label98.Location = New System.Drawing.Point(186, 18)
         Me.Label98.Name = "Label98"
         Me.Label98.Size = New System.Drawing.Size(97, 13)
@@ -5964,7 +6055,7 @@ Partial Class DevelopmentStart
         '
         'Label97
         '
-        Me.Label97.AutoSize = true
+        Me.Label97.AutoSize = True
         Me.Label97.Location = New System.Drawing.Point(9, 16)
         Me.Label97.Name = "Label97"
         Me.Label97.Size = New System.Drawing.Size(80, 13)
@@ -5975,16 +6066,16 @@ Partial Class DevelopmentStart
         '
         Me.txtVariationDetails.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtVariationDetails.Location = New System.Drawing.Point(189, 34)
-        Me.txtVariationDetails.Multiline = true
+        Me.txtVariationDetails.Multiline = True
         Me.txtVariationDetails.Name = "txtVariationDetails"
-        Me.txtVariationDetails.ReadOnly = true
+        Me.txtVariationDetails.ReadOnly = True
         Me.txtVariationDetails.Size = New System.Drawing.Size(590, 204)
         Me.txtVariationDetails.TabIndex = 1
         '
         'tpgSubmissions
         '
         Me.tpgSubmissions.Controls.Add(Me.pnlDisplaySubmisions)
-        Me.tpgSubmissions.ImageOptions.Image = CType(resources.GetObject("tpgSubmissions.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgSubmissions.ImageOptions.Image = CType(resources.GetObject("tpgSubmissions.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgSubmissions.Name = "tpgSubmissions"
         Me.tpgSubmissions.Size = New System.Drawing.Size(1211, 820)
         Me.tpgSubmissions.Text = "Submissions"
@@ -6003,9 +6094,9 @@ Partial Class DevelopmentStart
         '
         'DACompletedDtLabel2
         '
-        Me.DACompletedDtLabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(192,Byte),Integer))
+        Me.DACompletedDtLabel2.BackColor = System.Drawing.Color.FromArgb(CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(192, Byte), Integer))
         Me.DACompletedDtLabel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.DACompletedDtLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.DACompletedDtLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.DACompletedDtLabel2.Location = New System.Drawing.Point(472, 12)
         Me.DACompletedDtLabel2.Name = "DACompletedDtLabel2"
         Me.DACompletedDtLabel2.Size = New System.Drawing.Size(111, 23)
@@ -6037,18 +6128,18 @@ Partial Class DevelopmentStart
         '
         'btnEmailAcknowledgement
         '
-        Me.btnEmailAcknowledgement.Enabled = false
-        Me.btnEmailAcknowledgement.ImageOptions.Image = CType(resources.GetObject("btnEmailAcknowledgement.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEmailAcknowledgement.Enabled = False
+        Me.btnEmailAcknowledgement.ImageOptions.Image = CType(resources.GetObject("btnEmailAcknowledgement.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEmailAcknowledgement.Location = New System.Drawing.Point(786, 35)
         Me.btnEmailAcknowledgement.Name = "btnEmailAcknowledgement"
         Me.btnEmailAcknowledgement.Size = New System.Drawing.Size(134, 37)
         Me.btnEmailAcknowledgement.TabIndex = 62
-        Me.btnEmailAcknowledgement.Text = "Email "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Acknowledgement"
+        Me.btnEmailAcknowledgement.Text = "Email " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Acknowledgement"
         '
         'btnFinaliseSubmission
         '
-        Me.btnFinaliseSubmission.Enabled = false
-        Me.btnFinaliseSubmission.ImageOptions.Image = CType(resources.GetObject("btnFinaliseSubmission.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnFinaliseSubmission.Enabled = False
+        Me.btnFinaliseSubmission.ImageOptions.Image = CType(resources.GetObject("btnFinaliseSubmission.ImageOptions.Image"), System.Drawing.Image)
         Me.btnFinaliseSubmission.Location = New System.Drawing.Point(656, 121)
         Me.btnFinaliseSubmission.Name = "btnFinaliseSubmission"
         Me.btnFinaliseSubmission.Size = New System.Drawing.Size(108, 37)
@@ -6057,8 +6148,8 @@ Partial Class DevelopmentStart
         '
         'btnDeleteSubmission
         '
-        Me.btnDeleteSubmission.Enabled = false
-        Me.btnDeleteSubmission.ImageOptions.Image = CType(resources.GetObject("btnDeleteSubmission.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnDeleteSubmission.Enabled = False
+        Me.btnDeleteSubmission.ImageOptions.Image = CType(resources.GetObject("btnDeleteSubmission.ImageOptions.Image"), System.Drawing.Image)
         Me.btnDeleteSubmission.Location = New System.Drawing.Point(656, 78)
         Me.btnDeleteSubmission.Name = "btnDeleteSubmission"
         Me.btnDeleteSubmission.Size = New System.Drawing.Size(108, 37)
@@ -6067,8 +6158,8 @@ Partial Class DevelopmentStart
         '
         'btnEditSubmision
         '
-        Me.btnEditSubmision.Enabled = false
-        Me.btnEditSubmision.ImageOptions.Image = CType(resources.GetObject("btnEditSubmision.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditSubmision.Enabled = False
+        Me.btnEditSubmision.ImageOptions.Image = CType(resources.GetObject("btnEditSubmision.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditSubmision.Location = New System.Drawing.Point(656, 35)
         Me.btnEditSubmision.Name = "btnEditSubmision"
         Me.btnEditSubmision.Size = New System.Drawing.Size(108, 37)
@@ -6090,9 +6181,9 @@ Partial Class DevelopmentStart
         Me.gvwSubmissionDrafts.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn13, Me.GridColumn14, Me.GridColumn15, Me.GridColumn16, Me.GridColumn17, Me.GridColumn18})
         Me.gvwSubmissionDrafts.GridControl = Me.grdSubmissionDrafts
         Me.gvwSubmissionDrafts.Name = "gvwSubmissionDrafts"
-        Me.gvwSubmissionDrafts.OptionsBehavior.Editable = false
-        Me.gvwSubmissionDrafts.OptionsBehavior.ReadOnly = true
-        Me.gvwSubmissionDrafts.OptionsView.ShowGroupPanel = false
+        Me.gvwSubmissionDrafts.OptionsBehavior.Editable = False
+        Me.gvwSubmissionDrafts.OptionsBehavior.ReadOnly = True
+        Me.gvwSubmissionDrafts.OptionsView.ShowGroupPanel = False
         '
         'GridColumn13
         '
@@ -6105,7 +6196,7 @@ Partial Class DevelopmentStart
         Me.GridColumn14.Caption = "Document Type"
         Me.GridColumn14.FieldName = "Description"
         Me.GridColumn14.Name = "GridColumn14"
-        Me.GridColumn14.Visible = true
+        Me.GridColumn14.Visible = True
         Me.GridColumn14.VisibleIndex = 0
         Me.GridColumn14.Width = 517
         '
@@ -6123,7 +6214,7 @@ Partial Class DevelopmentStart
         Me.GridColumn16.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.GridColumn16.FieldName = "DateCreated"
         Me.GridColumn16.Name = "GridColumn16"
-        Me.GridColumn16.Visible = true
+        Me.GridColumn16.Visible = True
         Me.GridColumn16.VisibleIndex = 1
         Me.GridColumn16.Width = 94
         '
@@ -6153,9 +6244,9 @@ Partial Class DevelopmentStart
         Me.gvwSubmissionandObjections.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.GridColumn1, Me.GridColumn2, Me.GridColumn3, Me.GridColumn4, Me.GridColumn5, Me.GridColumn6, Me.GridColumn7, Me.GridColumn8, Me.GridColumn9, Me.GridColumn10, Me.GridColumn11})
         Me.gvwSubmissionandObjections.GridControl = Me.grdSubmissionandObjections
         Me.gvwSubmissionandObjections.Name = "gvwSubmissionandObjections"
-        Me.gvwSubmissionandObjections.OptionsBehavior.Editable = false
-        Me.gvwSubmissionandObjections.OptionsBehavior.ReadOnly = true
-        Me.gvwSubmissionandObjections.OptionsView.ShowGroupPanel = false
+        Me.gvwSubmissionandObjections.OptionsBehavior.Editable = False
+        Me.gvwSubmissionandObjections.OptionsBehavior.ReadOnly = True
+        Me.gvwSubmissionandObjections.OptionsView.ShowGroupPanel = False
         Me.gvwSubmissionandObjections.RowHeight = 40
         '
         'GridColumn1
@@ -6166,63 +6257,63 @@ Partial Class DevelopmentStart
         '
         'GridColumn2
         '
-        Me.GridColumn2.AppearanceCell.Options.UseTextOptions = true
+        Me.GridColumn2.AppearanceCell.Options.UseTextOptions = True
         Me.GridColumn2.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.GridColumn2.Caption = "Type"
         Me.GridColumn2.FieldName = "SubmissionType"
         Me.GridColumn2.Name = "GridColumn2"
-        Me.GridColumn2.Visible = true
+        Me.GridColumn2.Visible = True
         Me.GridColumn2.VisibleIndex = 0
         Me.GridColumn2.Width = 64
         '
         'GridColumn3
         '
-        Me.GridColumn3.AppearanceCell.Options.UseTextOptions = true
+        Me.GridColumn3.AppearanceCell.Options.UseTextOptions = True
         Me.GridColumn3.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.GridColumn3.Caption = "Received"
         Me.GridColumn3.FieldName = "DateReceived"
         Me.GridColumn3.Name = "GridColumn3"
-        Me.GridColumn3.Visible = true
+        Me.GridColumn3.Visible = True
         Me.GridColumn3.VisibleIndex = 1
         '
         'GridColumn4
         '
-        Me.GridColumn4.AppearanceCell.Options.UseTextOptions = true
+        Me.GridColumn4.AppearanceCell.Options.UseTextOptions = True
         Me.GridColumn4.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.GridColumn4.Caption = "File No"
         Me.GridColumn4.FieldName = "FileNo"
         Me.GridColumn4.Name = "GridColumn4"
-        Me.GridColumn4.Visible = true
+        Me.GridColumn4.Visible = True
         Me.GridColumn4.VisibleIndex = 2
         Me.GridColumn4.Width = 83
         '
         'GridColumn5
         '
-        Me.GridColumn5.AppearanceCell.Options.UseTextOptions = true
+        Me.GridColumn5.AppearanceCell.Options.UseTextOptions = True
         Me.GridColumn5.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.GridColumn5.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.GridColumn5.Caption = "Summary"
         Me.GridColumn5.FieldName = "SubmissionSummary"
         Me.GridColumn5.Name = "GridColumn5"
-        Me.GridColumn5.Visible = true
+        Me.GridColumn5.Visible = True
         Me.GridColumn5.VisibleIndex = 3
         Me.GridColumn5.Width = 241
         '
         'GridColumn6
         '
-        Me.GridColumn6.AppearanceCell.Options.UseTextOptions = true
+        Me.GridColumn6.AppearanceCell.Options.UseTextOptions = True
         Me.GridColumn6.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.GridColumn6.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.GridColumn6.Caption = "Officers Notes"
         Me.GridColumn6.FieldName = "OfficerNotes"
         Me.GridColumn6.Name = "GridColumn6"
-        Me.GridColumn6.Visible = true
+        Me.GridColumn6.Visible = True
         Me.GridColumn6.VisibleIndex = 4
         Me.GridColumn6.Width = 183
         '
         'GridColumn7
         '
-        Me.GridColumn7.AppearanceCell.Options.UseTextOptions = true
+        Me.GridColumn7.AppearanceCell.Options.UseTextOptions = True
         Me.GridColumn7.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.GridColumn7.Caption = "LastUpdate"
         Me.GridColumn7.FieldName = "LastUpdate"
@@ -6236,35 +6327,35 @@ Partial Class DevelopmentStart
         '
         'GridColumn9
         '
-        Me.GridColumn9.AppearanceCell.Options.UseTextOptions = true
+        Me.GridColumn9.AppearanceCell.Options.UseTextOptions = True
         Me.GridColumn9.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.GridColumn9.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.GridColumn9.Caption = "Address"
         Me.GridColumn9.FieldName = "Address"
         Me.GridColumn9.Name = "GridColumn9"
-        Me.GridColumn9.Visible = true
+        Me.GridColumn9.Visible = True
         Me.GridColumn9.VisibleIndex = 5
         Me.GridColumn9.Width = 177
         '
         'GridColumn10
         '
-        Me.GridColumn10.AppearanceCell.Options.UseTextOptions = true
+        Me.GridColumn10.AppearanceCell.Options.UseTextOptions = True
         Me.GridColumn10.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.GridColumn10.Caption = "Phone"
         Me.GridColumn10.FieldName = "AuthorPhone"
         Me.GridColumn10.Name = "GridColumn10"
-        Me.GridColumn10.Visible = true
+        Me.GridColumn10.Visible = True
         Me.GridColumn10.VisibleIndex = 6
         Me.GridColumn10.Width = 90
         '
         'GridColumn11
         '
-        Me.GridColumn11.AppearanceCell.Options.UseTextOptions = true
+        Me.GridColumn11.AppearanceCell.Options.UseTextOptions = True
         Me.GridColumn11.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.GridColumn11.Caption = "Gift"
         Me.GridColumn11.FieldName = "SubGiftDonationYN"
         Me.GridColumn11.Name = "GridColumn11"
-        Me.GridColumn11.Visible = true
+        Me.GridColumn11.Visible = True
         Me.GridColumn11.VisibleIndex = 7
         Me.GridColumn11.Width = 33
         '
@@ -6300,12 +6391,12 @@ Partial Class DevelopmentStart
         Me.GroupBox31.Name = "GroupBox31"
         Me.GroupBox31.Size = New System.Drawing.Size(1145, 181)
         Me.GroupBox31.TabIndex = 2
-        Me.GroupBox31.TabStop = false
+        Me.GroupBox31.TabStop = False
         '
         'btnRemoveSub
         '
-        Me.btnRemoveSub.Enabled = false
-        Me.btnRemoveSub.ImageOptions.Image = CType(resources.GetObject("btnRemoveSub.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveSub.Enabled = False
+        Me.btnRemoveSub.ImageOptions.Image = CType(resources.GetObject("btnRemoveSub.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveSub.Location = New System.Drawing.Point(1036, 50)
         Me.btnRemoveSub.Name = "btnRemoveSub"
         Me.btnRemoveSub.Size = New System.Drawing.Size(92, 32)
@@ -6314,7 +6405,7 @@ Partial Class DevelopmentStart
         '
         'Label30
         '
-        Me.Label30.AutoSize = true
+        Me.Label30.AutoSize = True
         Me.Label30.Location = New System.Drawing.Point(734, 123)
         Me.Label30.Name = "Label30"
         Me.Label30.Size = New System.Drawing.Size(35, 13)
@@ -6327,14 +6418,14 @@ Partial Class DevelopmentStart
         Me.txtAuthorEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAuthorEmail.Location = New System.Drawing.Point(788, 117)
         Me.txtAuthorEmail.Name = "txtAuthorEmail"
-        Me.txtAuthorEmail.ReadOnly = true
+        Me.txtAuthorEmail.ReadOnly = True
         Me.txtAuthorEmail.Size = New System.Drawing.Size(210, 21)
         Me.txtAuthorEmail.TabIndex = 60
         '
         'btnSaveSub
         '
-        Me.btnSaveSub.Enabled = false
-        Me.btnSaveSub.ImageOptions.Image = CType(resources.GetObject("btnSaveSub.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveSub.Enabled = False
+        Me.btnSaveSub.ImageOptions.Image = CType(resources.GetObject("btnSaveSub.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveSub.Location = New System.Drawing.Point(1036, 124)
         Me.btnSaveSub.Name = "btnSaveSub"
         Me.btnSaveSub.Size = New System.Drawing.Size(92, 32)
@@ -6343,8 +6434,8 @@ Partial Class DevelopmentStart
         '
         'btnEditSub
         '
-        Me.btnEditSub.Enabled = false
-        Me.btnEditSub.ImageOptions.Image = CType(resources.GetObject("btnEditSub.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditSub.Enabled = False
+        Me.btnEditSub.ImageOptions.Image = CType(resources.GetObject("btnEditSub.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditSub.Location = New System.Drawing.Point(1036, 87)
         Me.btnEditSub.Name = "btnEditSub"
         Me.btnEditSub.Size = New System.Drawing.Size(92, 32)
@@ -6353,7 +6444,7 @@ Partial Class DevelopmentStart
         '
         'btnAddSub
         '
-        Me.btnAddSub.ImageOptions.Image = CType(resources.GetObject("btnAddSub.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddSub.ImageOptions.Image = CType(resources.GetObject("btnAddSub.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddSub.Location = New System.Drawing.Point(1036, 13)
         Me.btnAddSub.Name = "btnAddSub"
         Me.btnAddSub.Size = New System.Drawing.Size(92, 32)
@@ -6366,19 +6457,19 @@ Partial Class DevelopmentStart
         Me.cboSubmissionType.Name = "cboSubmissionType"
         Me.cboSubmissionType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboSubmissionType.Properties.NullText = "[Select Type]"
-        Me.cboSubmissionType.Properties.ReadOnly = true
+        Me.cboSubmissionType.Properties.ReadOnly = True
         Me.cboSubmissionType.Size = New System.Drawing.Size(156, 20)
         Me.cboSubmissionType.TabIndex = 56
         '
         'btnAckSub
         '
-        Me.btnAckSub.Enabled = false
-        Me.btnAckSub.ImageOptions.Image = CType(resources.GetObject("btnAckSub.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAckSub.Enabled = False
+        Me.btnAckSub.ImageOptions.Image = CType(resources.GetObject("btnAckSub.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAckSub.Location = New System.Drawing.Point(411, 20)
         Me.btnAckSub.Name = "btnAckSub"
         Me.btnAckSub.Size = New System.Drawing.Size(134, 40)
         Me.btnAckSub.TabIndex = 55
-        Me.btnAckSub.Text = "Create "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Acknowledgement"
+        Me.btnAckSub.Text = "Create " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Acknowledgement"
         '
         'SubRecdDate
         '
@@ -6399,7 +6490,7 @@ Partial Class DevelopmentStart
         '
         'Label109
         '
-        Me.Label109.AutoSize = true
+        Me.Label109.AutoSize = True
         Me.Label109.Location = New System.Drawing.Point(5, 60)
         Me.Label109.Name = "Label109"
         Me.Label109.Size = New System.Drawing.Size(129, 13)
@@ -6408,7 +6499,7 @@ Partial Class DevelopmentStart
         '
         'Label108
         '
-        Me.Label108.AutoSize = true
+        Me.Label108.AutoSize = True
         Me.Label108.Location = New System.Drawing.Point(5, 117)
         Me.Label108.Name = "Label108"
         Me.Label108.Size = New System.Drawing.Size(79, 13)
@@ -6417,7 +6508,7 @@ Partial Class DevelopmentStart
         '
         'Label106
         '
-        Me.Label106.AutoSize = true
+        Me.Label106.AutoSize = True
         Me.Label106.Location = New System.Drawing.Point(734, 93)
         Me.Label106.Name = "Label106"
         Me.Label106.Size = New System.Drawing.Size(41, 13)
@@ -6429,9 +6520,9 @@ Partial Class DevelopmentStart
         Me.txtOfficerComment.BackColor = System.Drawing.SystemColors.Info
         Me.txtOfficerComment.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtOfficerComment.Location = New System.Drawing.Point(8, 134)
-        Me.txtOfficerComment.Multiline = true
+        Me.txtOfficerComment.Multiline = True
         Me.txtOfficerComment.Name = "txtOfficerComment"
-        Me.txtOfficerComment.ReadOnly = true
+        Me.txtOfficerComment.ReadOnly = True
         Me.txtOfficerComment.Size = New System.Drawing.Size(373, 38)
         Me.txtOfficerComment.TabIndex = 49
         '
@@ -6440,9 +6531,9 @@ Partial Class DevelopmentStart
         Me.txtSubmissionSummary.BackColor = System.Drawing.SystemColors.Info
         Me.txtSubmissionSummary.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtSubmissionSummary.Location = New System.Drawing.Point(8, 76)
-        Me.txtSubmissionSummary.Multiline = true
+        Me.txtSubmissionSummary.Multiline = True
         Me.txtSubmissionSummary.Name = "txtSubmissionSummary"
-        Me.txtSubmissionSummary.ReadOnly = true
+        Me.txtSubmissionSummary.ReadOnly = True
         Me.txtSubmissionSummary.Size = New System.Drawing.Size(373, 38)
         Me.txtSubmissionSummary.TabIndex = 48
         '
@@ -6452,7 +6543,7 @@ Partial Class DevelopmentStart
         Me.txtAuthorPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAuthorPhone.Location = New System.Drawing.Point(788, 90)
         Me.txtAuthorPhone.Name = "txtAuthorPhone"
-        Me.txtAuthorPhone.ReadOnly = true
+        Me.txtAuthorPhone.ReadOnly = True
         Me.txtAuthorPhone.Size = New System.Drawing.Size(210, 21)
         Me.txtAuthorPhone.TabIndex = 47
         '
@@ -6462,7 +6553,7 @@ Partial Class DevelopmentStart
         Me.txtAuthorTown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAuthorTown.Location = New System.Drawing.Point(788, 60)
         Me.txtAuthorTown.Name = "txtAuthorTown"
-        Me.txtAuthorTown.ReadOnly = true
+        Me.txtAuthorTown.ReadOnly = True
         Me.txtAuthorTown.Size = New System.Drawing.Size(181, 21)
         Me.txtAuthorTown.TabIndex = 46
         '
@@ -6472,7 +6563,7 @@ Partial Class DevelopmentStart
         Me.txtAuthorPCode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAuthorPCode.Location = New System.Drawing.Point(968, 60)
         Me.txtAuthorPCode.Name = "txtAuthorPCode"
-        Me.txtAuthorPCode.ReadOnly = true
+        Me.txtAuthorPCode.ReadOnly = True
         Me.txtAuthorPCode.Size = New System.Drawing.Size(30, 21)
         Me.txtAuthorPCode.TabIndex = 45
         '
@@ -6482,7 +6573,7 @@ Partial Class DevelopmentStart
         Me.txtAuthurAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAuthurAddress.Location = New System.Drawing.Point(788, 41)
         Me.txtAuthurAddress.Name = "txtAuthurAddress"
-        Me.txtAuthurAddress.ReadOnly = true
+        Me.txtAuthurAddress.ReadOnly = True
         Me.txtAuthurAddress.Size = New System.Drawing.Size(210, 21)
         Me.txtAuthurAddress.TabIndex = 44
         '
@@ -6492,13 +6583,13 @@ Partial Class DevelopmentStart
         Me.txtAuthorName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.txtAuthorName.Location = New System.Drawing.Point(788, 15)
         Me.txtAuthorName.Name = "txtAuthorName"
-        Me.txtAuthorName.ReadOnly = true
+        Me.txtAuthorName.ReadOnly = True
         Me.txtAuthorName.Size = New System.Drawing.Size(210, 21)
         Me.txtAuthorName.TabIndex = 43
         '
         'lblSubID
         '
-        Me.lblSubID.AutoSize = true
+        Me.lblSubID.AutoSize = True
         Me.lblSubID.ForeColor = System.Drawing.Color.Transparent
         Me.lblSubID.Location = New System.Drawing.Point(423, 134)
         Me.lblSubID.Name = "lblSubID"
@@ -6507,7 +6598,7 @@ Partial Class DevelopmentStart
         '
         'Label103
         '
-        Me.Label103.AutoSize = true
+        Me.Label103.AutoSize = True
         Me.Label103.Location = New System.Drawing.Point(204, 16)
         Me.Label103.Name = "Label103"
         Me.Label103.Size = New System.Drawing.Size(81, 13)
@@ -6516,7 +6607,7 @@ Partial Class DevelopmentStart
         '
         'Label104
         '
-        Me.Label104.AutoSize = true
+        Me.Label104.AutoSize = True
         Me.Label104.Location = New System.Drawing.Point(734, 44)
         Me.Label104.Name = "Label104"
         Me.Label104.Size = New System.Drawing.Size(50, 13)
@@ -6525,7 +6616,7 @@ Partial Class DevelopmentStart
         '
         'Label105
         '
-        Me.Label105.AutoSize = true
+        Me.Label105.AutoSize = True
         Me.Label105.Location = New System.Drawing.Point(734, 18)
         Me.Label105.Name = "Label105"
         Me.Label105.Size = New System.Drawing.Size(38, 13)
@@ -6534,7 +6625,7 @@ Partial Class DevelopmentStart
         '
         'Label107
         '
-        Me.Label107.AutoSize = true
+        Me.Label107.AutoSize = True
         Me.Label107.Location = New System.Drawing.Point(9, 16)
         Me.Label107.Name = "Label107"
         Me.Label107.Size = New System.Drawing.Size(90, 13)
@@ -6544,7 +6635,7 @@ Partial Class DevelopmentStart
         'tpgPCAConditions
         '
         Me.tpgPCAConditions.Controls.Add(Me.pnlDisplayPCAconditions)
-        Me.tpgPCAConditions.ImageOptions.Image = CType(resources.GetObject("tpgPCAConditions.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgPCAConditions.ImageOptions.Image = CType(resources.GetObject("tpgPCAConditions.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgPCAConditions.Name = "tpgPCAConditions"
         Me.tpgPCAConditions.Size = New System.Drawing.Size(1211, 820)
         Me.tpgPCAConditions.Text = "PCA Conditions"
@@ -6571,8 +6662,8 @@ Partial Class DevelopmentStart
         '
         'btnOneOffCondDone
         '
-        Me.btnOneOffCondDone.Enabled = false
-        Me.btnOneOffCondDone.ImageOptions.Image = CType(resources.GetObject("btnOneOffCondDone.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnOneOffCondDone.Enabled = False
+        Me.btnOneOffCondDone.ImageOptions.Image = CType(resources.GetObject("btnOneOffCondDone.ImageOptions.Image"), System.Drawing.Image)
         Me.btnOneOffCondDone.Location = New System.Drawing.Point(1033, 23)
         Me.btnOneOffCondDone.Name = "btnOneOffCondDone"
         Me.btnOneOffCondDone.Size = New System.Drawing.Size(103, 39)
@@ -6595,8 +6686,8 @@ Partial Class DevelopmentStart
         Me.gvwOneOffConditions.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colOneOffUniqueId, Me.colOneOffCondCode, Me.colConditionalText, Me.colOneOffCCMetDate})
         Me.gvwOneOffConditions.GridControl = Me.grdOneOffConditions
         Me.gvwOneOffConditions.Name = "gvwOneOffConditions"
-        Me.gvwOneOffConditions.OptionsBehavior.ReadOnly = true
-        Me.gvwOneOffConditions.OptionsView.ShowGroupPanel = false
+        Me.gvwOneOffConditions.OptionsBehavior.ReadOnly = True
+        Me.gvwOneOffConditions.OptionsView.ShowGroupPanel = False
         Me.gvwOneOffConditions.RowHeight = 200
         '
         'colOneOffUniqueId
@@ -6604,18 +6695,18 @@ Partial Class DevelopmentStart
         Me.colOneOffUniqueId.Caption = "GridColumn13"
         Me.colOneOffUniqueId.FieldName = "UniqueId"
         Me.colOneOffUniqueId.Name = "colOneOffUniqueId"
-        Me.colOneOffUniqueId.OptionsColumn.AllowEdit = false
-        Me.colOneOffUniqueId.OptionsColumn.ReadOnly = true
+        Me.colOneOffUniqueId.OptionsColumn.AllowEdit = False
+        Me.colOneOffUniqueId.OptionsColumn.ReadOnly = True
         '
         'colOneOffCondCode
         '
-        Me.colOneOffCondCode.AppearanceCell.Options.UseTextOptions = true
+        Me.colOneOffCondCode.AppearanceCell.Options.UseTextOptions = True
         Me.colOneOffCondCode.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colOneOffCondCode.Caption = "Code"
         Me.colOneOffCondCode.FieldName = "CondCode"
         Me.colOneOffCondCode.Name = "colOneOffCondCode"
-        Me.colOneOffCondCode.OptionsColumn.AllowEdit = false
-        Me.colOneOffCondCode.OptionsColumn.ReadOnly = true
+        Me.colOneOffCondCode.OptionsColumn.AllowEdit = False
+        Me.colOneOffCondCode.OptionsColumn.ReadOnly = True
         Me.colOneOffCondCode.Width = 82
         '
         'colConditionalText
@@ -6624,29 +6715,29 @@ Partial Class DevelopmentStart
         Me.colConditionalText.ColumnEdit = Me.RepositoryItemMemoEdit6
         Me.colConditionalText.FieldName = "ConditionText"
         Me.colConditionalText.Name = "colConditionalText"
-        Me.colConditionalText.OptionsColumn.AllowEdit = false
-        Me.colConditionalText.OptionsColumn.ReadOnly = true
-        Me.colConditionalText.Visible = true
+        Me.colConditionalText.OptionsColumn.AllowEdit = False
+        Me.colConditionalText.OptionsColumn.ReadOnly = True
+        Me.colConditionalText.Visible = True
         Me.colConditionalText.VisibleIndex = 0
         Me.colConditionalText.Width = 686
         '
         'RepositoryItemMemoEdit6
         '
-        Me.RepositoryItemMemoEdit6.Appearance.Options.UseTextOptions = true
+        Me.RepositoryItemMemoEdit6.Appearance.Options.UseTextOptions = True
         Me.RepositoryItemMemoEdit6.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.RepositoryItemMemoEdit6.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.RepositoryItemMemoEdit6.Name = "RepositoryItemMemoEdit6"
         '
         'colOneOffCCMetDate
         '
-        Me.colOneOffCCMetDate.AppearanceCell.Options.UseTextOptions = true
+        Me.colOneOffCCMetDate.AppearanceCell.Options.UseTextOptions = True
         Me.colOneOffCCMetDate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colOneOffCCMetDate.Caption = "Date"
         Me.colOneOffCCMetDate.FieldName = "CCMetDate"
         Me.colOneOffCCMetDate.Name = "colOneOffCCMetDate"
-        Me.colOneOffCCMetDate.OptionsColumn.AllowEdit = false
-        Me.colOneOffCCMetDate.OptionsColumn.ReadOnly = true
-        Me.colOneOffCCMetDate.Visible = true
+        Me.colOneOffCCMetDate.OptionsColumn.AllowEdit = False
+        Me.colOneOffCCMetDate.OptionsColumn.ReadOnly = True
+        Me.colOneOffCCMetDate.Visible = True
         Me.colOneOffCCMetDate.VisibleIndex = 1
         Me.colOneOffCCMetDate.Width = 112
         '
@@ -6662,8 +6753,8 @@ Partial Class DevelopmentStart
         '
         'btnStdCondDone
         '
-        Me.btnStdCondDone.Enabled = false
-        Me.btnStdCondDone.ImageOptions.Image = CType(resources.GetObject("btnStdCondDone.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnStdCondDone.Enabled = False
+        Me.btnStdCondDone.ImageOptions.Image = CType(resources.GetObject("btnStdCondDone.ImageOptions.Image"), System.Drawing.Image)
         Me.btnStdCondDone.Location = New System.Drawing.Point(1033, 23)
         Me.btnStdCondDone.Name = "btnStdCondDone"
         Me.btnStdCondDone.Size = New System.Drawing.Size(103, 39)
@@ -6685,9 +6776,9 @@ Partial Class DevelopmentStart
         Me.gvwSTDCond.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colAppCondId, Me.colStdCondCode, Me.colCondDesc, Me.colStdCCMetDate})
         Me.gvwSTDCond.GridControl = Me.grdSTDCond
         Me.gvwSTDCond.Name = "gvwSTDCond"
-        Me.gvwSTDCond.OptionsBehavior.Editable = false
-        Me.gvwSTDCond.OptionsBehavior.ReadOnly = true
-        Me.gvwSTDCond.OptionsView.ShowGroupPanel = false
+        Me.gvwSTDCond.OptionsBehavior.Editable = False
+        Me.gvwSTDCond.OptionsBehavior.ReadOnly = True
+        Me.gvwSTDCond.OptionsView.ShowGroupPanel = False
         '
         'colAppCondId
         '
@@ -6700,7 +6791,7 @@ Partial Class DevelopmentStart
         Me.colStdCondCode.Caption = "Code"
         Me.colStdCondCode.FieldName = "CondCode"
         Me.colStdCondCode.Name = "colStdCondCode"
-        Me.colStdCondCode.Visible = true
+        Me.colStdCondCode.Visible = True
         Me.colStdCondCode.VisibleIndex = 0
         Me.colStdCondCode.Width = 68
         '
@@ -6709,7 +6800,7 @@ Partial Class DevelopmentStart
         Me.colCondDesc.Caption = "Description"
         Me.colCondDesc.FieldName = "CondDesc"
         Me.colCondDesc.Name = "colCondDesc"
-        Me.colCondDesc.Visible = true
+        Me.colCondDesc.Visible = True
         Me.colCondDesc.VisibleIndex = 1
         Me.colCondDesc.Width = 808
         '
@@ -6718,14 +6809,14 @@ Partial Class DevelopmentStart
         Me.colStdCCMetDate.Caption = "Date"
         Me.colStdCCMetDate.FieldName = "CCMetDate"
         Me.colStdCCMetDate.Name = "colStdCCMetDate"
-        Me.colStdCCMetDate.Visible = true
+        Me.colStdCCMetDate.Visible = True
         Me.colStdCCMetDate.VisibleIndex = 2
         Me.colStdCCMetDate.Width = 115
         '
         'tpgFileNotes
         '
         Me.tpgFileNotes.Controls.Add(Me.pnlDisplayFileNotes)
-        Me.tpgFileNotes.ImageOptions.Image = CType(resources.GetObject("tpgFileNotes.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgFileNotes.ImageOptions.Image = CType(resources.GetObject("tpgFileNotes.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgFileNotes.Name = "tpgFileNotes"
         Me.tpgFileNotes.Size = New System.Drawing.Size(1211, 820)
         Me.tpgFileNotes.Text = "File Notes"
@@ -6772,96 +6863,96 @@ Partial Class DevelopmentStart
         Me.gvwFileNotes.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colFileNoteType, Me.colNoteDate, Me.colSubject, Me.colDetail, Me.colContactNumber, Me.colOfficer, Me.colid})
         Me.gvwFileNotes.GridControl = Me.grdFileNotes
         Me.gvwFileNotes.Name = "gvwFileNotes"
-        Me.gvwFileNotes.OptionsBehavior.ReadOnly = true
-        Me.gvwFileNotes.OptionsView.ShowGroupPanel = false
+        Me.gvwFileNotes.OptionsBehavior.ReadOnly = True
+        Me.gvwFileNotes.OptionsView.ShowGroupPanel = False
         Me.gvwFileNotes.RowHeight = 240
         '
         'colFileNoteType
         '
-        Me.colFileNoteType.AppearanceCell.Options.UseTextOptions = true
+        Me.colFileNoteType.AppearanceCell.Options.UseTextOptions = True
         Me.colFileNoteType.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colFileNoteType.Caption = "Type"
         Me.colFileNoteType.FieldName = "FileNoteType"
         Me.colFileNoteType.Name = "colFileNoteType"
-        Me.colFileNoteType.OptionsColumn.AllowEdit = false
-        Me.colFileNoteType.Visible = true
+        Me.colFileNoteType.OptionsColumn.AllowEdit = False
+        Me.colFileNoteType.Visible = True
         Me.colFileNoteType.VisibleIndex = 0
         Me.colFileNoteType.Width = 137
         '
         'colNoteDate
         '
-        Me.colNoteDate.AppearanceCell.Options.UseTextOptions = true
+        Me.colNoteDate.AppearanceCell.Options.UseTextOptions = True
         Me.colNoteDate.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colNoteDate.Caption = "Date"
         Me.colNoteDate.FieldName = "NoteDate"
         Me.colNoteDate.Name = "colNoteDate"
-        Me.colNoteDate.OptionsColumn.AllowEdit = false
-        Me.colNoteDate.Visible = true
+        Me.colNoteDate.OptionsColumn.AllowEdit = False
+        Me.colNoteDate.Visible = True
         Me.colNoteDate.VisibleIndex = 1
         Me.colNoteDate.Width = 88
         '
         'colSubject
         '
-        Me.colSubject.AppearanceCell.Options.UseTextOptions = true
+        Me.colSubject.AppearanceCell.Options.UseTextOptions = True
         Me.colSubject.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colSubject.Caption = "Subject"
         Me.colSubject.ColumnEdit = Me.RepositoryItemMemoEdit3
         Me.colSubject.FieldName = "Subject"
         Me.colSubject.Name = "colSubject"
-        Me.colSubject.OptionsColumn.AllowEdit = false
-        Me.colSubject.Visible = true
+        Me.colSubject.OptionsColumn.AllowEdit = False
+        Me.colSubject.Visible = True
         Me.colSubject.VisibleIndex = 2
         Me.colSubject.Width = 300
         '
         'RepositoryItemMemoEdit3
         '
-        Me.RepositoryItemMemoEdit3.Appearance.Options.UseTextOptions = true
+        Me.RepositoryItemMemoEdit3.Appearance.Options.UseTextOptions = True
         Me.RepositoryItemMemoEdit3.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.RepositoryItemMemoEdit3.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.RepositoryItemMemoEdit3.Name = "RepositoryItemMemoEdit3"
         '
         'colDetail
         '
-        Me.colDetail.AppearanceCell.Options.UseTextOptions = true
+        Me.colDetail.AppearanceCell.Options.UseTextOptions = True
         Me.colDetail.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colDetail.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.colDetail.Caption = "Detail"
         Me.colDetail.ColumnEdit = Me.RepositoryItemMemoEdit2
         Me.colDetail.FieldName = "Detail"
         Me.colDetail.Name = "colDetail"
-        Me.colDetail.OptionsColumn.ReadOnly = true
-        Me.colDetail.Visible = true
+        Me.colDetail.OptionsColumn.ReadOnly = True
+        Me.colDetail.Visible = True
         Me.colDetail.VisibleIndex = 3
         Me.colDetail.Width = 371
         '
         'RepositoryItemMemoEdit2
         '
-        Me.RepositoryItemMemoEdit2.Appearance.Options.UseTextOptions = true
+        Me.RepositoryItemMemoEdit2.Appearance.Options.UseTextOptions = True
         Me.RepositoryItemMemoEdit2.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.RepositoryItemMemoEdit2.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.RepositoryItemMemoEdit2.Name = "RepositoryItemMemoEdit2"
         '
         'colContactNumber
         '
-        Me.colContactNumber.AppearanceCell.Options.UseTextOptions = true
+        Me.colContactNumber.AppearanceCell.Options.UseTextOptions = True
         Me.colContactNumber.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colContactNumber.Caption = "Phone"
         Me.colContactNumber.FieldName = "ContactNumber"
         Me.colContactNumber.Name = "colContactNumber"
-        Me.colContactNumber.OptionsColumn.AllowEdit = false
-        Me.colContactNumber.Visible = true
+        Me.colContactNumber.OptionsColumn.AllowEdit = False
+        Me.colContactNumber.Visible = True
         Me.colContactNumber.VisibleIndex = 4
         Me.colContactNumber.Width = 97
         '
         'colOfficer
         '
-        Me.colOfficer.AppearanceCell.Options.UseTextOptions = true
+        Me.colOfficer.AppearanceCell.Options.UseTextOptions = True
         Me.colOfficer.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colOfficer.Caption = "Officer"
         Me.colOfficer.FieldName = "Officer"
         Me.colOfficer.Name = "colOfficer"
-        Me.colOfficer.OptionsColumn.AllowEdit = false
-        Me.colOfficer.Visible = true
+        Me.colOfficer.OptionsColumn.AllowEdit = False
+        Me.colOfficer.Visible = True
         Me.colOfficer.VisibleIndex = 5
         Me.colOfficer.Width = 159
         '
@@ -6909,7 +7000,7 @@ Partial Class DevelopmentStart
         Me.cboNotesOfficer.Name = "cboNotesOfficer"
         Me.cboNotesOfficer.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboNotesOfficer.Properties.NullText = "[Select Author]"
-        Me.cboNotesOfficer.Properties.ReadOnly = true
+        Me.cboNotesOfficer.Properties.ReadOnly = True
         Me.cboNotesOfficer.Size = New System.Drawing.Size(151, 20)
         Me.cboNotesOfficer.TabIndex = 40
         '
@@ -6919,14 +7010,14 @@ Partial Class DevelopmentStart
         Me.cboNoteType.Name = "cboNoteType"
         Me.cboNoteType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboNoteType.Properties.NullText = "[Select Note Type]"
-        Me.cboNoteType.Properties.ReadOnly = true
+        Me.cboNoteType.Properties.ReadOnly = True
         Me.cboNoteType.Size = New System.Drawing.Size(151, 20)
         Me.cboNoteType.TabIndex = 39
         '
         'btnSaveNote
         '
-        Me.btnSaveNote.Enabled = false
-        Me.btnSaveNote.ImageOptions.Image = CType(resources.GetObject("btnSaveNote.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveNote.Enabled = False
+        Me.btnSaveNote.ImageOptions.Image = CType(resources.GetObject("btnSaveNote.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveNote.Location = New System.Drawing.Point(1060, 146)
         Me.btnSaveNote.Name = "btnSaveNote"
         Me.btnSaveNote.Size = New System.Drawing.Size(96, 35)
@@ -6935,8 +7026,8 @@ Partial Class DevelopmentStart
         '
         'btnEditNote
         '
-        Me.btnEditNote.Enabled = false
-        Me.btnEditNote.ImageOptions.Image = CType(resources.GetObject("btnEditNote.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditNote.Enabled = False
+        Me.btnEditNote.ImageOptions.Image = CType(resources.GetObject("btnEditNote.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditNote.Location = New System.Drawing.Point(1060, 105)
         Me.btnEditNote.Name = "btnEditNote"
         Me.btnEditNote.Size = New System.Drawing.Size(96, 35)
@@ -6945,8 +7036,8 @@ Partial Class DevelopmentStart
         '
         'btnAddNote
         '
-        Me.btnAddNote.Enabled = false
-        Me.btnAddNote.ImageOptions.Image = CType(resources.GetObject("btnAddNote.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddNote.Enabled = False
+        Me.btnAddNote.ImageOptions.Image = CType(resources.GetObject("btnAddNote.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddNote.Location = New System.Drawing.Point(1060, 64)
         Me.btnAddNote.Name = "btnAddNote"
         Me.btnAddNote.Size = New System.Drawing.Size(96, 35)
@@ -6955,8 +7046,8 @@ Partial Class DevelopmentStart
         '
         'btnNotePrint
         '
-        Me.btnNotePrint.Enabled = false
-        Me.btnNotePrint.ImageOptions.Image = CType(resources.GetObject("btnNotePrint.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnNotePrint.Enabled = False
+        Me.btnNotePrint.ImageOptions.Image = CType(resources.GetObject("btnNotePrint.ImageOptions.Image"), System.Drawing.Image)
         Me.btnNotePrint.Location = New System.Drawing.Point(1060, 23)
         Me.btnNotePrint.Name = "btnNotePrint"
         Me.btnNotePrint.Size = New System.Drawing.Size(96, 35)
@@ -6975,7 +7066,7 @@ Partial Class DevelopmentStart
         '
         'lblNotesID
         '
-        Me.lblNotesID.AutoSize = true
+        Me.lblNotesID.AutoSize = True
         Me.lblNotesID.ForeColor = System.Drawing.Color.Transparent
         Me.lblNotesID.Location = New System.Drawing.Point(34, 193)
         Me.lblNotesID.Name = "lblNotesID"
@@ -6985,7 +7076,7 @@ Partial Class DevelopmentStart
         '
         'Label119
         '
-        Me.Label119.AutoSize = true
+        Me.Label119.AutoSize = True
         Me.Label119.Location = New System.Drawing.Point(421, 31)
         Me.Label119.Name = "Label119"
         Me.Label119.Size = New System.Drawing.Size(34, 13)
@@ -6997,13 +7088,13 @@ Partial Class DevelopmentStart
         Me.txtNotesSubject.BackColor = System.Drawing.SystemColors.Info
         Me.txtNotesSubject.Location = New System.Drawing.Point(179, 48)
         Me.txtNotesSubject.Name = "txtNotesSubject"
-        Me.txtNotesSubject.ReadOnly = true
+        Me.txtNotesSubject.ReadOnly = True
         Me.txtNotesSubject.Size = New System.Drawing.Size(225, 21)
         Me.txtNotesSubject.TabIndex = 2
         '
         'Label110
         '
-        Me.Label110.AutoSize = true
+        Me.Label110.AutoSize = True
         Me.Label110.Location = New System.Drawing.Point(8, 31)
         Me.Label110.Name = "Label110"
         Me.Label110.Size = New System.Drawing.Size(61, 13)
@@ -7012,7 +7103,7 @@ Partial Class DevelopmentStart
         '
         'Label111
         '
-        Me.Label111.AutoSize = true
+        Me.Label111.AutoSize = True
         Me.Label111.Location = New System.Drawing.Point(8, 76)
         Me.Label111.Name = "Label111"
         Me.Label111.Size = New System.Drawing.Size(40, 13)
@@ -7021,7 +7112,7 @@ Partial Class DevelopmentStart
         '
         'Label112
         '
-        Me.Label112.AutoSize = true
+        Me.Label112.AutoSize = True
         Me.Label112.Location = New System.Drawing.Point(176, 31)
         Me.Label112.Name = "Label112"
         Me.Label112.Size = New System.Drawing.Size(47, 13)
@@ -7033,14 +7124,14 @@ Partial Class DevelopmentStart
         Me.txtNotesReferredTo.BackColor = System.Drawing.SystemColors.Info
         Me.txtNotesReferredTo.Location = New System.Drawing.Point(674, 152)
         Me.txtNotesReferredTo.Name = "txtNotesReferredTo"
-        Me.txtNotesReferredTo.ReadOnly = true
+        Me.txtNotesReferredTo.ReadOnly = True
         Me.txtNotesReferredTo.Size = New System.Drawing.Size(138, 21)
         Me.txtNotesReferredTo.TabIndex = 23
-        Me.txtNotesReferredTo.Visible = false
+        Me.txtNotesReferredTo.Visible = False
         '
         'Label113
         '
-        Me.Label113.AutoSize = true
+        Me.Label113.AutoSize = True
         Me.Label113.Location = New System.Drawing.Point(176, 76)
         Me.Label113.Name = "Label113"
         Me.Label113.Size = New System.Drawing.Size(43, 13)
@@ -7052,14 +7143,14 @@ Partial Class DevelopmentStart
         Me.txtNotesFollowUp.BackColor = System.Drawing.SystemColors.Info
         Me.txtNotesFollowUp.Location = New System.Drawing.Point(674, 126)
         Me.txtNotesFollowUp.Name = "txtNotesFollowUp"
-        Me.txtNotesFollowUp.ReadOnly = true
+        Me.txtNotesFollowUp.ReadOnly = True
         Me.txtNotesFollowUp.Size = New System.Drawing.Size(138, 21)
         Me.txtNotesFollowUp.TabIndex = 22
-        Me.txtNotesFollowUp.Visible = false
+        Me.txtNotesFollowUp.Visible = False
         '
         'Label114
         '
-        Me.Label114.AutoSize = true
+        Me.Label114.AutoSize = True
         Me.Label114.Location = New System.Drawing.Point(611, 50)
         Me.Label114.Name = "Label114"
         Me.Label114.Size = New System.Drawing.Size(55, 13)
@@ -7071,14 +7162,14 @@ Partial Class DevelopmentStart
         Me.txtNotesCC.BackColor = System.Drawing.SystemColors.Info
         Me.txtNotesCC.Location = New System.Drawing.Point(674, 100)
         Me.txtNotesCC.Name = "txtNotesCC"
-        Me.txtNotesCC.ReadOnly = true
+        Me.txtNotesCC.ReadOnly = True
         Me.txtNotesCC.Size = New System.Drawing.Size(138, 21)
         Me.txtNotesCC.TabIndex = 21
-        Me.txtNotesCC.Visible = false
+        Me.txtNotesCC.Visible = False
         '
         'Label115
         '
-        Me.Label115.AutoSize = true
+        Me.Label115.AutoSize = True
         Me.Label115.Location = New System.Drawing.Point(601, 76)
         Me.Label115.Name = "Label115"
         Me.Label115.Size = New System.Drawing.Size(69, 13)
@@ -7090,63 +7181,63 @@ Partial Class DevelopmentStart
         Me.txtNotesContactNo.BackColor = System.Drawing.SystemColors.Info
         Me.txtNotesContactNo.Location = New System.Drawing.Point(674, 73)
         Me.txtNotesContactNo.Name = "txtNotesContactNo"
-        Me.txtNotesContactNo.ReadOnly = true
+        Me.txtNotesContactNo.ReadOnly = True
         Me.txtNotesContactNo.Size = New System.Drawing.Size(138, 21)
         Me.txtNotesContactNo.TabIndex = 20
         '
         'Label116
         '
-        Me.Label116.AutoSize = true
+        Me.Label116.AutoSize = True
         Me.Label116.Location = New System.Drawing.Point(644, 103)
         Me.Label116.Name = "Label116"
         Me.Label116.Size = New System.Drawing.Size(25, 13)
         Me.Label116.TabIndex = 15
         Me.Label116.Text = "CC:"
-        Me.Label116.Visible = false
+        Me.Label116.Visible = False
         '
         'txtNotesSpokeTo
         '
         Me.txtNotesSpokeTo.BackColor = System.Drawing.SystemColors.Info
         Me.txtNotesSpokeTo.Location = New System.Drawing.Point(674, 47)
         Me.txtNotesSpokeTo.Name = "txtNotesSpokeTo"
-        Me.txtNotesSpokeTo.ReadOnly = true
+        Me.txtNotesSpokeTo.ReadOnly = True
         Me.txtNotesSpokeTo.Size = New System.Drawing.Size(138, 21)
         Me.txtNotesSpokeTo.TabIndex = 19
         '
         'Label117
         '
-        Me.Label117.AutoSize = true
+        Me.Label117.AutoSize = True
         Me.Label117.Location = New System.Drawing.Point(611, 129)
         Me.Label117.Name = "Label117"
         Me.Label117.Size = New System.Drawing.Size(57, 13)
         Me.Label117.TabIndex = 16
         Me.Label117.Text = "Follow Up:"
-        Me.Label117.Visible = false
+        Me.Label117.Visible = False
         '
         'txtNoteDetails
         '
         Me.txtNoteDetails.BackColor = System.Drawing.SystemColors.Info
         Me.txtNoteDetails.Location = New System.Drawing.Point(179, 92)
-        Me.txtNoteDetails.Multiline = true
+        Me.txtNoteDetails.Multiline = True
         Me.txtNoteDetails.Name = "txtNoteDetails"
-        Me.txtNoteDetails.ReadOnly = true
+        Me.txtNoteDetails.ReadOnly = True
         Me.txtNoteDetails.Size = New System.Drawing.Size(356, 63)
         Me.txtNoteDetails.TabIndex = 18
         '
         'Label118
         '
-        Me.Label118.AutoSize = true
+        Me.Label118.AutoSize = True
         Me.Label118.Location = New System.Drawing.Point(616, 155)
         Me.Label118.Name = "Label118"
         Me.Label118.Size = New System.Drawing.Size(53, 13)
         Me.Label118.TabIndex = 17
         Me.Label118.Text = "Refer To:"
-        Me.Label118.Visible = false
+        Me.Label118.Visible = False
         '
         'tpgBuildLetters
         '
         Me.tpgBuildLetters.Controls.Add(Me.pnlBuildLetters)
-        Me.tpgBuildLetters.ImageOptions.Image = CType(resources.GetObject("tpgBuildLetters.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgBuildLetters.ImageOptions.Image = CType(resources.GetObject("tpgBuildLetters.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgBuildLetters.Name = "tpgBuildLetters"
         Me.tpgBuildLetters.Size = New System.Drawing.Size(1211, 820)
         Me.tpgBuildLetters.Text = "Build Letters"
@@ -7183,12 +7274,12 @@ Partial Class DevelopmentStart
         '
         'btnAddDefaultCondition
         '
-        Me.btnAddDefaultCondition.ImageOptions.Image = CType(resources.GetObject("btnAddDefaultCondition.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddDefaultCondition.ImageOptions.Image = CType(resources.GetObject("btnAddDefaultCondition.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddDefaultCondition.Location = New System.Drawing.Point(849, 18)
         Me.btnAddDefaultCondition.Name = "btnAddDefaultCondition"
         Me.btnAddDefaultCondition.Size = New System.Drawing.Size(158, 37)
         Me.btnAddDefaultCondition.TabIndex = 99
-        Me.btnAddDefaultCondition.Text = "Add "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Default Conditions"
+        Me.btnAddDefaultCondition.Text = "Add " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Default Conditions"
         '
         'cboAssessmentType
         '
@@ -7201,21 +7292,21 @@ Partial Class DevelopmentStart
         '
         'btnSaveConsent
         '
-        Me.btnSaveConsent.ImageOptions.Image = CType(resources.GetObject("btnSaveConsent.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveConsent.ImageOptions.Image = CType(resources.GetObject("btnSaveConsent.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveConsent.Location = New System.Drawing.Point(445, 17)
         Me.btnSaveConsent.Name = "btnSaveConsent"
         Me.btnSaveConsent.Size = New System.Drawing.Size(108, 38)
         Me.btnSaveConsent.TabIndex = 97
-        Me.btnSaveConsent.Text = "Save "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Consent No"
+        Me.btnSaveConsent.Text = "Save " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Consent No"
         '
         'btnInsertIntoLive
         '
-        Me.btnInsertIntoLive.ImageOptions.Image = CType(resources.GetObject("btnInsertIntoLive.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnInsertIntoLive.ImageOptions.Image = CType(resources.GetObject("btnInsertIntoLive.ImageOptions.Image"), System.Drawing.Image)
         Me.btnInsertIntoLive.Location = New System.Drawing.Point(1019, 486)
         Me.btnInsertIntoLive.Name = "btnInsertIntoLive"
         Me.btnInsertIntoLive.Size = New System.Drawing.Size(178, 59)
         Me.btnInsertIntoLive.TabIndex = 96
-        Me.btnInsertIntoLive.Text = "Copy ""Proposed"" "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Contributions to "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"""Live"" System"
+        Me.btnInsertIntoLive.Text = "Copy ""Proposed"" " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Contributions to " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & """Live"" System"
         '
         'GroupControl1
         '
@@ -7229,7 +7320,7 @@ Partial Class DevelopmentStart
         '
         'btnCreateOtherLetter
         '
-        Me.btnCreateOtherLetter.ImageOptions.Image = CType(resources.GetObject("btnCreateOtherLetter.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnCreateOtherLetter.ImageOptions.Image = CType(resources.GetObject("btnCreateOtherLetter.ImageOptions.Image"), System.Drawing.Image)
         Me.btnCreateOtherLetter.Location = New System.Drawing.Point(824, 25)
         Me.btnCreateOtherLetter.Name = "btnCreateOtherLetter"
         Me.btnCreateOtherLetter.Size = New System.Drawing.Size(144, 42)
@@ -7247,14 +7338,14 @@ Partial Class DevelopmentStart
         '
         'btnAssembleLetter
         '
-        Me.btnAssembleLetter.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.btnAssembleLetter.Appearance.Options.UseFont = true
-        Me.btnAssembleLetter.ImageOptions.Image = CType(resources.GetObject("btnAssembleLetter.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAssembleLetter.Appearance.Font = New System.Drawing.Font("Tahoma", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAssembleLetter.Appearance.Options.UseFont = True
+        Me.btnAssembleLetter.ImageOptions.Image = CType(resources.GetObject("btnAssembleLetter.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAssembleLetter.Location = New System.Drawing.Point(1019, 425)
         Me.btnAssembleLetter.Name = "btnAssembleLetter"
         Me.btnAssembleLetter.Size = New System.Drawing.Size(178, 51)
         Me.btnAssembleLetter.TabIndex = 13
-        Me.btnAssembleLetter.Text = "Assemble "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Draft Letter"
+        Me.btnAssembleLetter.Text = "Assemble " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Draft Letter"
         '
         'GroupControl9
         '
@@ -7270,32 +7361,32 @@ Partial Class DevelopmentStart
         '
         'btnEditCondition
         '
-        Me.btnEditCondition.Enabled = false
-        Me.btnEditCondition.ImageOptions.Image = CType(resources.GetObject("btnEditCondition.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditCondition.Enabled = False
+        Me.btnEditCondition.ImageOptions.Image = CType(resources.GetObject("btnEditCondition.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditCondition.Location = New System.Drawing.Point(866, 133)
         Me.btnEditCondition.Name = "btnEditCondition"
         Me.btnEditCondition.Size = New System.Drawing.Size(102, 35)
         Me.btnEditCondition.TabIndex = 13
-        Me.btnEditCondition.Text = "Edit "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Condition"
+        Me.btnEditCondition.Text = "Edit " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Condition"
         '
         'btnRemoveOneOffCond
         '
-        Me.btnRemoveOneOffCond.Enabled = false
-        Me.btnRemoveOneOffCond.ImageOptions.Image = CType(resources.GetObject("btnRemoveOneOffCond.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveOneOffCond.Enabled = False
+        Me.btnRemoveOneOffCond.ImageOptions.Image = CType(resources.GetObject("btnRemoveOneOffCond.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveOneOffCond.Location = New System.Drawing.Point(866, 174)
         Me.btnRemoveOneOffCond.Name = "btnRemoveOneOffCond"
         Me.btnRemoveOneOffCond.Size = New System.Drawing.Size(102, 35)
         Me.btnRemoveOneOffCond.TabIndex = 12
-        Me.btnRemoveOneOffCond.Text = "Remove"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Condition"
+        Me.btnRemoveOneOffCond.Text = "Remove" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Condition"
         '
         'btnAddOneOffCond
         '
-        Me.btnAddOneOffCond.ImageOptions.Image = CType(resources.GetObject("btnAddOneOffCond.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddOneOffCond.ImageOptions.Image = CType(resources.GetObject("btnAddOneOffCond.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddOneOffCond.Location = New System.Drawing.Point(866, 29)
         Me.btnAddOneOffCond.Name = "btnAddOneOffCond"
         Me.btnAddOneOffCond.Size = New System.Drawing.Size(102, 35)
         Me.btnAddOneOffCond.TabIndex = 11
-        Me.btnAddOneOffCond.Text = "Add "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Condition"
+        Me.btnAddOneOffCond.Text = "Add " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Condition"
         '
         'dgvOneUpConditions
         '
@@ -7312,9 +7403,9 @@ Partial Class DevelopmentStart
         Me.gvwOneUpConditions.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colUniqueId, Me.colConditionCode, Me.colConditionText})
         Me.gvwOneUpConditions.GridControl = Me.dgvOneUpConditions
         Me.gvwOneUpConditions.Name = "gvwOneUpConditions"
-        Me.gvwOneUpConditions.OptionsBehavior.Editable = false
-        Me.gvwOneUpConditions.OptionsBehavior.SmartVertScrollBar = false
-        Me.gvwOneUpConditions.OptionsView.ShowGroupPanel = false
+        Me.gvwOneUpConditions.OptionsBehavior.Editable = False
+        Me.gvwOneUpConditions.OptionsBehavior.SmartVertScrollBar = False
+        Me.gvwOneUpConditions.OptionsView.ShowGroupPanel = False
         Me.gvwOneUpConditions.RowHeight = 150
         '
         'colUniqueId
@@ -7330,19 +7421,19 @@ Partial Class DevelopmentStart
         '
         'colConditionText
         '
-        Me.colConditionText.AppearanceCell.Options.UseTextOptions = true
+        Me.colConditionText.AppearanceCell.Options.UseTextOptions = True
         Me.colConditionText.AppearanceCell.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.colConditionText.AppearanceCell.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.colConditionText.Caption = "Condition Text"
         Me.colConditionText.ColumnEdit = Me.RepositoryItemMemoEdit1
         Me.colConditionText.FieldName = "ConditionText"
         Me.colConditionText.Name = "colConditionText"
-        Me.colConditionText.Visible = true
+        Me.colConditionText.Visible = True
         Me.colConditionText.VisibleIndex = 0
         '
         'RepositoryItemMemoEdit1
         '
-        Me.RepositoryItemMemoEdit1.Appearance.Options.UseTextOptions = true
+        Me.RepositoryItemMemoEdit1.Appearance.Options.UseTextOptions = True
         Me.RepositoryItemMemoEdit1.Appearance.TextOptions.VAlignment = DevExpress.Utils.VertAlignment.Top
         Me.RepositoryItemMemoEdit1.Appearance.TextOptions.WordWrap = DevExpress.Utils.WordWrap.Wrap
         Me.RepositoryItemMemoEdit1.Name = "RepositoryItemMemoEdit1"
@@ -7361,22 +7452,22 @@ Partial Class DevelopmentStart
         '
         'btnRemoveCondition
         '
-        Me.btnRemoveCondition.Enabled = false
-        Me.btnRemoveCondition.ImageOptions.Image = CType(resources.GetObject("btnRemoveCondition.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemoveCondition.Enabled = False
+        Me.btnRemoveCondition.ImageOptions.Image = CType(resources.GetObject("btnRemoveCondition.ImageOptions.Image"), System.Drawing.Image)
         Me.btnRemoveCondition.Location = New System.Drawing.Point(866, 168)
         Me.btnRemoveCondition.Name = "btnRemoveCondition"
         Me.btnRemoveCondition.Size = New System.Drawing.Size(102, 35)
         Me.btnRemoveCondition.TabIndex = 12
-        Me.btnRemoveCondition.Text = "Remove"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Condition"
+        Me.btnRemoveCondition.Text = "Remove" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Condition"
         '
         'btnAddCondition
         '
-        Me.btnAddCondition.ImageOptions.Image = CType(resources.GetObject("btnAddCondition.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddCondition.ImageOptions.Image = CType(resources.GetObject("btnAddCondition.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddCondition.Location = New System.Drawing.Point(477, 209)
         Me.btnAddCondition.Name = "btnAddCondition"
         Me.btnAddCondition.Size = New System.Drawing.Size(102, 35)
         Me.btnAddCondition.TabIndex = 11
-        Me.btnAddCondition.Text = "Add "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Condition"
+        Me.btnAddCondition.Text = "Add " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Condition"
         '
         'dgvSTDConditions
         '
@@ -7392,9 +7483,9 @@ Partial Class DevelopmentStart
         Me.gvwSTDConditions.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.costdlId, Me.colStdCondition, Me.colFreeFormInserts})
         Me.gvwSTDConditions.GridControl = Me.dgvSTDConditions
         Me.gvwSTDConditions.Name = "gvwSTDConditions"
-        Me.gvwSTDConditions.OptionsBehavior.Editable = false
-        Me.gvwSTDConditions.OptionsBehavior.SmartVertScrollBar = false
-        Me.gvwSTDConditions.OptionsView.ShowGroupPanel = false
+        Me.gvwSTDConditions.OptionsBehavior.Editable = False
+        Me.gvwSTDConditions.OptionsBehavior.SmartVertScrollBar = False
+        Me.gvwSTDConditions.OptionsView.ShowGroupPanel = False
         '
         'costdlId
         '
@@ -7407,7 +7498,7 @@ Partial Class DevelopmentStart
         Me.colStdCondition.Caption = "Condition"
         Me.colStdCondition.FieldName = "Condition"
         Me.colStdCondition.Name = "colStdCondition"
-        Me.colStdCondition.Visible = true
+        Me.colStdCondition.Visible = True
         Me.colStdCondition.VisibleIndex = 0
         Me.colStdCondition.Width = 764
         '
@@ -7416,7 +7507,7 @@ Partial Class DevelopmentStart
         Me.colFreeFormInserts.Caption = "Inserts"
         Me.colFreeFormInserts.FieldName = "FreeFormInserts"
         Me.colFreeFormInserts.Name = "colFreeFormInserts"
-        Me.colFreeFormInserts.Visible = true
+        Me.colFreeFormInserts.Visible = True
         Me.colFreeFormInserts.VisibleIndex = 1
         Me.colFreeFormInserts.Width = 66
         '
@@ -7426,8 +7517,8 @@ Partial Class DevelopmentStart
         Me.cboSTDconditions.Name = "cboSTDconditions"
         Me.cboSTDconditions.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboSTDconditions.Properties.NullText = "[Select Condition]"
-        Me.cboSTDconditions.Properties.ShowFooter = false
-        Me.cboSTDconditions.Properties.ShowHeader = false
+        Me.cboSTDconditions.Properties.ShowFooter = False
+        Me.cboSTDconditions.Properties.ShowHeader = False
         Me.cboSTDconditions.Size = New System.Drawing.Size(456, 20)
         Me.cboSTDconditions.TabIndex = 9
         '
@@ -7445,8 +7536,8 @@ Partial Class DevelopmentStart
         Me.cboConsentDocType.Name = "cboConsentDocType"
         Me.cboConsentDocType.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.cboConsentDocType.Properties.NullText = "[Select Letter Type]"
-        Me.cboConsentDocType.Properties.ShowFooter = false
-        Me.cboConsentDocType.Properties.ShowHeader = false
+        Me.cboConsentDocType.Properties.ShowFooter = False
+        Me.cboConsentDocType.Properties.ShowHeader = False
         Me.cboConsentDocType.Size = New System.Drawing.Size(298, 20)
         Me.cboConsentDocType.TabIndex = 8
         '
@@ -7472,18 +7563,18 @@ Partial Class DevelopmentStart
         '
         'btnEmailAcknowledge
         '
-        Me.btnEmailAcknowledge.Enabled = false
-        Me.btnEmailAcknowledge.ImageOptions.Image = CType(resources.GetObject("btnEmailAcknowledge.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEmailAcknowledge.Enabled = False
+        Me.btnEmailAcknowledge.ImageOptions.Image = CType(resources.GetObject("btnEmailAcknowledge.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEmailAcknowledge.Location = New System.Drawing.Point(789, 35)
         Me.btnEmailAcknowledge.Name = "btnEmailAcknowledge"
         Me.btnEmailAcknowledge.Size = New System.Drawing.Size(134, 37)
         Me.btnEmailAcknowledge.TabIndex = 63
-        Me.btnEmailAcknowledge.Text = "Email DA"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Acknowledgement"
+        Me.btnEmailAcknowledge.Text = "Email DA" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Acknowledgement"
         '
         'btnFinaliseDoc
         '
-        Me.btnFinaliseDoc.Enabled = false
-        Me.btnFinaliseDoc.ImageOptions.Image = CType(resources.GetObject("btnFinaliseDoc.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnFinaliseDoc.Enabled = False
+        Me.btnFinaliseDoc.ImageOptions.Image = CType(resources.GetObject("btnFinaliseDoc.ImageOptions.Image"), System.Drawing.Image)
         Me.btnFinaliseDoc.Location = New System.Drawing.Point(656, 121)
         Me.btnFinaliseDoc.Name = "btnFinaliseDoc"
         Me.btnFinaliseDoc.Size = New System.Drawing.Size(108, 37)
@@ -7492,8 +7583,8 @@ Partial Class DevelopmentStart
         '
         'btnDeleteDoc
         '
-        Me.btnDeleteDoc.Enabled = false
-        Me.btnDeleteDoc.ImageOptions.Image = CType(resources.GetObject("btnDeleteDoc.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnDeleteDoc.Enabled = False
+        Me.btnDeleteDoc.ImageOptions.Image = CType(resources.GetObject("btnDeleteDoc.ImageOptions.Image"), System.Drawing.Image)
         Me.btnDeleteDoc.Location = New System.Drawing.Point(656, 78)
         Me.btnDeleteDoc.Name = "btnDeleteDoc"
         Me.btnDeleteDoc.Size = New System.Drawing.Size(108, 37)
@@ -7502,8 +7593,8 @@ Partial Class DevelopmentStart
         '
         'btnViewEditDocument
         '
-        Me.btnViewEditDocument.Enabled = false
-        Me.btnViewEditDocument.ImageOptions.Image = CType(resources.GetObject("btnViewEditDocument.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnViewEditDocument.Enabled = False
+        Me.btnViewEditDocument.ImageOptions.Image = CType(resources.GetObject("btnViewEditDocument.ImageOptions.Image"), System.Drawing.Image)
         Me.btnViewEditDocument.Location = New System.Drawing.Point(656, 35)
         Me.btnViewEditDocument.Name = "btnViewEditDocument"
         Me.btnViewEditDocument.Size = New System.Drawing.Size(108, 37)
@@ -7525,9 +7616,9 @@ Partial Class DevelopmentStart
         Me.gvwDraftDocs.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colAppNo, Me.colDescription, Me.colDocname, Me.colCreatedDate, Me.colDraftDocPath, Me.colDraftDocId})
         Me.gvwDraftDocs.GridControl = Me.grdDraftDocs
         Me.gvwDraftDocs.Name = "gvwDraftDocs"
-        Me.gvwDraftDocs.OptionsBehavior.Editable = false
-        Me.gvwDraftDocs.OptionsBehavior.ReadOnly = true
-        Me.gvwDraftDocs.OptionsView.ShowGroupPanel = false
+        Me.gvwDraftDocs.OptionsBehavior.Editable = False
+        Me.gvwDraftDocs.OptionsBehavior.ReadOnly = True
+        Me.gvwDraftDocs.OptionsView.ShowGroupPanel = False
         '
         'colAppNo
         '
@@ -7540,7 +7631,7 @@ Partial Class DevelopmentStart
         Me.colDescription.Caption = "Document Type"
         Me.colDescription.FieldName = "Description"
         Me.colDescription.Name = "colDescription"
-        Me.colDescription.Visible = true
+        Me.colDescription.Visible = True
         Me.colDescription.VisibleIndex = 0
         Me.colDescription.Width = 517
         '
@@ -7558,7 +7649,7 @@ Partial Class DevelopmentStart
         Me.colCreatedDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime
         Me.colCreatedDate.FieldName = "DateCreated"
         Me.colCreatedDate.Name = "colCreatedDate"
-        Me.colCreatedDate.Visible = true
+        Me.colCreatedDate.Visible = True
         Me.colCreatedDate.VisibleIndex = 1
         Me.colCreatedDate.Width = 94
         '
@@ -7577,7 +7668,7 @@ Partial Class DevelopmentStart
         'tpgAssociated
         '
         Me.tpgAssociated.Controls.Add(Me.pnlDisplayAssociatedApps)
-        Me.tpgAssociated.ImageOptions.Image = CType(resources.GetObject("tpgAssociated.ImageOptions.Image"),System.Drawing.Image)
+        Me.tpgAssociated.ImageOptions.Image = CType(resources.GetObject("tpgAssociated.ImageOptions.Image"), System.Drawing.Image)
         Me.tpgAssociated.Name = "tpgAssociated"
         Me.tpgAssociated.Size = New System.Drawing.Size(1211, 820)
         Me.tpgAssociated.Text = "Associated Applications"
@@ -7605,16 +7696,16 @@ Partial Class DevelopmentStart
         Me.gvwAssociatedApps.Columns.AddRange(New DevExpress.XtraGrid.Columns.GridColumn() {Me.colAssocAppNo, Me.colRegistered, Me.colTypeOf, Me.colAssocDescription, Me.colAssocDADecision, Me.colCCNo})
         Me.gvwAssociatedApps.GridControl = Me.grdAssociatedApps
         Me.gvwAssociatedApps.Name = "gvwAssociatedApps"
-        Me.gvwAssociatedApps.OptionsBehavior.Editable = false
-        Me.gvwAssociatedApps.OptionsBehavior.ReadOnly = true
-        Me.gvwAssociatedApps.OptionsView.ShowGroupPanel = false
+        Me.gvwAssociatedApps.OptionsBehavior.Editable = False
+        Me.gvwAssociatedApps.OptionsBehavior.ReadOnly = True
+        Me.gvwAssociatedApps.OptionsView.ShowGroupPanel = False
         '
         'colAssocAppNo
         '
         Me.colAssocAppNo.Caption = "App No."
         Me.colAssocAppNo.FieldName = "AppNo"
         Me.colAssocAppNo.Name = "colAssocAppNo"
-        Me.colAssocAppNo.Visible = true
+        Me.colAssocAppNo.Visible = True
         Me.colAssocAppNo.VisibleIndex = 0
         Me.colAssocAppNo.Width = 67
         '
@@ -7623,7 +7714,7 @@ Partial Class DevelopmentStart
         Me.colRegistered.Caption = "Registered"
         Me.colRegistered.FieldName = "Registered"
         Me.colRegistered.Name = "colRegistered"
-        Me.colRegistered.Visible = true
+        Me.colRegistered.Visible = True
         Me.colRegistered.VisibleIndex = 1
         Me.colRegistered.Width = 102
         '
@@ -7632,7 +7723,7 @@ Partial Class DevelopmentStart
         Me.colTypeOf.Caption = "Type"
         Me.colTypeOf.FieldName = "TypeOf"
         Me.colTypeOf.Name = "colTypeOf"
-        Me.colTypeOf.Visible = true
+        Me.colTypeOf.Visible = True
         Me.colTypeOf.VisibleIndex = 2
         Me.colTypeOf.Width = 178
         '
@@ -7641,7 +7732,7 @@ Partial Class DevelopmentStart
         Me.colAssocDescription.Caption = "Description"
         Me.colAssocDescription.FieldName = "Description"
         Me.colAssocDescription.Name = "colAssocDescription"
-        Me.colAssocDescription.Visible = true
+        Me.colAssocDescription.Visible = True
         Me.colAssocDescription.VisibleIndex = 3
         Me.colAssocDescription.Width = 490
         '
@@ -7650,7 +7741,7 @@ Partial Class DevelopmentStart
         Me.colAssocDADecision.Caption = "Status"
         Me.colAssocDADecision.FieldName = "DADecision"
         Me.colAssocDADecision.Name = "colAssocDADecision"
-        Me.colAssocDADecision.Visible = true
+        Me.colAssocDADecision.Visible = True
         Me.colAssocDADecision.VisibleIndex = 4
         Me.colAssocDADecision.Width = 128
         '
@@ -7659,14 +7750,14 @@ Partial Class DevelopmentStart
         Me.colCCNo.Caption = "C.C. No"
         Me.colCCNo.FieldName = "CCNo"
         Me.colCCNo.Name = "colCCNo"
-        Me.colCCNo.Visible = true
+        Me.colCCNo.Visible = True
         Me.colCCNo.VisibleIndex = 5
         '
         'tpgEnlighten
         '
         Me.tpgEnlighten.Controls.Add(Me.pnlDisplayEnlighten)
         Me.tpgEnlighten.Name = "tpgEnlighten"
-        Me.tpgEnlighten.PageVisible = false
+        Me.tpgEnlighten.PageVisible = False
         Me.tpgEnlighten.Size = New System.Drawing.Size(1211, 820)
         Me.tpgEnlighten.Text = "Enlighten Map"
         '
@@ -7684,7 +7775,7 @@ Partial Class DevelopmentStart
         '
         'btnClearEnlightenMap
         '
-        Me.btnClearEnlightenMap.Enabled = false
+        Me.btnClearEnlightenMap.Enabled = False
         Me.btnClearEnlightenMap.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnClearEnlightenMap.ImageKey = "Artdesigner-Urban-Stories-Map.ico"
         Me.btnClearEnlightenMap.ImageList = Me.ImageList3
@@ -7694,11 +7785,11 @@ Partial Class DevelopmentStart
         Me.btnClearEnlightenMap.TabIndex = 10
         Me.btnClearEnlightenMap.Text = "Clear Enlighten Map"
         Me.btnClearEnlightenMap.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnClearEnlightenMap.UseVisualStyleBackColor = true
+        Me.btnClearEnlightenMap.UseVisualStyleBackColor = True
         '
         'btnSaveEnlighten
         '
-        Me.btnSaveEnlighten.Enabled = false
+        Me.btnSaveEnlighten.Enabled = False
         Me.btnSaveEnlighten.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.btnSaveEnlighten.ImageKey = "Artdesigner-Urban-Stories-Map.ico"
         Me.btnSaveEnlighten.ImageList = Me.ImageList4
@@ -7708,7 +7799,7 @@ Partial Class DevelopmentStart
         Me.btnSaveEnlighten.TabIndex = 9
         Me.btnSaveEnlighten.Text = "Save Enlighten Map"
         Me.btnSaveEnlighten.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnSaveEnlighten.UseVisualStyleBackColor = true
+        Me.btnSaveEnlighten.UseVisualStyleBackColor = True
         '
         'btnInsertEnlightenMap
         '
@@ -7721,7 +7812,7 @@ Partial Class DevelopmentStart
         Me.btnInsertEnlightenMap.TabIndex = 8
         Me.btnInsertEnlightenMap.Text = "Insert Enlighten Map"
         Me.btnInsertEnlightenMap.TextAlign = System.Drawing.ContentAlignment.MiddleRight
-        Me.btnInsertEnlightenMap.UseVisualStyleBackColor = true
+        Me.btnInsertEnlightenMap.UseVisualStyleBackColor = True
         '
         'picEnlightenMap
         '
@@ -7729,16 +7820,16 @@ Partial Class DevelopmentStart
         Me.picEnlightenMap.Name = "picEnlightenMap"
         Me.picEnlightenMap.Size = New System.Drawing.Size(960, 662)
         Me.picEnlightenMap.TabIndex = 0
-        Me.picEnlightenMap.TabStop = false
+        Me.picEnlightenMap.TabStop = False
         '
         'btnSaveDA
         '
-        Me.btnSaveDA.Appearance.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.btnSaveDA.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(192,Byte),Integer))
-        Me.btnSaveDA.Appearance.Options.UseFont = true
-        Me.btnSaveDA.Appearance.Options.UseForeColor = true
-        Me.btnSaveDA.Enabled = false
-        Me.btnSaveDA.ImageOptions.Image = CType(resources.GetObject("btnSaveDA.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnSaveDA.Appearance.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnSaveDA.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(192, Byte), Integer))
+        Me.btnSaveDA.Appearance.Options.UseFont = True
+        Me.btnSaveDA.Appearance.Options.UseForeColor = True
+        Me.btnSaveDA.Enabled = False
+        Me.btnSaveDA.ImageOptions.Image = CType(resources.GetObject("btnSaveDA.ImageOptions.Image"), System.Drawing.Image)
         Me.btnSaveDA.Location = New System.Drawing.Point(229, 12)
         Me.btnSaveDA.Name = "btnSaveDA"
         Me.btnSaveDA.Size = New System.Drawing.Size(104, 36)
@@ -7748,12 +7839,12 @@ Partial Class DevelopmentStart
         '
         'btnEditDA
         '
-        Me.btnEditDA.Appearance.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.btnEditDA.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer))
-        Me.btnEditDA.Appearance.Options.UseFont = true
-        Me.btnEditDA.Appearance.Options.UseForeColor = true
-        Me.btnEditDA.Enabled = false
-        Me.btnEditDA.ImageOptions.Image = CType(resources.GetObject("btnEditDA.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnEditDA.Appearance.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEditDA.Appearance.ForeColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(0, Byte), Integer), CType(CType(0, Byte), Integer))
+        Me.btnEditDA.Appearance.Options.UseFont = True
+        Me.btnEditDA.Appearance.Options.UseForeColor = True
+        Me.btnEditDA.Enabled = False
+        Me.btnEditDA.ImageOptions.Image = CType(resources.GetObject("btnEditDA.ImageOptions.Image"), System.Drawing.Image)
         Me.btnEditDA.Location = New System.Drawing.Point(119, 12)
         Me.btnEditDA.Name = "btnEditDA"
         Me.btnEditDA.Size = New System.Drawing.Size(104, 36)
@@ -7763,11 +7854,11 @@ Partial Class DevelopmentStart
         '
         'btnAddDA
         '
-        Me.btnAddDA.Appearance.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.btnAddDA.Appearance.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btnAddDA.Appearance.ForeColor = System.Drawing.Color.Green
-        Me.btnAddDA.Appearance.Options.UseFont = true
-        Me.btnAddDA.Appearance.Options.UseForeColor = true
-        Me.btnAddDA.ImageOptions.Image = CType(resources.GetObject("btnAddDA.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddDA.Appearance.Options.UseFont = True
+        Me.btnAddDA.Appearance.Options.UseForeColor = True
+        Me.btnAddDA.ImageOptions.Image = CType(resources.GetObject("btnAddDA.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAddDA.Location = New System.Drawing.Point(9, 12)
         Me.btnAddDA.Name = "btnAddDA"
         Me.btnAddDA.Size = New System.Drawing.Size(104, 36)
@@ -7807,9 +7898,9 @@ Partial Class DevelopmentStart
         '
         'btnFind
         '
-        Me.btnFind.Appearance.Font = New System.Drawing.Font("Tahoma", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.btnFind.Appearance.Options.UseFont = true
-        Me.btnFind.ImageOptions.Image = CType(resources.GetObject("btnFind.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnFind.Appearance.Font = New System.Drawing.Font("Tahoma", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnFind.Appearance.Options.UseFont = True
+        Me.btnFind.ImageOptions.Image = CType(resources.GetObject("btnFind.ImageOptions.Image"), System.Drawing.Image)
         Me.btnFind.Location = New System.Drawing.Point(678, 19)
         Me.btnFind.Name = "btnFind"
         Me.btnFind.Size = New System.Drawing.Size(123, 36)
@@ -7818,20 +7909,20 @@ Partial Class DevelopmentStart
         '
         'btnAdditionalInfo
         '
-        Me.btnAdditionalInfo.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.btnAdditionalInfo.Appearance.Options.UseFont = true
-        Me.btnAdditionalInfo.ImageOptions.Image = CType(resources.GetObject("btnAdditionalInfo.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAdditionalInfo.Appearance.Font = New System.Drawing.Font("Tahoma", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAdditionalInfo.Appearance.Options.UseFont = True
+        Me.btnAdditionalInfo.ImageOptions.Image = CType(resources.GetObject("btnAdditionalInfo.ImageOptions.Image"), System.Drawing.Image)
         Me.btnAdditionalInfo.Location = New System.Drawing.Point(817, 19)
         Me.btnAdditionalInfo.Name = "btnAdditionalInfo"
         Me.btnAdditionalInfo.Size = New System.Drawing.Size(123, 36)
         Me.btnAdditionalInfo.TabIndex = 43
-        Me.btnAdditionalInfo.TabStop = false
-        Me.btnAdditionalInfo.Text = "Additional "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Information"
+        Me.btnAdditionalInfo.TabStop = False
+        Me.btnAdditionalInfo.Text = "Additional " & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Information"
         '
         'Label13
         '
-        Me.Label13.AutoSize = true
-        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label13.AutoSize = True
+        Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(14, 65)
         Me.Label13.Name = "Label13"
         Me.Label13.Size = New System.Drawing.Size(110, 24)
@@ -7841,7 +7932,7 @@ Partial Class DevelopmentStart
         '
         'lblapplicationNo
         '
-        Me.lblapplicationNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.lblapplicationNo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lblapplicationNo.Location = New System.Drawing.Point(127, 62)
         Me.lblapplicationNo.Name = "lblapplicationNo"
         Me.lblapplicationNo.Size = New System.Drawing.Size(176, 30)
@@ -7850,7 +7941,7 @@ Partial Class DevelopmentStart
         '
         'lblSearchFor
         '
-        Me.lblSearchFor.AutoSize = true
+        Me.lblSearchFor.AutoSize = True
         Me.lblSearchFor.Location = New System.Drawing.Point(205, 6)
         Me.lblSearchFor.Name = "lblSearchFor"
         Me.lblSearchFor.Size = New System.Drawing.Size(94, 13)
@@ -7864,7 +7955,7 @@ Partial Class DevelopmentStart
         Me.WebBrowser1.Name = "WebBrowser1"
         Me.WebBrowser1.Size = New System.Drawing.Size(20, 20)
         Me.WebBrowser1.TabIndex = 38
-        Me.WebBrowser1.Visible = false
+        Me.WebBrowser1.Visible = False
         '
         'grpSearch
         '
@@ -7877,8 +7968,8 @@ Partial Class DevelopmentStart
         Me.grpSearch.Name = "grpSearch"
         Me.grpSearch.Size = New System.Drawing.Size(464, 36)
         Me.grpSearch.TabIndex = 28
-        Me.grpSearch.TabStop = false
-        Me.grpSearch.Visible = false
+        Me.grpSearch.TabStop = False
+        Me.grpSearch.Visible = False
         '
         'mskEndDate
         '
@@ -7902,7 +7993,7 @@ Partial Class DevelopmentStart
         '
         'Label47
         '
-        Me.Label47.AutoSize = true
+        Me.Label47.AutoSize = True
         Me.Label47.Location = New System.Drawing.Point(340, 16)
         Me.Label47.Name = "Label47"
         Me.Label47.Size = New System.Drawing.Size(17, 13)
@@ -7911,7 +8002,7 @@ Partial Class DevelopmentStart
         '
         'Label48
         '
-        Me.Label48.AutoSize = true
+        Me.Label48.AutoSize = True
         Me.Label48.Location = New System.Drawing.Point(204, 14)
         Me.Label48.Name = "Label48"
         Me.Label48.Size = New System.Drawing.Size(31, 13)
@@ -7923,7 +8014,7 @@ Partial Class DevelopmentStart
         Me.cboSearch.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend
         Me.cboSearch.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.ListItems
         Me.cboSearch.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSearch.FormattingEnabled = true
+        Me.cboSearch.FormattingEnabled = True
         Me.cboSearch.Location = New System.Drawing.Point(6, 11)
         Me.cboSearch.Name = "cboSearch"
         Me.cboSearch.Size = New System.Drawing.Size(182, 21)
@@ -7931,7 +8022,7 @@ Partial Class DevelopmentStart
         '
         'Label83
         '
-        Me.Label83.AutoSize = true
+        Me.Label83.AutoSize = True
         Me.Label83.Location = New System.Drawing.Point(9, 6)
         Me.Label83.Name = "Label83"
         Me.Label83.Size = New System.Drawing.Size(85, 13)
@@ -7950,414 +8041,331 @@ Partial Class DevelopmentStart
         'cboSearchType
         '
         Me.cboSearchType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
-        Me.cboSearchType.FormattingEnabled = true
+        Me.cboSearchType.FormattingEnabled = True
         Me.cboSearchType.Items.AddRange(New Object() {"DA Number", "Construction Certificate", "File No", "PIN", "Applicant Address ", "Property Address", "Applicant  Name", "Owners Name", "Development Type", "Description"})
         Me.cboSearchType.Location = New System.Drawing.Point(12, 24)
         Me.cboSearchType.Name = "cboSearchType"
         Me.cboSearchType.Size = New System.Drawing.Size(181, 21)
         Me.cboSearchType.TabIndex = 0
         '
-        'txtExistingDwelings
-        '
-        Me.txtExistingDwelings.Location = New System.Drawing.Point(518, 45)
-        Me.txtExistingDwelings.Name = "txtExistingDwelings"
-        Me.txtExistingDwelings.Properties.Appearance.Options.UseTextOptions = true
-        Me.txtExistingDwelings.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.txtExistingDwelings.Properties.Mask.EditMask = "d"
-        Me.txtExistingDwelings.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.txtExistingDwelings.Properties.ReadOnly = true
-        Me.txtExistingDwelings.Size = New System.Drawing.Size(44, 20)
-        Me.txtExistingDwelings.TabIndex = 200
-        '
-        'lblExistingDwellings
-        '
-        Me.lblExistingDwellings.AutoSize = true
-        Me.lblExistingDwellings.Location = New System.Drawing.Point(376, 49)
-        Me.lblExistingDwellings.Name = "lblExistingDwellings"
-        Me.lblExistingDwellings.Size = New System.Drawing.Size(123, 13)
-        Me.lblExistingDwellings.TabIndex = 199
-        Me.lblExistingDwellings.Text = "No. of Existing dwellings"
-        '
-        'txtDemolishedDwelings
-        '
-        Me.txtDemolishedDwelings.Location = New System.Drawing.Point(518, 66)
-        Me.txtDemolishedDwelings.Name = "txtDemolishedDwelings"
-        Me.txtDemolishedDwelings.Properties.Appearance.Options.UseTextOptions = true
-        Me.txtDemolishedDwelings.Properties.Appearance.TextOptions.HAlignment = DevExpress.Utils.HorzAlignment.Center
-        Me.txtDemolishedDwelings.Properties.Mask.EditMask = "d"
-        Me.txtDemolishedDwelings.Properties.Mask.MaskType = DevExpress.XtraEditors.Mask.MaskType.Numeric
-        Me.txtDemolishedDwelings.Properties.ReadOnly = true
-        Me.txtDemolishedDwelings.Size = New System.Drawing.Size(44, 20)
-        Me.txtDemolishedDwelings.TabIndex = 202
-        '
-        'lblNoDemolishedDwellings
-        '
-        Me.lblNoDemolishedDwellings.AutoSize = true
-        Me.lblNoDemolishedDwellings.Location = New System.Drawing.Point(376, 68)
-        Me.lblNoDemolishedDwellings.Name = "lblNoDemolishedDwellings"
-        Me.lblNoDemolishedDwellings.Size = New System.Drawing.Size(140, 13)
-        Me.lblNoDemolishedDwellings.TabIndex = 201
-        Me.lblNoDemolishedDwellings.Text = "No. of dwellings Demolished"
-        '
-        'lblAttachement
-        '
-        Me.lblAttachement.AutoSize = true
-        Me.lblAttachement.Location = New System.Drawing.Point(13, 113)
-        Me.lblAttachement.Name = "lblAttachement"
-        Me.lblAttachement.Size = New System.Drawing.Size(97, 13)
-        Me.lblAttachement.TabIndex = 204
-        Me.lblAttachement.Text = "Attachment Status"
-        '
-        'cboAttachmentStatus
-        '
-        Me.cboAttachmentStatus.Location = New System.Drawing.Point(124, 110)
-        Me.cboAttachmentStatus.Name = "cboAttachmentStatus"
-        Me.cboAttachmentStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cboAttachmentStatus.Properties.DisplayMember = "DevUse"
-        Me.cboAttachmentStatus.Properties.NullText = "[Select Attachment Type]"
-        Me.cboAttachmentStatus.Properties.ReadOnly = true
-        Me.cboAttachmentStatus.Properties.ValueMember = "DevUseId"
-        Me.cboAttachmentStatus.Size = New System.Drawing.Size(240, 20)
-        Me.cboAttachmentStatus.TabIndex = 203
-        '
-        'radOccupancy
-        '
-        Me.radOccupancy.Location = New System.Drawing.Point(446, 111)
-        Me.radOccupancy.Name = "radOccupancy"
-        Me.radOccupancy.Properties.Appearance.BackColor = System.Drawing.Color.Transparent
-        Me.radOccupancy.Properties.Appearance.Options.UseBackColor = true
-        Me.radOccupancy.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder
-        Me.radOccupancy.Properties.Items.AddRange(New DevExpress.XtraEditors.Controls.RadioGroupItem() {New DevExpress.XtraEditors.Controls.RadioGroupItem(1, "Single"), New DevExpress.XtraEditors.Controls.RadioGroupItem(2, "Dual")})
-        Me.radOccupancy.Size = New System.Drawing.Size(116, 22)
-        Me.radOccupancy.TabIndex = 205
-        '
-        'lblOccupancy
-        '
-        Me.lblOccupancy.AutoSize = true
-        Me.lblOccupancy.Location = New System.Drawing.Point(376, 115)
-        Me.lblOccupancy.Name = "lblOccupancy"
-        Me.lblOccupancy.Size = New System.Drawing.Size(64, 13)
-        Me.lblOccupancy.TabIndex = 206
-        Me.lblOccupancy.Text = "Occupancy:"
-        '
         'DevelopmentStart
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.AutoScroll = true
+        Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(1378, 947)
         Me.Controls.Add(Me.tabPanels)
         Me.Controls.Add(Me.pnlSearch)
         Me.Controls.Add(Me.MenuStrip1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
-        Me.Icon = CType(resources.GetObject("$this.Icon"),System.Drawing.Icon)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MainMenuStrip = Me.MenuStrip1
-        Me.MaximizeBox = false
+        Me.MaximizeBox = False
         Me.Name = "DevelopmentStart"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Development Application"
-        Me.MenuStrip1.ResumeLayout(false)
-        Me.MenuStrip1.PerformLayout
-        CType(Me.tabPanels,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tabPanels.ResumeLayout(false)
-        Me.tpgApplication.ResumeLayout(false)
-        CType(Me.pnlApplicationData,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlApplicationData.ResumeLayout(false)
-        Me.pnlApplicationData.PerformLayout
-        CType(Me.grp,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grp.ResumeLayout(false)
-        Me.grp.PerformLayout
-        CType(Me.grpBasix,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpBasix.ResumeLayout(false)
-        Me.grpBasix.PerformLayout
-        CType(Me.grpFileNumber,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpFileNumber.ResumeLayout(false)
-        Me.grpFileNumber.PerformLayout
-        CType(Me.grpOwner,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpOwner.ResumeLayout(false)
-        Me.grpOwner.PerformLayout
-        CType(Me.grpPurpose,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpPurpose.ResumeLayout(false)
-        Me.grpPurpose.PerformLayout
-        CType(Me.grpDescription,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpDescription.ResumeLayout(false)
-        Me.grpDescription.PerformLayout
-        CType(Me.cboIntendedLandUse.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.nudDwellings.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboBuildingType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDAClass.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboConsentType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDevUse.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDevType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpAdditional,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpAdditional.ResumeLayout(false)
-        Me.grpAdditional.PerformLayout
-        CType(Me.cboDAtype1.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDAtype3.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDAType2.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDAClass2.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDAClass1.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDAClass3.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpLand,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpLand.ResumeLayout(false)
-        Me.GroupBox21.ResumeLayout(false)
-        Me.grpPropertyLotAddress.ResumeLayout(false)
-        Me.grpPropertyLotAddress.PerformLayout
-        CType(Me.cboAreaType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDACensusCode.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDAlocalityCode.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpCCSum,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpCCSum.ResumeLayout(false)
-        Me.grpCCSum.PerformLayout
-        CType(Me.grpDetails,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpDetails.ResumeLayout(false)
-        Me.grpDetails.PerformLayout
-        CType(Me.txtOfficer.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboSector.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboAppType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgFees.ResumeLayout(false)
-        CType(Me.pnlDisplayFees,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplayFees.ResumeLayout(false)
-        CType(Me.GroupControl6,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupControl6.ResumeLayout(false)
-        Me.GroupControl6.PerformLayout
-        CType(Me.grdDARefundsPaid,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwDARefundsPaid,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.GroupControl4,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupControl4.ResumeLayout(false)
-        CType(Me.grdPaymentsReceived,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwPaymentsReceived,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgSection68.ResumeLayout(false)
-        CType(Me.pnlDisplaySect68IntDev,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplaySect68IntDev.ResumeLayout(false)
-        CType(Me.GroupBox9,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox9.ResumeLayout(false)
-        Me.GroupBox9.PerformLayout
-        CType(Me.grdIntDev,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwIntDev,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboIntDevActs.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.mskDateAct.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.mskDateAct.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grp68,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grp68.ResumeLayout(false)
-        Me.grp68.PerformLayout
-        Me.tpgReferrals.ResumeLayout(false)
-        CType(Me.pnlDisplayReferrals,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplayReferrals.ResumeLayout(false)
-        CType(Me.grpMain,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpMain.ResumeLayout(false)
-        Me.grpMain.PerformLayout
-        CType(Me.DaysElapsedTextBox.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboRefCodeId.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RefRetDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RefRetDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.Refdt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.Refdt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpIntDesig,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpIntDesig.ResumeLayout(false)
-        CType(Me.cboReferralsIntProvision.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpRFS,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpRFS.ResumeLayout(false)
-        Me.grpRFS.PerformLayout
-        CType(Me.txtRFSSubLots.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboRFSSubDivisionType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpEngineers,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpEngineers.ResumeLayout(false)
-        Me.grpEngineers.PerformLayout
-        CType(Me.EngDueReturnDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.EngDueReturnDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtEngInternalComments.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtRefComm.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpSepp71,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpSepp71.ResumeLayout(false)
-        Me.grpSepp71.PerformLayout
-        CType(Me.chksepp71.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDesignatedYN.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboIntDevYN.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.pnlButtons,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlButtons.ResumeLayout(false)
-        CType(Me.dgvLoadListReferrals,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwLoadListReferrals,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtRefResponse.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgStatus.ResumeLayout(false)
-        CType(Me.pnlDisplayStatus,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplayStatus.ResumeLayout(false)
-        CType(Me.GroupControl10,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupControl10.ResumeLayout(false)
-        Me.GroupControl10.PerformLayout
-        CType(Me.txtDesignatedText.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtDepartPlanning.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtAdvertSignIntDetails.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtDepotAddress.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboAdvertSignDepot.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.GroupBox18,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox18.ResumeLayout(false)
-        Me.GroupBox18.PerformLayout
-        CType(Me.grpAssessment,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpAssessment.ResumeLayout(false)
-        Me.grpAssessment.PerformLayout
-        CType(Me.DAToTypingDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAToTypingDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAToPlannerDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAToPlannerDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DASiteInspectedDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DASiteInspectedDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PreAssessCompleteDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.PreAssessCompleteDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RefToPlanCom.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RefToPlanCom.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpNotification,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpNotification.ResumeLayout(false)
-        Me.grpNotification.PerformLayout
-        CType(Me.DACompletedDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DACompletedDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DACommDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DACommDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAAdvisedDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAAdvisedDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpDetermination,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpDetermination.ResumeLayout(false)
-        Me.grpDetermination.PerformLayout
-        CType(Me.DAPermExDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAPermExDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboProgressCode.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAOccDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAOccDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboReasonOver40.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAConsentPubDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAConsentPubDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDADecisionId.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDAAuthorityId.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAFreeTreeDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAFreeTreeDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.ConsentPostedDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.ConsentPostedDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAAppNotDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DAAppNotDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DADetermDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.DADetermDt.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgDocuments.ResumeLayout(false)
-        CType(Me.pnlDisplayDocs,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplayDocs.ResumeLayout(false)
-        CType(Me.GroupBox32,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox32.ResumeLayout(false)
-        Me.GroupBox32.PerformLayout
-        CType(Me.grdDocumentsList,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwDocumentsList,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemPictureEdit1,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgVariations.ResumeLayout(false)
-        CType(Me.pnlDisplayVariations,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplayVariations.ResumeLayout(false)
-        CType(Me.GroupBox28,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox28.ResumeLayout(false)
-        CType(Me.grdVariations,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwVariations,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemMemoEdit4,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemMemoEdit5,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox8.ResumeLayout(false)
-        Me.GroupBox8.PerformLayout
-        CType(Me.cboVariationAuthority.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboVariationResult.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.variationDecisionDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.variationDecisionDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox29.ResumeLayout(false)
-        Me.GroupBox29.PerformLayout
-        CType(Me.cboVariationType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgSubmissions.ResumeLayout(false)
-        CType(Me.pnlDisplaySubmisions,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplaySubmisions.ResumeLayout(false)
-        Me.pnlDisplaySubmisions.PerformLayout
-        CType(Me.GroupBox30,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox30.ResumeLayout(false)
-        CType(Me.GroupControl8,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupControl8.ResumeLayout(false)
-        CType(Me.grdSubmissionDrafts,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwSubmissionDrafts,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grdSubmissionandObjections,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwSubmissionandObjections,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox31.ResumeLayout(false)
-        Me.GroupBox31.PerformLayout
-        CType(Me.cboSubmissionType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.SubRecdDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.SubRecdDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgPCAConditions.ResumeLayout(false)
-        CType(Me.pnlDisplayPCAconditions,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplayPCAconditions.ResumeLayout(false)
-        CType(Me.GroupBox36,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox36.ResumeLayout(false)
-        CType(Me.grdOneOffConditions,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwOneOffConditions,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemMemoEdit6,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.GroupBox35,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupBox35.ResumeLayout(false)
-        CType(Me.grdSTDCond,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwSTDCond,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgFileNotes.ResumeLayout(false)
-        CType(Me.pnlDisplayFileNotes,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplayFileNotes.ResumeLayout(false)
-        CType(Me.GroupControl2,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupControl2.ResumeLayout(false)
-        CType(Me.GroupControl5,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupControl5.ResumeLayout(false)
-        CType(Me.grdFileNotes,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwFileNotes,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemMemoEdit3,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemMemoEdit2,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpFileNotes,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpFileNotes.ResumeLayout(false)
-        Me.grpFileNotes.PerformLayout
-        CType(Me.cboNotesOfficer.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboNoteType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.NoteDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.NoteDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgBuildLetters.ResumeLayout(false)
-        CType(Me.pnlBuildLetters,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlBuildLetters.ResumeLayout(false)
-        Me.pnlBuildLetters.PerformLayout
-        CType(Me.cboAssessmentType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.GroupControl1,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupControl1.ResumeLayout(false)
-        CType(Me.cboOtherDocs.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.GroupControl9,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupControl9.ResumeLayout(false)
-        CType(Me.dgvOneUpConditions,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwOneUpConditions,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.RepositoryItemMemoEdit1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.GroupControl3,System.ComponentModel.ISupportInitialize).EndInit
-        Me.GroupControl3.ResumeLayout(false)
-        CType(Me.dgvSTDConditions,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwSTDConditions,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboSTDconditions.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboConsentDocType.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpLetters,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpLetters.ResumeLayout(false)
-        CType(Me.grdDraftDocs,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwDraftDocs,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgAssociated.ResumeLayout(false)
-        CType(Me.pnlDisplayAssociatedApps,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplayAssociatedApps.ResumeLayout(false)
-        CType(Me.grdAssociatedApps,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.gvwAssociatedApps,System.ComponentModel.ISupportInitialize).EndInit
-        Me.tpgEnlighten.ResumeLayout(false)
-        CType(Me.pnlDisplayEnlighten,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlDisplayEnlighten.ResumeLayout(false)
-        CType(Me.picEnlightenMap,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.pnlSearch,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlSearch.ResumeLayout(false)
-        Me.pnlSearch.PerformLayout
-        CType(Me.pnlEditButtons,System.ComponentModel.ISupportInitialize).EndInit
-        Me.pnlEditButtons.ResumeLayout(false)
-        Me.grpSearch.ResumeLayout(false)
-        Me.grpSearch.PerformLayout
-        CType(Me.mskEndDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.mskEndDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.mskStartDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.mskStartDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtExistingDwelings.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtDemolishedDwelings.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboAttachmentStatus.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.radOccupancy.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        Me.ResumeLayout(false)
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
+        CType(Me.tabPanels, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tabPanels.ResumeLayout(False)
+        Me.tpgApplication.ResumeLayout(False)
+        CType(Me.pnlApplicationData, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlApplicationData.ResumeLayout(False)
+        Me.pnlApplicationData.PerformLayout()
+        CType(Me.grp, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grp.ResumeLayout(False)
+        Me.grp.PerformLayout()
+        CType(Me.grpBasix, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpBasix.ResumeLayout(False)
+        Me.grpBasix.PerformLayout()
+        CType(Me.grpFileNumber, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpFileNumber.ResumeLayout(False)
+        Me.grpFileNumber.PerformLayout()
+        CType(Me.grpOwner, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpOwner.ResumeLayout(False)
+        Me.grpOwner.PerformLayout()
+        CType(Me.grpPurpose, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpPurpose.ResumeLayout(False)
+        Me.grpPurpose.PerformLayout()
+        CType(Me.grpDescription, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpDescription.ResumeLayout(False)
+        Me.grpDescription.PerformLayout()
+        CType(Me.radOccupancy.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboAttachmentStatus.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDemolishedDwelings.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtExistingDwelings.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboIntendedLandUse.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nudDwellings.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboBuildingType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDAClass.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboConsentType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDevUse.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDevType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpAdditional, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpAdditional.ResumeLayout(False)
+        Me.grpAdditional.PerformLayout()
+        CType(Me.cboDAtype1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDAtype3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDAType2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDAClass2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDAClass1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDAClass3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpLand, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpLand.ResumeLayout(False)
+        Me.GroupBox21.ResumeLayout(False)
+        Me.grpPropertyLotAddress.ResumeLayout(False)
+        Me.grpPropertyLotAddress.PerformLayout()
+        CType(Me.cboAreaType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDACensusCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDAlocalityCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpCCSum, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpCCSum.ResumeLayout(False)
+        Me.grpCCSum.PerformLayout()
+        CType(Me.grpDetails, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpDetails.ResumeLayout(False)
+        Me.grpDetails.PerformLayout()
+        CType(Me.txtOfficer.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboSector.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboAppType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgFees.ResumeLayout(False)
+        CType(Me.pnlDisplayFees, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplayFees.ResumeLayout(False)
+        CType(Me.GroupControl6, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl6.ResumeLayout(False)
+        Me.GroupControl6.PerformLayout()
+        CType(Me.grdDARefundsPaid, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwDARefundsPaid, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupControl4, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl4.ResumeLayout(False)
+        CType(Me.grdPaymentsReceived, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwPaymentsReceived, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgSection68.ResumeLayout(False)
+        CType(Me.pnlDisplaySect68IntDev, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplaySect68IntDev.ResumeLayout(False)
+        CType(Me.GroupBox9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox9.ResumeLayout(False)
+        Me.GroupBox9.PerformLayout()
+        CType(Me.grdIntDev, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwIntDev, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboIntDevActs.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.mskDateAct.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.mskDateAct.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grp68, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grp68.ResumeLayout(False)
+        Me.grp68.PerformLayout()
+        Me.tpgReferrals.ResumeLayout(False)
+        CType(Me.pnlDisplayReferrals, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplayReferrals.ResumeLayout(False)
+        CType(Me.grpMain, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpMain.ResumeLayout(False)
+        Me.grpMain.PerformLayout()
+        CType(Me.DaysElapsedTextBox.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboRefCodeId.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RefRetDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RefRetDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Refdt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Refdt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpIntDesig, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpIntDesig.ResumeLayout(False)
+        CType(Me.cboReferralsIntProvision.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpRFS, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpRFS.ResumeLayout(False)
+        Me.grpRFS.PerformLayout()
+        CType(Me.txtRFSSubLots.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboRFSSubDivisionType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpEngineers, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpEngineers.ResumeLayout(False)
+        Me.grpEngineers.PerformLayout()
+        CType(Me.EngDueReturnDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.EngDueReturnDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtEngInternalComments.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtRefComm.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpSepp71, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpSepp71.ResumeLayout(False)
+        Me.grpSepp71.PerformLayout()
+        CType(Me.chksepp71.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDesignatedYN.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboIntDevYN.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pnlButtons, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlButtons.ResumeLayout(False)
+        CType(Me.dgvLoadListReferrals, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwLoadListReferrals, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtRefResponse.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgStatus.ResumeLayout(False)
+        CType(Me.pnlDisplayStatus, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplayStatus.ResumeLayout(False)
+        CType(Me.GroupControl10, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl10.ResumeLayout(False)
+        Me.GroupControl10.PerformLayout()
+        CType(Me.txtDesignatedText.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDepartPlanning.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtAdvertSignIntDetails.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtDepotAddress.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboAdvertSignDepot.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupBox18, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox18.ResumeLayout(False)
+        Me.GroupBox18.PerformLayout()
+        CType(Me.grpAssessment, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpAssessment.ResumeLayout(False)
+        Me.grpAssessment.PerformLayout()
+        CType(Me.DAToTypingDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAToTypingDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAToPlannerDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAToPlannerDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DASiteInspectedDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DASiteInspectedDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PreAssessCompleteDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PreAssessCompleteDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RefToPlanCom.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RefToPlanCom.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpNotification, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpNotification.ResumeLayout(False)
+        Me.grpNotification.PerformLayout()
+        CType(Me.DACompletedDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DACompletedDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DACommDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DACommDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAAdvisedDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAAdvisedDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpDetermination, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpDetermination.ResumeLayout(False)
+        Me.grpDetermination.PerformLayout()
+        CType(Me.DAPermExDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAPermExDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboProgressCode.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAOccDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAOccDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboReasonOver40.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAConsentPubDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAConsentPubDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDADecisionId.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboDAAuthorityId.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAFreeTreeDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAFreeTreeDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ConsentPostedDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.ConsentPostedDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAAppNotDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DAAppNotDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DADetermDt.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DADetermDt.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgDocuments.ResumeLayout(False)
+        CType(Me.pnlDisplayDocs, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplayDocs.ResumeLayout(False)
+        CType(Me.GroupBox32, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox32.ResumeLayout(False)
+        Me.GroupBox32.PerformLayout()
+        CType(Me.grdDocumentsList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwDocumentsList, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemPictureEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgVariations.ResumeLayout(False)
+        CType(Me.pnlDisplayVariations, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplayVariations.ResumeLayout(False)
+        CType(Me.GroupBox28, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox28.ResumeLayout(False)
+        CType(Me.grdVariations, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwVariations, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemMemoEdit4, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemMemoEdit5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox8.ResumeLayout(False)
+        Me.GroupBox8.PerformLayout()
+        CType(Me.cboVariationAuthority.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboVariationResult.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.variationDecisionDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.variationDecisionDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox29.ResumeLayout(False)
+        Me.GroupBox29.PerformLayout()
+        CType(Me.cboVariationType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgSubmissions.ResumeLayout(False)
+        CType(Me.pnlDisplaySubmisions, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplaySubmisions.ResumeLayout(False)
+        Me.pnlDisplaySubmisions.PerformLayout()
+        CType(Me.GroupBox30, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox30.ResumeLayout(False)
+        CType(Me.GroupControl8, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl8.ResumeLayout(False)
+        CType(Me.grdSubmissionDrafts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwSubmissionDrafts, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grdSubmissionandObjections, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwSubmissionandObjections, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox31.ResumeLayout(False)
+        Me.GroupBox31.PerformLayout()
+        CType(Me.cboSubmissionType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SubRecdDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.SubRecdDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgPCAConditions.ResumeLayout(False)
+        CType(Me.pnlDisplayPCAconditions, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplayPCAconditions.ResumeLayout(False)
+        CType(Me.GroupBox36, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox36.ResumeLayout(False)
+        CType(Me.grdOneOffConditions, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwOneOffConditions, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemMemoEdit6, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupBox35, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupBox35.ResumeLayout(False)
+        CType(Me.grdSTDCond, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwSTDCond, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgFileNotes.ResumeLayout(False)
+        CType(Me.pnlDisplayFileNotes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplayFileNotes.ResumeLayout(False)
+        CType(Me.GroupControl2, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl2.ResumeLayout(False)
+        CType(Me.GroupControl5, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl5.ResumeLayout(False)
+        CType(Me.grdFileNotes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwFileNotes, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemMemoEdit3, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemMemoEdit2, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpFileNotes, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpFileNotes.ResumeLayout(False)
+        Me.grpFileNotes.PerformLayout()
+        CType(Me.cboNotesOfficer.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboNoteType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NoteDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.NoteDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgBuildLetters.ResumeLayout(False)
+        CType(Me.pnlBuildLetters, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlBuildLetters.ResumeLayout(False)
+        Me.pnlBuildLetters.PerformLayout()
+        CType(Me.cboAssessmentType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupControl1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl1.ResumeLayout(False)
+        CType(Me.cboOtherDocs.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupControl9, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl9.ResumeLayout(False)
+        CType(Me.dgvOneUpConditions, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwOneUpConditions, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.RepositoryItemMemoEdit1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.GroupControl3, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.GroupControl3.ResumeLayout(False)
+        CType(Me.dgvSTDConditions, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwSTDConditions, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboSTDconditions.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.cboConsentDocType.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.grpLetters, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.grpLetters.ResumeLayout(False)
+        CType(Me.grdDraftDocs, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwDraftDocs, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgAssociated.ResumeLayout(False)
+        CType(Me.pnlDisplayAssociatedApps, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplayAssociatedApps.ResumeLayout(False)
+        CType(Me.grdAssociatedApps, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.gvwAssociatedApps, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.tpgEnlighten.ResumeLayout(False)
+        CType(Me.pnlDisplayEnlighten, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlDisplayEnlighten.ResumeLayout(False)
+        CType(Me.picEnlightenMap, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.pnlSearch, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlSearch.ResumeLayout(False)
+        Me.pnlSearch.PerformLayout()
+        CType(Me.pnlEditButtons, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.pnlEditButtons.ResumeLayout(False)
+        Me.grpSearch.ResumeLayout(False)
+        Me.grpSearch.PerformLayout()
+        CType(Me.mskEndDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.mskEndDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.mskStartDate.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.mskStartDate.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
         Me.PerformLayout
 
 End Sub

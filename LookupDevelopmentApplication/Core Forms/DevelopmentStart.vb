@@ -11278,7 +11278,22 @@ Public Class DevelopmentStart
     End Sub
 
     Private Sub mnuConsentAdvertising_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuConsentAdvertising.Click
-        Dim rptDocument As New ReportDocument
+        'Dim rptDocument As New ReportDocument
+
+
+        Dim saveDialoge As New SaveFileDialog
+
+        Dim fileName As String = ""
+
+        With saveDialoge
+            .Filter = "Word files (*.docx)|*.docx"
+            .RestoreDirectory = True
+            If .ShowDialog = DialogResult.OK Then
+                fileName = .FileName
+
+            End If
+
+        End With
 
         Dim objDT As New DataTable
 
@@ -11300,7 +11315,8 @@ Public Class DevelopmentStart
                     With cmd
                         .Connection = cn
                         .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_rpt_DA_Advert_Union"
+                        '.CommandText = "usp_rpt_DA_Advert_Union"
+                        .CommandText = "usp_SELECT_DA_Advert_Union"
                     End With
 
 
@@ -11309,7 +11325,37 @@ Public Class DevelopmentStart
                         objDT.Load(objDataReader)
                     End Using
 
-                    PrintAdvertisingSheet(objDT)
+                    Dim rept As New AdvertisingConcentList
+
+
+                    'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
+                    'Dim mylist As DataSet = New DataSet
+                    'adapter.Fill(mylist, "consents")
+
+                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\Devexpress Reports\advertisingConsent.xsd")
+
+
+
+                    rept.DataSource = objDT
+
+
+                    rept.CreateDocument()
+
+
+                    rept.ExportToDocx(fileName)
+
+                    Try
+
+                        Dim WRD As New OpenDocument
+                        WRD.OpenVisible(fileName)
+
+
+                    Catch ex As Exception
+
+                    End Try
+
+
+                    'PrintAdvertisingSheet(objDT)
 
                 End Using
 
@@ -11320,6 +11366,15 @@ Public Class DevelopmentStart
                 MessageBox.Show(ex.Message, " in mnuPreviewAssessment_Click routine ")
             End Try
         End Using
+
+
+    End Sub
+
+    Private Sub BuildAdvertisingConsentList()
+
+
+
+
 
 
     End Sub
@@ -13855,9 +13910,7 @@ Public Class DevelopmentStart
 
     End Sub
 
-    Private Sub cboDevType_HelpRequested(sender As Object, hlpevent As HelpEventArgs) Handles cboDevType.HelpRequested
 
-    End Sub
 
 
 
