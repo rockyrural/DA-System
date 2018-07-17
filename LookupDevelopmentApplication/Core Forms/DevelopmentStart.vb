@@ -242,6 +242,7 @@ Public Class DevelopmentStart
         LoadLookupEdit(Me.cboDAAuthorityId, "usp_LoadUpDAAuthorityList")
         LoadLookupEdit(cboReasonOver40, "usp_LoadUp_REASON_DA_APPL_40DAYSList")
         LoadLookupEdit(cboProgressCode, "usp_LoadUp_ProgressCodeList")
+        LoadLookupEdit(lupSection68, "usp_SELECT_ListOfSection68Items")
 
         ''LoadCombo(Me.cboDevType, "usp_LoadUpDevTypeList")
         loadDevelopmentTypeCombo()
@@ -2518,7 +2519,7 @@ Public Class DevelopmentStart
 
                         cb.Enabled = True
 
-                    Case "btnAddVariation", "btnAddSub", "btnEdit68", "btnAddFee", "btnAddRefund", "btnAddReferral", "btnEditReferralsTab"
+                    Case "btnAddVariation", "btnAddSub",  "btnAddFee", "btnAddRefund", "btnAddReferral", "btnEditReferralsTab"
 
                         cb.Enabled = True
 
@@ -2544,7 +2545,7 @@ Public Class DevelopmentStart
 
                         cb.Enabled = True
 
-                    Case "btnAddVariation", "btnAddSub", "btnEdit68", "btnAddFee", "btnAddRefund", "btnAddReferral", "btnEditReferralsTab", "btnModifyAdvertAddress"
+                    Case "btnAddVariation", "btnAddSub",  "btnAddFee", "btnAddRefund", "btnAddReferral", "btnEditReferralsTab", "btnModifyAdvertAddress"
 
                         cb.Enabled = True
 
@@ -2580,6 +2581,13 @@ Public Class DevelopmentStart
                 Dim cb As LookUpEdit = DirectCast(ctrl, LookUpEdit)
 
                 If cb.Name <> "cboIntDevActs" Then
+
+                    cb.ReadOnly = Not bLock
+                Else
+                    cb.ReadOnly = False
+
+                End If
+                If cb.Name <> "lupSection68" Then
 
                     cb.ReadOnly = Not bLock
                 Else
@@ -7425,31 +7433,19 @@ Public Class DevelopmentStart
 
 #Region "Section68andIntDev"
 
-    Private Sub btnEdit68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEdit68.Click
+    Private Sub btnInsert68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnInsert68.Click
         'Edit Sec68 Tab
-        LockTheForm(grp68, True)
-        grp68.Enabled = True
-        btnEdit68.Enabled = False
-        Me.btnSave68.Enabled = True
+        'LockTheForm(grp68, True)
+        'grp68.Enabled = True
+        btnInsert68.Enabled = False
+        'Me.btnSave68.Enabled = True
 
 
-    End Sub
-
-    Private Sub btnSave68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave68.Click
-        LockTheForm(grp68, False)
-        btnSave68.Enabled = False
-        btnEdit68.Enabled = True
-
-        SaveSection68()
-
-    End Sub
-
-    Private Sub SaveSection68()
-        Using cn As New SqlConnection(My.Settings.connectionString)
+    Using cn As New SqlConnection(my.settings.ConnectionString)
             Try
                 cn.Open()
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
+                MessageBox.Show(ex.Message, " in btnInsert68_Click routine - form " & Me.name)
 
             End Try
 
@@ -7461,32 +7457,85 @@ Public Class DevelopmentStart
                     With cmd
                         .Connection = cn
                         .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_DAUPDATE_Section68"
+                        .CommandText = "INSERT_Section68Item"
 
-                        .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = txtDANo.Text
-                        .Parameters.Add("@SEC681", SqlDbType.Int).Value = Me.chkSec68q1.CheckState
-                        .Parameters.Add("@SEC682", SqlDbType.Int).Value = Me.chkSec68q2.CheckState
-                        .Parameters.Add("@SEC683", SqlDbType.Int).Value = Me.chkSec68q3.CheckState
-                        .Parameters.Add("@SEC684", SqlDbType.Int).Value = Me.chkSec68q4.CheckState
-                        .Parameters.Add("@SEC685", SqlDbType.Int).Value = Me.chkSec68q5.CheckState
-                        .Parameters.Add("@SEC686", SqlDbType.Int).Value = Me.chkSec68q6.CheckState
-                        .Parameters.Add("@SEC687", SqlDbType.Int).Value = Me.chkSec68q7.CheckState
+                        .Parameters.Add("@DANO", SqlDbType.varchar).Value = txtDANo.Text
+                        .Parameters.Add("@ITEMID", SqlDbType.Int).Value = cint(lupSection68.editvalue)
+
                         .ExecuteNonQuery()
 
                     End With
+
+
 
                 End Using
 
 
 
-
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
+                MessageBox.Show(ex.Message, " in btnInsert68_Click routine - form " & Me.name)
 
             End Try
         End Using
 
+        LoadSection68(txtDANo.Text)
+
+        lupSection68.editvalue= nothing
+
     End Sub
+
+    'Private Sub btnSave68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
+    '    LockTheForm(grp68, False)
+    '    'btnSave68.Enabled = False
+    '    btnInsert68.Enabled = True
+
+    '    SaveSection68()
+
+    'End Sub
+
+    'Private Sub SaveSection68()
+    '    Using cn As New SqlConnection(My.Settings.connectionString)
+    '        Try
+    '            cn.Open()
+    '        Catch ex As SqlException
+    '            MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
+
+    '        End Try
+
+
+    '        Try
+
+    '            Using cmd As New SqlCommand
+
+    '                With cmd
+    '                    .Connection = cn
+    '                    .CommandType = CommandType.StoredProcedure
+    '                    .CommandText = "usp_DAUPDATE_Section68"
+
+    '                    .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = txtDANo.Text
+    '                    .Parameters.Add("@SEC681", SqlDbType.Int).Value = Me.chkSec68q1.CheckState
+    '                    .Parameters.Add("@SEC682", SqlDbType.Int).Value = Me.chkSec68q2.CheckState
+    '                    .Parameters.Add("@SEC683", SqlDbType.Int).Value = Me.chkSec68q3.CheckState
+    '                    .Parameters.Add("@SEC684", SqlDbType.Int).Value = Me.chkSec68q4.CheckState
+    '                    .Parameters.Add("@SEC685", SqlDbType.Int).Value = Me.chkSec68q5.CheckState
+    '                    .Parameters.Add("@SEC686", SqlDbType.Int).Value = Me.chkSec68q6.CheckState
+    '                    .Parameters.Add("@SEC687", SqlDbType.Int).Value = Me.chkSec68q7.CheckState
+    '                    .ExecuteNonQuery()
+
+    '                End With
+
+    '            End Using
+
+
+
+
+    '        Catch ex As SqlException
+    '            MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
+
+    '        End Try
+    '    End Using
+
+    'End Sub
 
     'Private Sub btnSaveIntDev_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSaveIntDev
 
@@ -7730,6 +7779,54 @@ Public Class DevelopmentStart
 
 
     End Sub
+
+    Private sub LoadSection68(DANumber As string)
+
+        Using cn As New SqlConnection(my.settings.ConnectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadSection68 routine - form " & Me.name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_SELECT_ListOfSection68ItemsForDA"
+
+                        .Parameters.Add("@DANO", SqlDbType.VarChar).Value = DANumber
+
+
+
+                    End With
+
+                    Dim objDT As New DataTable
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    grdSection68.DataSource=objdt
+
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadSection68 routine - form " & Me.name)
+
+            End Try
+        End Using
+
+    End sub
 
     Private Sub loadIntDevGrid(ByVal DANo As String)
 
@@ -9355,7 +9452,7 @@ Public Class DevelopmentStart
 
 
         btnSaveDA.Enabled = False
-        btnSave68.Enabled = False
+        'btnSave68.Enabled = False
         btnRemoveIntDev.Enabled = False
         btnSaveStatus.Enabled = False
 
@@ -9651,13 +9748,13 @@ Public Class DevelopmentStart
 
 
                         'Section68
-                        chkSec68q1.Checked = CBool(objDataRow.Item("Sec68q1"))
-                        chkSec68q2.Checked = CBool(objDataRow.Item("Sec68q2"))
-                        chkSec68q3.Checked = CBool(objDataRow.Item("Sec68q3"))
-                        chkSec68q4.Checked = CBool(objDataRow.Item("Sec68q4"))
-                        chkSec68q5.Checked = CBool(objDataRow.Item("Sec68q5"))
-                        chkSec68q6.Checked = CBool(objDataRow.Item("Sec68q6"))
-                        chkSec68q7.Checked = CBool(objDataRow.Item("Sec68q7"))
+                        'chkSec68q1.Checked = CBool(objDataRow.Item("Sec68q1"))
+                        'chkSec68q2.Checked = CBool(objDataRow.Item("Sec68q2"))
+                        'chkSec68q3.Checked = CBool(objDataRow.Item("Sec68q3"))
+                        'chkSec68q4.Checked = CBool(objDataRow.Item("Sec68q4"))
+                        'chkSec68q5.Checked = CBool(objDataRow.Item("Sec68q5"))
+                        'chkSec68q6.Checked = CBool(objDataRow.Item("Sec68q6"))
+                        'chkSec68q7.Checked = CBool(objDataRow.Item("Sec68q7"))
 
 
                         'Status
@@ -9911,6 +10008,7 @@ Public Class DevelopmentStart
         LoadSummaryData(DANo)
         LoadIntDevCombo()
         loadIntDevGrid(DANo)
+        LoadSection68(DANo)
 
         Dim PINS As String = String.Empty
 
@@ -9932,7 +10030,7 @@ Public Class DevelopmentStart
 
 
 
-        btnEdit68.Enabled = True
+        'btnEdit68.Enabled = True
 
         mnuCompliance.Enabled = True
         mnuOtherApplication.Enabled = True
@@ -13907,6 +14005,66 @@ Public Class DevelopmentStart
         End Select
 
 
+
+    End Sub
+
+    Private Sub lupSection68_EditValueChanged(sender As Object, e As EventArgs) Handles lupSection68.EditValueChanged
+        if lupSection68.IsLoading then return
+
+        btnInsert68.Enabled=true
+    End Sub
+
+    Private Sub gvwSection68_RowClick(sender As Object, e As RowClickEventArgs) Handles gvwSection68.RowClick
+        btnRemove68.Enabled=true
+    End Sub
+
+    Private Sub btnRemove68_Click(sender As Object, e As EventArgs) Handles btnRemove68.Click
+
+
+
+
+            Dim myobj As DataRowView = CType(gvwSection68.GetFocusedRow, DataRowView)
+
+
+        
+        Using cn As New SqlConnection(my.settings.ConnectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in btnRemove68_Click routine - form " & Me.name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_DELETE_Section68Item"
+
+                        .Parameters.Add("@ITEMID", SqlDbType.Int).Value = CInt(myobj.Row.Item("sectIdx"))
+
+                        .ExecuteNonQuery()
+
+                    End With
+
+
+
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in btnRemove68_Click routine - form " & Me.name)
+
+            End Try
+        End Using
+
+        LoadSection68(txtDANo.text)
 
     End Sub
 
