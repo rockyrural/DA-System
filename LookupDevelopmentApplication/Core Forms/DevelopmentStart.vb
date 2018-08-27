@@ -7,6 +7,7 @@ Imports System.Text
 Imports System.Threading
 Imports CrystalDecisions.CrystalReports.Engine
 Imports DevExpress.LookAndFeel
+Imports DevExpress.XtraBars
 Imports DevExpress.XtraEditors
 Imports DevExpress.XtraEditors.Controls
 Imports DevExpress.XtraGrid.Columns
@@ -141,9 +142,9 @@ Public Class DevelopmentStart
 
 
 
-        If My.Settings.connectionString = "Data Source=Development\dev;Initial Catalog=DevelopmentSQL;Integrated Security=True" Then
-            MessageBox.Show("WARNING THIS IS TEST DATA DO NOT PROCEED,  RING BOB NOW!!!", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-        End If
+		If My.Settings.connectionString = "Data Source=Development\dev;Initial Catalog=DevelopmentSQL;Integrated Security=True" Then
+			MessageBox.Show("WARNING THIS IS TEST DATA DO NOT PROCEED,  RING BOB NOW!!!", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+		End If
 
 
 #End If
@@ -153,45 +154,14 @@ Public Class DevelopmentStart
         cboSTDconditions.Visible = False
         btnAddCondition.Visible = False
 
-        'If My.Settings.FirstTray <> "" Then
-        '    bTrayIsLoaded = True
-
-        '    Dim prtdoc2 As New PrintDocument
-        '    Dim strDefaultPrinter As String = String.Empty
-        '    Dim bPrinterFound As Boolean = False
-
-        '    strDefaultPrinter = My.Settings.DefaultPrinter
-        '    For Each strPrinter As String In PrinterSettings.InstalledPrinters
-        '        If strPrinter = strDefaultPrinter Then
-        '            bPrinterFound = True
-        '        End If
-        '    Next
-
-        '    If Not bPrinterFound Then
-        '        My.Settings.DefaultPrinter = prtdoc2.PrinterSettings.PrinterName
-        '    End If
-
-        'Else
-
-        '    'If Not bTrayIsLoaded Then
-        '    With PageSetup
-        '        .ShowDialog()
-        '        bTrayIsLoaded = .PageHasbeenSet
-        '        .Dispose()
-        '    End With
-
-        '    'End If
-
-        'End If
         FindUserInfor()
 
-        'LoadLetterTypeCombo()
 
-        btnAddDA.Enabled = Administration
+        BiAddDA.Enabled = Administration
 
         If ViewOnly Then
             LockAccessIfViewOnly(Me)
-            Me.menuAssessmentApplication.Enabled = False
+            BiAssessment.Enabled = False
 
         End If
 
@@ -242,7 +212,6 @@ Public Class DevelopmentStart
         LoadLookupEdit(Me.cboDAAuthorityId, "usp_LoadUpDAAuthorityList")
         LoadLookupEdit(cboReasonOver40, "usp_LoadUp_REASON_DA_APPL_40DAYSList")
         LoadLookupEdit(cboProgressCode, "usp_LoadUp_ProgressCodeList")
-        LoadLookupEdit(lupSection68, "usp_SELECT_ListOfSection68Items")
 
         ''LoadCombo(Me.cboDevType, "usp_LoadUpDevTypeList")
         loadDevelopmentTypeCombo()
@@ -253,8 +222,6 @@ Public Class DevelopmentStart
         LoadLookupEdit(Me.cboDAtype3, "usp_LoadUpDevTypeList")
         'LoadLetterTypeCombo()
         LoadLookupEdit(Me.cboDevUse, "usp_LoadUpDevUseList")
-        LoadLookupEdit(cboIntendedLandUse, "usp_SELECT_LoadIntendLandUseList")
-        LoadLookupEdit(cboAttachmentStatus, "usp_SELECT_ListOfAttachmentTypes")
         ''LoadCombo(Me.cboIntDevActs , "usp_LoadUpIntegratedDevelopmentActList")
         LoadLookupEdit(Me.cboDAlocalityCode, "usp_LoadUpLocalityCodesList")
         ''LoadCombo(cboAssessmentType, "usp_LoadUpDADefaultConditionsList")
@@ -267,11 +234,6 @@ Public Class DevelopmentStart
         LoadLookupEdit(Me.cboBuildingType, "usp_SELECT_LoadABSBuildingTypeList")
 
 
-        LoadLookupEdit(Me.cboDAClass, "usp_LoadUpDAClassComboList")
-
-        LoadLookupEdit(Me.cboDAClass1, "usp_LoadUpDAClassComboList")
-        LoadLookupEdit(Me.cboDAClass2, "usp_LoadUpDAClassComboList")
-        LoadLookupEdit(Me.cboDAClass3, "usp_LoadUpDAClassComboList")
 
 
 
@@ -519,9 +481,7 @@ Public Class DevelopmentStart
 
 
     End Sub
-    Private Sub mnuFileExit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuFileExit.Click
-        Me.Close()
-    End Sub
+
 
 #End Region
 
@@ -1344,30 +1304,13 @@ Public Class DevelopmentStart
             releaseObject(objWordApp)
 
 
-            Dim PublicId As Integer
 
 
-            With My.Forms.EASEInsertWordDocument
-
-                Select Case doctype
-                    Case 55, 56 'RFSDAREFERRAL, RFSSUBREFERRAL
-                        PublicId = 278599
-
-                    Case 48 'RTAREFERRAL
-                        PublicId = 287392
-                End Select
-                .PublicID = PublicId
-                .FileNumber = txtFileNo.Text
-                .DocSummary = DocSummary
-                .DocNumber = strDocumentNo
-                .ShowDialog()
-                .Dispose()
-            End With
+            Dim DTS As Double = CType(Now().ToOADate(), Double)
 
 
 
 
-            'My.Computer.FileSystem.DeleteFile(WordDocName)
 
 
             FileIO.FileSystem.MoveFile(mydocuments & "\" & strEASEdocumentName, My.Settings.DocumentGateway & strEASEdocumentName, True)
@@ -1999,15 +1942,15 @@ Public Class DevelopmentStart
 
 #If CONFIG = "Release" Then
 
-            sUserID = My.User.Name.Substring(4)
-            'sUserID = "cdavey"
+			sUserID = My.User.Name.Substring(4)
+			'sUserID = "cdavey"
 
 #Else
 
 
 
             sUserID = My.User.Name.Substring(4)
-            'sUserID = "kralph"
+            'sUserID = "cbarton"
 
 #End If
 
@@ -2498,8 +2441,8 @@ Public Class DevelopmentStart
             End If
         Next
 
-        btnGoogle.Enabled = False
-        btnEnlighten.Enabled = False
+        ibGoogleMaps.Enabled = False
+        ibIntraMaps.Enabled = False
 
     End Sub
 
@@ -2519,7 +2462,7 @@ Public Class DevelopmentStart
 
                         cb.Enabled = True
 
-                    Case "btnAddVariation", "btnAddSub",  "btnAddFee", "btnAddRefund", "btnAddReferral", "btnEditReferralsTab"
+                    Case "btnAddVariation", "btnAddSub", "btnEdit68", "btnAddFee", "btnAddRefund", "btnAddReferral", "btnEditReferralsTab"
 
                         cb.Enabled = True
 
@@ -2545,7 +2488,7 @@ Public Class DevelopmentStart
 
                         cb.Enabled = True
 
-                    Case "btnAddVariation", "btnAddSub",  "btnAddFee", "btnAddRefund", "btnAddReferral", "btnEditReferralsTab", "btnModifyAdvertAddress"
+                    Case "btnAddVariation", "btnAddSub", "btnEdit68", "btnAddFee", "btnAddRefund", "btnAddReferral", "btnEditReferralsTab", "btnModifyAdvertAddress"
 
                         cb.Enabled = True
 
@@ -2581,13 +2524,6 @@ Public Class DevelopmentStart
                 Dim cb As LookUpEdit = DirectCast(ctrl, LookUpEdit)
 
                 If cb.Name <> "cboIntDevActs" Then
-
-                    cb.ReadOnly = Not bLock
-                Else
-                    cb.ReadOnly = False
-
-                End If
-                If cb.Name <> "lupSection68" Then
 
                     cb.ReadOnly = Not bLock
                 Else
@@ -2960,10 +2896,6 @@ Public Class DevelopmentStart
                         If cboDAtype1.Text <> String.Empty Then .Parameters.Add("@DATYPE1", SqlDbType.Int).Value = CInt(Me.cboDAtype1.EditValue)
                         If cboDAType2.Text <> String.Empty Then .Parameters.Add("@DATYPE2", SqlDbType.Int).Value = CInt(Me.cboDAType2.EditValue)
                         If cboDAtype3.Text <> String.Empty Then .Parameters.Add("@DATYPE3", SqlDbType.Int).Value = CInt(Me.cboDAtype3.EditValue)
-                        If cboDAClass.Text <> String.Empty Then .Parameters.Add("@DACLASS", SqlDbType.NVarChar).Value = Me.cboDAClass.EditValue
-                        If cboDAClass1.Text <> String.Empty Then .Parameters.Add("@DACLASS1", SqlDbType.NVarChar).Value = Me.cboDAClass1.EditValue
-                        If cboDAClass2.Text <> String.Empty Then .Parameters.Add("@DACLASS2", SqlDbType.NVarChar).Value = Me.cboDAClass2.EditValue
-                        If cboDAClass3.Text <> String.Empty Then .Parameters.Add("@DACLASS3", SqlDbType.NVarChar).Value = Me.cboDAClass3.EditValue
                         .Parameters.Add("@MODDESC", SqlDbType.NVarChar).Value = Me.txtModDesc.Text
                         .ExecuteNonQuery()
 
@@ -3012,11 +2944,11 @@ Public Class DevelopmentStart
 
                         If Not cboDAlocalityCode.EditValue Is Nothing Then .Parameters.Add("@LOCALITY", SqlDbType.Int).Value = CInt(cboDAlocalityCode.EditValue)
 
-                        .Parameters.Add("@OWNERNAME", SqlDbType.NVarChar).Value = Me.txtDAOwnersName.Text
-                        .Parameters.Add("@OWNERADDRESS", SqlDbType.NVarChar).Value = Me.txtDAOwnersAddress.Text
-                        .Parameters.Add("@OWNERTOWN", SqlDbType.NVarChar).Value = Me.txtDAOwnersTown.Text
+                        .Parameters.Add("@OWNERNAME", SqlDbType.NVarChar).Value = txtDAOwnersName.Text
+                        .Parameters.Add("@OWNERADDRESS", SqlDbType.NVarChar).Value = txtDAOwnersAddress.Text
+                        .Parameters.Add("@OWNERTOWN", SqlDbType.NVarChar).Value = txtDAOwnersTown.Text
                         .Parameters.Add("@OWNERPCODE", SqlDbType.SmallInt).Value = NZ(txtDAOwnersPcode.Text)
-                        .Parameters.Add("@OWNERPHONE", SqlDbType.NVarChar).Value = Me.txtDAOwnersPhone.Text
+                        .Parameters.Add("@OWNERPHONE", SqlDbType.NVarChar).Value = txtDAOwnersPhone.Text
                         If txtArea.Text <> String.Empty Then .Parameters.Add("@DAAREA", SqlDbType.Float).Value = CDbl(txtArea.Text)
                         .Parameters.Add("@AREAUNIT", SqlDbType.NVarChar).Value = Me.cboAreaType.EditValue.ToString
 
@@ -3048,14 +2980,14 @@ Public Class DevelopmentStart
     Private Sub CheckIfDataChanged()
         Dim changed As Boolean = False
 
-        If btnSaveDA.Enabled Then
+        If BiSaveDA.Enabled Then
             changed = True
         End If
 
         If changed Then
             If MessageBox.Show("It appears you have updated some information, save the changes?", "Save Changes", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
 
-                If Me.btnSaveDA.Enabled Then btnSaveDA_ClickExtracted()
+                If BiSaveDA.Enabled Then btnSaveDA_ClickExtracted()
 
 
             End If
@@ -3164,12 +3096,8 @@ Public Class DevelopmentStart
                         objDT.Load(objDataReader)
                     End Using
 
-                    With lstPINs
-                        .DataSource = objDT
-                        .DisplayMember = "PIN"
-                        .ValueMember = "PIN"
-                        .SelectedIndex = -1
-                    End With
+
+                    grdPIN.DataSource = objDT
 
 
 
@@ -3398,7 +3326,7 @@ Public Class DevelopmentStart
             End Try
         End Using
 
-        mnuSec94.Enabled = True
+        BiSection94.Enabled = True
 
     End Sub
 
@@ -3538,7 +3466,6 @@ Public Class DevelopmentStart
 
 
                         .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = AppNo
-                        .Parameters.Add("@USERID", SqlDbType.NVarChar).Value = sUserID
 
                     End With
 
@@ -3618,7 +3545,6 @@ Public Class DevelopmentStart
 
 
                         .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = AppNo
-                        .Parameters.Add("@USRID", SqlDbType.NVarChar).Value = sUserID
 
                     End With
 
@@ -3831,7 +3757,11 @@ Public Class DevelopmentStart
         btnDeleteDoc.Enabled = True
         btnFinaliseDoc.Enabled = True
 
+
         If txtAppemail.Text <> String.Empty Then btnEmailAcknowledge.Enabled = myobj.Row.Item("Docname").ToString = "DAACKN"
+
+
+
 
 
     End Sub
@@ -4469,22 +4399,26 @@ Public Class DevelopmentStart
 
         End With
 
+        'TODO: EASE DevelopmentStart DONE?
 
         With My.Forms.InsertEASEDocument
+
+
 
             Select Case Recepient
                 Case 1
 
-                    .CustName = Me.txtDAOwnersName.Text
-                    .CustAddress = Me.txtDAOwnersAddress.Text & " " & txtDAOwnersTown.Text & " " & Me.txtDAOwnersPcode.Text
+                    .CustName = txtDAOwnersName.Text
+                    .CustAddress = txtDAOwnersAddress.Text & " " & txtDAOwnersTown.Text & " " & txtDAOwnersPcode.Text
 
                 Case 2
 
-                    .CustName = Me.txtAppName.Text
-                    .CustAddress = Me.txtAppAddress.Text & " " & Me.txtAppTown.Text & " " & Me.txtAppPcode.Text
+                    .CustName = txtAppName.Text
+                    .CustAddress = txtAppAddress.Text & " " & txtAppTown.Text & " " & txtAppPcode.Text
 
 
             End Select
+
 
             .WordDocLocation = myobj.Row.Item("DraftDocPath").ToString
             .DocSummary = summary
@@ -4492,6 +4426,8 @@ Public Class DevelopmentStart
             .FileNumber = Me.txtFileNo.Text
             .ShowDialog()
             .Dispose()
+
+
         End With
 
         Dim NewRecordID As Integer
@@ -4800,7 +4736,7 @@ Public Class DevelopmentStart
         btnSaveReferralsTab.Enabled = False
         LockTheForm(grpMain, False)
         LockTheForm(pnlButtons, False)
-        LockTheForm(pnlEditButtons, False)
+        'LockTheForm(pnlEditButtons, False)
         LockTheForm(grpRFS, False)
         LockTheForm(grpIntDesig, False)
         LockTheForm(grpEngineers, False)
@@ -5747,7 +5683,7 @@ Public Class DevelopmentStart
 
 
         LockTheForm(pnlButtons, False)
-        LockTheForm(pnlEditButtons, False)
+        'LockTheForm(pnlEditButtons, False)
 
         LockTheForm(grpMain, False)
         LockTheForm(grpRFS, False)
@@ -7433,19 +7369,31 @@ Public Class DevelopmentStart
 
 #Region "Section68andIntDev"
 
-    Private Sub btnInsert68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnInsert68.Click
+    Private Sub btnEdit68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEdit68.Click
         'Edit Sec68 Tab
-        'LockTheForm(grp68, True)
-        'grp68.Enabled = True
-        btnInsert68.Enabled = False
-        'Me.btnSave68.Enabled = True
+        LockTheForm(grp68, True)
+        grp68.Enabled = True
+        btnEdit68.Enabled = False
+        Me.btnSave68.Enabled = True
 
 
-    Using cn As New SqlConnection(my.settings.ConnectionString)
+    End Sub
+
+    Private Sub btnSave68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave68.Click
+        LockTheForm(grp68, False)
+        btnSave68.Enabled = False
+        btnEdit68.Enabled = True
+
+        SaveSection68()
+
+    End Sub
+
+    Private Sub SaveSection68()
+        Using cn As New SqlConnection(My.Settings.connectionString)
             Try
                 cn.Open()
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in btnInsert68_Click routine - form " & Me.name)
+                MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
 
             End Try
 
@@ -7457,85 +7405,32 @@ Public Class DevelopmentStart
                     With cmd
                         .Connection = cn
                         .CommandType = CommandType.StoredProcedure
-                        .CommandText = "INSERT_Section68Item"
+                        .CommandText = "usp_DAUPDATE_Section68"
 
-                        .Parameters.Add("@DANO", SqlDbType.varchar).Value = txtDANo.Text
-                        .Parameters.Add("@ITEMID", SqlDbType.Int).Value = cint(lupSection68.editvalue)
-
+                        .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = txtDANo.Text
+                        .Parameters.Add("@SEC681", SqlDbType.Int).Value = Me.chkSec68q1.CheckState
+                        .Parameters.Add("@SEC682", SqlDbType.Int).Value = Me.chkSec68q2.CheckState
+                        .Parameters.Add("@SEC683", SqlDbType.Int).Value = Me.chkSec68q3.CheckState
+                        .Parameters.Add("@SEC684", SqlDbType.Int).Value = Me.chkSec68q4.CheckState
+                        .Parameters.Add("@SEC685", SqlDbType.Int).Value = Me.chkSec68q5.CheckState
+                        .Parameters.Add("@SEC686", SqlDbType.Int).Value = Me.chkSec68q6.CheckState
+                        .Parameters.Add("@SEC687", SqlDbType.Int).Value = Me.chkSec68q7.CheckState
                         .ExecuteNonQuery()
 
                     End With
-
-
 
                 End Using
 
 
 
+
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in btnInsert68_Click routine - form " & Me.name)
+                MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
 
             End Try
         End Using
 
-        LoadSection68(txtDANo.Text)
-
-        lupSection68.editvalue= nothing
-
     End Sub
-
-    'Private Sub btnSave68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) 
-    '    LockTheForm(grp68, False)
-    '    'btnSave68.Enabled = False
-    '    btnInsert68.Enabled = True
-
-    '    SaveSection68()
-
-    'End Sub
-
-    'Private Sub SaveSection68()
-    '    Using cn As New SqlConnection(My.Settings.connectionString)
-    '        Try
-    '            cn.Open()
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
-
-    '        End Try
-
-
-    '        Try
-
-    '            Using cmd As New SqlCommand
-
-    '                With cmd
-    '                    .Connection = cn
-    '                    .CommandType = CommandType.StoredProcedure
-    '                    .CommandText = "usp_DAUPDATE_Section68"
-
-    '                    .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = txtDANo.Text
-    '                    .Parameters.Add("@SEC681", SqlDbType.Int).Value = Me.chkSec68q1.CheckState
-    '                    .Parameters.Add("@SEC682", SqlDbType.Int).Value = Me.chkSec68q2.CheckState
-    '                    .Parameters.Add("@SEC683", SqlDbType.Int).Value = Me.chkSec68q3.CheckState
-    '                    .Parameters.Add("@SEC684", SqlDbType.Int).Value = Me.chkSec68q4.CheckState
-    '                    .Parameters.Add("@SEC685", SqlDbType.Int).Value = Me.chkSec68q5.CheckState
-    '                    .Parameters.Add("@SEC686", SqlDbType.Int).Value = Me.chkSec68q6.CheckState
-    '                    .Parameters.Add("@SEC687", SqlDbType.Int).Value = Me.chkSec68q7.CheckState
-    '                    .ExecuteNonQuery()
-
-    '                End With
-
-    '            End Using
-
-
-
-
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
-
-    '        End Try
-    '    End Using
-
-    'End Sub
 
     'Private Sub btnSaveIntDev_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSaveIntDev
 
@@ -7718,7 +7613,16 @@ Public Class DevelopmentStart
     End Sub
 
     Private Sub btnMaitList_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnMaitList.Click
-        ' TODO: Write code to maintain list 
+        With My.Forms.MaintainIntDevListofActs
+
+            .ShowDialog()
+
+            .Dispose()
+
+
+        End With
+
+
     End Sub
 
     Private Sub LoadIntDevCombo()
@@ -7779,54 +7683,6 @@ Public Class DevelopmentStart
 
 
     End Sub
-
-    Private sub LoadSection68(DANumber As string)
-
-        Using cn As New SqlConnection(my.settings.ConnectionString)
-            Try
-                cn.Open()
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in LoadSection68 routine - form " & Me.name)
-
-            End Try
-
-
-            Try
-
-                Using cmd As New SqlCommand
-
-                    With cmd
-                        .Connection = cn
-                        .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_SELECT_ListOfSection68ItemsForDA"
-
-                        .Parameters.Add("@DANO", SqlDbType.VarChar).Value = DANumber
-
-
-
-                    End With
-
-                    Dim objDT As New DataTable
-
-
-                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
-                        objDT.Load(objDataReader)
-                    End Using
-
-                    grdSection68.DataSource=objdt
-
-
-                End Using
-
-
-
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in LoadSection68 routine - form " & Me.name)
-
-            End Try
-        End Using
-
-    End sub
 
     Private Sub loadIntDevGrid(ByVal DANo As String)
 
@@ -8983,7 +8839,7 @@ Public Class DevelopmentStart
                         .Connection = cn
                         .CommandType = CommandType.StoredProcedure
                         .CommandText = "usp_InsertNewPropertyNo"
-                        .Parameters.Add("@DANUM", SqlDbType.VarChar).Value = Me.txtDANo.Text
+                        .Parameters.Add("@DANUM", SqlDbType.VarChar).Value = txtDANo.Text
                         .Parameters.Add("@PIN", SqlDbType.Int).Value = NewPIN
                         .Parameters.Add("@SYSID", SqlDbType.NVarChar).Value = "DA"
                         .ExecuteNonQuery()
@@ -9011,7 +8867,16 @@ Public Class DevelopmentStart
     End Sub
 
     Private Sub btnRemovePIN_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRemovePIN.Click
-        If MessageBox.Show("Remove Property number " & lstPINs.Text & " ?", "Remove PIN", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
+
+
+
+        Dim myobj As DataRowView = CType(gvwPIN.GetFocusedRow, DataRowView)
+
+
+        If MessageBox.Show("Remove Property number " & myobj.Row.Item("PIN") & " ?", "Remove PIN", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then
+
+
+
             Using cn As New SqlConnection(My.Settings.connectionString)
                 Try
                     cn.Open()
@@ -9030,7 +8895,7 @@ Public Class DevelopmentStart
                             .CommandType = CommandType.StoredProcedure
                             .CommandText = "usp_RemoveDAPin"
                             .Parameters.Add("@DANO", SqlDbType.VarChar).Value = txtDANo.Text
-                            .Parameters.Add("@PIN", SqlDbType.Int).Value = CInt(lstPINs.SelectedValue)
+                            .Parameters.Add("@PIN", SqlDbType.Int).Value = CInt(myobj.Row.Item("PIN"))
                             .Parameters.Add("@SYSID", SqlDbType.NVarChar).Value = "DA"
                             .ExecuteNonQuery()
                         End With
@@ -9054,7 +8919,14 @@ Public Class DevelopmentStart
     End Sub
 
     Private Sub btnRetrieveProperty_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnRetrieveProperty.Click
-        If Me.lstPINs.Text = String.Empty Then Exit Sub
+        'If Me.lstPINs.Text = String.Empty Then Exit Sub
+
+        If gvwPIN.RowCount = 0 Then Return
+
+        Dim myobj As DataRowView = CType(gvwPIN.GetFocusedRow, DataRowView)
+
+
+
 
         Using cn As New SqlConnection(My.Settings.cnLIMES)
             Try
@@ -9074,7 +8946,7 @@ Public Class DevelopmentStart
                         .CommandType = CommandType.StoredProcedure
                         .CommandText = "usp_RatesData"
 
-                        .Parameters.Add("@PIN", SqlDbType.Int).Value = CInt(lstPINs.Text)
+                        .Parameters.Add("@PIN", SqlDbType.Int).Value = CInt(myobj.Row.Item("PIN"))
                     End With
 
                     Dim objDT As New DataTable
@@ -9095,10 +8967,10 @@ Public Class DevelopmentStart
                         Me.txtStreetNo.Text = objDataRow.Item("HOFR").ToString
                         Me.txtStreetName.Text = objDataRow.Item("Street Name").ToString
                         Me.cboDAlocalityCode.EditValue = CInt(objDataRow.Item("LOC"))
-                        Me.txtDAOwnersName.Text = objDataRow.Item("Name").ToString
-                        Me.txtDAOwnersAddress.Text = objDataRow.Item("Add1").ToString
-                        Me.txtDAOwnersTown.Text = objDataRow.Item("Addrs").ToString
-                        Me.txtDAOwnersPcode.Text = objDataRow.Item("POST").ToString
+                        txtDAOwnersName.Text = objDataRow.Item("Name").ToString
+                        txtDAOwnersAddress.Text = objDataRow.Item("Add1").ToString
+                        txtDAOwnersTown.Text = objDataRow.Item("Addrs").ToString
+                        txtDAOwnersPcode.Text = objDataRow.Item("POST").ToString
 
 
                     End If
@@ -9122,106 +8994,8 @@ Public Class DevelopmentStart
 
 #Region "Main Application"
 
-    Private Sub btnKeep2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnKeep2.Click
-        Dim objStreamWriter As StreamWriter
-
-        'Pass the file path and the file name to the StreamWriter constructor.
-        objStreamWriter = New StreamWriter(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\da.tmp", False)
-        'Write a line of text.
-        objStreamWriter.WriteLine(Me.txtDAOwnersName.Text)
-        objStreamWriter.WriteLine(Me.txtDAOwnersAddress.Text)
-        objStreamWriter.WriteLine(Me.txtDAOwnersTown.Text)
-        objStreamWriter.WriteLine(Me.txtDAOwnersPcode.Text)
-        objStreamWriter.WriteLine(Me.txtDAOwnersPhone.Text)
 
 
-        'Close the file.
-        objStreamWriter.Close()
-    End Sub
-
-    Private Sub btnKeep1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnKeep1.Click
-
-
-
-        Dim objStreamWriter As StreamWriter
-
-        'Pass the file path and the file name to the StreamWriter constructor.
-        objStreamWriter = New StreamWriter(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\da.tmp", False)
-        'Write a line of text.
-        objStreamWriter.WriteLine(Me.txtAppName.Text)
-        objStreamWriter.WriteLine(Me.txtAppAddress.Text)
-        objStreamWriter.WriteLine(Me.txtAppTown.Text)
-        objStreamWriter.WriteLine(Me.txtAppPcode.Text)
-        objStreamWriter.WriteLine(Me.txtAppPhone.Text)
-
-
-        'Close the file.
-        objStreamWriter.Close()
-
-
-    End Sub
-
-    Private Sub btnUse1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnUse1.Click
-        Dim objStreamReader As StreamReader
-        Dim strLine As String
-        objStreamReader = New StreamReader(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\da.tmp")
-
-        strLine = objStreamReader.ReadLine
-        txtAppName.Text = strLine
-
-        strLine = objStreamReader.ReadLine
-        txtAppAddress.Text = strLine
-
-        strLine = objStreamReader.ReadLine
-        txtAppTown.Text = strLine
-
-        strLine = objStreamReader.ReadLine
-        txtAppPcode.Text = strLine
-
-        strLine = objStreamReader.ReadLine
-        txtAppPhone.Text = strLine
-
-
-        objStreamReader.Close()
-
-
-
-    End Sub
-
-    Private Sub btnUse2_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnUse2.Click
-
-        Dim objStreamReader As StreamReader
-        Dim strLine As String
-        objStreamReader = New StreamReader(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\da.tmp")
-
-        strLine = objStreamReader.ReadLine
-        txtDAOwnersName.Text = strLine
-
-        strLine = objStreamReader.ReadLine
-        txtDAOwnersAddress.Text = strLine
-
-        strLine = objStreamReader.ReadLine
-        txtDAOwnersTown.Text = strLine
-
-        strLine = objStreamReader.ReadLine
-        txtDAOwnersPcode.Text = strLine
-
-        strLine = objStreamReader.ReadLine
-        txtDAOwnersPhone.Text = strLine
-
-
-        objStreamReader.Close()
-
-
-    End Sub
-    Private Sub mnuPageSetup_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuPageSetup.Click
-        With My.Forms.PageSetup
-            .ShowDialog()
-            bTrayIsLoaded = .PageHasbeenSet
-            .Dispose()
-        End With
-
-    End Sub
 
     Private Sub cboSearchType_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles cboSearchType.KeyPress
         KeyPressSendTab(e)
@@ -9428,7 +9202,7 @@ Public Class DevelopmentStart
 
     Public Sub PopulateForm(ByVal DANo As String)
 
-
+        If DANo.Length > 10 Then Return
 
         LoadingForm = True
 
@@ -9451,8 +9225,8 @@ Public Class DevelopmentStart
 
 
 
-        btnSaveDA.Enabled = False
-        'btnSave68.Enabled = False
+        BiSaveDA.Enabled = False
+        btnSave68.Enabled = False
         btnRemoveIntDev.Enabled = False
         btnSaveStatus.Enabled = False
 
@@ -9546,8 +9320,6 @@ Public Class DevelopmentStart
                             cboDAlocalityCode.EditValue = Nothing
                         End If
 
-                        btnGoogle.Enabled = True
-                        btnEnlighten.Enabled = True
 
                         txtDAOwnersName.Text = objDataRow.Item("DAOwnersName").ToString
                         txtDAOwnersAddress.Text = objDataRow.Item("DAOwnersPAddr").ToString
@@ -9563,7 +9335,6 @@ Public Class DevelopmentStart
                         txtBASIXthermal.Text = objDataRow.Item("BasixThermal").ToString
                         txtBASIXenergy.Text = objDataRow.Item("BasixEnergy").ToString
                         txtBASIXwater.Text = objDataRow.Item("BasixWater").ToString
-                        radOccupancy.EditValue = CType(objDataRow.Item("occupancyStatus"), Integer)
 
 
                         'Description
@@ -9583,7 +9354,7 @@ Public Class DevelopmentStart
                             'cboDevType.EditValue = objDataRow.Item("DevType").ToString
                             cboDevType.EditValue = CInt(objDataRow.Item("DADevTypeId"))
 
-                            Dim editor As LookUpEdit = CType(cboDevType, LookUpEdit)
+                            Dim editor As DevExpress.XtraEditors.LookUpEdit = CType(cboDevType, DevExpress.XtraEditors.LookUpEdit)
                             Dim row As DataRowView = CType(editor.Properties.GetDataSourceRowByKeyValue(editor.EditValue), DataRowView)
                             Dim value As Object = row("NewDwellingsReports")
 
@@ -9593,18 +9364,6 @@ Public Class DevelopmentStart
                             lblNoDwellings.Visible = isReport
 
 
-                            txtExistingDwelings.Visible = isReport
-                            lblExistingDwellings.Visible = isReport
-
-                            txtDemolishedDwelings.Visible = isReport
-                            lblNoDemolishedDwellings.Visible = isReport
-
-                            cboAttachmentStatus.Visible = isReport
-                            lblAttachement.Visible = isReport
-
-                            radOccupancy.Visible = isReport
-                            lblOccupancy.Visible = isReport
-
                         Else
 
                             cboDevType.EditValue = Nothing
@@ -9612,38 +9371,12 @@ Public Class DevelopmentStart
                             nudDwellings.Visible = False
                             lblNoDwellings.Visible = False
 
-                            txtExistingDwelings.Visible = False
-                            lblExistingDwellings.Visible = False
-
-                            txtDemolishedDwelings.Visible = False
-                            lblNoDemolishedDwellings.Visible = False
-
-                            cboAttachmentStatus.Visible = False
-                            lblAttachement.Visible = False
-
-                            radOccupancy.Visible = False
-                            lblOccupancy.Visible = False
-
-
                         End If
 
                         nudDwellings.Text = objDataRow.Item("NumberOfDwellings").ToString
-                        txtExistingDwelings.Text = objDataRow.Item("ExistingDwelings").ToString
-                        txtDemolishedDwelings.Text = objDataRow.Item("DemolishedDwelings").ToString
-
-
-                        If Not IsDBNull(objDataRow.Item("AttachmentStatus")) Then
-
-                            cboAttachmentStatus.EditValue = CInt(objDataRow.Item("AttachmentStatus"))
-
-                        Else
-                            cboAttachmentStatus.EditValue = Nothing
-                        End If
-
 
 
                         If Not IsDBNull(objDataRow.Item("DADevUseId")) Then
-
                             cboDevUse.EditValue = CInt(objDataRow.Item("DADevUseId"))
 
                         Else
@@ -9651,17 +9384,7 @@ Public Class DevelopmentStart
                         End If
 
 
-                        If Not IsDBNull(objDataRow.Item("IntendLandUse")) Then
-
-                            cboIntendedLandUse.EditValue = CInt(objDataRow.Item("IntendLandUse"))
-
-                        Else
-                            cboIntendedLandUse.EditValue = Nothing
-                        End If
-
-
                         If Not IsDBNull(objDataRow.Item("IntDevYN")) Then
-
                             cboIntDevYN.EditValue = objDataRow.Item("IntDevYN").ToString
 
                         Else
@@ -9670,7 +9393,6 @@ Public Class DevelopmentStart
 
 
                         If Not IsDBNull(objDataRow.Item("DesignatedYN")) Then
-
                             cboDesignatedYN.EditValue = objDataRow.Item("DesignatedYN").ToString
 
                         Else
@@ -9678,7 +9400,6 @@ Public Class DevelopmentStart
                         End If
 
                         txtDADesc.Text = objDataRow.Item("DADesc").ToString
-
                         txtModDesc.Text = objDataRow.Item("ModDesc").ToString
 
                         txtCurrentLandUse.Text = objDataRow.Item("CurrentLandUse").ToString
@@ -9717,44 +9438,6 @@ Public Class DevelopmentStart
                             cboDAtype3.EditValue = Nothing
                         End If
 
-                        If Not IsDBNull(objDataRow.Item("DAClassification")) Then
-                            cboDAClass.EditValue = objDataRow.Item("DAClassification").ToString
-
-                        Else
-                            cboDAClass.EditValue = Nothing
-                        End If
-
-                        If Not IsDBNull(objDataRow.Item("DAClassification1")) Then
-                            cboDAClass1.EditValue = objDataRow.Item("DAClassification1").ToString
-
-                        Else
-                            cboDAClass1.EditValue = Nothing
-                        End If
-
-                        If Not IsDBNull(objDataRow.Item("DAClassification2")) Then
-                            cboDAClass2.EditValue = objDataRow.Item("DAClassification2").ToString
-
-                        Else
-                            cboDAClass2.EditValue = Nothing
-                        End If
-
-                        If Not IsDBNull(objDataRow.Item("DAClassification3")) Then
-                            cboDAClass3.EditValue = objDataRow.Item("DAClassification3").ToString
-
-                        Else
-                            cboDAClass3.EditValue = Nothing
-                        End If
-
-
-
-                        'Section68
-                        'chkSec68q1.Checked = CBool(objDataRow.Item("Sec68q1"))
-                        'chkSec68q2.Checked = CBool(objDataRow.Item("Sec68q2"))
-                        'chkSec68q3.Checked = CBool(objDataRow.Item("Sec68q3"))
-                        'chkSec68q4.Checked = CBool(objDataRow.Item("Sec68q4"))
-                        'chkSec68q5.Checked = CBool(objDataRow.Item("Sec68q5"))
-                        'chkSec68q6.Checked = CBool(objDataRow.Item("Sec68q6"))
-                        'chkSec68q7.Checked = CBool(objDataRow.Item("Sec68q7"))
 
 
                         'Status
@@ -9827,7 +9510,13 @@ Public Class DevelopmentStart
                         txtDesignatedText.Text = objDataRow.Item("DesignatedText").ToString
 
 
-                        If Not IsDBNull(objDataRow.Item("Sec94YN")) Then mnuSec94.Enabled = CBool(objDataRow.Item("Sec94YN"))
+                        If Not IsDBNull(objDataRow.Item("Sec94YN")) Then BiSection94.Enabled = CBool(objDataRow.Item("Sec94YN"))
+
+
+
+
+
+
                         If Not IsDBNull(objDataRow.Item("AdvertNotifCheck")) Then
 
                             Select Case CInt(objDataRow.Item("AdvertNotifCheck"))
@@ -9916,7 +9605,7 @@ Public Class DevelopmentStart
 
 
 
-                        Me.mnuOldSystemImages.Enabled = ThereisanImage()
+                        ibOldSystemImages.Enabled = ThereisanImage()
 
                         btnRemovePIN.Enabled = False
 
@@ -9932,7 +9621,7 @@ Public Class DevelopmentStart
 
                         Me.txtDaysTaken.Text = CalculateDaysTakenToDetermine.ToString
 
-                        Me.mnuLinked.Enabled = ThereISLinkedApp(DANo)
+                        ibLinked.Enabled = ThereISLinkedApp(DANo)
 
                         cboConsentDocType.EditValue = Nothing
 
@@ -9962,7 +9651,89 @@ Public Class DevelopmentStart
 
 
 
+
+
+
                     End If
+
+
+                    LoadListOfPINS(DANo)
+                    grdPIN.ForceInitialize()
+                    RetrieveListOfFileNumbers(DANo)
+                    LoadPaymentsRecieved(DANo)
+                    LoadRefundsPaid(DANo)
+                    LoadHistoricalDocuments()
+                    RetrieveFileNotes(DANo)
+                    LoadReferralsIntProvisionlList(DANo)
+                    LoadLstIntegrated(DANo)
+                    LoadUpConditionsList(DANo)
+                    LoadUpOneUpConditions(DANo)
+                    DisplayListOfDraftDocuments(DANo)
+                    DisplayListOfSubmissionDraftDocuments(DANo)
+                    LoadVariationGrid(DANo)
+                    LoadSubmissionsGrid(DANo)
+                    LoadSTDConditionsPriorToCCRelease(DANo)
+                    LoadOneOffConditionsPriorToCCRelease(DANo)
+                    LoadSummaryData(DANo)
+                    LoadIntDevCombo()
+                    loadIntDevGrid(DANo)
+
+                    Dim PINS As String = String.Empty
+
+                    For i As Integer = 0 To gvwPIN.DataRowCount - 1
+
+                        PINS &= gvwPIN.GetRowCellValue(i, "PIN") & ","
+
+                    Next
+
+
+                    Dim View As DevExpress.XtraGrid.Views.Base.ColumnView = CType(grdPIN.MainView, DevExpress.XtraGrid.Views.Base.ColumnView)
+
+                    View.MoveFirst()
+
+
+                    If String.IsNullOrEmpty(PINS) Then
+
+                        LoadAssociateApplicationsGrid("999999")
+
+                    Else
+                        LoadAssociateApplicationsGrid(PINS.Substring(0, PINS.Length - 1))
+
+                    End If
+
+
+
+
+                    btnEdit68.Enabled = True
+
+
+
+                    ibImages.Enabled = True
+                    BiCompliance.Enabled = True
+                    BiEngineerConsent.Enabled = True
+                    BiAssessment.Enabled = True
+                    BiConstructionCert.Enabled = True
+                    BiEditDA.Enabled = True
+                    BiSaveDA.Enabled = False
+
+
+                    If ViewOnly Then
+
+                        LockAccessIfViewOnly(Me)
+
+                        BiAssessment.Enabled = False
+
+                    End If
+
+
+                    btnAddNote.Enabled = True
+
+                    ClearReferralData(grpMain)
+                    ClearFileNotes(grpFileNotes)
+
+
+                    ibGoogleMaps.Enabled = True
+                    ibIntraMaps.Enabled = True
 
 
 
@@ -9987,80 +9758,15 @@ Public Class DevelopmentStart
         LockTheForm(pnlDisplaySubmisions, False)
         LockTheForm(pnlDisplayPCAconditions, False)
         LockTheForm(pnlButtons, False)
-        LockTheForm(pnlEditButtons, False)
-
-        LoadListOfPINS(DANo)
-        RetrieveListOfFileNumbers(DANo)
-        LoadPaymentsRecieved(DANo)
-        LoadRefundsPaid(DANo)
-        LoadHistoricalDocuments()
-        RetrieveFileNotes(DANo)
-        LoadReferralsIntProvisionlList(DANo)
-        LoadLstIntegrated(DANo)
-        LoadUpConditionsList(DANo)
-        LoadUpOneUpConditions(DANo)
-        DisplayListOfDraftDocuments(DANo)
-        DisplayListOfSubmissionDraftDocuments(DANo)
-        LoadVariationGrid(DANo)
-        LoadSubmissionsGrid(DANo)
-        LoadSTDConditionsPriorToCCRelease(DANo)
-        LoadOneOffConditionsPriorToCCRelease(DANo)
-        LoadSummaryData(DANo)
-        LoadIntDevCombo()
-        loadIntDevGrid(DANo)
-        LoadSection68(DANo)
-
-        Dim PINS As String = String.Empty
-
-        For i As Integer = 0 To lstPINs.Items.Count - 1
-            'lstPINs.SelectedIndex = i
-            PINS &= lstPINs.GetItemText(lstPINs.Items(i)) & ","
-        Next
+        'LockTheForm(pnlEditButtons, False)
 
 
-        If String.IsNullOrEmpty(PINS) Then
-
-            LoadAssociateApplicationsGrid("999999")
-
-        Else
-            LoadAssociateApplicationsGrid(PINS.Substring(0, PINS.Length - 1))
-
-        End If
-
-
-
-
-        'btnEdit68.Enabled = True
-
-        mnuCompliance.Enabled = True
-        mnuOtherApplication.Enabled = True
-        mnuPrintFileCoverSheet.Enabled = True
-        mnuEngDetailsPostConsent.Enabled = True
-        menuAssessmentApplication.Enabled = True
-        mnuImages.Enabled = True
-
-        If ViewOnly Then
-
-            LockAccessIfViewOnly(Me)
-            menuAssessmentApplication.Enabled = False
-
-        End If
-
-
-        btnAddNote.Enabled = True
-        btnGoogle.Enabled = True
-
-        ClearReferralData(grpMain)
-        ClearFileNotes(grpFileNotes)
-
-        btnEnlighten.Enabled = True
 
         LoadingForm = False
 
 
 
     End Sub
-
     Private Sub GetEnlightenImage()
 
 
@@ -10270,12 +9976,19 @@ Public Class DevelopmentStart
                         .Parameters.Add("@DATYPE", SqlDbType.Int).Value = CInt(cboAppType.EditValue)
                         '.Parameters.Add("@OFFICER", SqlDbType.Int).Value = CInt(Me.cboDAOfficer.SelectedValue)
                         .Parameters.Add("@SEC94YN", SqlDbType.Bit).Value = Me.chkSec94.CheckState
-                        .Parameters.Add("@APPNAME", SqlDbType.NVarChar).Value = Me.txtAppName.Text
-                        .Parameters.Add("@APPADDR", SqlDbType.NVarChar).Value = Me.txtAppAddress.Text
-                        .Parameters.Add("@APPTOWN", SqlDbType.NVarChar).Value = Me.txtAppTown.Text
-                        .Parameters.Add("@APPPCODE", SqlDbType.NVarChar).Value = Me.txtAppPcode.Text
-                        .Parameters.Add("@APPPHONE", SqlDbType.NVarChar).Value = Me.txtAppPhone.Text
-                        .Parameters.Add("@APPEMAIL", SqlDbType.NVarChar).Value = Me.txtAppemail.Text
+
+
+                        .Parameters.Add("@APPNAME", SqlDbType.NVarChar).Value = txtAppName.Text
+                        .Parameters.Add("@APPADDR", SqlDbType.NVarChar).Value = txtAppAddress.Text
+                        .Parameters.Add("@APPTOWN", SqlDbType.NVarChar).Value = txtAppTown.Text
+                        .Parameters.Add("@APPPCODE", SqlDbType.NVarChar).Value = txtAppPcode.Text
+                        .Parameters.Add("@APPPHONE", SqlDbType.NVarChar).Value = txtAppPhone.Text
+                        .Parameters.Add("@APPEMAIL", SqlDbType.NVarChar).Value = txtAppemail.Text
+
+
+
+
+
                         '---------------------------Description
                         .Parameters.Add("@DADESC1", SqlDbType.Bit).Value = Me.chkDesc1.CheckState
                         .Parameters.Add("@DADESC2", SqlDbType.Bit).Value = Me.chkDADesc2.CheckState
@@ -10301,16 +10014,8 @@ Public Class DevelopmentStart
 
 
                         .Parameters.Add("@NODWELLINGS", SqlDbType.Int).Value = CType(nudDwellings.Text, Integer)
-                        If txtExistingDwelings.Text <> String.Empty Then .Parameters.Add("@ExistingDwelings", SqlDbType.Int).Value = CType(txtExistingDwelings.Text, Integer)
-                        If txtDemolishedDwelings.Text <> String.Empty Then .Parameters.Add("@DemolishedDwelings", SqlDbType.Int).Value = CType(txtDemolishedDwelings.Text, Integer)
 
                         If Not cboDevUse.EditValue Is Nothing Then .Parameters.Add("@USEID", SqlDbType.Int).Value = CInt(Me.cboDevUse.EditValue)
-
-                        If Not cboIntendedLandUse.EditValue Is Nothing Then .Parameters.Add("@IntendedLandUse", SqlDbType.Int).Value = CInt(Me.cboIntendedLandUse.EditValue)
-                        If Not cboAttachmentStatus.EditValue Is Nothing Then .Parameters.Add("@AttachmentStatus", SqlDbType.Int).Value = CInt(Me.cboAttachmentStatus.EditValue)
-
-
-
                         .Parameters.Add("@DESC", SqlDbType.NVarChar).Value = Me.txtDADesc.Text
                         .Parameters.Add("@MODDESC", SqlDbType.NVarChar).Value = Me.txtModDesc.Text
 
@@ -10329,10 +10034,6 @@ Public Class DevelopmentStart
                         If Not cboDAtype1.EditValue Is Nothing Then .Parameters.Add("@DATYPE1", SqlDbType.Int).Value = CInt(Me.cboDAtype1.EditValue)
                         If Not cboDAType2.EditValue Is Nothing Then .Parameters.Add("@DATYPE2", SqlDbType.Int).Value = CInt(Me.cboDAType2.EditValue)
                         If Not cboDAtype3.EditValue Is Nothing Then .Parameters.Add("@DATYPE3", SqlDbType.Int).Value = CInt(Me.cboDAtype3.EditValue)
-                        If Not cboDAClass.EditValue Is Nothing Then .Parameters.Add("@DACLASS", SqlDbType.NVarChar).Value = Me.cboDAClass.EditValue
-                        If Not cboDAClass1.EditValue Is Nothing Then .Parameters.Add("@DACLASS1", SqlDbType.NVarChar).Value = Me.cboDAClass1.EditValue
-                        If Not cboDAClass2.EditValue Is Nothing Then .Parameters.Add("@DACLASS2", SqlDbType.NVarChar).Value = Me.cboDAClass2.EditValue
-                        If Not cboDAClass3.EditValue Is Nothing Then .Parameters.Add("@DACLASS3", SqlDbType.NVarChar).Value = Me.cboDAClass3.EditValue
 
                         '----------------Property 
                         .Parameters.Add("@DALOT", SqlDbType.NVarChar).Value = Me.txtLot.Text
@@ -10341,11 +10042,19 @@ Public Class DevelopmentStart
                         .Parameters.Add("@DASTREETNO", SqlDbType.NVarChar).Value = Me.txtStreetNo.Text
                         .Parameters.Add("@DASTREETNAME", SqlDbType.NVarChar).Value = Me.txtStreetName.Text
                         If Not cboDAlocalityCode.EditValue Is Nothing Then .Parameters.Add("@LOCALITY", SqlDbType.Int).Value = CInt(cboDAlocalityCode.EditValue)
-                        .Parameters.Add("@OWNERNAME", SqlDbType.NVarChar).Value = Me.txtDAOwnersName.Text
-                        .Parameters.Add("@OWNERADDRESS", SqlDbType.NVarChar).Value = Me.txtDAOwnersAddress.Text
-                        .Parameters.Add("@OWNERTOWN", SqlDbType.NVarChar).Value = Me.txtDAOwnersTown.Text
+
+
+
+                        .Parameters.Add("@OWNERNAME", SqlDbType.NVarChar).Value = txtDAOwnersName.Text
+                        .Parameters.Add("@OWNERADDRESS", SqlDbType.NVarChar).Value = txtDAOwnersAddress.Text
+                        .Parameters.Add("@OWNERTOWN", SqlDbType.NVarChar).Value = txtDAOwnersTown.Text
                         .Parameters.Add("@OWNERPCODE", SqlDbType.VarChar).Value = txtDAOwnersPcode.Text.ToString
-                        .Parameters.Add("@OWNERPHONE", SqlDbType.NVarChar).Value = Me.txtDAOwnersPhone.Text
+                        .Parameters.Add("@OWNERPHONE", SqlDbType.NVarChar).Value = txtDAOwnersPhone.Text
+
+
+
+
+
                         If txtArea.Text <> String.Empty Then .Parameters.Add("@DAAREA", SqlDbType.Float).Value = CDbl(txtArea.Text)
                         .Parameters.Add("@AREAUNIT", SqlDbType.NVarChar).Value = Me.cboAreaType.EditValue.ToString
                         .Parameters.Add("@CENSUS", SqlDbType.NVarChar).Value = Me.cboDACensusCode.EditValue
@@ -10355,8 +10064,6 @@ Public Class DevelopmentStart
                         .Parameters.Add("@BASIXTHERMAL", SqlDbType.NVarChar).Value = Me.txtBASIXthermal.Text
                         .Parameters.Add("@BASIXENERGY", SqlDbType.NVarChar).Value = Me.txtBASIXenergy.Text
                         .Parameters.Add("@BASIXWATER", SqlDbType.NVarChar).Value = Me.txtBASIXwater.Text
-                        .Parameters.Add("@occupancyStatus", SqlDbType.Int).Value = radOccupancy.EditValue
-
 
 
                         .ExecuteNonQuery()
@@ -10458,7 +10165,8 @@ Public Class DevelopmentStart
                         .Parameters.Add("@CCNUMBER", SqlDbType.NVarChar, 10).Direction = ParameterDirection.Output
                         .Parameters.Add("@CONFIRM", SqlDbType.Bit).Direction = ParameterDirection.Output
                         .ExecuteNonQuery()
-                        Me.mnuCompliance.Enabled = CBool(.Parameters("@CONFIRM").Value)
+                        BiCompliance.Enabled = CBool(.Parameters("@CONFIRM").Value)
+
                         compliancenumber = .Parameters("@CCNUMBER").Value.ToString
                     End With
 
@@ -10525,208 +10233,6 @@ Public Class DevelopmentStart
         txtSearch.Text = String.Empty
     End Sub
 
-    Private Sub mnuPrintCoverSheet_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles mnuPrintFileCoverSheet.Click
-
-        'Dim rptDocument As New ReportDocument
-
-        Dim objDT As New DataTable
-
-        'Check file exists
-
-        Using cn As New SqlConnection(My.Settings.connectionString)
-            Try
-                cn.Open()
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in mnuPrintFileCoverSheet_Click routine")
-
-            End Try
-
-
-            Try
-
-                Using cmd As New SqlCommand
-
-                    With cmd
-                        .Connection = cn
-                        .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_rpt_DACert"
-                        .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = Me.txtDANo.Text
-                    End With
-
-
-
-                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
-                        objDT.Load(objDataReader)
-                    End Using
-
-                    'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
-                    'Dim mylist As DataSet = New DataSet
-                    'adapter.Fill(mylist, "coversheet")
-
-                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\New Version\Reports\coversheet.xsd")
-
-                End Using
-
-                Dim fish As String = String.Empty
-                Dim Heritage As String = String.Empty
-                Dim Mine As String = String.Empty
-                Dim NationalParks As String = String.Empty
-                Dim River As String = String.Empty
-                Dim Roads As String = String.Empty
-                Dim Waste As String = String.Empty
-                Dim Polution As String = String.Empty
-                Dim Water As String = String.Empty
-
-                If objDT.Rows.Count > 0 Then
-
-                    Dim objDataRow As DataRow = objDT.Rows.Item(0)
-
-                    If CBool(objDataRow.Item("S144")) Then
-                        fish = "S144"
-                    End If
-                    If CBool(objDataRow.Item("S201")) Then
-                        fish &= ", S201"
-                    End If
-                    If CBool(objDataRow.Item("S205")) Then
-                        fish &= ", S205"
-                    End If
-
-                    If CBool(objDataRow.Item("S58")) Then
-                        Heritage = "S58"
-                    End If
-
-                    If CBool(objDataRow.Item("S15")) Then
-                        Mine = "S15"
-                    End If
-
-                    If CBool(objDataRow.Item("S90")) Then
-                        NationalParks = "S90"
-                    End If
-
-                    If CBool(objDataRow.Item("P3A")) Then
-                        River = "Part 3A"
-                    End If
-
-                    If CBool(objDataRow.Item("S138")) Then
-                        Roads = "S138"
-                    End If
-
-                    If CBool(objDataRow.Item("S44")) Then
-                        Waste = "S44"
-                    End If
-
-                    If CBool(objDataRow.Item("S17A")) Then
-                        Polution = "S17A"
-                    End If
-                    If CBool(objDataRow.Item("S17C")) Then
-                        Polution &= ", S17C"
-                    End If
-                    If CBool(objDataRow.Item("S17D")) Then
-                        Polution &= ", S17D"
-                    End If
-                    If CBool(objDataRow.Item("S171")) Then
-                        Polution &= ", S171"
-                    End If
-
-
-                    If CBool(objDataRow.Item("S10")) Then
-                        Water = "S10"
-                    End If
-                    If CBool(objDataRow.Item("S13A")) Then
-                        Water &= ", S13A"
-                    End If
-                    If CBool(objDataRow.Item("S18F")) Then
-                        Water &= ", S18F"
-                    End If
-                    If CBool(objDataRow.Item("S20B")) Then
-                        Water &= ", S20B"
-                    End If
-                    If CBool(objDataRow.Item("S20CA")) Then
-                        Water &= ", S20C"
-                    End If
-                    If CBool(objDataRow.Item("S20L")) Then
-                        Water &= ", S20L"
-                    End If
-                    If CBool(objDataRow.Item("S116")) Then
-                        Water &= ", S116"
-                    End If
-                    If CBool(objDataRow.Item("P8")) Then
-                        Water &= ", Part 8"
-                    End If
-
-
-                End If
-
-                Dim rept As New DAcoverSheet
-
-                rept.lblFish.Text = fish
-                rept.LblHeritage.Text = Heritage
-                rept.lblMine.Text = Mine
-                rept.lblNatParks.Text = NationalParks
-                rept.lblPollution.Text = Polution
-                rept.lblRivers.Text = River
-                rept.lblRoads.Text = Roads
-                rept.lblWaste.Text = Waste
-                rept.lblWater.Text = Water
-
-                rept.DataSource = objDT
-
-                rept.ReferralsObjDT = referralsData()
-
-                Using printTool As New ReportPrintTool(rept)
-                    ' Invoke the Ribbon Print Preview form modally, 
-                    ' and load the report document into it.
-                    printTool.ShowPreviewDialog()
-
-                    ' Invoke the Ribbon Print Preview form
-                    ' with the specified look and feel setting.
-                    printTool.ShowPreview(UserLookAndFeel.Default)
-                End Using
-
-
-                'Dim strReportPath As String = My.Settings.ReportLocation & "DACert.rpt"
-                'Try
-
-                '    If Not IO.File.Exists(strReportPath) Then
-                '        Throw (New Exception("Unable to locate report file:" & vbCrLf & strReportPath))
-
-                '    End If
-
-                '    Dim myPrintOptions As PrintOptions = rptDocument.PrintOptions
-                '    myPrintOptions.PrinterName = My.Settings.DefaultPrinter
-                '    myPrintOptions.PrinterDuplex = CrystalDecisions.Shared.PrinterDuplex.Vertical
-                '    'myPrintOptions.CustomPaperSource = GetSelectedPaperSource()
-
-                '    With rptDocument
-                '        .Load(strReportPath)
-                '        .SetDataSource(objDT)
-                '        .VerifyDatabase()
-                '        .PrintToPrinter(1, False, 1, 99)
-                '    End With
-                'Catch ex As SqlException
-                '    MessageBox.Show(ex.Message, " in mnuPrintFileCoverSheet_Click routine ")
-                'End Try
-
-
-                '    Dim fViewer As New AddAdvertPrinter
-                '    With fViewer
-                '        .objDataTable = objDT
-                '        If Modification Then
-                '            .ReportName = "DAAssessmentMod.rpt"
-
-                '        Else
-                '            .ReportName = "DAAssessment.rpt"
-
-                '        End If
-                '        .ShowDialog()
-                '        .Dispose()
-                '    End With
-
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in mnuPreviewAssessment_Click routine ")
-            End Try
-        End Using
-    End Sub
 
     Private Function referralsData() As DataTable
         Dim objDT As New DataTable
@@ -10782,7 +10288,7 @@ Public Class DevelopmentStart
     End Function
 
 
-    Private Sub btnSaveDA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSaveDA.Click
+    Private Sub btnSaveDA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
         If cboDevUse.EditValue Is Nothing Then
 
@@ -10815,12 +10321,12 @@ Public Class DevelopmentStart
         LockTheForm(grpCCSum, False)
 
 
-        btnEditDA.Enabled = True
-        Me.btnSaveDA.Enabled = False
+        BiEditDA.Enabled = True
+        BiSaveDA.Enabled = False
 
-        Me.btnAddPIN.Enabled = False
-        btnAddDA.Enabled = True
-        Me.btnRetrieveProperty.Enabled = False
+        btnAddPIN.Enabled = False
+        BiAddDA.Enabled = True
+        btnRetrieveProperty.Enabled = False
         btnAddFile.Enabled = False
 
         btnSaveDA_ClickExtracted()
@@ -10828,169 +10334,6 @@ Public Class DevelopmentStart
         txtOfficer.ReadOnly = True
 
     End Sub
-
-    Private Sub btnAddDA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnAddDA.Click
-        Dim NewDANumber As String = String.Empty
-        Dim CreatedOK As Boolean
-
-
-        With My.Forms.AddNewDA
-            .ShowDialog()
-            If .DialogResult = Windows.Forms.DialogResult.OK Then
-                NewDANumber = .NewDANumber
-                CreatedOK = True
-            Else
-                CreatedOK = False
-            End If
-            .Dispose()
-        End With
-
-        If Not CreatedOK Then Exit Sub
-
-
-        PopulateForm(NewDANumber)
-
-        btnEditDA.Enabled = False
-        Me.btnSaveDA.Enabled = True
-
-
-        Me.txtReceipts.Text = String.Empty
-        Me.txtRefunds.Text = String.Empty
-        txtDifference.Text = String.Empty
-
-
-        btnEditDA.Enabled = False
-
-        Me.btnSaveDA.Enabled = True
-        btnAddDA.Enabled = False
-
-
-
-        Me.btnAddPIN.Enabled = True
-        Me.btnAddFile.Enabled = True
-        Me.btnRetrieveProperty.Enabled = True
-
-        LockTheForm(grpDetails, True)
-        LockTheForm(grpLand, True)
-        LockTheForm(grpOwner, True)
-        LockTheForm(grpDescription, True)
-        LockTheForm(grpAdditional, True)
-        LockTheForm(grpPurpose, True)
-        LockTheForm(grpBasix, True)
-        LockTheForm(grpFileNumber, True)
-        LockTheForm(grpCCSum, True)
-        txtOfficer.ReadOnly = False
-
-        'LockTheForm(pnlApplicationData, True)
-        'LockTheForm(pnlDisplayAssociatedApps, True)
-        'LockTheForm(pnlDisplaySect68IntDev, True)
-        'LockTheForm(pnlDisplayFees, True)
-        'LockTheForm(pnlDisplayReferrals, True)
-        'LockTheForm(pnlDisplayFileNotes, True)
-        'LockTheForm(pnlDisplayDocs, True)
-        'LockTheForm(pnlDisplayStatus, True)
-        'LockTheForm(pnlDisplaySubmisions, True)
-        'LockTheForm(pnlDisplayVariations, True)
-        'LockTheForm(grpPropertyLotAddress, True)
-
-        'btnEditDA.PerformClick()
-
-
-    End Sub
-
-    Private Sub btnEditDA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEditDA.Click
-
-
-        'LockTheForm(pnlApplicationData, True)
-
-        LockTheForm(grpDetails, True)
-        LockTheForm(grpLand, True)
-        LockTheForm(grpOwner, True)
-        LockTheForm(grpDescription, True)
-        LockTheForm(grpAdditional, True)
-        LockTheForm(grpPurpose, True)
-        LockTheForm(grpBasix, True)
-        LockTheForm(grpFileNumber, True)
-        LockTheForm(grpCCSum, True)
-
-
-        txtCCno.ReadOnly = Not Administration
-        chkSec94.Enabled = Administration
-        cboAppType.Enabled = Administration
-        txtFileNo.ReadOnly = Not Administration
-        txtAppName.ReadOnly = Not Administration
-        txtAppAddress.ReadOnly = Not Administration
-        txtAppTown.ReadOnly = Not Administration
-        txtAppPcode.ReadOnly = Not Administration
-        txtAppPhone.ReadOnly = Not Administration
-        txtAppemail.ReadOnly = Not Administration
-        'txtOfficer.Properties.Buttons(0).Enabled = True
-
-        'Edit Property Tab
-        Me.txtLot.ReadOnly = False
-        Me.txtDP.ReadOnly = False
-        Me.txtSection.ReadOnly = False
-        Me.txtArea.ReadOnly = False
-        Me.cboAreaType.Enabled = True
-        Me.txtStreetNo.ReadOnly = False
-        Me.txtStreetName.ReadOnly = False
-        Me.cboDAlocalityCode.Enabled = True
-        Me.cboDACensusCode.Enabled = True
-        Me.txtDAOwnersName.ReadOnly = False
-        Me.txtDAOwnersAddress.ReadOnly = False
-        Me.txtDAOwnersTown.ReadOnly = False
-        Me.txtDAOwnersPcode.ReadOnly = False
-        Me.txtDAOwnersPhone.ReadOnly = False
-        Me.chkBASIXRecd.Enabled = True
-        Me.txtBASIXCertNo.ReadOnly = False
-        Me.txtBASIXRcptNo.ReadOnly = False
-        Me.txtBASIXwater.ReadOnly = False
-        Me.txtBASIXthermal.ReadOnly = False
-        Me.txtBASIXenergy.ReadOnly = False
-        txtOfficer.ReadOnly = False
-
-        Me.chkDesc1.Enabled = True
-        Me.chkDADesc2.Enabled = True
-        Me.chkDADesc3.Enabled = True
-        Me.chkDADesc4.Enabled = True
-        Me.chkDADesc5.Enabled = True
-        Me.chkDADesc6.Enabled = True
-        Me.chkDADesc7.Enabled = True
-        Me.chkDADesc8.Enabled = True
-        Me.chkGiftDonation.Enabled = True
-        Me.cboDevType.Enabled = True
-        Me.cboDevUse.Enabled = True
-        txtDADesc.ReadOnly = False
-        txtDAestCost.ReadOnly = False
-        txtDAFloor.ReadOnly = False
-        cboConsentType.Enabled = True
-        cboDAtype1.Enabled = True
-        cboDAType2.Enabled = True
-        cboDAtype3.Enabled = True
-        cboDAClass.Enabled = True
-        cboDAClass1.Enabled = True
-        cboDAClass2.Enabled = True
-        cboDAClass3.Enabled = True
-        txtModDesc.ReadOnly = False
-
-        btnEditDA.Enabled = False
-        Me.btnSaveDA.Enabled = True
-
-        btnAddFile.Enabled = True
-        Me.btnAddPIN.Enabled = True
-        Me.btnRetrieveProperty.Enabled = True
-
-
-
-    End Sub
-
-    'Private Sub btnFind_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-    '    KeyPressSendTab(e)
-    'End Sub
-
-    'Private Sub txtSearch_KeyPress(ByVal sender As System.Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
-    '    KeyPressSendTab(e)
-    'End Sub
 
 
     Private Sub loadDevelopmentTypeCombo()
@@ -11012,7 +10355,7 @@ Public Class DevelopmentStart
                     With cmd
                         .Connection = cn
                         .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_SELECT_DOP_DEV_TYPES_For_Combo"
+                        .CommandText = "usp_SELECT_DevTypes_For_Combo"
 
                     End With
 
@@ -11075,770 +10418,14 @@ Public Class DevelopmentStart
     End Sub
 
 
-    Private Sub mnuInspectionTypes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuInspectionTypes.Click
-        With My.Forms.MaintainInspectionType
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
 
-    End Sub
 
-    Private Sub MaintainStandardConditionCodesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MaintainStandardConditionCodesToolStripMenuItem.Click
-        With My.Forms.MaintainDefaultConditions
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub btnGoogle_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnGoogle.Click
-        Dim URL As String = "http://maps.google.com/maps?f=q&hl=en&geocode=&time=&date=&ttype=&q=@ADDR@&ie=UTF8&t=@TYPE@"
-
-        Dim address As String = txtStreetNo.Text & " " & txtStreetName.Text & " " & cboDAlocalityCode.Text & " Australia"
-        address = address.Replace(" ", "+")
-        address = address.Replace(",", "%2c")
-
-        URL = URL.Replace("@ADDR@", address)
-
-        'Select Case "Satellite"
-        '    Case "Map"
-        '        URL.Replace("@TYPE@", "m")
-        'Case "Satellite"
-        URL = URL.Replace("@TYPE@", "h")
-        '    Case "Terrain"
-        'URL.Replace("@TYPE@", "p")
-        'End Select
-
-        Process.Start(URL)
-
-    End Sub
 
 #End Region
 
 #Region "Menu"
 
-    Private Sub mnuCompliance_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuCompliance.Click
 
-        Dim Compl As New COMP
-
-
-        With Compl
-            .SystemType = "DA"
-            .UserId = MyUserId
-            .DAnumber = Me.txtDANo.Text
-            .CCnumber = txtCCno.Text
-            .LoadMainInterface()
-
-        End With
-
-        LoadSummaryData(txtDANo.Text)
-
-
-    End Sub
-
-    Private Sub mnuLinked_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuLinked.Click
-        With DALinkToParent
-            .DaNo = Me.txtDANo.Text
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub mnuOldSystemImages_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuOldSystemImages.Click
-        Dim images As New OldImagesViewer
-        With images
-            .DAnumber = Me.txtDANo.Text
-            .ShowDialog()
-            .Dispose()
-
-
-        End With
-
-    End Sub
-
-    Private Sub mnuImages_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuCurrentImages.Click
-        Dim fMultimedia As New MultimediaInterface
-        Dim GroupImageIDB4 As Integer = mdl_GroupImageID
-
-        With fMultimedia
-            .DAnumber = Me.txtDANo.Text
-            .ImageGroupID = Me.mdl_GroupImageID
-            .ShowDialog()
-            mdl_GroupImageID = .ImageGroupID
-        End With
-        If GroupImageIDB4 = 0 And mdl_GroupImageID <> 0 Then UpdatePropertyImage(mdl_GroupImageID)
-
-
-    End Sub
-
-    Private Sub mnuSec94ToolStrip_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuSec94.Click
-        Dim fSec94 As New Sec9464contributions
-        With fSec94
-            .DANumber = Me.txtDANo.Text
-            .DateDetermined = CStr(IIf(DADetermDt.Text = "  /  /", String.Empty, DADetermDt.Text))
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-    End Sub
-
-    Private Sub mnuOtherApplication_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuOtherApplication.Click
-
-        'With My.Forms.ConstructionCertifcate
-        '    .DANumber = txtDANo.Text
-        '    .FileNumber = Me.txtFileNo.Text
-        '    .DAUseType = NZ(cboDevUse.EditValue)
-        '    .StartPosition = FormStartPosition.CenterScreen
-        '    'Me.Hide()
-        '    .ShowDialog()
-        '    Me.txtCCno.Text = .CCNo
-        '    .Dispose()
-
-        'End With
-
-        With My.Forms.IssueConstructionCertificate
-            .DANumber = txtDANo.Text
-            .FileNumber = Me.txtFileNo.Text
-            .DAUseType = NZ(cboDevUse.EditValue)
-            .StartPosition = FormStartPosition.CenterScreen
-            'Me.Hide()
-            .ShowDialog()
-            Me.txtCCno.Text = .CCNo
-
-            LoadSummaryData(txtDANo.Text)
-
-            .Dispose()
-
-        End With
-
-        SaveCCNO()
-    End Sub
-
-    Private Sub mnuEngDetailsPostConsent_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuEngDetailsPostConsent.Click
-
-        'With My.Forms.EngineerPostConsent
-        With My.Forms.EngineeringPostConsentModule
-            .DAnumber = Me.txtDANo.Text
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub menuAssessmentApplication_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles menuAssessmentApplication.Click
-        'If UAT = True Then
-
-        With My.Forms.NewAssessmentForm
-
-            .DANoToFind = Me.txtDANo.Text
-            .OriginalDA = DAmodificationNumber
-            .StartPosition = FormStartPosition.CenterParent
-
-            .ShowDialog()
-            .Dispose()
-
-        End With
-
-        'Else
-        'With My.Forms.DevelopmentAssessment
-        '    .DANoToFind = Me.txtDANo.Text
-        '    .OriginalDA = DAmodificationNumber
-        '    .StartPosition = FormStartPosition.CenterParent
-
-        '    .ShowDialog()
-        '    .Dispose()
-
-        'End With
-
-        'End If
-        PopulateForm(txtDANo.Text)
-    End Sub
-
-    Private Sub mnuMyOutstandingDAs_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuMyOutstandingDAs.Click
-        With My.Forms.MyOutstandingDAs
-            .Show()
-        End With
-    End Sub
-
-    Private Sub OfficersToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OfficersToolStripMenuItem.Click
-
-        With My.Forms.SystemUsersMaintenance
-            .ShowDialog()
-            .Dispose()
-
-        End With
-    End Sub
-
-
-    Private Sub SepticApprovalsByTownAndTypeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SepticApprovalsByTownAndTypeToolStripMenuItem.Click
-        Dim reptview As New reportSetupApprovals
-
-        With reptview
-            .ReportToPrint = "SepticApprovalsByTownAndType.rpt"
-            .StoredProcedureName = "usp_rpt_SepticApprovalsByTownAndType"
-            '.StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-    End Sub
-
-    Private Sub ApplicationsRegisteredByOfficerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ApplicationsRegisteredByOfficerToolStripMenuItem.Click
-        Dim reptview As New reportSetupApprovals
-
-        With reptview
-            .ReportToPrint = "ApplicationsRegisteredByOfficer.rpt"
-            .StoredProcedureName = "usp_rpt_ApplicationsRegisteredBY"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-    End Sub
-
-
-    Private Sub ReferralListToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ReferralListToolStripMenuItem.Click
-        With My.Forms.MaintainReferralCategories
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub mnuSEPPCodes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuSEPPCodes.Click
-        With My.Forms.MaintainSEPPCategories
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub mnuDCPTypes_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuDCPTypes.Click
-        With My.Forms.MaintainDCPTypes
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub mnuDCPGuidelines_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuDCPGuidelines.Click
-        With My.Forms.MaintainDCPGuidelines
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub AuthoritiesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AuthoritiesToolStripMenuItem.Click
-        Dim fAuthorities As New MaintainApprovalAuthorities
-        With fAuthorities
-            .ShowDialog()
-            .Dispose()
-        End With
-
-    End Sub
-
-    Private Sub DAUsersToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DAUsersToolStripMenuItem.Click
-        With My.Forms.MaintainDAUsers
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub DevelopmentTypesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DevelopmentTypesToolStripMenuItem.Click
-        With My.Forms.MaintDevelopmentType
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-
-        loadDevelopmentTypeCombo()
-
-        'LoadCombo(cboDevType, "usp_LoadUpDevTypeList")
-
-    End Sub
-
-    Private Sub PCABuildersListToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PCABuildersListToolStripMenuItem.Click
-        Dim fBuilderMaint As New MaintainBuilders
-        With fBuilderMaint
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-
-    End Sub
-
-    Private Sub CouncilDeterminationToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CouncilDeterminationToolStripMenuItem.Click
-        Dim daResults As New CouncilVoting
-        With daResults
-            .ShowDialog()
-            .Dispose()
-        End With
-
-    End Sub
-
-    Private Sub mnuConsentAdvertising_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuConsentAdvertising.Click
-        'Dim rptDocument As New ReportDocument
-
-
-        Dim saveDialoge As New SaveFileDialog
-
-        Dim fileName As String = ""
-
-        With saveDialoge
-            .Filter = "Word files (*.xlsx)|*.xlsx"
-            .RestoreDirectory = True
-            If .ShowDialog = DialogResult.OK Then
-                fileName = .FileName
-
-            End If
-
-        End With
-
-        Dim objDT As New DataTable
-
-        'Check file exists
-
-        Using cn As New SqlConnection(My.Settings.connectionString)
-            Try
-                cn.Open()
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in mnuConsentAdvertising_Click routine")
-
-            End Try
-
-
-            Try
-
-                Using cmd As New SqlCommand
-
-                    With cmd
-                        .Connection = cn
-                        .CommandType = CommandType.StoredProcedure
-                        '.CommandText = "usp_rpt_DA_Advert_Union"
-                        .CommandText = "usp_SELECT_DA_Advert_Union"
-                    End With
-
-
-
-                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
-                        objDT.Load(objDataReader)
-                    End Using
-
-                    Dim rept As New AdvertisingConcentList
-
-
-                    'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
-                    'Dim mylist As DataSet = New DataSet
-                    'adapter.Fill(mylist, "consents")
-
-                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\Devexpress Reports\advertisingConsent.xsd")
-
-
-
-                    rept.DataSource = objDT
-
-
-                    rept.CreateDocument()
-
-                    rept.ExportToXlsx(filename)
-                    'rept.ExportToDocx(fileName)
-
-                    Try
-
-                        Dim WRD As New OpenDocument
-                        WRD.OpenVisible(fileName)
-
-
-                    Catch ex As Exception
-
-                    End Try
-
-
-                    'PrintAdvertisingSheet(objDT)
-
-                End Using
-
-
-
-
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in mnuPreviewAssessment_Click routine ")
-            End Try
-        End Using
-
-
-    End Sub
-
-    Private Sub BuildAdvertisingConsentList()
-
-
-
-
-
-
-    End Sub
-
-    Private Sub mnuNavision_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuNavision.Click
-        With My.Forms.FeeReconciliationToNavision
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-        End With
-
-    End Sub
-
-    Private Sub mnuProduceABSStatistics_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuProduceABSStatistics.Click
-        Dim fABS As New ABSReportSetup
-        With fABS
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-
-    End Sub
-
-    Private Sub AllResultsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AllResultsToolStripMenuItem.Click
-        Dim daResults As New ApplicationCounter
-        With daResults
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub DAResultsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DAResultsToolStripMenuItem.Click
-        Dim daResults As New ApplicationCounterDA
-        With daResults
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub CCResultsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CCResultsToolStripMenuItem.Click
-        Dim daResults As New ApplicationCounterCC
-        With daResults
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub CDResultsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CDResultsToolStripMenuItem.Click
-        Dim daResults As New ApplicationCounterCD
-        With daResults
-            .ShowDialog()
-            .Dispose()
-        End With
-
-    End Sub
-
-    Private Sub ApprovalsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ApprovalsToolStripMenuItem.Click
-
-
-        Dim rept As New ApprovalsReport
-
-        With My.Forms.ApprovalsReportViewer
-            .reportName = rept
-            .StoredProcedureName = "usp_rpt_Approvals"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-    End Sub
-
-    Private Sub DAsRecievedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DAsReceivedToolStripMenuItem.Click
-
-        Dim rept As New DAAddressProperty
-
-        'rept.lblEurobodallaShireCouncil.Text = "Eurobodalla Shire Council" & vbCrLf & "Development Applications Registered List"
-
-        With My.Forms.ApprovalsReportViewer
-            .reportName = rept
-            .StoredProcedureName = "usp_rpt_DAAddr"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-
-    End Sub
-
-    Private Sub CCsByPropertyOwnerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CCsByPropertyOwnerToolStripMenuItem.Click
-
-
-        Dim rept As New CCAddressProperty
-
-        'rept.lblEurobodallaShireCouncil.Text = "Eurobodalla Shire Council" & vbCrLf & "Construction Certificate Registered List"
-
-        With My.Forms.ApprovalsReportViewer
-            .reportName = rept
-            .StoredProcedureName = "usp_rpt_CCAddr"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-
-    End Sub
-
-    Private Sub OutstandingDAsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OutstandingDAsToolStripMenuItem.Click
-        Dim freportSetup As New ReportSetupOutStandingDAs
-
-        With freportSetup
-            .ShowDialog()
-            .Dispose()
-        End With
-
-
-    End Sub
-
-
-    Private Sub DeterminedDAsByOfficerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeterminedDAsByOfficerToolStripMenuItem.Click
-
-
-
-
-
-        With My.Forms.reportSetupApprovalsByOfficer
-            .ReportType = "ApprovalsByOfficer"
-            .StoredProcedureName = "usp_rpt_ApprovalsByOfficer"
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub DeterminedCCsByOfficerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles DeterminedCCsByOfficerToolStripMenuItem.Click
-
-
-        With My.Forms.reportSetupApprovalsByOfficer
-            .ReportType = "ConstructionCertificatesByOfficer"
-            .StoredProcedureName = "usp_rpt_CCsByOfficer"
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-
-
-    Private Sub ByOfficerToolStripMenuItem1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ByOfficerToolStripMenuItem.Click
-        Dim reptview As New reportSetupApprovals
-
-        With reptview
-            .ReportToPrint = "ComplianceInspectionsByOfficer.rpt"
-            .StoredProcedureName = "usp_rpt_ComplianceInspectionsByOfficer"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-
-    End Sub
-
-    Private Sub TotalsByOfficerByTypeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TotalsByOfficerByTypeToolStripMenuItem.Click
-        Dim reptview As New reportSetupApprovals
-
-        With reptview
-            .ReportToPrint = "InspectionsByOfficerXtab.rpt"
-            .StoredProcedureName = "usp_rpt_ComplianceInspectionsByOfficer"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-
-    End Sub
-
-    Private Sub ByOfficerSummaryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ByOfficerSummaryToolStripMenuItem.Click
-        Dim reptview As New reportSetupApprovals
-        With reptview
-            .ReportToPrint = "InspectionsByOfficerXtabSummary.rpt"
-            .StoredProcedureName = "usp_rpt_ComplianceInspectionsByOfficer"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-    End Sub
-
-    Private Sub ByFileNoToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ByFileNumberToolStripMenuItem.Click
-        Dim reptview As New reportSetupApprovals
-        With reptview
-            .ReportToPrint = "InspectionsByFileNo.rpt"
-            .StoredProcedureName = "usp_rpt_InspectByFileNo"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub AverageInspectionTimesToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        With My.Forms.ReportSetupAverageInspectTimes
-
-            .ShowDialog()
-            .Dispose()
-        End With
-
-    End Sub
-
-    Private Sub CouncilReportToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        With My.Forms.ReportSetup
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub ApprovalsByTownAndTypeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ApprovalsByTownAndTypeToolStripMenuItem.Click
-        Dim reptview As New reportSetupApprovals
-
-        With reptview
-            .ReportToPrint = "ApprovalsByTownAndType.rpt"
-            .StoredProcedureName = "usp_rpt_ApprovalsByTownByTypebyDateRange"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-        End With
-    End Sub
-
-    Private Sub OccCertsByTownAndTypeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles OccupationCertificatesByTownAndTypeToolStripMenuItem.Click
-
-        Dim rept As New OccupationCertsByTownandType
-
-
-        With My.Forms.ReportViewer
-            .ReportType = "OCCUP"
-
-            .reportName = rept
-            .StoredProcedureName = "usp_rpt_FinalOccsByTown"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-
-
-        End With
-
-
-    End Sub
-
-    Private Sub LiquidWasteApplicationsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        'Dim rptDocument As New ReportDocument
-
-        Dim objDT As New DataTable
-
-        Using cn As New SqlConnection(My.Settings.connectionString)
-            Try
-                cn.Open()
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in LiquidWasteApplicationsToolStripMenuItem.Click routine")
-
-            End Try
-
-            Try
-
-                Using cmd As New SqlCommand
-
-                    With cmd
-                        .Connection = cn
-                        .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_rpt_LTWApps"
-                    End With
-
-                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
-                        objDT.Load(objDataReader)
-                    End Using
-
-                    'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
-                    'Dim mylist As DataSet = New DataSet
-                    'adapter.Fill(mylist, "LTW")
-
-                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\New Version\Reports\LTW.xsd")
-
-                    Dim rept As New LTWapplications
-
-                    rept.DataSource = objDT
-
-
-                    Using printTool As New ReportPrintTool(rept)
-                        ' Invoke the Ribbon Print Preview form modally, 
-                        ' and load the report document into it.
-                        printTool.ShowPreviewDialog()
-
-                        ' Invoke the Ribbon Print Preview form
-                        ' with the specified look and feel setting.
-                        printTool.ShowPreview(UserLookAndFeel.Default)
-                    End Using
-
-
-                End Using
-
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in LiquidWasteApplicationsToolStripMenuItem.Click routine ")
-            End Try
-        End Using
-    End Sub
-
-    Private Sub TotalDAsAndCCsSummaryToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TotalDAsAndCCsSummaryToolStripMenuItem.Click
-        Dim daResults As New reportSetupApprovals
-        With daResults
-            .ReportToPrint = "NumberOfDaCCapprovedSummary.rpt"
-            .StoredProcedureName = "usp_rpt_NumberDAsApprovedSummary"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub StatutoryTimeToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StatutoryTimeToolStripMenuItem.Click
-        Dim daResults As New ReportSetupStatutoryTime
-        With daResults
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub MayoralDeterminedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim reptview As New reportSetupMayoral
-        With reptview
-            .ReportToPrint = "DAMayoralSummaryDeterm.rpt"
-            .StoredProcedureName = "usp_rpt_DADetermSummary"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-    Private Sub MayoralReceivedToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim reptview As New reportSetupMayoral
-        With reptview
-            .ReportToPrint = "DAMayoralSummaryRecv.rpt"
-            .StoredProcedureName = "usp_rpt_DARecvSummary"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-
-    End Sub
-
-    Private Sub CCWithoutOccCertToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CCWithoutOccCertToolStripMenuItem.Click
-        Dim reptview As New reportSetupApprovals
-        With reptview
-            .ReportToPrint = "CCWithoutOccCert.rpt"
-            .StoredProcedureName = "usp_rpt_CCWithoutOccCert"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
-
-
-    Private Sub mnuExpireInterimOccupationCert_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExpiredInterimOccupationCertificatesToolStripMenuItem.Click
-
-        With My.Forms.reportSetupApprovals
-            .ReportToPrint = "CCWithOutstandingInterimOccCert.rpt"
-            .StoredProcedureName = "usp_rpt_CCExpiredInterimOC"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
 
 #End Region
 
@@ -11849,156 +10436,6 @@ Public Class DevelopmentStart
         InitializeComponent()
 
 
-
-        'LoadCombo(Me.cboNoteType, "usp_LoadUpFileNoteTypeList")
-        'LoadCombo(Me.cboRefCodeId, "usp_LoadUpReferralCodeList")
-        'LoadCombo(Me.cboReferralsIntProvision, "usp_LoadUpIntegratedProvisionList")
-        'LoadCombo(Me.cboAppType, "usp_LoadUpDATypeList")
-        ''LoadCombo(Me.cboOtherDocs, "usp_LoadUp_DocType_WordTemplateList")
-        'LoadListOfOtherWordTemplates("O")
-        'LoadCombo(Me.cboDADecisionId, "usp_LoadUpDADecisionList")
-        'LoadCombo(Me.cboNotesOfficer, "usp_LoadUpOfficerList")
-        ''LoadCombo(Me.cboNoteType, "usp_LoadUpFileNoteTypeList")
-        'LoadCombo(Me.cboDAAuthorityId, "usp_LoadUpDAAuthorityList")
-
-        ' ''LoadCombo(Me.cboDevType, "usp_LoadUpDevTypeList")
-        ''loadDevelopmentTypeCombo()
-
-
-        'LoadCombo(Me.cboDAtype1, "usp_LoadUpDevTypeList")
-        'LoadCombo(Me.cboDAType2, "usp_LoadUpDevTypeList")
-        'LoadCombo(Me.cboDAtype3, "usp_LoadUpDevTypeList")
-        'LoadLetterTypeCombo()
-        'LoadCombo(Me.cboDevUse, "usp_LoadUpDevUseList")
-        ' ''LoadCombo(Me.cboIntDevActs , "usp_LoadUpIntegratedDevelopmentActList")
-        'LoadCombo(Me.cboDAlocalityCode, "usp_LoadUpLocalityCodesList")
-        ' ''LoadCombo(cboAssessmentType, "usp_LoadUpDADefaultConditionsList")
-        'LoadCombo(cboAssessmentType, "usp_SELECT_StandardCondition")
-        'LoadCombo(Me.cboDACensusCode, "[usp_LoadUpCensusCodeList]")
-        'LoadCombo(Me.cboConsentType, "usp_LoadUpConsentTypeList")
-
-        ''LoadListOfWordTemplates() '<<<++++======
-
-
-
-        'LoadCombo(Me.cboDAClass, "usp_LoadUpDAClassComboList")
-
-        'LoadCombo(Me.cboDAClass1, "usp_LoadUpDAClassComboList")
-        'LoadCombo(Me.cboDAClass2, "usp_LoadUpDAClassComboList")
-        'LoadCombo(Me.cboDAClass3, "usp_LoadUpDAClassComboList")
-
-        'LoadCombo(cboVariationType, "usp_LoadUpVariationList")
-        'LoadCombo(cboSubmissionType, "usp_LoadUpVariationList")
-
-        'LoadCombo(cboVariationResult, "usp_LoadUpVariationResultList")
-        'LoadCombo(cboVariationAuthority, "usp_LoadUpDelegatedAuthorityList")
-
-        'LoadCombo(cboReasonOver40, "usp_LoadUp_REASON_DA_APPL_40DAYSList")
-        'LoadCombo(cboProgressCode, "usp_LoadUp_ProgressCodeList")
-
-
-
-        'LoadSearchCombo()
-
-
-        'Dim AreaDescription As New ArrayList
-
-        '' Add division structure entries to the arraylist
-        'With AreaDescription
-        '    .Add(New AreaType("Metres", "M"))
-        '    .Add(New AreaType("Hectares", "H"))
-        'End With
-
-        'With cboAreaType
-        '    .DataSource = AreaDescription
-        '    .DisplayMember = "Name"
-        '    .ValueMember = "Key"
-        '    .SelectedIndex = -1
-        'End With
-
-
-        'Dim CouncilDepot As New ArrayList
-
-        '' Add division structure entries to the arraylist
-        'With CouncilDepot
-        '    .Add(New Depots("", ""))
-        '    .Add(New Depots("Batemans Bay", "B"))
-        '    .Add(New Depots("Moruya", "M"))
-        '    .Add(New Depots("Narooma", "N"))
-        'End With
-
-        'With cboAdvertSignDepot
-        '    .DataSource = CouncilDepot
-        '    .DisplayMember = "Name"
-        '    .ValueMember = "Key"
-        '    .SelectedIndex = -1
-        'End With
-
-        'Dim IntDev As New ArrayList
-
-        '' Add division structure entries to the arraylist
-        'With IntDev
-        '    .Add(New YesNoAnswer("Yes", "Y"))
-        '    .Add(New YesNoAnswer("No", "N"))
-        'End With
-
-        'With cboIntDevYN
-        '    .DataSource = IntDev
-        '    .DisplayMember = "Name"
-        '    .ValueMember = "Key"
-        '    .SelectedIndex = -1
-        'End With
-
-        'Dim Designated As New ArrayList
-
-        '' Add division structure entries to the arraylist
-        'With Designated
-        '    .Add(New YesNoAnswer("Yes", "Y"))
-        '    .Add(New YesNoAnswer("No", "N"))
-        'End With
-
-        'With cboDesignatedYN
-        '    .DataSource = Designated
-        '    .DisplayMember = "Name"
-        '    .ValueMember = "Key"
-        '    .SelectedIndex = -1
-        'End With
-        'Dim RFS As New ArrayList
-
-        '' Add division structure entries to the arraylist
-        'With RFS
-        '    .Add(New RFSSubvisionType("Residential", "2"))
-        '    .Add(New RFSSubvisionType("Rural", "1"))
-        'End With
-
-        'With cboRFSSubDivisionType
-        '    .DataSource = RFS
-        '    .DisplayMember = "Name"
-        '    .ValueMember = "Key"
-        '    .SelectedIndex = -1
-        'End With
-
-
-        'Dim SubmissionType As New ArrayList
-
-        '' Add division structure entries to the arraylist
-        'With SubmissionType
-        '    .Add(New SubmissionTypes("Submision", "S"))
-        '    .Add(New SubmissionTypes("Objection", "O"))
-        'End With
-
-        'With cboSubmissionType
-        '    .DataSource = SubmissionType
-        '    .DisplayMember = "Name"
-        '    .ValueMember = "Key"
-        '    .SelectedIndex = -1
-        'End With
-
-
-
-        'lblMenu.Text = "Development Application Details"
-        'Me.pnlApplicationData.Dock = DockStyle.Fill
-        'pnlSearch.Visible = True
 
 
         ErrorProvider = New System.Windows.Forms.ErrorProvider()
@@ -12121,27 +10558,7 @@ Public Class DevelopmentStart
 
     End Sub
 
-    Private Sub mnuVideos_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles mnuVideos.Click
 
-
-
-        'Dim GroupImageIDB4 As Integer = _VideoGroupId
-
-
-        'Dim VidCapture As New VIDEO
-
-        'With VidCapture
-        '    .ServerName = "REC"
-        '    .Application = 7
-        '    .VideoGroupID = _VideoGroupId
-        '    .DisplayCaptureScreen()
-        '    _VideoGroupId = .VideoGroupID
-
-        'End With
-        'If GroupImageIDB4 <= 0 And _VideoGroupId <> 0 Then UpdateVideoGroupID(_VideoGroupId)
-
-
-    End Sub
 
 
     Private Sub cboDevType_EditValueChanged(sender As Object, e As System.EventArgs) Handles cboDevType.EditValueChanged
@@ -12160,18 +10577,6 @@ Public Class DevelopmentStart
         nudDwellings.Visible = isReport
         lblNoDwellings.Visible = isReport
 
-        txtExistingDwelings.Visible = isReport
-        lblExistingDwellings.Visible = isReport
-
-        txtDemolishedDwelings.Visible = isReport
-        lblNoDemolishedDwellings.Visible = isReport
-
-        cboAttachmentStatus.Visible = isReport
-        lblAttachement.Visible = isReport
-
-        radOccupancy.Visible = isReport
-        lblOccupancy.Visible = isReport
-
 
         If isReport = True Then
 
@@ -12180,16 +10585,11 @@ Public Class DevelopmentStart
                 Case 0, 4, 5, 6, 9, 10, 19, 20, 28, 35, 36, 37, 39, 46, 48
 
                     nudDwellings.EditValue = 1
-                    txtExistingDwelings.EditValue = 0
-                    txtDemolishedDwelings.EditValue = 0
-                    radOccupancy.EditValue = 1
 
                 Case Else
 
                     nudDwellings.EditValue = 0
-                    txtExistingDwelings.EditValue = 0
-                    txtDemolishedDwelings.EditValue = 0
-                    radOccupancy.EditValue = Nothing
+
 
             End Select
 
@@ -12206,15 +10606,6 @@ Public Class DevelopmentStart
 
     End Sub
 
-    Private Sub NumberOfDwellingsApprovedToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles NumberOfDwellingsApprovedToolStripMenuItem.Click
-        With My.Forms.NumberDwellingsApproved
-
-            .ShowDialog()
-
-            .Dispose()
-
-        End With
-    End Sub
 
     Private Sub DAApplication_Shown(sender As Object, e As System.EventArgs) Handles Me.Shown
         If Not String.IsNullOrEmpty(cmdArg) Then
@@ -12224,45 +10615,24 @@ Public Class DevelopmentStart
         End If
     End Sub
 
-    Private Sub CCsPCAToolStripMenuItem_Click(sender As System.Object, e As System.EventArgs) Handles CCsPCAToolStripMenuItem.Click
 
 
-        Dim rept As New CCAddressPropertyByPCA
+    Private Sub btnEnlighten_Click(sender As System.Object, e As System.EventArgs)
 
-        rept.lblEurobodallaShireCouncil.Text = "Eurobodalla Shire Council" & vbCrLf & "Construction Certificate Registered List"
+        'lstPINs.SelectedIndex = 0
 
-        With My.Forms.ApprovalsReportViewer
-            .reportName = rept
-            .StoredProcedureName = "usp_rpt_CC_PCA"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
+        'Dim EnlightenURL As String = "http://escgis05v/enlighten/IntegrationLogon.cfm?search=Pin&Pin=" & CInt(lstPINs.SelectedValue) & "&refresh=YES"
 
-        End With
+        'Process.Start(EnlightenURL)
+
+
+
+
 
     End Sub
 
-    Private Sub btnEnlighten_Click(sender As System.Object, e As System.EventArgs) Handles btnEnlighten.Click
-
-        lstPINs.SelectedIndex = 0
-
-        Dim EnlightenURL As String = "http://escgis05v/enlighten/IntegrationLogon.cfm?search=Pin&Pin=" & CInt(lstPINs.SelectedValue) & "&refresh=YES"
-
-        Process.Start(EnlightenURL)
-    End Sub
 
 
-    Private Sub mnuMaintainInsuranceCoys_Click(sender As Object, e As EventArgs) Handles mnuMaintainInsuranceCoys.Click
-
-        With My.Forms.MaintainInsuranceCompanies
-
-            .ShowDialog()
-
-            .Dispose()
-
-        End With
-
-    End Sub
 
     Private Function ReadFile(ByVal sPath As String) As Byte()
         'Initialize byte array with a null value initially.        
@@ -12284,17 +10654,6 @@ Public Class DevelopmentStart
     End Function
 
 
-    Private Sub mnuCreateTemplate_Click(sender As Object, e As EventArgs) Handles mnuCreateTemplate.Click
-
-        With My.Forms.CreateBlankTemplate
-
-            .ShowDialog()
-
-            .Dispose()
-
-        End With
-
-    End Sub
 
     Private Sub gvwDocumentsList_RowClick(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowClickEventArgs) Handles gvwDocumentsList.RowClick
 
@@ -12406,19 +10765,7 @@ Public Class DevelopmentStart
 
     End Sub
 
-    Private Sub btnAdditionalInfo_Click(sender As Object, e As EventArgs) Handles btnAdditionalInfo.Click
 
-        Dim AdditionalInfo As New ADDINFO
-
-        With AdditionalInfo
-            .ServerName = "REC"
-            .SystemType = "DA"
-            .ApplicationNumber = txtDANo.Text
-            .UserId = MyUserId
-            .LoadMainInterface()
-        End With
-
-    End Sub
 
     Private Sub DADetermDt_EditValueChanged(sender As Object, e As EventArgs) Handles DADetermDt.EditValueChanged
 
@@ -12993,7 +11340,7 @@ Public Class DevelopmentStart
 
     End Sub
 
-    Private Sub txtAppemail_Validating(sender As Object, e As CancelEventArgs) Handles txtAppemail.Validating
+    Private Sub txtAppemail_Validating(sender As Object, e As CancelEventArgs)
 
         Try
             MyValidatingCode(txtAppemail)
@@ -13037,7 +11384,7 @@ Public Class DevelopmentStart
         Return emailMatch.Success
     End Function
 
-    Private Sub txtAppemail_Validated(sender As Object, e As EventArgs) Handles txtAppemail.Validated
+    Private Sub txtAppemail_Validated(sender As Object, e As EventArgs)
 
         ErrorProvider.SetError(txtAppemail, "")
 
@@ -13250,22 +11597,30 @@ Public Class DevelopmentStart
 
         End With
 
+        'TODO: EASE DONE?
+
+
+
+        '======================================================================================================================================================
 
         With My.Forms.InsertEASEDocument
+
+
 
             Select Case Recepient
                 Case 1
 
-                    .CustName = Me.txtDAOwnersName.Text
-                    .CustAddress = Me.txtDAOwnersAddress.Text & " " & txtDAOwnersTown.Text & " " & Me.txtDAOwnersPcode.Text
+                    .CustName = txtDAOwnersName.Text
+                    .CustAddress = txtDAOwnersAddress.Text & " " & txtDAOwnersTown.Text & " " & txtDAOwnersPcode.Text
 
                 Case 2
 
-                    .CustName = Me.txtAppName.Text
-                    .CustAddress = Me.txtAppAddress.Text & " " & Me.txtAppTown.Text & " " & Me.txtAppPcode.Text
+                    .CustName = txtAppName.Text
+                    .CustAddress = txtAppAddress.Text & " " & txtAppTown.Text & " " & txtAppPcode.Text
 
 
             End Select
+
 
             .WordDocLocation = myobj.Row.Item("DraftDocPath").ToString
             .DocSummary = summary
@@ -13273,8 +11628,14 @@ Public Class DevelopmentStart
             .FileNumber = Me.txtFileNo.Text
             .ShowDialog()
             .Dispose()
+
+
         End With
 
+
+
+
+        '======================================================================================================================================================
         Dim NewRecordID As Integer
 
         Dim InsertDocData As New InsertDocumentData
@@ -13385,29 +11746,7 @@ Public Class DevelopmentStart
 
     End Sub
 
-    Private Sub mnuSection94Codes_Click(sender As Object, e As EventArgs) Handles mnuSection94Codes.Click
 
-        With My.Forms.MaintainSec94Codes
-
-            .ShowDialog()
-
-            .Dispose()
-
-        End With
-
-    End Sub
-
-    Private Sub mnuSection94RF_Click(sender As Object, e As EventArgs) Handles mnuSection94RF.Click
-
-        With My.Forms.MaintainRoadFundingPercentages
-
-            .ShowDialog()
-
-            .Dispose()
-
-        End With
-
-    End Sub
 
     Private Sub txtOfficer_ButtonClick(sender As Object, e As ButtonPressedEventArgs) Handles txtOfficer.ButtonClick
         With My.Forms.AssignOfficerList
@@ -13640,8 +11979,849 @@ Public Class DevelopmentStart
 
     End Sub
 
-    Private Sub CCsAllocatedByOfficerMenuItem_Click(sender As Object, e As EventArgs) Handles ConstructionCertificatesToolStripMenuItem.Click
 
+
+    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnTest.Click
+
+        SplashScreenManager.ShowDefaultWaitForm()
+
+        For i As Integer = 0 To 100
+
+            Thread.Sleep(100)
+
+
+        Next
+
+        SplashScreenManager.CloseForm()
+    End Sub
+
+
+
+    Private Sub BiMyOSDas_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiMyOSDas.ItemClick
+        With My.Forms.MyOutstandingDAs
+            .Show()
+        End With
+    End Sub
+
+    Private Sub BiAssessment_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiAssessment.ItemClick
+        'If UAT = True Then
+
+        With My.Forms.NewAssessmentForm
+
+            .DANoToFind = Me.txtDANo.Text
+            .OriginalDA = DAmodificationNumber
+            .ApplicantName = txtAppName.Text
+            .ApplicantAddress = txtAppAddress.Text
+            .ApplicantTown = txtAppTown.Text
+            .ApplicantPostCode = txtAppPcode.Text
+            .StartPosition = FormStartPosition.CenterParent
+
+            .ShowDialog()
+            .Dispose()
+
+        End With
+
+        'Else
+        'With My.Forms.DevelopmentAssessment
+        '    .DANoToFind = Me.txtDANo.Text
+        '    .OriginalDA = DAmodificationNumber
+        '    .StartPosition = FormStartPosition.CenterParent
+
+        '    .ShowDialog()
+        '    .Dispose()
+
+        'End With
+
+        'End If
+        PopulateForm(txtDANo.Text)
+    End Sub
+
+    Private Sub BiEngineerConsent_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiEngineerConsent.ItemClick
+
+        'With My.Forms.EngineerPostConsent
+        With My.Forms.EngineeringPostConsentModule
+            .DAnumber = Me.txtDANo.Text
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub BiConstructionCert_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiConstructionCert.ItemClick
+        With My.Forms.IssueConstructionCertificate
+            .DANumber = txtDANo.Text
+            .FileNumber = Me.txtFileNo.Text
+            .DAUseType = NZ(cboDevUse.EditValue)
+            .StartPosition = FormStartPosition.CenterScreen
+            'Me.Hide()
+            .ShowDialog()
+            Me.txtCCno.Text = .CCNo
+
+            LoadSummaryData(txtDANo.Text)
+
+            .Dispose()
+
+        End With
+
+        SaveCCNO()
+    End Sub
+
+    Private Sub BiCompliance_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiCompliance.ItemClick
+
+        Dim Compl As New COMP
+
+
+        With Compl
+            .SystemType = "DA"
+            .UserId = MyUserId
+            .DAnumber = txtDANo.Text
+            .CCnumber = txtCCno.Text
+            .LoadMainInterface()
+
+        End With
+
+        LoadSummaryData(txtDANo.Text)
+
+
+    End Sub
+
+    Private Sub BiSection94_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiSection94.ItemClick
+        Dim fSec94 As New Sec9464contributions
+        With fSec94
+            .DANumber = Me.txtDANo.Text
+            .DateDetermined = CStr(IIf(DADetermDt.Text = "  /  /", String.Empty, DADetermDt.Text))
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+
+        End With
+    End Sub
+
+
+
+
+    Private Sub Exit_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibExit.ItemClick, ibRptsExit.ItemClick, ibMaintExit.ItemClick
+        Me.Close()
+    End Sub
+
+
+
+
+    Private Sub BiAddDA_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiAddDA.ItemClick
+        Dim NewDANumber As String = String.Empty
+        Dim CreatedOK As Boolean
+
+
+        With My.Forms.AddNewDA
+            .ShowDialog()
+            If .DialogResult = Windows.Forms.DialogResult.OK Then
+                NewDANumber = .NewDANumber
+                CreatedOK = True
+            Else
+                CreatedOK = False
+            End If
+            .Dispose()
+        End With
+
+        If Not CreatedOK Then Exit Sub
+
+
+        PopulateForm(NewDANumber)
+
+
+
+        Me.txtReceipts.Text = String.Empty
+        Me.txtRefunds.Text = String.Empty
+        txtDifference.Text = String.Empty
+
+
+        BiEditDA.Enabled = False
+
+        BiSaveDA.Enabled = True
+        BiAddDA.Enabled = False
+
+
+
+        Me.btnAddPIN.Enabled = True
+        Me.btnAddFile.Enabled = True
+        Me.btnRetrieveProperty.Enabled = False
+
+        LockTheForm(grpDetails, True)
+        LockTheForm(grpLand, True)
+        LockTheForm(grpOwner, True)
+        LockTheForm(grpDescription, True)
+        LockTheForm(grpAdditional, True)
+        LockTheForm(grpPurpose, True)
+        LockTheForm(grpBasix, True)
+        LockTheForm(grpFileNumber, True)
+        LockTheForm(grpCCSum, True)
+        txtOfficer.ReadOnly = False
+    End Sub
+
+    Private Sub BiSaveDA_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiSaveDA.ItemClick
+        If cboDevUse.EditValue Is Nothing Then
+
+            MessageBox.Show("you are required to select a Development Use", "Not complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+            With ErrorProvider
+                .SetIconAlignment(cboDevUse, ErrorIconAlignment.MiddleRight)
+                .SetError(cboDevUse, "This is required")
+            End With
+
+            Return
+        Else
+
+            ErrorProvider.SetError(cboDevUse, "")
+
+        End If
+
+
+        'LockTheForm(pnlApplicationData, False)
+        LockTheForm(pnlDisplayAssociatedApps, False)
+        LockTheForm(pnlDisplaySect68IntDev, False)
+        LockTheForm(grpDetails, False)
+        LockTheForm(grpLand, False)
+        LockTheForm(grpOwner, False)
+        LockTheForm(grpDescription, False)
+        LockTheForm(grpAdditional, False)
+        LockTheForm(grpPurpose, False)
+        LockTheForm(grpBasix, False)
+        LockTheForm(grpFileNumber, False)
+        LockTheForm(grpCCSum, False)
+
+
+        BiEditDA.Enabled = True
+        BiSaveDA.Enabled = False
+
+        btnAddPIN.Enabled = False
+        BiAddDA.Enabled = True
+        btnRetrieveProperty.Enabled = False
+        btnAddFile.Enabled = False
+
+        btnSaveDA_ClickExtracted()
+        txtOfficer.ReadOnly = True
+    End Sub
+
+    Private Sub BiEditDA_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiEditDA.ItemClick
+        LockTheForm(grpDetails, True)
+        LockTheForm(grpLand, True)
+        LockTheForm(grpOwner, True)
+        LockTheForm(grpDescription, True)
+        LockTheForm(grpAdditional, True)
+        LockTheForm(grpPurpose, True)
+        LockTheForm(grpBasix, True)
+        LockTheForm(grpFileNumber, True)
+        LockTheForm(grpCCSum, True)
+
+
+        txtCCno.ReadOnly = Not Administration
+        chkSec94.Enabled = Administration
+        cboAppType.Enabled = Administration
+        txtFileNo.ReadOnly = Not Administration
+        txtAppName.ReadOnly = Not Administration
+        txtAppAddress.ReadOnly = Not Administration
+        txtAppTown.ReadOnly = Not Administration
+        txtAppPcode.ReadOnly = Not Administration
+        txtAppPhone.ReadOnly = False 'Not Administration
+        txtAppemail.ReadOnly = False 'Not Administration
+        'txtOfficer.Properties.Buttons(0).Enabled = True
+
+        'Edit Property Tab
+        txtLot.ReadOnly = False
+        txtDP.ReadOnly = False
+        txtSection.ReadOnly = False
+        txtArea.ReadOnly = False
+        cboAreaType.Enabled = True
+        txtStreetNo.ReadOnly = False
+        txtStreetName.ReadOnly = False
+        cboDAlocalityCode.Enabled = True
+        cboDACensusCode.Enabled = True
+        txtDAOwnersName.ReadOnly = False
+        txtDAOwnersAddress.ReadOnly = False
+        txtDAOwnersTown.ReadOnly = False
+        txtDAOwnersPcode.ReadOnly = False
+        txtDAOwnersPhone.ReadOnly = False
+
+        chkBASIXRecd.Enabled = True
+        txtBASIXCertNo.ReadOnly = False
+        txtBASIXRcptNo.ReadOnly = False
+        txtBASIXwater.ReadOnly = False
+        txtBASIXthermal.ReadOnly = False
+        txtBASIXenergy.ReadOnly = False
+        txtOfficer.ReadOnly = False
+
+        chkDesc1.Enabled = True
+        chkDADesc2.Enabled = True
+        chkDADesc3.Enabled = True
+        chkDADesc4.Enabled = True
+        chkDADesc5.Enabled = True
+        chkDADesc6.Enabled = True
+        chkDADesc7.Enabled = True
+        chkDADesc8.Enabled = True
+        chkGiftDonation.Enabled = True
+        cboDevType.Enabled = True
+        cboDevUse.Enabled = True
+        txtDADesc.ReadOnly = False
+        txtDAestCost.ReadOnly = False
+        txtDAFloor.ReadOnly = False
+        cboConsentType.Enabled = True
+        cboDAtype1.Enabled = True
+        cboDAType2.Enabled = True
+        cboDAtype3.Enabled = True
+        txtModDesc.ReadOnly = False
+
+        BiEditDA.Enabled = False
+        BiSaveDA.Enabled = True
+
+        btnAddFile.Enabled = True
+        btnAddPIN.Enabled = True
+        btnRetrieveProperty.Enabled = False
+
+
+
+    End Sub
+
+    Private Sub ibOldSystemImages_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibOldSystemImages.ItemClick
+
+        Dim images As New OldImagesViewer
+
+        With images
+
+            .DAnumber = Me.txtDANo.Text
+            .ShowDialog()
+            .Dispose()
+
+
+        End With
+
+    End Sub
+
+    Private Sub ibCurrentImages_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibCurrentImages.ItemClick
+
+        Dim fMultimedia As New MultimediaInterface
+        Dim GroupImageIDB4 As Integer = mdl_GroupImageID
+
+        With fMultimedia
+            .DAnumber = Me.txtDANo.Text
+            .ImageGroupID = Me.mdl_GroupImageID
+            .ShowDialog()
+            mdl_GroupImageID = .ImageGroupID
+        End With
+        If GroupImageIDB4 = 0 And mdl_GroupImageID <> 0 Then UpdatePropertyImage(mdl_GroupImageID)
+
+
+    End Sub
+
+    Private Sub ibVideos_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibVideos.ItemClick
+
+
+
+        'Dim GroupImageIDB4 As Integer = _VideoGroupId
+
+
+        'Dim VidCapture As New VIDEO
+
+        'With VidCapture
+        '    .ServerName = "REC"
+        '    .Application = 7
+        '    .VideoGroupID = _VideoGroupId
+        '    .DisplayCaptureScreen()
+        '    _VideoGroupId = .VideoGroupID
+
+        'End With
+        'If GroupImageIDB4 <= 0 And _VideoGroupId <> 0 Then UpdateVideoGroupID(_VideoGroupId)
+
+
+
+    End Sub
+
+    Private Sub ibPrintCoverSheet_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibPrintCoverSheet.ItemClick
+
+        Dim objDT As New DataTable
+
+        'Check file exists
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in mnuPrintFileCoverSheet_Click routine")
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_rpt_DACert"
+                        .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = Me.txtDANo.Text
+                    End With
+
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
+                    'Dim mylist As DataSet = New DataSet
+                    'adapter.Fill(mylist, "coversheet")
+
+                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\New Version\Reports\coversheet.xsd")
+
+                End Using
+
+                Dim fish As String = String.Empty
+                Dim Heritage As String = String.Empty
+                Dim Mine As String = String.Empty
+                Dim NationalParks As String = String.Empty
+                Dim River As String = String.Empty
+                Dim Roads As String = String.Empty
+                Dim Waste As String = String.Empty
+                Dim Polution As String = String.Empty
+                Dim Water As String = String.Empty
+
+                If objDT.Rows.Count > 0 Then
+
+                    Dim objDataRow As DataRow = objDT.Rows.Item(0)
+
+                    If CBool(objDataRow.Item("S144")) Then
+                        fish = "S144"
+                    End If
+                    If CBool(objDataRow.Item("S201")) Then
+                        fish &= ", S201"
+                    End If
+                    If CBool(objDataRow.Item("S205")) Then
+                        fish &= ", S205"
+                    End If
+
+                    If CBool(objDataRow.Item("S58")) Then
+                        Heritage = "S58"
+                    End If
+
+                    If CBool(objDataRow.Item("S15")) Then
+                        Mine = "S15"
+                    End If
+
+                    If CBool(objDataRow.Item("S90")) Then
+                        NationalParks = "S90"
+                    End If
+
+                    If CBool(objDataRow.Item("P3A")) Then
+                        River = "Part 3A"
+                    End If
+
+                    If CBool(objDataRow.Item("S138")) Then
+                        Roads = "S138"
+                    End If
+
+                    If CBool(objDataRow.Item("S44")) Then
+                        Waste = "S44"
+                    End If
+
+                    If CBool(objDataRow.Item("S17A")) Then
+                        Polution = "S17A"
+                    End If
+                    If CBool(objDataRow.Item("S17C")) Then
+                        Polution &= ", S17C"
+                    End If
+                    If CBool(objDataRow.Item("S17D")) Then
+                        Polution &= ", S17D"
+                    End If
+                    If CBool(objDataRow.Item("S171")) Then
+                        Polution &= ", S171"
+                    End If
+
+
+                    If CBool(objDataRow.Item("S10")) Then
+                        Water = "S10"
+                    End If
+                    If CBool(objDataRow.Item("S13A")) Then
+                        Water &= ", S13A"
+                    End If
+                    If CBool(objDataRow.Item("S18F")) Then
+                        Water &= ", S18F"
+                    End If
+                    If CBool(objDataRow.Item("S20B")) Then
+                        Water &= ", S20B"
+                    End If
+                    If CBool(objDataRow.Item("S20CA")) Then
+                        Water &= ", S20C"
+                    End If
+                    If CBool(objDataRow.Item("S20L")) Then
+                        Water &= ", S20L"
+                    End If
+                    If CBool(objDataRow.Item("S116")) Then
+                        Water &= ", S116"
+                    End If
+                    If CBool(objDataRow.Item("P8")) Then
+                        Water &= ", Part 8"
+                    End If
+
+
+                End If
+
+                Dim rept As New DAcoverSheet
+
+                rept.lblFish.Text = fish
+                rept.LblHeritage.Text = Heritage
+                rept.lblMine.Text = Mine
+                rept.lblNatParks.Text = NationalParks
+                rept.lblPollution.Text = Polution
+                rept.lblRivers.Text = River
+                rept.lblRoads.Text = Roads
+                rept.lblWaste.Text = Waste
+                rept.lblWater.Text = Water
+
+                rept.DataSource = objDT
+
+                rept.ReferralsObjDT = referralsData()
+
+                Using printTool As New ReportPrintTool(rept)
+                    ' Invoke the Ribbon Print Preview form modally, 
+                    ' and load the report document into it.
+                    printTool.ShowPreviewDialog()
+
+                    ' Invoke the Ribbon Print Preview form
+                    ' with the specified look and feel setting.
+                    printTool.ShowPreview(UserLookAndFeel.Default)
+                End Using
+
+
+                'Dim strReportPath As String = My.Settings.ReportLocation & "DACert.rpt"
+                'Try
+
+                '    If Not IO.File.Exists(strReportPath) Then
+                '        Throw (New Exception("Unable to locate report file:" & vbCrLf & strReportPath))
+
+                '    End If
+
+                '    Dim myPrintOptions As PrintOptions = rptDocument.PrintOptions
+                '    myPrintOptions.PrinterName = My.Settings.DefaultPrinter
+                '    myPrintOptions.PrinterDuplex = CrystalDecisions.Shared.PrinterDuplex.Vertical
+                '    'myPrintOptions.CustomPaperSource = GetSelectedPaperSource()
+
+                '    With rptDocument
+                '        .Load(strReportPath)
+                '        .SetDataSource(objDT)
+                '        .VerifyDatabase()
+                '        .PrintToPrinter(1, False, 1, 99)
+                '    End With
+                'Catch ex As SqlException
+                '    MessageBox.Show(ex.Message, " in mnuPrintFileCoverSheet_Click routine ")
+                'End Try
+
+
+                '    Dim fViewer As New AddAdvertPrinter
+                '    With fViewer
+                '        .objDataTable = objDT
+                '        If Modification Then
+                '            .ReportName = "DAAssessmentMod.rpt"
+
+                '        Else
+                '            .ReportName = "DAAssessment.rpt"
+
+                '        End If
+                '        .ShowDialog()
+                '        .Dispose()
+                '    End With
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in mnuPreviewAssessment_Click routine ")
+            End Try
+        End Using
+
+
+    End Sub
+
+    Private Sub ibCreateTemplate_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibCreateTemplate.ItemClick
+
+        With My.Forms.CreateBlankTemplate
+
+            .ShowDialog()
+
+            .Dispose()
+
+        End With
+
+    End Sub
+
+    Private Sub ibOfficers_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibOfficers.ItemClick
+
+
+        With My.Forms.SystemUsersMaintenance
+            .ShowDialog()
+            .Dispose()
+
+        End With
+
+    End Sub
+
+    Private Sub ibSection94Codes_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibSection94Codes.ItemClick
+
+
+        With My.Forms.MaintainSec94Codes
+
+            .ShowDialog()
+
+            .Dispose()
+
+        End With
+
+    End Sub
+
+    Private Sub ibSection94RF_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibSection94RF.ItemClick
+
+
+        With My.Forms.MaintainRoadFundingPercentages
+
+            .ShowDialog()
+
+            .Dispose()
+
+        End With
+
+
+    End Sub
+
+    Private Sub ibDevelopmentTypes_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibDevelopmentTypes.ItemClick
+
+        With My.Forms.MaintDevelopmentType
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+
+        loadDevelopmentTypeCombo()
+
+        'LoadCombo(cboDevType, "usp_LoadUpDevTypeList")
+
+    End Sub
+
+    Private Sub ibPCAbuilders_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibPCAbuilders.ItemClick
+        Dim fBuilderMaint As New MaintainBuilders
+        With fBuilderMaint
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibAuthorities_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibAuthorities.ItemClick
+
+        Dim fAuthorities As New MaintainApprovalAuthorities
+        With fAuthorities
+            .ShowDialog()
+            .Dispose()
+        End With
+
+    End Sub
+
+    Private Sub ibDAUsers_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibDAUsers.ItemClick
+
+        With My.Forms.MaintainDAUsers
+            .ShowDialog()
+            .Dispose()
+        End With
+
+    End Sub
+
+    Private Sub ibReferralList_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibReferralList.ItemClick
+        With My.Forms.MaintainReferralCategories
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibSEPPcodes_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibSEPPcodes.ItemClick
+
+        With My.Forms.MaintainSEPPCategories
+            .ShowDialog()
+            .Dispose()
+        End With
+
+    End Sub
+
+    Private Sub ibDCPtypes_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibDCPtypes.ItemClick
+
+        With My.Forms.MaintainDCPTypes
+            .ShowDialog()
+            .Dispose()
+        End With
+
+
+    End Sub
+
+    Private Sub ibInspectionTypes_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibInspectionTypes.ItemClick
+        With My.Forms.MaintainInspectionType
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibStdCondCodes_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibStdCondCodes.ItemClick
+        With My.Forms.MaintainDefaultConditions
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+
+    End Sub
+
+    Private Sub ibInsuranceCoy_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles ibInsuranceCoy.ItemClick
+
+        With My.Forms.MaintainInsuranceCompanies
+
+            .ShowDialog()
+
+            .Dispose()
+
+        End With
+
+
+    End Sub
+
+    Private Sub ibDCPGuidlines_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibDCPGuidlines.ItemClick
+        With My.Forms.MaintainDCPGuidelines
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibNavision_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibNavision.ItemClick
+        With My.Forms.FeeReconciliationToNavision
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+        End With
+    End Sub
+
+    Private Sub ibABSStats_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibABSStats.ItemClick
+        Dim fABS As New ABSReportSetup
+        With fABS
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+
+    End Sub
+
+    Private Sub ibConsentAdvert_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibConsentAdvert.ItemClick
+        Dim rptDocument As New ReportDocument
+
+        Dim objDT As New DataTable
+
+        'Check file exists
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in mnuConsentAdvertising_Click routine")
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_rpt_DA_Advert_Union"
+                    End With
+
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    PrintAdvertisingSheet(objDT)
+
+                End Using
+
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in mnuPreviewAssessment_Click routine ")
+            End Try
+        End Using
+
+
+    End Sub
+
+    Private Sub ibCCresults_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibCCresults.ItemClick
+        Dim daResults As New ApplicationCounterCC
+        With daResults
+            .ShowDialog()
+            .Dispose()
+        End With
+
+    End Sub
+
+    Private Sub ibCDresults_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibCDresults.ItemClick
+        Dim daResults As New ApplicationCounterCD
+        With daResults
+            .ShowDialog()
+            .Dispose()
+        End With
+
+
+    End Sub
+
+    Private Sub ibDAresults_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibDAresults.ItemClick
+        Dim daResults As New ApplicationCounterDA
+        With daResults
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibAllResults_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibAllResults.ItemClick
+        Dim daResults As New ApplicationCounter
+        With daResults
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibApprovals_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibApprovals.ItemClick
+
+        Dim rept As New ApprovalsReport
+
+        With My.Forms.ApprovalsReportViewer
+            .reportName = rept
+            .StoredProcedureName = "usp_rpt_Approvals"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+
+        End With
+
+    End Sub
+
+    Private Sub ibDevelopmentApps_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibDevelopmentApps.ItemClick
+        With My.Forms.ReportViewer
+            .ReportType = "DAALLOC"
+            '.reportName = rept
+            .StoredProcedureName = "usp_rpt_DAs_AllocatedToOfficers"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+
+
+
+        End With
+    End Sub
+
+    Private Sub ibConstructionCertificates_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibConstructionCertificates.ItemClick
 
         With My.Forms.ReportViewer
             .ReportType = "CCALLOC"
@@ -13654,16 +12834,126 @@ Public Class DevelopmentStart
 
 
         End With
+    End Sub
+
+    Private Sub BarButtonItem7_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibCCdetermined.ItemClick
+
+        With My.Forms.reportSetupApprovalsByOfficer
+            .ReportType = "ConstructionCertificatesByOfficer"
+            .StoredProcedureName = "usp_rpt_CCsByOfficer"
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibSepticByTown_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibSepticByTown.ItemClick
+        Dim reptview As New reportSetupApprovals
+
+        With reptview
+            .ReportToPrint = "SepticApprovalsByTownAndType.rpt"
+            .StoredProcedureName = "usp_rpt_SepticApprovalsByTownAndType"
+            '.StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+
+        End With
+    End Sub
+
+    Private Sub ibAppliByOfficer_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibAppliByOfficer.ItemClick
+        Dim reptview As New reportSetupApprovals
+
+        With reptview
+            .ReportToPrint = "ApplicationsRegisteredByOfficer.rpt"
+            .StoredProcedureName = "usp_rpt_ApplicationsRegisteredBY"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+
+        End With
+    End Sub
+
+    Private Sub ibDAreceived_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibDAreceived.ItemClick
+        Dim rept As New DAAddressProperty
+
+        'rept.lblEurobodallaShireCouncil.Text = "Eurobodalla Shire Council" & vbCrLf & "Development Applications Registered List"
+
+        With My.Forms.ApprovalsReportViewer
+            .reportName = rept
+            .StoredProcedureName = "usp_rpt_DAAddr"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+
+        End With
+    End Sub
+
+    Private Sub ibCCOwner_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibCCOwner.ItemClick
+
+        Dim rept As New CCAddressProperty
+
+        'rept.lblEurobodallaShireCouncil.Text = "Eurobodalla Shire Council" & vbCrLf & "Construction Certificate Registered List"
+
+        With My.Forms.ApprovalsReportViewer
+            .reportName = rept
+            .StoredProcedureName = "usp_rpt_CCAddr"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+
+        End With
 
     End Sub
 
-    Private Sub MayoralDeterminedMenuItem_Click(sender As Object, e As EventArgs) Handles MayoralDeterminedMenuItem.Click
+    Private Sub ibOutstandingDA_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibOutstandingDA.ItemClick
+        Dim freportSetup As New ReportSetupOutStandingDAs
+
+        With freportSetup
+            .ShowDialog()
+            .Dispose()
+        End With
+
+    End Sub
+
+    Private Sub ibDAdetermined_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibDAdetermined.ItemClick
+        With My.Forms.reportSetupApprovalsByOfficer
+            .ReportType = "ApprovalsByOfficer"
+            .StoredProcedureName = "usp_rpt_ApprovalsByOfficer"
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibAverageTime_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibAverageTime.ItemClick
+        With My.Forms.ReportSetupAverageInspectTimes
+
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibApprovalsByTown_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibApprovalsByTown.ItemClick
+        Dim reptview As New reportSetupApprovals
+
+        With reptview
+            .ReportToPrint = "ApprovalsByTownAndType.rpt"
+            .StoredProcedureName = "usp_rpt_ApprovalsByTownByTypebyDateRange"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+
+        End With
+    End Sub
+
+    Private Sub ibOccupByTown_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibOccupByTown.ItemClick
+
+        Dim rept As New OccupationCertsByTownandType
 
 
         With My.Forms.ReportViewer
-            .ReportType = "MAYORDETERM"
-            '.reportName = rept
-            .StoredProcedureName = "usp_rpt_DADetermSummary"
+            .ReportType = "OCCUP"
+
+            .reportName = rept
+            .StoredProcedureName = "usp_rpt_FinalOccsByTown"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
             .Dispose()
@@ -13671,123 +12961,19 @@ Public Class DevelopmentStart
 
 
         End With
-
     End Sub
 
-    Private Sub MayoralReceivedMenuItem_Click(sender As Object, e As EventArgs) Handles MayoralReceivedMenuItem.Click
+    Private Sub ibLTW_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibLTW.ItemClick
 
-
-        With My.Forms.ReportViewer
-            .ReportType = "MAYORRECD"
-            '.reportName = rept
-            .StoredProcedureName = "usp_rpt_DARecvSummary"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-
-
-
-        End With
-
-    End Sub
-
-    Private Sub OutstandingReferralsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles OutstandingReferralsToolStripMenuItem.Click
+        Dim objDT As New DataTable
 
         Using cn As New SqlConnection(My.Settings.connectionString)
             Try
                 cn.Open()
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in OutstandingReferralsMenuItem_Click routine - form " & Me.Name)
+                MessageBox.Show(ex.Message, " in LiquidWasteApplicationsToolStripMenuItem.Click routine")
 
             End Try
-
-
-            Try
-
-                Using cmd As New SqlCommand
-
-                    With cmd
-                        .Connection = cn
-                        .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_rpt_OutstandingReferrals"
-
-
-
-                    End With
-
-                    Dim objDT As New DataTable
-
-
-                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
-                        objDT.Load(objDataReader)
-                    End Using
-
-                    'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
-                    'Dim mylist As DataSet = New DataSet
-                    'adapter.Fill(mylist, "referrals")
-
-                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\Devexpress Reports\referrals.xsd")
-
-                    Dim rept As New OutStandingReferrals
-
-                    With rept
-                        .DataSource = objDT
-                        .CreateDocument()
-
-                    End With
-
-                    Using printTool As New ReportPrintTool(rept)
-                        ' Invoke the Ribbon Print Preview form modally, 
-                        ' and load the report document into it.
-                        printTool.ShowPreviewDialog()
-
-                        ' Invoke the Ribbon Print Preview form
-                        ' with the specified look and feel setting.
-                        printTool.ShowPreview(UserLookAndFeel.Default)
-                    End Using
-
-
-                End Using
-
-
-
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in OutstandingReferralsMenuItem_Click routine - form " & Me.Name)
-
-            End Try
-        End Using
-    End Sub
-
-    Private Sub ReferralsByOfficerAndDateToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ReferralsByOfficerAndDateToolStripMenuItem.Click
-
-        With My.Forms.ReportSetupReferralsByOfficer
-
-            .ShowDialog()
-
-            .Dispose()
-
-        End With
-
-
-    End Sub
-
-    Private Sub ApprovedUnderDelegatedAuthorityToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ApprovedUnderDelegatedAuthorityToolStripMenuItem.Click
-
-
-
-    End Sub
-
-    Private Sub LiquidTradeWasteApplicationsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles LiquidTradeWasteApplicationsToolStripMenuItem.Click
-
-
-        Using cn As New SqlConnection(My.Settings.connectionString)
-            Try
-                cn.Open()
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in OutstandingReferralsMenuItem_Click routine - form " & Me.Name)
-
-            End Try
-
 
             Try
 
@@ -13797,13 +12983,7 @@ Public Class DevelopmentStart
                         .Connection = cn
                         .CommandType = CommandType.StoredProcedure
                         .CommandText = "usp_rpt_LTWApps"
-
-
-
                     End With
-
-                    Dim objDT As New DataTable
-
 
                     Using objDataReader As SqlDataReader = cmd.ExecuteReader
                         objDT.Load(objDataReader)
@@ -13811,17 +12991,14 @@ Public Class DevelopmentStart
 
                     'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
                     'Dim mylist As DataSet = New DataSet
-                    'adapter.Fill(mylist, "referrals")
+                    'adapter.Fill(mylist, "LTW")
 
-                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\Devexpress Reports\referrals.xsd")
+                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\New Version\Reports\LTW.xsd")
 
-                    Dim rept As New LiquidTradeWasteApplications
+                    Dim rept As New LTWapplications
 
-                    With rept
-                        .DataSource = objDT
-                        .CreateDocument()
+                    rept.DataSource = objDT
 
-                    End With
 
                     Using printTool As New ReportPrintTool(rept)
                         ' Invoke the Ribbon Print Preview form modally, 
@@ -13836,40 +13013,104 @@ Public Class DevelopmentStart
 
                 End Using
 
-
-
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in OutstandingReferralsMenuItem_Click routine - form " & Me.Name)
-
+                MessageBox.Show(ex.Message, " in LiquidWasteApplicationsToolStripMenuItem.Click routine ")
             End Try
         End Using
+    End Sub
 
+    Private Sub ibTotalNoDACC_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibTotalNoDACC.ItemClick
+        Dim daResults As New reportSetupApprovals
+        With daResults
+            .ReportToPrint = "NumberOfDaCCapprovedSummary.rpt"
+            .StoredProcedureName = "usp_rpt_NumberDAsApprovedSummary"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibStatutoryTime_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibStatutoryTime.ItemClick
+        Dim daResults As New ReportSetupStatutoryTime
+        With daResults
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibMayoralDetermined_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibMayoralDetermined.ItemClick
+
+        Dim reptview As New reportSetupMayoral
+        With reptview
+            .ReportToPrint = "DAMayoralSummaryDeterm.rpt"
+            .StoredProcedureName = "usp_rpt_DADetermSummary"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
 
     End Sub
 
-    Private Sub DevelopmentApplicationsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles DevelopmentApplicationsToolStripMenuItem.Click
+    Private Sub ibMayoralRecd_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibMayoralRecd.ItemClick
+        Dim reptview As New reportSetupMayoral
+        With reptview
+            .ReportToPrint = "DAMayoralSummaryRecv.rpt"
+            .StoredProcedureName = "usp_rpt_DARecvSummary"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
 
-        With My.Forms.ReportViewer
-            .ReportType = "DAALLOC"
-            '.reportName = rept
-            .StoredProcedureName = "usp_rpt_DAs_AllocatedToOfficers"
+    End Sub
+
+    Private Sub ibCCwithoutOC_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibCCwithoutOC.ItemClick
+        Dim reptview As New reportSetupApprovals
+        With reptview
+            .ReportToPrint = "CCWithoutOccCert.rpt"
+            .StoredProcedureName = "usp_rpt_CCWithoutOccCert"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibExpiredIOC_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibExpiredIOC.ItemClick
+        With My.Forms.reportSetupApprovals
+            .ReportToPrint = "CCWithOutstandingInterimOccCert.rpt"
+            .StoredProcedureName = "usp_rpt_CCExpiredInterimOC"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub ibCCPCA_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibCCPCA.ItemClick
+
+        Dim rept As New CCAddressPropertyByPCA
+
+        rept.lblEurobodallaShireCouncil.Text = "Eurobodalla Shire Council" & vbCrLf & "Construction Certificate Registered List"
+
+        With My.Forms.ApprovalsReportViewer
+            .reportName = rept
+            .StoredProcedureName = "usp_rpt_CC_PCA"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
             .Dispose()
 
+        End With
+    End Sub
 
+    Private Sub ibNumberDwellingsAppd_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibNumberDwellingsAppd.ItemClick
+        With My.Forms.NumberDwellingsApproved
+
+            .ShowDialog()
+
+            .Dispose()
 
         End With
-
-
     End Sub
 
-    Private Sub ConstructionCertificatesToolStripMenuItem_Click(sender As Object, e As EventArgs)
-
-    End Sub
-
-    Private Sub mnuOutstandingConstructionCertificates_Click(sender As Object, e As EventArgs) Handles mnuOutstandingConstructionCertificates.Click
-
+    Private Sub ibOutstandCC_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibOutstandCC.ItemClick
         Dim objDT As New DataTable
 
         'Check file exists
@@ -13936,52 +13177,11 @@ Public Class DevelopmentStart
         End Using
     End Sub
 
-    Private Sub AverageInspectionTimesToolStripMenuItem_Click_1(sender As Object, e As EventArgs) Handles AverageInspectionTimesToolStripMenuItem.Click
-        With My.Forms.ReportSetupAverageInspectTimes
+    Private Sub ibAppdDelegation_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibAppdDelegation.ItemClick
 
-            .ShowDialog()
-            .Dispose()
-        End With
     End Sub
 
-    'Private Sub BackgroundWorker1_DoWork(sender As Object, e As DoWorkEventArgs) Handles BackgroundWorker1.DoWork
-    '    'Dim worker As BackgroundWorker = CType(sender, BackgroundWorker)
-
-    '    'If (worker.CancellationPending = True) Then
-
-    '    '    e.Cancel = True
-
-    '    'Else
-
-    '    BuildAcknowledgementLetter()
-
-    '    'End If
-    'End Sub
-
-    'Private Sub BackgroundWorker1_RunWorkerCompleted(sender As Object, e As RunWorkerCompletedEventArgs) Handles BackgroundWorker1.RunWorkerCompleted
-
-    '    DisplayListOfSubmissionDraftDocuments(Me.txtDANo.Text)
-
-
-    '    SplashScreenManager.CloseForm()
-
-    'End Sub
-
-    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnTest.Click
-
-        SplashScreenManager.ShowDefaultWaitForm()
-
-        For i As Integer = 0 To 100
-
-            Thread.Sleep(100)
-
-
-        Next
-
-        SplashScreenManager.CloseForm()
-    End Sub
-
-    Private Sub mnuLEPVariationsRegister_Click(sender As Object, e As EventArgs) Handles mnuLEPVariationsRegister.Click
+    Private Sub ibLEPRegister_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibLEPRegister.ItemClick
 
         With My.Forms.LEPVariationsReport
 
@@ -13993,45 +13193,74 @@ Public Class DevelopmentStart
 
     End Sub
 
-    Private Sub cboDevUse_EditValueChanged(sender As Object, e As EventArgs) Handles cboDevUse.EditValueChanged
-        If cboDevUse.IsLoading Or LoadingForm Then Return
+    Private Sub ibInspectFileNumber_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibInspectFileNumber.ItemClick
+        Dim reptview As New reportSetupApprovals
+        With reptview
+            .ReportToPrint = "InspectionsByFileNo.rpt"
+            .StoredProcedureName = "usp_rpt_InspectByFileNo"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
 
-        Select Case CInt(cboDevUse.EditValue)
+    Private Sub ibInspectionByOfficer_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibInspectionByOfficer.ItemClick
+        Dim reptview As New reportSetupApprovals
 
-            Case 1 : cboIntendedLandUse.EditValue = 1
+        With reptview
+            .ReportToPrint = "ComplianceInspectionsByOfficer.rpt"
+            .StoredProcedureName = "usp_rpt_ComplianceInspectionsByOfficer"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
 
-            Case Else : cboIntendedLandUse.EditValue = 2
+        End With
+    End Sub
 
-        End Select
+    Private Sub ibInspectOfficerAndType_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibInspectOfficerAndType.ItemClick
+        Dim reptview As New reportSetupApprovals
 
+        With reptview
+            .ReportToPrint = "InspectionsByOfficerXtab.rpt"
+            .StoredProcedureName = "usp_rpt_ComplianceInspectionsByOfficer"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
 
+        End With
 
     End Sub
 
-    Private Sub lupSection68_EditValueChanged(sender As Object, e As EventArgs) Handles lupSection68.EditValueChanged
-        if lupSection68.IsLoading then return
+    Private Sub ibInspectOfficerSummary_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibInspectOfficerSummary.ItemClick
+        Dim reptview As New reportSetupApprovals
+        With reptview
+            .ReportToPrint = "InspectionsByOfficerXtabSummary.rpt"
+            .StoredProcedureName = "usp_rpt_ComplianceInspectionsByOfficer"
+            .StartPosition = FormStartPosition.CenterParent
+            .ShowDialog()
+            .Dispose()
 
-        btnInsert68.Enabled=true
+        End With
     End Sub
 
-    Private Sub gvwSection68_RowClick(sender As Object, e As RowClickEventArgs) Handles gvwSection68.RowClick
-        btnRemove68.Enabled=true
+    Private Sub ibReferralsByOfficer_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibReferralsByOfficer.ItemClick
+
+        With My.Forms.ReportSetupReferralsByOfficer
+
+            .ShowDialog()
+
+            .Dispose()
+
+        End With
     End Sub
 
-    Private Sub btnRemove68_Click(sender As Object, e As EventArgs) Handles btnRemove68.Click
+    Private Sub ibOSreferrals_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibOSreferrals.ItemClick
 
-
-
-
-            Dim myobj As DataRowView = CType(gvwSection68.GetFocusedRow, DataRowView)
-
-
-        
-        Using cn As New SqlConnection(my.settings.ConnectionString)
+        Using cn As New SqlConnection(My.Settings.connectionString)
             Try
                 cn.Open()
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in btnRemove68_Click routine - form " & Me.name)
+                MessageBox.Show(ex.Message, " in OutstandingReferralsMenuItem_Click routine - form " & Me.Name)
 
             End Try
 
@@ -14043,15 +13272,42 @@ Public Class DevelopmentStart
                     With cmd
                         .Connection = cn
                         .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_DELETE_Section68Item"
+                        .CommandText = "usp_rpt_OutstandingReferrals"
 
-                        .Parameters.Add("@ITEMID", SqlDbType.Int).Value = CInt(myobj.Row.Item("sectIdx"))
 
-                        .ExecuteNonQuery()
 
                     End With
 
+                    Dim objDT As New DataTable
 
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
+                    'Dim mylist As DataSet = New DataSet
+                    'adapter.Fill(mylist, "referrals")
+
+                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\Devexpress Reports\referrals.xsd")
+
+                    Dim rept As New OutStandingReferrals
+
+                    With rept
+                        .DataSource = objDT
+                        .CreateDocument()
+
+                    End With
+
+                    Using printTool As New ReportPrintTool(rept)
+                        ' Invoke the Ribbon Print Preview form modally, 
+                        ' and load the report document into it.
+                        printTool.ShowPreviewDialog()
+
+                        ' Invoke the Ribbon Print Preview form
+                        ' with the specified look and feel setting.
+                        printTool.ShowPreview(UserLookAndFeel.Default)
+                    End Using
 
 
                 End Using
@@ -14059,15 +13315,89 @@ Public Class DevelopmentStart
 
 
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in btnRemove68_Click routine - form " & Me.name)
+                MessageBox.Show(ex.Message, " in OutstandingReferralsMenuItem_Click routine - form " & Me.Name)
 
             End Try
         End Using
+    End Sub
 
-        LoadSection68(txtDANo.text)
+
+
+    Private Sub ibAdditionalIfo_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibAdditionalIfo.ItemClick
+
+        Dim AdditionalInfo As New ADDINFO
+
+        With AdditionalInfo
+            .ServerName = "REC"
+            .SystemType = "DA"
+            .ApplicationNumber = txtDANo.Text
+            .UserId = MyUserId
+            .LoadMainInterface()
+        End With
 
     End Sub
 
+    Private Sub ibLinked_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibLinked.ItemClick
+        With DALinkToParent
+            .DaNo = Me.txtDANo.Text
+            .ShowDialog()
+            .Dispose()
+        End With
+    End Sub
+
+    Private Sub grpAdditional_Paint(sender As Object, e As PaintEventArgs) Handles grpAdditional.Paint
+
+    End Sub
+
+    Private Sub gvwPIN_RowClick(sender As Object, e As RowClickEventArgs) Handles gvwPIN.RowClick
+        btnRetrieveProperty.Enabled = True
+        btnRemovePIN.Enabled = True
+    End Sub
+
+    Private Sub ibIntraMaps_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibIntraMaps.ItemClick
+        If gvwPIN.RowCount = 0 Then Return
+
+
+
+        Dim myobj As DataRowView = CType(gvwPIN.GetFocusedRow, DataRowView)
+
+
+        Dim cadId As String = myobj.Row.Item("Cadid")
+
+
+        If cadId = String.Empty Then
+
+            MessageBox.Show("There is not a CADID associated with this property, therefore unable to display Mapview", "MISSING CADID", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Return
+
+        Else
+
+            Dim EnlightenURL As String = "https://esct1prodgis01v.esc.nsw.gov.au/IntraMaps80/?project=EUROBODALLA&module=PROPERTY%20&layer=REGISTERED%20PARCELS&mapkey=" & cadId
+            Process.Start(EnlightenURL)
+
+        End If
+    End Sub
+
+    Private Sub ibGoogleMaps_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibGoogleMaps.ItemClick
+        Dim URL As String = "http://maps.google.com/maps?f=q&hl=en&geocode=&time=&date=&ttype=&q=@ADDR@&ie=UTF8&t=@TYPE@"
+
+        Dim address As String = txtStreetNo.Text & " " & txtStreetName.Text & " " & cboDAlocalityCode.Text & " Australia"
+        address = address.Replace(" ", "+")
+        address = address.Replace(",", "%2c")
+
+        URL = URL.Replace("@ADDR@", address)
+
+        'Select Case "Satellite"
+        '    Case "Map"
+        '        URL.Replace("@TYPE@", "m")
+        'Case "Satellite"
+        URL = URL.Replace("@TYPE@", "h")
+        '    Case "Terrain"
+        'URL.Replace("@TYPE@", "p")
+        'End Select
+
+        Process.Start(URL)
+    End Sub
 
 
 

@@ -695,6 +695,12 @@
     <Compile Include="MyControls\DCPCheckListTwo.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="MyControls\ucConstructionCertOld.Designer.vb">
+      <DependentUpon>ucConstructionCertOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\ucConstructionCertOld.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Outlook Module\OutlookHelper.vb" />
     <Compile Include="Devexpress Reports\AbbreviatedSection9464DistributionOfPaymentsReport.Designer.vb">
       <DependentUpon>AbbreviatedSection9464DistributionOfPaymentsReport.vb</DependentUpon>
@@ -1571,6 +1577,9 @@
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\ucConstructionCertOld.resx">
+      <DependentUpon>ucConstructionCertOld.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Outlook Module\WhoAreYouSendingMailTo.resx">
       <DependentUpon>WhoAreYouSendingMailTo.vb</DependentUpon>
@@ -3338,6 +3347,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\DevelopmentIcon.png" />
+    <None Include="Resources\Google-Maps-icon.png" />
+    <Content Include="Resources\intramaps.jpg" />
+    <Content Include="Resources\intramapslink.jpg" />
     <Content Include="Under-Construction.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
