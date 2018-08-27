@@ -133,5 +133,8 @@
     <Setting Name="PlanLocation" Type="System.String" Scope="Application">
       <Value Profile="(Default)">\\rec\daplans\</Value>
     </Setting>
+    <Setting Name="ApplicationSkinName" Type="System.String" Scope="User">
+      <Value Profile="(Default)">DevExpress Style</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
