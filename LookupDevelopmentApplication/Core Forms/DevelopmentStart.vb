@@ -16,6 +16,7 @@ Imports DevExpress.XtraGrid.Views.Grid.ViewInfo
 Imports DevExpress.XtraReports.UI
 Imports DevExpress.XtraSplashScreen
 Imports ADDINFO = ClassAdditionalInformation.AdditionalInfo
+
 'Imports ADwrapper = ActiveDirectoryWrapper.PC.ADWrapper
 Imports ADHelpr = ADHelper.ADHelper
 'Imports CrystalDecisions.ReportSource
@@ -212,6 +213,7 @@ Public Class DevelopmentStart
         LoadLookupEdit(Me.cboDAAuthorityId, "usp_LoadUpDAAuthorityList")
         LoadLookupEdit(cboReasonOver40, "usp_LoadUp_REASON_DA_APPL_40DAYSList")
         LoadLookupEdit(cboProgressCode, "usp_LoadUp_ProgressCodeList")
+     LoadLookupEdit(lupSection68, "usp_SELECT_ListOfSection68Items")
 
         ''LoadCombo(Me.cboDevType, "usp_LoadUpDevTypeList")
         loadDevelopmentTypeCombo()
@@ -222,6 +224,10 @@ Public Class DevelopmentStart
         LoadLookupEdit(Me.cboDAtype3, "usp_LoadUpDevTypeList")
         'LoadLetterTypeCombo()
         LoadLookupEdit(Me.cboDevUse, "usp_LoadUpDevUseList")
+        LoadLookupEdit(cboIntendedLandUse, "usp_SELECT_LoadIntendLandUseList")
+        LoadLookupEdit(cboAttachmentStatus, "usp_SELECT_ListOfAttachmentTypes")
+
+
         ''LoadCombo(Me.cboIntDevActs , "usp_LoadUpIntegratedDevelopmentActList")
         LoadLookupEdit(Me.cboDAlocalityCode, "usp_LoadUpLocalityCodesList")
         ''LoadCombo(cboAssessmentType, "usp_LoadUpDADefaultConditionsList")
@@ -286,6 +292,37 @@ Public Class DevelopmentStart
         colSector.Add(New LookUpColumnInfo("Key", 0))
 
         colSector.Item(1).Visible = False
+
+
+        '-------------------------------------
+        Dim Occupancy As New ArrayList
+
+        ' Add division structure entries to the arraylist
+        With Occupancy
+            .Add(New AreaType("Single", "1"))
+            .Add(New AreaType("Dual", "2"))
+        End With
+
+        With lupOccupancyStatus.Properties
+            .DataSource = Occupancy
+            .DisplayMember = "Name"
+            .ValueMember = "Key"
+            .ShowFooter = False
+            .ShowHeader = False
+
+
+        End With
+        Dim colOccup As LookUpColumnInfoCollection = lupOccupancyStatus.Properties.Columns
+        colOccup.Add(New LookUpColumnInfo("Name", 0))
+        colOccup.Add(New LookUpColumnInfo("Key", 0))
+
+        colOccup.Item(1).Visible = False
+
+
+
+
+
+        '----------------------------------------
 
 
         Dim CouncilDepot As New ArrayList
@@ -2666,92 +2703,6 @@ Public Class DevelopmentStart
         End Using
 
     End Sub
-
-    'Private Sub LockApplication()
-    '    txtCCno.ReadOnly = True
-    '    chkSec94.Enabled = False
-    '    cboAppType.Enabled = False
-    '    txtFileNo.ReadOnly = True
-    '    txtAppName.ReadOnly = True
-    '    txtAppAddress.ReadOnly = True
-    '    txtAppTown.ReadOnly = True
-    '    txtAppPcode.ReadOnly = True
-    '    txtAppPhone.ReadOnly = True
-    '    txtAppemail.ReadOnly = True
-    '    btnEditDA.Enabled = True
-    '    btnAddDA.Enabled = Administration
-    '    rbNotifyAdvert.Enabled = False
-    '    Me.rbNone.Enabled = False
-    '    Me.rbNotify.Enabled = False
-
-    '    Me.btnSaveDA.Enabled = False
-    '    Me.txtLot.ReadOnly = True
-    '    Me.txtDP.ReadOnly = True
-    '    Me.txtSection.ReadOnly = True
-    '    Me.txtArea.ReadOnly = True
-    '    Me.cboAreaType.Enabled = False
-    '    Me.txtStreetNo.ReadOnly = True
-    '    Me.txtStreetName.ReadOnly = True
-    '    Me.cboDAlocalityCode.Enabled = False
-    '    Me.cboDACensusCode.Enabled = False
-    '    Me.txtDAOwnersName.ReadOnly = True
-    '    Me.txtDAOwnersAddress.ReadOnly = True
-    '    Me.txtDAOwnersTown.ReadOnly = True
-    '    Me.txtDAOwnersPcode.ReadOnly = True
-    '    Me.txtDAOwnersPhone.ReadOnly = True
-    '    Me.chkBASIXRecd.Enabled = False
-    '    Me.txtBASIXCertNo.ReadOnly = True
-    '    Me.txtBASIXwater.ReadOnly = True
-    '    Me.txtBASIXthermal.ReadOnly = True
-    '    Me.txtBASIXenergy.ReadOnly = True
-    '    Me.btnAddPIN.Enabled = False
-    '    'Me.btnRemovePIN.Enabled = True
-    '    Me.btnRetrieveProperty.Enabled = False
-    '    Me.chkDesc1.Enabled = False
-    '    Me.chkDADesc2.Enabled = False
-    '    Me.chkDADesc3.Enabled = False
-    '    Me.chkDADesc4.Enabled = False
-    '    Me.chkDADesc5.Enabled = False
-    '    Me.chkDADesc6.Enabled = False
-    '    Me.chkDADesc7.Enabled = False
-    '    Me.chkDADesc8.Enabled = False
-    '    Me.chkGiftDonation.Enabled = False
-    '    Me.cboDevType.Enabled = False
-    '    Me.cboDevUse.Enabled = False
-    '    txtDADesc.ReadOnly = True
-    '    txtDAestCost.ReadOnly = True
-    '    txtDAFloor.ReadOnly = True
-    '    cboConsentType.Enabled = False
-    '    cboDAtype1.Enabled = False
-    '    cboDAType2.Enabled = False
-    '    cboDAtype3.Enabled = False
-    '    cboDAClass.Enabled = False
-    '    cboDAClass1.Enabled = False
-    '    cboDAClass2.Enabled = False
-    '    cboDAClass3.Enabled = False
-    '    txtModDesc.ReadOnly = True
-    '    btnAddFile.Enabled = False
-    '    btnRemoveFile.Enabled = False
-    '    Me.chkSec68q1.Enabled = True
-    '    Me.chkSec68q2.Enabled = True
-    '    Me.chkSec68q3.Enabled = True
-    '    Me.chkSec68q4.Enabled = True
-    '    Me.chkSec68q5.Enabled = True
-    '    Me.chkSec68q6.Enabled = True
-    '    Me.chkSec68q7.Enabled = True
-    '    LockTheForm(grpAssessment, False)
-    '    LockTheForm(grpDetermination, False)
-    '    LockTheForm(grpNotification, False)
-    '    cboAdvertSignDepot.Enabled = False
-    '    'Me.mnuImages.Enabled = True
-    '    Me.mnuCompliance.Enabled = True
-    '    Me.mnuOtherApplication.Enabled = True
-    '    'me.mnuPreviewAssessment.Enabled=True
-    '    Me.mnuEngDetailsPostConsent.Enabled = True
-    '    Me.menuAssessmentApplication.Enabled = Assessment
-
-    'End Sub
-
     Private Sub SaveTheStatus()
 
         Using cn As New SqlConnection(My.Settings.connectionString)
@@ -7369,31 +7320,20 @@ Public Class DevelopmentStart
 
 #Region "Section68andIntDev"
 
-    Private Sub btnEdit68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnEdit68.Click
+
+    Private Sub btnInsert68_Click(sender As Object, e As EventArgs) Handles btnInsert68.Click
         'Edit Sec68 Tab
-        LockTheForm(grp68, True)
-        grp68.Enabled = True
-        btnEdit68.Enabled = False
-        Me.btnSave68.Enabled = True
+        'LockTheForm(grp68, True)
+        'grp68.Enabled = True
+        btnInsert68.Enabled = False
+        'Me.btnSave68.Enabled = True
 
 
-    End Sub
-
-    Private Sub btnSave68_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSave68.Click
-        LockTheForm(grp68, False)
-        btnSave68.Enabled = False
-        btnEdit68.Enabled = True
-
-        SaveSection68()
-
-    End Sub
-
-    Private Sub SaveSection68()
         Using cn As New SqlConnection(My.Settings.connectionString)
             Try
                 cn.Open()
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
+                MessageBox.Show(ex.Message, " in btnInsert68_Click routine - form " & Me.Name)
 
             End Try
 
@@ -7405,79 +7345,82 @@ Public Class DevelopmentStart
                     With cmd
                         .Connection = cn
                         .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_DAUPDATE_Section68"
+                        .CommandText = "INSERT_Section68Item"
 
-                        .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = txtDANo.Text
-                        .Parameters.Add("@SEC681", SqlDbType.Int).Value = Me.chkSec68q1.CheckState
-                        .Parameters.Add("@SEC682", SqlDbType.Int).Value = Me.chkSec68q2.CheckState
-                        .Parameters.Add("@SEC683", SqlDbType.Int).Value = Me.chkSec68q3.CheckState
-                        .Parameters.Add("@SEC684", SqlDbType.Int).Value = Me.chkSec68q4.CheckState
-                        .Parameters.Add("@SEC685", SqlDbType.Int).Value = Me.chkSec68q5.CheckState
-                        .Parameters.Add("@SEC686", SqlDbType.Int).Value = Me.chkSec68q6.CheckState
-                        .Parameters.Add("@SEC687", SqlDbType.Int).Value = Me.chkSec68q7.CheckState
+                        .Parameters.Add("@DANO", SqlDbType.VarChar).Value = txtDANo.Text
+                        .Parameters.Add("@ITEMID", SqlDbType.Int).Value = CInt(lupSection68.EditValue)
+
                         .ExecuteNonQuery()
 
                     End With
+
+
 
                 End Using
 
 
 
-
             Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in SaveSection68 routine - form " & Me.Name)
+                MessageBox.Show(ex.Message, " in btnInsert68_Click routine - form " & Me.Name)
 
             End Try
         End Using
 
+        LoadSection68(txtDANo.Text)
+
+        lupSection68.EditValue = Nothing
     End Sub
 
-    'Private Sub btnSaveIntDev_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSaveIntDev
-
-    '    btnAddIntDev.Enabled = True
-    '    btnRemoveIntDev.Enabled = False
-
-    '    Using cn As New SqlConnection(My.Settings.connectionString)
-    '        Try
-    '            cn.Open()
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in btnSaveIntDev_Click routine - form " & Me.Name)
-
-    '        End Try
-
-
-    '        Try
-
-    '            Using cmd As New SqlCommand
-
-    '                With cmd
-    '                    .Connection = cn
-    '                    .CommandType = CommandType.StoredProcedure
-    '                    .CommandText = "usp_RemoveIntDevFromGridData"
-
-    '                    .Parameters.Add("@ID", SqlDbType.Int).Value = CInt(dgvIntDev.CurrentRow.Cells(0).Value)
-    '                    .ExecuteNonQuery()
-
-    '                End With
-
-
-
-    '            End Using
+    Private Sub btnRemove68_Click(sender As Object, e As EventArgs) Handles btnRemove68.Click
 
 
 
 
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in btnSaveIntDev_Click routine - form " & Me.Name)
-
-    '        End Try
-    '    End Using
-
-    '    LoadIntDevCombo()
-    '    loadIntDevGrid(txtDANo.Text)
+        Dim myobj As DataRowView = CType(gvwSection68.GetFocusedRow, DataRowView)
 
 
-    'End Sub
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in btnRemove68_Click routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_DELETE_Section68Item"
+
+                        .Parameters.Add("@ITEMID", SqlDbType.Int).Value = CInt(myobj.Row.Item("sectIdx"))
+
+                        .ExecuteNonQuery()
+
+                    End With
+
+
+
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in btnRemove68_Click routine - form " & Me.Name)
+
+            End Try
+        End Using
+
+        LoadSection68(txtDANo.Text)
+
+    End Sub
+
 
     Private Sub cboIntDevActs_EditValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cboIntDevActs.EditValueChanged
         btnAddIntDev.Enabled = Not cboIntDevActs.EditValue Is Nothing
@@ -7681,6 +7624,54 @@ Public Class DevelopmentStart
         End Using
 
 
+
+    End Sub
+
+    Private Sub LoadSection68(DANumber As String)
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadSection68 routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_SELECT_ListOfSection68ItemsForDA"
+
+                        .Parameters.Add("@DANO", SqlDbType.VarChar).Value = DANumber
+
+
+
+                    End With
+
+                    Dim objDT As New DataTable
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    grdSection68.DataSource = objDT
+
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadSection68 routine - form " & Me.Name)
+
+            End Try
+        End Using
 
     End Sub
 
@@ -9226,7 +9217,7 @@ Public Class DevelopmentStart
 
 
         BiSaveDA.Enabled = False
-        btnSave68.Enabled = False
+        'btnSave68.Enabled = False
         btnRemoveIntDev.Enabled = False
         btnSaveStatus.Enabled = False
 
@@ -9335,7 +9326,8 @@ Public Class DevelopmentStart
                         txtBASIXthermal.Text = objDataRow.Item("BasixThermal").ToString
                         txtBASIXenergy.Text = objDataRow.Item("BasixEnergy").ToString
                         txtBASIXwater.Text = objDataRow.Item("BasixWater").ToString
-
+                        'radOccupancy.EditValue =1'CType(objDataRow.Item("occupancyStatus"), Integer)
+                        lupOccupancyStatus.EditValue = objDataRow.Item("occupancyStatus").ToString
 
                         'Description
                         If Not IsDBNull(objDataRow.Item("DADesc1")) Then chkDesc1.Checked = CBool(objDataRow.Item("DADesc1"))
@@ -9363,6 +9355,17 @@ Public Class DevelopmentStart
                             nudDwellings.Visible = isReport
                             lblNoDwellings.Visible = isReport
 
+                            txtExistingDwelings.Visible = isReport
+                            lblExistingDwellings.Visible = isReport
+
+                            txtDemolishedDwelings.Visible = isReport
+                            lblNoDemolishedDwellings.Visible = isReport
+
+                            cboAttachmentStatus.Visible = isReport
+                            lblAttachement.Visible = isReport
+
+                            lupOccupancyStatus.Visible = isReport
+                            lblOccupancy.Visible = isReport
 
                         Else
 
@@ -9371,9 +9374,34 @@ Public Class DevelopmentStart
                             nudDwellings.Visible = False
                             lblNoDwellings.Visible = False
 
+                            txtExistingDwelings.Visible = False
+                            lblExistingDwellings.Visible = False
+
+                            txtDemolishedDwelings.Visible = False
+                            lblNoDemolishedDwellings.Visible = False
+
+                            cboAttachmentStatus.Visible = False
+                            lblAttachement.Visible = False
+
+                            lupOccupancyStatus.Visible = False
+                            lblOccupancy.Visible = False
+
                         End If
 
                         nudDwellings.Text = objDataRow.Item("NumberOfDwellings").ToString
+                        txtExistingDwelings.Text = objDataRow.Item("ExistingDwelings").ToString
+                        txtDemolishedDwelings.Text = objDataRow.Item("DemolishedDwelings").ToString
+
+
+                        If Not IsDBNull(objDataRow.Item("AttachmentStatus")) Then
+
+                            cboAttachmentStatus.EditValue = CInt(objDataRow.Item("AttachmentStatus"))
+
+                        Else
+                            cboAttachmentStatus.EditValue = Nothing
+                        End If
+
+
 
 
                         If Not IsDBNull(objDataRow.Item("DADevUseId")) Then
@@ -9381,6 +9409,15 @@ Public Class DevelopmentStart
 
                         Else
                             cboDevUse.EditValue = Nothing
+                        End If
+
+
+                        If Not IsDBNull(objDataRow.Item("IntendLandUse")) Then
+
+                            cboIntendedLandUse.EditValue = CInt(objDataRow.Item("IntendLandUse"))
+
+                        Else
+                            cboIntendedLandUse.EditValue = Nothing
                         End If
 
 
@@ -9677,6 +9714,8 @@ Public Class DevelopmentStart
                     LoadSummaryData(DANo)
                     LoadIntDevCombo()
                     loadIntDevGrid(DANo)
+                    LoadSection68(DANo)
+
 
                     Dim PINS As String = String.Empty
 
@@ -9700,11 +9739,6 @@ Public Class DevelopmentStart
                         LoadAssociateApplicationsGrid(PINS.Substring(0, PINS.Length - 1))
 
                     End If
-
-
-
-
-                    btnEdit68.Enabled = True
 
 
 
@@ -10009,13 +10043,20 @@ Public Class DevelopmentStart
 
                         If cboSector.Text <> String.Empty Then .Parameters.Add("@SECTOR", SqlDbType.Int).Value = CInt(cboSector.EditValue)
 
+
                         If Not cboBuildingType.EditValue Is Nothing Then .Parameters.Add("@TypeBldgCode", SqlDbType.Int).Value = CInt(cboBuildingType.EditValue)
 
 
 
                         .Parameters.Add("@NODWELLINGS", SqlDbType.Int).Value = CType(nudDwellings.Text, Integer)
+                        If txtExistingDwelings.Text <> String.Empty Then .Parameters.Add("@ExistingDwelings", SqlDbType.Int).Value = CType(txtExistingDwelings.Text, Integer)
+                        If txtDemolishedDwelings.Text <> String.Empty Then .Parameters.Add("@DemolishedDwelings", SqlDbType.Int).Value = CType(txtDemolishedDwelings.Text, Integer)
 
                         If Not cboDevUse.EditValue Is Nothing Then .Parameters.Add("@USEID", SqlDbType.Int).Value = CInt(Me.cboDevUse.EditValue)
+
+                        If Not cboIntendedLandUse.EditValue Is Nothing Then .Parameters.Add("@IntendedLandUse", SqlDbType.Int).Value = CInt(Me.cboIntendedLandUse.EditValue)
+                        If Not cboAttachmentStatus.EditValue Is Nothing Then .Parameters.Add("@AttachmentStatus", SqlDbType.Int).Value = CInt(Me.cboAttachmentStatus.EditValue)
+
                         .Parameters.Add("@DESC", SqlDbType.NVarChar).Value = Me.txtDADesc.Text
                         .Parameters.Add("@MODDESC", SqlDbType.NVarChar).Value = Me.txtModDesc.Text
 
@@ -10064,6 +10105,8 @@ Public Class DevelopmentStart
                         .Parameters.Add("@BASIXTHERMAL", SqlDbType.NVarChar).Value = Me.txtBASIXthermal.Text
                         .Parameters.Add("@BASIXENERGY", SqlDbType.NVarChar).Value = Me.txtBASIXenergy.Text
                         .Parameters.Add("@BASIXWATER", SqlDbType.NVarChar).Value = Me.txtBASIXwater.Text
+                        '.Parameters.Add("@occupancyStatus", SqlDbType.Int).Value = radOccupancy.EditValue
+                        If lupOccupancyStatus.EditValue Is Nothing Then .Parameters.Add("@occupancyStatus", SqlDbType.Int).Value = CInt(lupOccupancyStatus.EditValue)
 
 
                         .ExecuteNonQuery()
@@ -10288,52 +10331,52 @@ Public Class DevelopmentStart
     End Function
 
 
-    Private Sub btnSaveDA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    'Private Sub btnSaveDA_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
 
-        If cboDevUse.EditValue Is Nothing Then
+    '    If cboDevUse.EditValue Is Nothing Then
 
-            MessageBox.Show("you are required to select a Development Use", "Not complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
+    '        MessageBox.Show("you are required to select a Development Use", "Not complete", MessageBoxButtons.OK, MessageBoxIcon.Information)
 
-            With ErrorProvider
-                .SetIconAlignment(cboDevUse, ErrorIconAlignment.MiddleRight)
-                .SetError(cboDevUse, "This is required")
-            End With
+    '        With ErrorProvider
+    '            .SetIconAlignment(cboDevUse, ErrorIconAlignment.MiddleRight)
+    '            .SetError(cboDevUse, "This is required")
+    '        End With
 
-            Return
-        Else
+    '        Return
+    '    Else
 
-            ErrorProvider.SetError(cboDevUse, "")
+    '        ErrorProvider.SetError(cboDevUse, "")
 
-        End If
-
-
-        'LockTheForm(pnlApplicationData, False)
-        LockTheForm(pnlDisplayAssociatedApps, False)
-        LockTheForm(pnlDisplaySect68IntDev, False)
-        LockTheForm(grpDetails, False)
-        LockTheForm(grpLand, False)
-        LockTheForm(grpOwner, False)
-        LockTheForm(grpDescription, False)
-        LockTheForm(grpAdditional, False)
-        LockTheForm(grpPurpose, False)
-        LockTheForm(grpBasix, False)
-        LockTheForm(grpFileNumber, False)
-        LockTheForm(grpCCSum, False)
+    '    End If
 
 
-        BiEditDA.Enabled = True
-        BiSaveDA.Enabled = False
+    '    'LockTheForm(pnlApplicationData, False)
+    '    LockTheForm(pnlDisplayAssociatedApps, False)
+    '    LockTheForm(pnlDisplaySect68IntDev, False)
+    '    LockTheForm(grpDetails, False)
+    '    LockTheForm(grpLand, False)
+    '    LockTheForm(grpOwner, False)
+    '    LockTheForm(grpDescription, False)
+    '    LockTheForm(grpAdditional, False)
+    '    LockTheForm(grpPurpose, False)
+    '    LockTheForm(grpBasix, False)
+    '    LockTheForm(grpFileNumber, False)
+    '    LockTheForm(grpCCSum, False)
 
-        btnAddPIN.Enabled = False
-        BiAddDA.Enabled = True
-        btnRetrieveProperty.Enabled = False
-        btnAddFile.Enabled = False
 
-        btnSaveDA_ClickExtracted()
-        'txtOfficer.Properties.Buttons(0).Enabled = False
-        txtOfficer.ReadOnly = True
+    '    BiEditDA.Enabled = True
+    '    BiSaveDA.Enabled = False
 
-    End Sub
+    '    btnAddPIN.Enabled = False
+    '    BiAddDA.Enabled = True
+    '    btnRetrieveProperty.Enabled = False
+    '    btnAddFile.Enabled = False
+
+    '    btnSaveDA_ClickExtracted()
+    '    'txtOfficer.Properties.Buttons(0).Enabled = False
+    '    txtOfficer.ReadOnly = True
+
+    'End Sub
 
 
     Private Sub loadDevelopmentTypeCombo()
@@ -10430,18 +10473,25 @@ Public Class DevelopmentStart
 #End Region
 
 
+
+    Shared Sub New()
+        DevExpress.UserSkins.BonusSkins.Register()
+        DevExpress.Skins.SkinManager.EnableFormSkins()
+    End Sub
+
     Public Sub New()
         isloading = True
         ' This call is required by the Windows Form Designer.
         InitializeComponent()
 
+        ErrorProvider = New ErrorProvider()
 
+        ErrorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink
 
-
-        ErrorProvider = New System.Windows.Forms.ErrorProvider()
-        ErrorProvider.BlinkStyle = System.Windows.Forms.ErrorBlinkStyle.NeverBlink
-
+        UserLookAndFeel.Default.SkinName = My.MySettings.Default("ApplicationSkinName").ToString()
+        
         isloading = False
+
     End Sub
 
 
@@ -10577,6 +10627,18 @@ Public Class DevelopmentStart
         nudDwellings.Visible = isReport
         lblNoDwellings.Visible = isReport
 
+        txtExistingDwelings.Visible = isReport
+        lblExistingDwellings.Visible = isReport
+
+        txtDemolishedDwelings.Visible = isReport
+        lblNoDemolishedDwellings.Visible = isReport
+
+        cboAttachmentStatus.Visible = isReport
+        lblAttachement.Visible = isReport
+
+        lupOccupancyStatus.Visible = isReport
+        lblOccupancy.Visible = isReport
+
 
         If isReport = True Then
 
@@ -10585,20 +10647,21 @@ Public Class DevelopmentStart
                 Case 0, 4, 5, 6, 9, 10, 19, 20, 28, 35, 36, 37, 39, 46, 48
 
                     nudDwellings.EditValue = 1
+                    txtExistingDwelings.EditValue = 0
+                    txtDemolishedDwelings.EditValue = 0
+                    lupOccupancyStatus.EditValue = "1"
 
                 Case Else
 
                     nudDwellings.EditValue = 0
-
+                    txtExistingDwelings.EditValue = 0
+                    txtDemolishedDwelings.EditValue = 0
+                    'lupOccupancyStatus.EditValue = Nothing
 
             End Select
 
         End If
 
-        'Else
-
-        '    nudDwellings.Visible = False
-        '    lblNoDwellings.Visible = False
 
 
 
@@ -10616,20 +10679,6 @@ Public Class DevelopmentStart
     End Sub
 
 
-
-    Private Sub btnEnlighten_Click(sender As System.Object, e As System.EventArgs)
-
-        'lstPINs.SelectedIndex = 0
-
-        'Dim EnlightenURL As String = "http://escgis05v/enlighten/IntegrationLogon.cfm?search=Pin&Pin=" & CInt(lstPINs.SelectedValue) & "&refresh=YES"
-
-        'Process.Start(EnlightenURL)
-
-
-
-
-
-    End Sub
 
 
 
@@ -13399,11 +13448,43 @@ Public Class DevelopmentStart
         Process.Start(URL)
     End Sub
 
+    Private Sub cboDevUse_EditValueChanged(sender As Object, e As EventArgs) Handles cboDevUse.EditValueChanged
+        If cboDevUse.IsLoading Or LoadingForm Then Return
+
+        Select Case CInt(cboDevUse.EditValue)
+
+            Case 1 : cboIntendedLandUse.EditValue = 1
+
+            Case Else : cboIntendedLandUse.EditValue = 2
+
+        End Select
 
 
 
+    End Sub
 
+    Private Sub lupSection68_EditValueChanged(sender As Object, e As EventArgs) Handles lupSection68.EditValueChanged
 
+        If lupSection68.IsLoading Then Return
+
+        btnInsert68.Enabled = True
+
+    End Sub
+
+    Private Sub gvwSection68_RowClick(sender As Object, e As RowClickEventArgs) Handles gvwSection68.RowClick
+        btnRemove68.Enabled = True
+    End Sub
+
+    Private Sub DevelopmentStart_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
+
+        
+#Disable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
+        My.Settings.Default("ApplicationSkinName") = UserLookAndFeel.Default.SkinName
+        My.Settings.Default.Save()
+
+#Enable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
+
+    End Sub
 
 
 #Region "Redundant"
