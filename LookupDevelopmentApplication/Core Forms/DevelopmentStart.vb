@@ -11384,7 +11384,7 @@ Public Class DevelopmentStart
         Dim fileName As String = ""
 
         With saveDialoge
-            .Filter = "Word files (*.docx)|*.docx"
+            .Filter = "Word files (*.xlsx)|*.xlsx"
             .RestoreDirectory = True
             If .ShowDialog = DialogResult.OK Then
                 fileName = .FileName
@@ -11439,8 +11439,8 @@ Public Class DevelopmentStart
 
                     rept.CreateDocument()
 
-
-                    rept.ExportToDocx(fileName)
+                    rept.ExportToXlsx(filename)
+                    'rept.ExportToDocx(fileName)
 
                     Try
 

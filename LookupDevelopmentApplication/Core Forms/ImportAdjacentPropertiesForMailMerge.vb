@@ -164,7 +164,7 @@ Public Class ImportAdjacentPropertiesForMailMerge
                         .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = DANo
                         .Parameters.Add("@NAME", SqlDbType.NVarChar).Value = name
                         .Parameters.Add("@ADDRS", SqlDbType.NVarChar).Value = address
-                        .Parameters.Add("@TOWN", SqlDbType.NVarChar).Value = town.substring(0,town.length-1)
+                        .Parameters.Add("@TOWN", SqlDbType.NVarChar).Value = town'.substring(0,town.length-1)
                         .Parameters.Add("@TAG", SqlDbType.Int).Value = tag
                         .ExecuteNonQuery()
 
