@@ -143,9 +143,9 @@ Public Class DevelopmentStart
 
 
 
-		If My.Settings.connectionString = "Data Source=Development\dev;Initial Catalog=DevelopmentSQL;Integrated Security=True" Then
-			MessageBox.Show("WARNING THIS IS TEST DATA DO NOT PROCEED,  RING BOB NOW!!!", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
-		End If
+        If My.Settings.connectionString = "Data Source=Development\dev;Initial Catalog=DevelopmentSQL;Integrated Security=True" Then
+            MessageBox.Show("WARNING THIS IS TEST DATA DO NOT PROCEED,  RING BOB NOW!!!", "WARNING", MessageBoxButtons.OK, MessageBoxIcon.Warning)
+        End If
 
 
 #End If
@@ -213,7 +213,7 @@ Public Class DevelopmentStart
         LoadLookupEdit(Me.cboDAAuthorityId, "usp_LoadUpDAAuthorityList")
         LoadLookupEdit(cboReasonOver40, "usp_LoadUp_REASON_DA_APPL_40DAYSList")
         LoadLookupEdit(cboProgressCode, "usp_LoadUp_ProgressCodeList")
-     LoadLookupEdit(lupSection68, "usp_SELECT_ListOfSection68Items")
+        LoadLookupEdit(lupSection68, "usp_SELECT_ListOfSection68Items")
 
         ''LoadCombo(Me.cboDevType, "usp_LoadUpDevTypeList")
         loadDevelopmentTypeCombo()
@@ -1979,8 +1979,8 @@ Public Class DevelopmentStart
 
 #If CONFIG = "Release" Then
 
-			sUserID = My.User.Name.Substring(4)
-			'sUserID = "cdavey"
+            sUserID = My.User.Name.Substring(4)
+            'sUserID = "cdavey"
 
 #Else
 
@@ -2492,7 +2492,7 @@ Public Class DevelopmentStart
 
                 Select Case cb.Name
 
-                    Case "btnViewNote", "btnPrintSewer", "btnPrintBldgCert", "btnEditBldgCert", "btnEditTrees", "btnEditLTW", "btnAddFile", "btnAddPIN", "btnAddFile"
+                    Case "btnViewNote", "btnPrintSewer", "btnPrintBldgCert", "btnEditBldgCert", "btnEditTrees", "btnEditLTW", "btnAddFile", "btnAddPIN", "btnAddFile", "btnAddNote"
                         cb.Enabled = True
 
                     Case "btnAddDA", "btnEditDA", "btnViewOfficers", "btnEditStatus", "btnMapMerge", "btnPrintAdvert", "btnPrintAdvNotice", "btnDesignated", "btnDesignIntegr"
@@ -2518,7 +2518,7 @@ Public Class DevelopmentStart
 
                 Select Case cb.Name
 
-                    Case "btnViewNote", "btnPrintSewer", "btnPrintBldgCert", "btnEditBldgCert", "btnEditTrees", "btnEditLTW", "btnAddFile", "btnAddPIN", "btnAddFile"
+                    Case "btnViewNote", "btnPrintSewer", "btnPrintBldgCert", "btnEditBldgCert", "btnEditTrees", "btnEditLTW", "btnAddFile", "btnAddPIN", "btnAddFile", "btnAddNote"
                         cb.Enabled = True
 
                     Case "btnAddDA", "btnEditDA", "btnViewOfficers", "btnEditStatus", "btnMapMerge", "btnPrintAdvert", "btnPrintAdvNotice", "btnDesignated", "btnDesignIntegr"
@@ -2560,13 +2560,23 @@ Public Class DevelopmentStart
             ElseIf TypeOf ctrl Is LookUpEdit Then
                 Dim cb As LookUpEdit = DirectCast(ctrl, LookUpEdit)
 
-                If cb.Name <> "cboIntDevActs" Then
 
-                    cb.ReadOnly = Not bLock
-                Else
-                    cb.ReadOnly = False
+                Select Case cb.Name
+                    Case "cboIntDevActs", "lupSection68"
+                        cb.ReadOnly = False
+                    Case Else
+                        cb.Enabled = Not bLock
 
-                End If
+
+                End Select
+
+                'If cb.Name <> "cboIntDevActs", "lupSection68" Then
+
+                '    cb.ReadOnly = Not bLock
+                'Else
+                '    cb.ReadOnly = False
+
+                'End If
 
 
             ElseIf TypeOf ctrl Is TextBox Then
@@ -6593,7 +6603,7 @@ Public Class DevelopmentStart
         Me.cboNotesOfficer.ReadOnly = lock
         Me.btnEditNote.Enabled = lock
         Me.btnSaveNote.Enabled = Not lock
-        btnAddNote.Enabled = lock
+        btnAddNote.Enabled = True
         Me.btnNotePrint.Enabled = True
     End Sub
     Private Sub btnAddNote_Click(sender As Object, e As EventArgs) Handles btnAddNote.Click
@@ -10489,7 +10499,7 @@ Public Class DevelopmentStart
         ErrorProvider.BlinkStyle = ErrorBlinkStyle.NeverBlink
 
         UserLookAndFeel.Default.SkinName = My.MySettings.Default("ApplicationSkinName").ToString()
-        
+
         isloading = False
 
     End Sub
@@ -13477,7 +13487,7 @@ Public Class DevelopmentStart
 
     Private Sub DevelopmentStart_FormClosing(sender As Object, e As FormClosingEventArgs) Handles Me.FormClosing
 
-        
+
 #Disable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
         My.Settings.Default("ApplicationSkinName") = UserLookAndFeel.Default.SkinName
         My.Settings.Default.Save()
