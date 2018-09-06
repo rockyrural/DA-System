@@ -41,7 +41,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>46</ApplicationRevision>
+    <ApplicationRevision>61</ApplicationRevision>
     <ApplicationVersion>2.1.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -98,38 +98,38 @@
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.BonusSkins.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Charts.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.CodeParser.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.DataAccess.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Office.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Pdf.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Pdf.v17.2.Drawing, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.PivotGrid.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Printing.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Images.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Snap.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Sparkline.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Utils.v17.2.UI, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraBars.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraCharts.v17.2.Wizard, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraEditors.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGauges.v17.2.Core, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraGrid.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraLayout.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPdfViewer.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraPrinting.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.RichEdit.v17.2.Export, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraReports.v17.2.Extensions, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraRichEdit.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraRichEdit.v17.2.Extensions, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
-    <Reference Include="DevExpress.XtraTreeList.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.BonusSkins.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Charts.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Data.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Office.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v18.1.Drawing, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Images.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Snap.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Sparkline.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v18.1.UI, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraBars.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v18.1.Wizard, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGauges.v18.1.Core, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPdfViewer.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v18.1.Export, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v18.1.Extensions, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraRichEdit.v18.1.Extensions, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraTreeList.v18.1, Version=18.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DotNetSecLayer">
       <HintPath>..\..\Libraries\DotNetSecLayer.dll</HintPath>
     </Reference>
@@ -433,6 +433,12 @@
     <Compile Include="Core Forms\LocateOriginalDA.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Core Forms\NCCBuildingSolutionsList.Designer.vb">
+      <DependentUpon>NCCBuildingSolutionsList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Core Forms\NCCBuildingSolutionsList.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Core Forms\NumberDwellingsApproved.Designer.vb">
       <DependentUpon>NumberDwellingsApproved.vb</DependentUpon>
     </Compile>
@@ -687,6 +693,12 @@
       <DependentUpon>DCPCheckListTwo.vb</DependentUpon>
     </Compile>
     <Compile Include="MyControls\DCPCheckListTwo.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MyControls\ucConstructionCertOld.Designer.vb">
+      <DependentUpon>ucConstructionCertOld.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MyControls\ucConstructionCertOld.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Outlook Module\OutlookHelper.vb" />
@@ -961,6 +973,12 @@
     </Compile>
     <Compile Include="Reports\ABSReportSetup.vb">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reports\AdvertisingConcentList.Designer.vb">
+      <DependentUpon>AdvertisingConcentList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\AdvertisingConcentList.vb">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\ApplicationCounter.Designer.vb">
       <DependentUpon>ApplicationCounter.vb</DependentUpon>
@@ -1331,6 +1349,9 @@
     <EmbeddedResource Include="Core Forms\LocateOriginalDA.resx">
       <DependentUpon>LocateOriginalDA.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Core Forms\NCCBuildingSolutionsList.resx">
+      <DependentUpon>NCCBuildingSolutionsList.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Core Forms\NumberDwellingsApproved.resx">
       <DependentUpon>NumberDwellingsApproved.vb</DependentUpon>
     </EmbeddedResource>
@@ -1557,11 +1578,17 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="MyControls\ucConstructionCertOld.resx">
+      <DependentUpon>ucConstructionCertOld.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Outlook Module\WhoAreYouSendingMailTo.resx">
       <DependentUpon>WhoAreYouSendingMailTo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ABSReportSetup.resx">
       <DependentUpon>ABSReportSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\AdvertisingConcentList.resx">
+      <DependentUpon>AdvertisingConcentList.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ApplicationCounter.resx">
       <DependentUpon>ApplicationCounter.vb</DependentUpon>
@@ -1979,7 +2006,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Data.v17.2.resources">
+    <PublishFile Include="de\DevExpress.Data.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -1989,7 +2016,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.DataAccess.v17.2.resources">
+    <PublishFile Include="de\DevExpress.DataAccess.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -1999,7 +2026,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.DataAccess.v17.2.UI.resources">
+    <PublishFile Include="de\DevExpress.DataAccess.v18.1.UI.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2009,7 +2036,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Diagram.v17.2.Core.resources">
+    <PublishFile Include="de\DevExpress.Diagram.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2019,7 +2046,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Office.v17.2.Core.resources">
+    <PublishFile Include="de\DevExpress.Office.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2029,7 +2056,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Pdf.v17.2.Core.resources">
+    <PublishFile Include="de\DevExpress.Pdf.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2039,7 +2066,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.PivotGrid.v17.2.Core.resources">
+    <PublishFile Include="de\DevExpress.PivotGrid.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2049,7 +2076,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Printing.v17.2.Core.resources">
+    <PublishFile Include="de\DevExpress.Printing.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2059,7 +2086,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.RichEdit.v17.2.Core.resources">
+    <PublishFile Include="de\DevExpress.RichEdit.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2069,7 +2096,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Snap.v17.2.Core.resources">
+    <PublishFile Include="de\DevExpress.Snap.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2079,7 +2106,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Snap.v17.2.resources">
+    <PublishFile Include="de\DevExpress.Snap.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2089,7 +2116,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Sparkline.v17.2.Core.resources">
+    <PublishFile Include="de\DevExpress.Sparkline.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2099,7 +2126,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Utils.v17.2.resources">
+    <PublishFile Include="de\DevExpress.Utils.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2109,7 +2136,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Utils.v17.2.UI.resources">
+    <PublishFile Include="de\DevExpress.Utils.v18.1.UI.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2119,7 +2146,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.Xpo.v17.2.resources">
+    <PublishFile Include="de\DevExpress.Xpo.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2129,7 +2156,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraBars.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraBars.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2139,7 +2166,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraCharts.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraCharts.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2149,7 +2176,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraCharts.v17.2.Wizard.resources">
+    <PublishFile Include="de\DevExpress.XtraCharts.v18.1.Wizard.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2159,7 +2186,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraEditors.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraEditors.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2169,7 +2196,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraGauges.v17.2.Core.resources">
+    <PublishFile Include="de\DevExpress.XtraGauges.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2179,7 +2206,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraGrid.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2189,7 +2216,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraLayout.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraLayout.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2199,7 +2226,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraNavBar.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraNavBar.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2209,7 +2236,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraPdfViewer.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraPdfViewer.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2219,7 +2246,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraPivotGrid.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraPivotGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2229,7 +2256,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraPrinting.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraPrinting.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2239,7 +2266,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraReports.v17.2.Extensions.resources">
+    <PublishFile Include="de\DevExpress.XtraReports.v18.1.Extensions.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2249,7 +2276,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraReports.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraReports.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2259,7 +2286,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraRichEdit.v17.2.Extensions.resources">
+    <PublishFile Include="de\DevExpress.XtraRichEdit.v18.1.Extensions.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2269,7 +2296,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraRichEdit.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraRichEdit.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2279,7 +2306,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraTreeList.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraTreeList.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2289,7 +2316,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="de\DevExpress.XtraVerticalGrid.v17.2.resources">
+    <PublishFile Include="de\DevExpress.XtraVerticalGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2299,7 +2326,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Data.v17.2.resources">
+    <PublishFile Include="es\DevExpress.Data.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2309,7 +2336,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.DataAccess.v17.2.resources">
+    <PublishFile Include="es\DevExpress.DataAccess.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2319,7 +2346,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.DataAccess.v17.2.UI.resources">
+    <PublishFile Include="es\DevExpress.DataAccess.v18.1.UI.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2329,7 +2356,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Diagram.v17.2.Core.resources">
+    <PublishFile Include="es\DevExpress.Diagram.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2339,7 +2366,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Office.v17.2.Core.resources">
+    <PublishFile Include="es\DevExpress.Office.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2349,7 +2376,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Pdf.v17.2.Core.resources">
+    <PublishFile Include="es\DevExpress.Pdf.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2359,7 +2386,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.PivotGrid.v17.2.Core.resources">
+    <PublishFile Include="es\DevExpress.PivotGrid.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2369,7 +2396,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Printing.v17.2.Core.resources">
+    <PublishFile Include="es\DevExpress.Printing.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2379,7 +2406,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.RichEdit.v17.2.Core.resources">
+    <PublishFile Include="es\DevExpress.RichEdit.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2389,7 +2416,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Snap.v17.2.Core.resources">
+    <PublishFile Include="es\DevExpress.Snap.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2399,7 +2426,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Snap.v17.2.resources">
+    <PublishFile Include="es\DevExpress.Snap.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2409,7 +2436,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Sparkline.v17.2.Core.resources">
+    <PublishFile Include="es\DevExpress.Sparkline.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2419,7 +2446,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Utils.v17.2.resources">
+    <PublishFile Include="es\DevExpress.Utils.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2429,7 +2456,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Utils.v17.2.UI.resources">
+    <PublishFile Include="es\DevExpress.Utils.v18.1.UI.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2439,7 +2466,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.Xpo.v17.2.resources">
+    <PublishFile Include="es\DevExpress.Xpo.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2449,7 +2476,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraBars.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraBars.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2459,7 +2486,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraCharts.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraCharts.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2469,7 +2496,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraCharts.v17.2.Wizard.resources">
+    <PublishFile Include="es\DevExpress.XtraCharts.v18.1.Wizard.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2479,7 +2506,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraEditors.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraEditors.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2489,7 +2516,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraGauges.v17.2.Core.resources">
+    <PublishFile Include="es\DevExpress.XtraGauges.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2499,7 +2526,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraGrid.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2509,7 +2536,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraLayout.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraLayout.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2519,7 +2546,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraNavBar.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraNavBar.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2529,7 +2556,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraPdfViewer.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraPdfViewer.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2539,7 +2566,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraPivotGrid.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraPivotGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2549,7 +2576,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraPrinting.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraPrinting.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2559,7 +2586,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraReports.v17.2.Extensions.resources">
+    <PublishFile Include="es\DevExpress.XtraReports.v18.1.Extensions.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2569,7 +2596,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraReports.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraReports.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2579,7 +2606,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraRichEdit.v17.2.Extensions.resources">
+    <PublishFile Include="es\DevExpress.XtraRichEdit.v18.1.Extensions.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2589,7 +2616,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraRichEdit.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraRichEdit.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2599,7 +2626,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraTreeList.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraTreeList.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2609,7 +2636,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="es\DevExpress.XtraVerticalGrid.v17.2.resources">
+    <PublishFile Include="es\DevExpress.XtraVerticalGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2629,7 +2656,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Data.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.Data.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2639,7 +2666,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.DataAccess.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.DataAccess.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2649,7 +2676,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.DataAccess.v17.2.UI.resources">
+    <PublishFile Include="ja\DevExpress.DataAccess.v18.1.UI.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2659,7 +2686,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Diagram.v17.2.Core.resources">
+    <PublishFile Include="ja\DevExpress.Diagram.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2669,7 +2696,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Office.v17.2.Core.resources">
+    <PublishFile Include="ja\DevExpress.Office.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2679,7 +2706,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Pdf.v17.2.Core.resources">
+    <PublishFile Include="ja\DevExpress.Pdf.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2689,7 +2716,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.PivotGrid.v17.2.Core.resources">
+    <PublishFile Include="ja\DevExpress.PivotGrid.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2699,7 +2726,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Printing.v17.2.Core.resources">
+    <PublishFile Include="ja\DevExpress.Printing.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2709,7 +2736,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.RichEdit.v17.2.Core.resources">
+    <PublishFile Include="ja\DevExpress.RichEdit.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2719,7 +2746,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Snap.v17.2.Core.resources">
+    <PublishFile Include="ja\DevExpress.Snap.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2729,7 +2756,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Snap.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.Snap.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2739,7 +2766,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Sparkline.v17.2.Core.resources">
+    <PublishFile Include="ja\DevExpress.Sparkline.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2749,7 +2776,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Utils.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.Utils.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2759,7 +2786,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Utils.v17.2.UI.resources">
+    <PublishFile Include="ja\DevExpress.Utils.v18.1.UI.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2769,7 +2796,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.Xpo.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.Xpo.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2779,7 +2806,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraBars.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraBars.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2789,7 +2816,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraCharts.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraCharts.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2799,7 +2826,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraCharts.v17.2.Wizard.resources">
+    <PublishFile Include="ja\DevExpress.XtraCharts.v18.1.Wizard.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2809,7 +2836,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraEditors.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraEditors.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2819,7 +2846,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraGauges.v17.2.Core.resources">
+    <PublishFile Include="ja\DevExpress.XtraGauges.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2829,7 +2856,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraGrid.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2839,7 +2866,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraLayout.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraLayout.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2849,7 +2876,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraNavBar.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraNavBar.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2859,7 +2886,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraPdfViewer.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraPdfViewer.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2869,7 +2896,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraPivotGrid.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraPivotGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2879,7 +2906,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraPrinting.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraPrinting.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2889,7 +2916,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraReports.v17.2.Extensions.resources">
+    <PublishFile Include="ja\DevExpress.XtraReports.v18.1.Extensions.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2899,7 +2926,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraReports.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraReports.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2909,7 +2936,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraRichEdit.v17.2.Extensions.resources">
+    <PublishFile Include="ja\DevExpress.XtraRichEdit.v18.1.Extensions.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2919,7 +2946,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraRichEdit.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraRichEdit.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2929,7 +2956,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraTreeList.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraTreeList.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2939,7 +2966,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ja\DevExpress.XtraVerticalGrid.v17.2.resources">
+    <PublishFile Include="ja\DevExpress.XtraVerticalGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2959,7 +2986,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Data.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.Data.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2969,7 +2996,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.DataAccess.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.DataAccess.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2979,7 +3006,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.DataAccess.v17.2.UI.resources">
+    <PublishFile Include="ru\DevExpress.DataAccess.v18.1.UI.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2989,7 +3016,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Diagram.v17.2.Core.resources">
+    <PublishFile Include="ru\DevExpress.Diagram.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -2999,7 +3026,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Office.v17.2.Core.resources">
+    <PublishFile Include="ru\DevExpress.Office.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3009,7 +3036,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Pdf.v17.2.Core.resources">
+    <PublishFile Include="ru\DevExpress.Pdf.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3019,7 +3046,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.PivotGrid.v17.2.Core.resources">
+    <PublishFile Include="ru\DevExpress.PivotGrid.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3029,7 +3056,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Printing.v17.2.Core.resources">
+    <PublishFile Include="ru\DevExpress.Printing.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3039,7 +3066,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.RichEdit.v17.2.Core.resources">
+    <PublishFile Include="ru\DevExpress.RichEdit.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3049,7 +3076,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Snap.v17.2.Core.resources">
+    <PublishFile Include="ru\DevExpress.Snap.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3059,7 +3086,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Snap.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.Snap.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3069,7 +3096,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Sparkline.v17.2.Core.resources">
+    <PublishFile Include="ru\DevExpress.Sparkline.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3079,7 +3106,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Utils.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.Utils.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3089,7 +3116,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Utils.v17.2.UI.resources">
+    <PublishFile Include="ru\DevExpress.Utils.v18.1.UI.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3099,7 +3126,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.Xpo.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.Xpo.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3109,7 +3136,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraBars.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraBars.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3119,7 +3146,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraCharts.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraCharts.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3129,7 +3156,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraCharts.v17.2.Wizard.resources">
+    <PublishFile Include="ru\DevExpress.XtraCharts.v18.1.Wizard.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3139,7 +3166,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraEditors.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraEditors.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3149,7 +3176,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraGauges.v17.2.Core.resources">
+    <PublishFile Include="ru\DevExpress.XtraGauges.v18.1.Core.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3159,7 +3186,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraGrid.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3169,7 +3196,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraLayout.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraLayout.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3179,7 +3206,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraNavBar.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraNavBar.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3189,7 +3216,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraPdfViewer.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraPdfViewer.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3199,7 +3226,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraPivotGrid.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraPivotGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3209,7 +3236,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraPrinting.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraPrinting.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3219,7 +3246,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraReports.v17.2.Extensions.resources">
+    <PublishFile Include="ru\DevExpress.XtraReports.v18.1.Extensions.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3229,7 +3256,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraReports.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraReports.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3239,7 +3266,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraRichEdit.v17.2.Extensions.resources">
+    <PublishFile Include="ru\DevExpress.XtraRichEdit.v18.1.Extensions.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3249,7 +3276,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraRichEdit.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraRichEdit.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3259,7 +3286,7 @@
       <IncludeHash>True</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraTreeList.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraTreeList.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3269,7 +3296,7 @@
       <IncludeHash>False</IncludeHash>
       <FileType>Satellite</FileType>
     </PublishFile>
-    <PublishFile Include="ru\DevExpress.XtraVerticalGrid.v17.2.resources">
+    <PublishFile Include="ru\DevExpress.XtraVerticalGrid.v18.1.resources">
       <Visible>False</Visible>
       <Group>
       </Group>
@@ -3320,6 +3347,10 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\DevelopmentIcon.png" />
+    <None Include="Resources\Google-Maps-icon.png" />
+    <Content Include="Resources\intramaps.jpg" />
+    <Content Include="Resources\intramapslink.jpg" />
     <Content Include="Under-Construction.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />

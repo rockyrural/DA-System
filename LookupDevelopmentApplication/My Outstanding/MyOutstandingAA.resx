@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="SqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InVzcF9Ub0RvTGlzdEFBcyI+PEZpZWxkIE5hbWU9IkFBTm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTGFwc2VkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQUFUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0cmVldCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBQVJlZ29EdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkFJIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBRGVjaXNpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTmV0d29ya1VzZXIiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InVzcF9Ub0RvTGlzdEFBcyI+PEZpZWxkIE5hbWU9IkFBTm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTGFwc2VkIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQUFUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlN0cmVldCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJBQVJlZ29EdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkFJIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBRGVjaXNpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTmV0d29ya1VzZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQUFGaWxlTm8iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
   <data name="$this.DataSourceSchema" xml:space="preserve">
     <value>&lt;?xml version="1.0"?&gt;
@@ -140,6 +140,7 @@
               &lt;xs:element name="AI" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="DADecision" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="NetworkUser" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="AAFileNo" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;

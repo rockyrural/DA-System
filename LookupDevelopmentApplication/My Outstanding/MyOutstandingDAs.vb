@@ -1,6 +1,6 @@
-Imports System.Data
 Imports System.Data.SqlClient
 Imports DevExpress.LookAndFeel
+Imports DevExpress.XtraEditors.Controls
 Imports DevExpress.XtraReports.UI
 'Imports CrystalDecisions.CrystalReports
 'Imports CrystalDecisions.CrystalReports.Engine
@@ -30,7 +30,7 @@ Public Class MyOutstandingDAs
         'Me.cboOfficers.Text = GetUsersName(UserLANID.Substring(4))
         'MyOustandingDAs_LoadExtracted(UserLANID.Substring(4))
 
-        Me.cboOfficers.Text = GetUsersName(sUserID)
+        lupOfficers.EditValue = sUserID
         MyOustandingDAs_LoadExtracted(sUserID)
 
         Loading = False
@@ -75,15 +75,27 @@ Public Class MyOutstandingDAs
                         objDT.Load(objDataReader)
                     End Using
 
-                    With cboOfficers
 
+
+                    With lupOfficers.Properties
+
+                        .Columns.Clear()
                         .DataSource = objDT
                         .DisplayMember = "Officer"
-                        .ValueMember = "Networkuser"
-                        .SelectedIndex = -1
+                        .ValueMember = "NetworkUser"
+                        .BestFitMode = BestFitMode.BestFitResizePopup
+                        .SearchMode = SearchMode.AutoComplete
+                        .AutoSearchColumnIndex = 1
+                        .ShowFooter = False
+                        .ShowHeader = False
 
                     End With
-                    'dgvSales 'dgvSales.Refresh()
+                    Dim col2 As LookUpColumnInfoCollection = lupOfficers.Properties.Columns
+                    col2.Add(New LookUpColumnInfo("NetworkUser", 0))
+                    col2.Add(New LookUpColumnInfo("Officer", 0))
+
+                    col2.Item(0).Visible = False
+
 
                 End Using
 
@@ -158,17 +170,257 @@ Public Class MyOutstandingDAs
 
     End Sub
 
+    Private Sub LoadUsersOutstandingDAs(UserID As String)
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadUsersOutstandingDAs routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_UserCurrentDAs"
+
+                        .Parameters.Add("@GLUSER", SqlDbType.VarChar).Value = UserID
+
+
+
+                    End With
+
+                    Dim objDT As New DataTable
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+
+                    grdOutStandingDA.DataSource = objDT
+
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadUsersOutstandingDAs routine - form " & Me.Name)
+
+            End Try
+        End Using
+
+
+
+    End Sub
+
+    Private Sub LoadUsersOutstandingAAs(userId As String)
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadUsersOutstandingAAs routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_ToDoListAAs"
+
+                        .Parameters.Add("@GLUSER", SqlDbType.VarChar).Value = userId
+
+
+
+                    End With
+
+                    Dim objDT As New DataTable
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    grdOutStandingAA.DataSource = objDT
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadUsersOutstandingAAs routine - form " & Me.Name)
+
+            End Try
+        End Using
+
+
+
+    End Sub
+
+    Private Sub LoadListofUsersReferrals(userId As String)
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadListofUsersReferrals routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_ToDoListReferrals"
+
+                        .Parameters.Add("@USERID", SqlDbType.VarChar).Value = userId
+
+
+
+                    End With
+
+                    Dim objDT As New DataTable
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    grdReferralsList.DataSource = objDT
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadListofUsersReferrals routine - form " & Me.Name)
+
+            End Try
+        End Using
+
+
+    End Sub
+
+    Private Sub LoadListOfUsersCCReferrals(userID As String)
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadListOfUsersCCReferrals routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_ToDoListCCs"
+
+                        .Parameters.Add("@USERID", SqlDbType.VarChar).Value = userID
+
+                    End With
+
+                    Dim objDT As New DataTable
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    grdOutstandingCC.DataSource = objDT
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadListOfUsersCCReferrals routine - form " & Me.Name)
+
+            End Try
+        End Using
+
+
+    End Sub
+
+    Private Sub LoadUsersAdditionalInfo(userId As String)
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadUsersAdditionalInfo routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_ToDoListAdditionalInfo"
+
+                        .Parameters.Add("@USERID", SqlDbType.VarChar).Value = userId
+
+
+
+                    End With
+
+                    Dim objDT As New DataTable
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    grdAdditionalInfo.DataSource = objDT
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadUsersAdditionalInfo routine - form " & Me.Name)
+
+            End Try
+        End Using
+
+    End Sub
+
     Private Sub MyOustandingDAs_LoadExtracted(ByVal UserID As String)
 
 
         Try
             LoadOfficerStats(UserID)
-            Me.Usp_UserCurrentDAsTableAdapter.Fill(Me.DevelopmentSQLDataSet.usp_UserCurrentDAs, UserID)
-            Me.ToDoListAdditionalInfoTableAdapter.Fill(Me.DevelopmentSQLDataSet.ToDoListAdditionalInfo, UserID)
-            Me.ToDoListCCsTableAdapter.Fill(Me.TodoListData.ToDoListCCs, UserID)
-            Me.ToDoListReferralsTableAdapter.Fill(Me.TodoListData.ToDoListReferrals, UserID)
-            Me.Usp_ToDoListAAsTableAdapter.Fill(Me.TodoListData.usp_ToDoListAAs, UserID)
-
+            LoadUsersOutstandingDAs(UserID)
+            LoadUsersOutstandingAAs(UserID)
+            LoadListofUsersReferrals(UserID)
+            LoadListOfUsersCCReferrals(UserID)
+            LoadUsersAdditionalInfo(UserID)
             loadAAReferralsList(UserID)
 
         Catch ex As System.Exception
@@ -271,16 +523,6 @@ Public Class MyOutstandingDAs
     End Function
 
 
-    Private Sub cboOfficers_SelectedValueChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles cboOfficers.SelectedValueChanged
-        If Loading Then Exit Sub
-        Try
-            MyOustandingDAs_LoadExtracted(cboOfficers.SelectedValue.ToString)
-            Me.btnPrint.Enabled = True
-
-        Catch ex As Exception
-
-        End Try
-    End Sub
 
     Public Sub New()
         Loading = True
@@ -294,124 +536,11 @@ Public Class MyOutstandingDAs
     End Sub
 
 
-    'Private Sub btnPrint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrint.Click
-    '    Dim r As Integer
-    '    Dim c As Integer = 1
-    '    Dim s As String
-
-    '    Me.Cursor = Cursors.WaitCursor
-
-    '    Dim xlApp As EXCEL.Application
-    '    Dim xlBook As EXCEL._Workbook
-    '    Dim objBooks As EXCEL.Workbooks
-    '    Dim objSheets As EXCEL.Sheets
-    '    Dim xlsheet As EXCEL._Worksheet
-
-    '    xlApp = New EXCEL.Application
-    '    objBooks = xlApp.Workbooks
-    '    xlBook = objBooks.Add
-    '    objSheets = xlBook.Worksheets
-
-    '    xlsheet = CType(objSheets.Item(1), EXCEL._Worksheet)
-
-
-    '    'xlApp = CType(CreateObject("Excel.Application"), _
-    '    '        Microsoft.Office.Interop.Excel.Application)
-    '    'xlBook = CType(xlApp.Workbooks.Add, _
-    '    '      Microsoft.Office.Interop.Excel.Workbook)
-    '    'xlsheet = CType(xlBook.Worksheets(1), _
-    '    '      Microsoft.Office.Interop.Excel.Worksheet)
-
-    '    'xlsheet.Application.Visible = True
-
-    '    xlsheet.Cells.Select()
-
-    '    xlsheet.Cells(1, 1).Value = "DANO"
-
-    '    xlsheet.Range(
-
-
-    '    xlsheet.Cells(1, 1).value = "DANO"
-    '    xlsheet.Cells(1, 2).value = "Lapsed"
-    '    xlsheet.Cells(1, 3).value = "DaysOver"
-    '    xlsheet.Cells(1, 4).value = "Type"
-    '    xlsheet.Cells(1, 5).value = "Location"
-    '    xlsheet.Cells(1, 6).value = "Date Registered"
-    '    xlsheet.Cells(1, 7).value = "Progress Comments"
-    '    xlsheet.Cells(1, 8).value = "Preassessment Date"
-    '    xlsheet.Cells(1, 9).value = "AI"
-
-
-    '    Dim rc As Integer = 2
-
-    '    For r = 0 To Usp_UserCurrentDAsDataGridView.Rows.Count - 1
-
-    '        For c = 0 To Usp_UserCurrentDAsDataGridView.Rows(r).Cells.Count - 1
-
-    '            s = Usp_UserCurrentDAsDataGridView.Rows(r).Cells(c).Value.ToString
-
-    '            xlsheet.Cells(rc, c + 1).value = s
-
-    '        Next
-
-    '        rc = rc + 1
-
-    '    Next
-    '    Dim FileName As String
-    '    If cboOfficers.SelectedIndex = -1 Then
-    '        FileName = "Myoutstanding.xlsx"
-    '    Else
-    '        FileName = cboOfficers.Text & ".xlsx"
-    '    End If
-
-    '    xlsheet.SaveAs(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\" & FileName)
-    '    xlApp.Quit()
-    '    MessageBox.Show("An excel workbook has been created in your My Documents folder called " & FileName)
-    '    Me.Cursor = Cursors.Default
-
-
-    'End Sub
-
-
-
-
-
 
 
 
     Private Sub btnPrint_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnPrint.Click
-        'Dim rptDocument As New ReportDocument
 
-        ''Pass the reportname to string variable 
-        'Dim strReportPath As String = String.Empty
-
-        'Select Case btnPrint.Tag
-        '    Case "DA"
-        '        strReportPath = My.Settings.ReportLocation & "mydas.rpt"
-        '    Case "CC"
-        '        strReportPath = My.Settings.ReportLocation & "MyCCs.rpt"
-
-        '    Case "REFER"
-        '        strReportPath = My.Settings.ReportLocation & "MyReferrals.rpt"
-
-        '    Case "AA"
-        '        strReportPath = My.Settings.ReportLocation & "myAAs.rpt"
-
-        '    Case "AAREFER"
-        '        strReportPath = My.Settings.ReportLocation & "myAAReferrals.rpt"
-
-        'End Select
-
-
-        'Check file exists
-        'If Not IO.File.Exists(strReportPath) Then
-        '    Throw (New Exception("Unable to locate report file:" & vbCrLf & strReportPath))
-        'End If
-
-        'Dim myPrintOptions As PrintOptions = rptDocument.PrintOptions
-        'myPrintOptions.PrinterName = My.Settings.DefaultPrinter
-        'myPrintOptions.PrinterDuplex = CrystalDecisions.Shared.PrinterDuplex.Default
-        'myPrintOptions.CustomPaperSource = GetSelectedSecondPaperSource()
 
 
         Using cn As New SqlConnection(My.Settings.connectionString)
@@ -433,22 +562,22 @@ Public Class MyOutstandingDAs
                         Select Case btnPrint.Tag
                             Case "DA"
                                 .CommandText = "usp_UserCurrentDAs"
-                                .Parameters.Add("@GLUSER", SqlDbType.VarChar).Value = cboOfficers.SelectedValue.ToString
+                                .Parameters.Add("@GLUSER", SqlDbType.VarChar).Value = lupOfficers.EditValue.ToString
                             Case "CC"
                                 .CommandText = "usp_ToDoListCCs"
-                                .Parameters.Add("@USERID", SqlDbType.VarChar).Value = cboOfficers.SelectedValue.ToString
+                                .Parameters.Add("@USERID", SqlDbType.VarChar).Value = lupOfficers.EditValue.ToString
 
                             Case "REFER"
                                 .CommandText = "usp_ToDoListReferrals"
-                                .Parameters.Add("@USERID", SqlDbType.VarChar).Value = cboOfficers.SelectedValue.ToString
+                                .Parameters.Add("@USERID", SqlDbType.VarChar).Value = lupOfficers.EditValue.ToString
 
                             Case "AA"
                                 .CommandText = "usp_ToDoListAAs"
-                                .Parameters.Add("@GLUSER", SqlDbType.VarChar).Value = cboOfficers.SelectedValue.ToString
+                                .Parameters.Add("@GLUSER", SqlDbType.VarChar).Value = lupOfficers.EditValue.ToString
 
                             Case "AAREFER"
                                 .CommandText = "usp_SELECT_AAReferalListByOfficerID"
-                                .Parameters.Add("@USERID", SqlDbType.VarChar).Value = cboOfficers.SelectedValue.ToString
+                                .Parameters.Add("@USERID", SqlDbType.VarChar).Value = lupOfficers.EditValue.ToString
 
 
                         End Select
@@ -463,6 +592,11 @@ Public Class MyOutstandingDAs
                         objDT.Load(objDataReader)
                     End Using
 
+                    'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
+                    'Dim mylist As DataSet = New DataSet
+                    'adapter.Fill(mylist, "PROPERTYNOTES")
+
+                    'mylist.WriteXmlSchema("FileLocation")
 
 
                     Select Case btnPrint.Tag
@@ -570,15 +704,7 @@ Public Class MyOutstandingDAs
         End Using
     End Sub
 
-    'Private Sub Usp_ToDoListAAsDataGridView_CellContentClick(ByVal sender As System.Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-    '    If e.ColumnIndex = -1 Then Exit Sub
-    '    With DAApplication
-    '        .StartPosition = FormStartPosition.CenterParent
-    '        .ShowDialog()
-    '        .Dispose()
-    '    End With
 
-    'End Sub
 
     Private Sub TabControl1_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles TabControl1.SelectedIndexChanged
 
@@ -591,12 +717,23 @@ Public Class MyOutstandingDAs
                     .Tag = "DA"
                     .Text = "Print my DAs list"
                 End With
+                With btnExportExcel
+                    .Enabled = True
+                    .Tag = "DA"
+                    .Text = "Export DAs list"
+                End With
+
             Case 2
 
                 With btnPrint
                     .Enabled = False
                     .Tag = ""
                     .Text = "Nothing to print"
+                End With
+                With btnExportExcel
+                    .Enabled = False
+                    .Tag = ""
+                    .Text = "Nothing to export"
                 End With
 
             Case 3
@@ -605,12 +742,22 @@ Public Class MyOutstandingDAs
                     .Tag = "CC"
                     .Text = "Print my CCs list"
                 End With
+                With btnExportExcel
+                    .Enabled = True
+                    .Tag = "CC"
+                    .Text = "Export CCs list"
+                End With
 
             Case 4
                 With btnPrint
                     .Enabled = True
                     .Tag = "REFER"
                     .Text = "Print my referrals"
+                End With
+                With btnExportExcel
+                    .Enabled = True
+                    .Tag = "REFER"
+                    .Text = "Export CCs referrals"
                 End With
 
             Case 5
@@ -619,12 +766,26 @@ Public Class MyOutstandingDAs
                     .Tag = "AA"
                     .Text = "Print my AAs list"
                 End With
+
+                With btnExportExcel
+                    .Enabled = True
+                    .Tag = "AA"
+                    .Text = "Export AAs list"
+                End With
+
+
             Case 6
                 With btnPrint
                     .Enabled = True
                     .Tag = "AAREFER"
                     .Text = "Print my AAs referrals"
                 End With
+                With btnExportExcel
+                    .Enabled = True
+                    .Tag = "AAREFER"
+                    .Text = "Export AAs referrals"
+                End With
+
 
 
         End Select
@@ -674,6 +835,187 @@ Public Class MyOutstandingDAs
 
         DevelopmentStart.DisplayMyDA = myobj.Row.Item("DANo").ToString
 
+
+    End Sub
+
+    Private Sub lupOfficers_EditValueChanged(sender As Object, e As EventArgs) Handles lupOfficers.EditValueChanged
+        If lupOfficers.IsLoading Then Return
+
+        If Loading Then Return
+
+        Try
+            MyOustandingDAs_LoadExtracted(lupOfficers.EditValue.ToString)
+            btnPrint.Enabled = True
+
+        Catch ex As Exception
+
+        End Try
+    End Sub
+
+    Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
+        Me.Close()
+    End Sub
+
+    Private Sub btnExportExcel_Click(sender As Object, e As EventArgs) Handles btnExportExcel.Click
+
+        Cursor = Cursors.WaitCursor
+
+        Select Case btnPrint.Tag
+
+            Case "DA"
+
+
+                Dim View As DevExpress.XtraGrid.Views.Grid.GridView = CType(grdOutStandingDA.MainView, DevExpress.XtraGrid.Views.Grid.GridView)
+
+                Dim saveData As New SaveFileDialog
+                Dim myStream As System.IO.Stream
+
+                With saveData
+                    .Filter = "Excel files (*.xlsx)|*.xlsx"
+                    .RestoreDirectory = True
+                    If .ShowDialog = DialogResult.OK Then
+                        myStream = .OpenFile
+
+                        If Not View Is Nothing Then
+                            View.OptionsPrint.ExpandAllDetails = True
+                            View.ExportToXlsx(myStream)
+                            'View.ExportToPdf("MainViewData.pdf")
+                        End If
+
+
+                        If (myStream IsNot Nothing) Then
+
+                            myStream.Close()
+                        End If
+
+                    End If
+
+                End With
+
+
+            Case "CC"
+
+
+                Dim View As DevExpress.XtraGrid.Views.Grid.GridView = CType(grdOutstandingCC.MainView, DevExpress.XtraGrid.Views.Grid.GridView)
+
+                Dim saveData As New SaveFileDialog
+                Dim myStream As System.IO.Stream
+
+                With saveData
+                    .Filter = "Excel files (*.xlsx)|*.xlsx"
+                    .RestoreDirectory = True
+                    If .ShowDialog = DialogResult.OK Then
+                        myStream = .OpenFile
+
+                        If Not View Is Nothing Then
+                            View.OptionsPrint.ExpandAllDetails = True
+                            View.ExportToXlsx(myStream)
+                            'View.ExportToPdf("MainViewData.pdf")
+                        End If
+
+
+                        If (myStream IsNot Nothing) Then
+
+                            myStream.Close()
+                        End If
+
+                    End If
+
+                End With
+
+            Case "REFER"
+
+
+                Dim View As DevExpress.XtraGrid.Views.Grid.GridView = CType(grdReferralsList.MainView, DevExpress.XtraGrid.Views.Grid.GridView)
+
+                Dim saveData As New SaveFileDialog
+                Dim myStream As System.IO.Stream
+
+                With saveData
+                    .Filter = "Excel files (*.xlsx)|*.xlsx"
+                    .RestoreDirectory = True
+                    If .ShowDialog = DialogResult.OK Then
+                        myStream = .OpenFile
+
+                        If Not View Is Nothing Then
+                            View.OptionsPrint.ExpandAllDetails = True
+                            View.ExportToXlsx(myStream)
+                            'View.ExportToPdf("MainViewData.pdf")
+                        End If
+
+
+                        If (myStream IsNot Nothing) Then
+
+                            myStream.Close()
+                        End If
+
+                    End If
+
+                End With
+
+            Case "AA"
+
+
+                Dim View As DevExpress.XtraGrid.Views.Grid.GridView = CType(grdOutStandingAA.MainView, DevExpress.XtraGrid.Views.Grid.GridView)
+
+                Dim saveData As New SaveFileDialog
+                Dim myStream As System.IO.Stream
+
+                With saveData
+                    .Filter = "Excel files (*.xlsx)|*.xlsx"
+                    .RestoreDirectory = True
+                    If .ShowDialog = DialogResult.OK Then
+                        myStream = .OpenFile
+
+                        If Not View Is Nothing Then
+                            View.OptionsPrint.ExpandAllDetails = True
+                            View.ExportToXlsx(myStream)
+                            'View.ExportToPdf("MainViewData.pdf")
+                        End If
+
+
+                        If (myStream IsNot Nothing) Then
+
+                            myStream.Close()
+                        End If
+
+                    End If
+
+                End With
+
+            Case "AAREFER"
+
+
+                Dim View As DevExpress.XtraGrid.Views.Grid.GridView = CType(grdAAreferrals.MainView, DevExpress.XtraGrid.Views.Grid.GridView)
+
+                Dim saveData As New SaveFileDialog
+                Dim myStream As System.IO.Stream
+
+                With saveData
+                    .Filter = "Excel files (*.xlsx)|*.xlsx"
+                    .RestoreDirectory = True
+                    If .ShowDialog = DialogResult.OK Then
+                        myStream = .OpenFile
+
+                        If Not View Is Nothing Then
+                            View.OptionsPrint.ExpandAllDetails = True
+                            View.ExportToXlsx(myStream)
+                            'View.ExportToPdf("MainViewData.pdf")
+                        End If
+
+
+                        If (myStream IsNot Nothing) Then
+
+                            myStream.Close()
+                        End If
+
+                    End If
+
+                End With
+
+        End Select
+
+        Cursor = Cursors.Default
 
     End Sub
 End Class

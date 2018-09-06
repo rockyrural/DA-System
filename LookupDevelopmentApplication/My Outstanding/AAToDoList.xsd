@@ -14,6 +14,7 @@
               <xs:element name="AI" type="xs:string" minOccurs="0" />
               <xs:element name="DADecision" type="xs:string" minOccurs="0" />
               <xs:element name="NetworkUser" type="xs:string" minOccurs="0" />
+              <xs:element name="AAFileNo" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

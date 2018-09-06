@@ -22,6 +22,7 @@ Partial Class DevelopmentStart
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim CurrentLandUseLabel As System.Windows.Forms.Label
         Dim Label27 As System.Windows.Forms.Label
         Dim OfficerLabel As System.Windows.Forms.Label
@@ -33,13 +34,13 @@ Partial Class DevelopmentStart
         Dim ConsentPlanNumberLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DevelopmentStart))
         Dim GridLevelNode1 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
-        Me.ImageList1 = New System.Windows.Forms.ImageList()
-        Me.ImageList3 = New System.Windows.Forms.ImageList()
-        Me.ImageList4 = New System.Windows.Forms.ImageList()
-        Me.ImageList5 = New System.Windows.Forms.ImageList()
-        Me.ImageList2 = New System.Windows.Forms.ImageList()
-        Me.imgSmll = New System.Windows.Forms.ImageList()
-        Me.imlNavigation = New System.Windows.Forms.ImageList()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList3 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList4 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList5 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
+        Me.imgSmll = New System.Windows.Forms.ImageList(Me.components)
+        Me.imlNavigation = New System.Windows.Forms.ImageList(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.tabPanels = New DevExpress.XtraTab.XtraTabControl()
         Me.tpgApplication = New DevExpress.XtraTab.XtraTabPage()
@@ -97,6 +98,7 @@ Partial Class DevelopmentStart
         Me.chkDADesc2 = New System.Windows.Forms.CheckBox()
         Me.chkDesc1 = New System.Windows.Forms.CheckBox()
         Me.grpDescription = New DevExpress.XtraEditors.GroupControl()
+        Me.lupOccupancyStatus = New DevExpress.XtraEditors.LookUpEdit()
         Me.Label39 = New System.Windows.Forms.Label()
         Me.cboDAClass = New DevExpress.XtraEditors.LookUpEdit()
         Me.lblOccupancy = New System.Windows.Forms.Label()
@@ -219,9 +221,11 @@ Partial Class DevelopmentStart
         Me.ibLinked = New DevExpress.XtraBars.BarButtonItem()
         Me.ibIntraMaps = New DevExpress.XtraBars.BarButtonItem()
         Me.ibGoogleMaps = New DevExpress.XtraBars.BarButtonItem()
+        Me.SkinDropDownButtonItem1 = New DevExpress.XtraBars.SkinDropDownButtonItem()
         Me.RibbonPage1 = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup1 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup2 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
+        Me.RibbonPageGroup7 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.rpgReports = New DevExpress.XtraBars.Ribbon.RibbonPage()
         Me.RibbonPageGroup3 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
         Me.RibbonPageGroup4 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
@@ -664,7 +668,6 @@ Partial Class DevelopmentStart
         Me.Label118 = New System.Windows.Forms.Label()
         Me.tpgBuildLetters = New DevExpress.XtraTab.XtraTabPage()
         Me.pnlBuildLetters = New DevExpress.XtraEditors.PanelControl()
-        Me.btnTest = New DevExpress.XtraEditors.SimpleButton()
         Me.btnAddDefaultCondition = New DevExpress.XtraEditors.SimpleButton()
         Me.cboAssessmentType = New DevExpress.XtraEditors.LookUpEdit()
         Me.btnSaveConsent = New DevExpress.XtraEditors.SimpleButton()
@@ -738,9 +741,6 @@ Partial Class DevelopmentStart
         Me.Label48 = New System.Windows.Forms.Label()
         Me.cboSearch = New System.Windows.Forms.ComboBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.lupOccupancyStatus = New DevExpress.XtraEditors.LookUpEdit()
-        Me.RibbonPageGroup7 = New DevExpress.XtraBars.Ribbon.RibbonPageGroup()
-        Me.SkinDropDownButtonItem1 = New DevExpress.XtraBars.SkinDropDownButtonItem()
         CurrentLandUseLabel = New System.Windows.Forms.Label()
         Label27 = New System.Windows.Forms.Label()
         OfficerLabel = New System.Windows.Forms.Label()
@@ -773,6 +773,7 @@ Partial Class DevelopmentStart
         Me.grpPurpose.SuspendLayout
         CType(Me.grpDescription,System.ComponentModel.ISupportInitialize).BeginInit
         Me.grpDescription.SuspendLayout
+        CType(Me.lupOccupancyStatus.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.cboDAClass.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.cboAttachmentStatus.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.txtDemolishedDwelings.Properties,System.ComponentModel.ISupportInitialize).BeginInit
@@ -1018,7 +1019,6 @@ Partial Class DevelopmentStart
         CType(Me.mskEndDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.mskStartDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.mskStartDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.lupOccupancyStatus.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         Me.SuspendLayout
         '
         'CurrentLandUseLabel
@@ -1866,6 +1866,18 @@ Partial Class DevelopmentStart
         Me.grpDescription.Size = New System.Drawing.Size(571, 330)
         Me.grpDescription.TabIndex = 177
         Me.grpDescription.Text = "Description"
+        '
+        'lupOccupancyStatus
+        '
+        Me.lupOccupancyStatus.Location = New System.Drawing.Point(473, 117)
+        Me.lupOccupancyStatus.Name = "lupOccupancyStatus"
+        Me.lupOccupancyStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.lupOccupancyStatus.Properties.DisplayMember = "DAClassification"
+        Me.lupOccupancyStatus.Properties.NullText = "[Ocupancy?]"
+        Me.lupOccupancyStatus.Properties.ReadOnly = true
+        Me.lupOccupancyStatus.Properties.ValueMember = "DAClassification"
+        Me.lupOccupancyStatus.Size = New System.Drawing.Size(77, 20)
+        Me.lupOccupancyStatus.TabIndex = 221
         '
         'Label39
         '
@@ -2841,6 +2853,11 @@ Partial Class DevelopmentStart
         Me.ibGoogleMaps.ImageOptions.LargeImage = Global.LookupDevelopmentApplication.My.Resources.Resources.Google_Maps_icon
         Me.ibGoogleMaps.Name = "ibGoogleMaps"
         '
+        'SkinDropDownButtonItem1
+        '
+        Me.SkinDropDownButtonItem1.Id = 101
+        Me.SkinDropDownButtonItem1.Name = "SkinDropDownButtonItem1"
+        '
         'RibbonPage1
         '
         Me.RibbonPage1.Groups.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPageGroup() {Me.RibbonPageGroup1, Me.RibbonPageGroup2, Me.RibbonPageGroup7})
@@ -2849,7 +2866,6 @@ Partial Class DevelopmentStart
         '
         'RibbonPageGroup1
         '
-        Me.RibbonPageGroup1.AllowMinimize = false
         Me.RibbonPageGroup1.AllowTextClipping = false
         Me.RibbonPageGroup1.ItemLinks.Add(Me.ibExit)
         Me.RibbonPageGroup1.ItemLinks.Add(Me.BiAddDA)
@@ -2862,11 +2878,11 @@ Partial Class DevelopmentStart
         Me.RibbonPageGroup1.ItemLinks.Add(Me.ibGoogleMaps)
         Me.RibbonPageGroup1.Name = "RibbonPageGroup1"
         Me.RibbonPageGroup1.ShowCaptionButton = false
+        Me.RibbonPageGroup1.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded
         Me.RibbonPageGroup1.Text = "Home"
         '
         'RibbonPageGroup2
         '
-        Me.RibbonPageGroup2.AllowMinimize = false
         Me.RibbonPageGroup2.AllowTextClipping = false
         Me.RibbonPageGroup2.ItemLinks.Add(Me.ibImages)
         Me.RibbonPageGroup2.ItemLinks.Add(Me.BiSection94)
@@ -2878,7 +2894,16 @@ Partial Class DevelopmentStart
         Me.RibbonPageGroup2.ItemLinks.Add(Me.ibAdditionalIfo)
         Me.RibbonPageGroup2.Name = "RibbonPageGroup2"
         Me.RibbonPageGroup2.ShowCaptionButton = false
+        Me.RibbonPageGroup2.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded
         Me.RibbonPageGroup2.Text = "Actions"
+        '
+        'RibbonPageGroup7
+        '
+        Me.RibbonPageGroup7.AllowTextClipping = false
+        Me.RibbonPageGroup7.ItemLinks.Add(Me.SkinDropDownButtonItem1)
+        Me.RibbonPageGroup7.Name = "RibbonPageGroup7"
+        Me.RibbonPageGroup7.ShowCaptionButton = false
+        Me.RibbonPageGroup7.Text = "Appearance"
         '
         'rpgReports
         '
@@ -2888,16 +2913,15 @@ Partial Class DevelopmentStart
         '
         'RibbonPageGroup3
         '
-        Me.RibbonPageGroup3.AllowMinimize = false
         Me.RibbonPageGroup3.AllowTextClipping = false
         Me.RibbonPageGroup3.ItemLinks.Add(Me.ibRptsExit)
         Me.RibbonPageGroup3.Name = "RibbonPageGroup3"
         Me.RibbonPageGroup3.ShowCaptionButton = false
+        Me.RibbonPageGroup3.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded
         Me.RibbonPageGroup3.Text = "Home"
         '
         'RibbonPageGroup4
         '
-        Me.RibbonPageGroup4.AllowMinimize = false
         Me.RibbonPageGroup4.AllowTextClipping = false
         Me.RibbonPageGroup4.ItemLinks.Add(Me.ibConsentAdvert)
         Me.RibbonPageGroup4.ItemLinks.Add(Me.ibABSStats)
@@ -2906,6 +2930,7 @@ Partial Class DevelopmentStart
         Me.RibbonPageGroup4.ItemLinks.Add(Me.ibReports)
         Me.RibbonPageGroup4.Name = "RibbonPageGroup4"
         Me.RibbonPageGroup4.ShowCaptionButton = false
+        Me.RibbonPageGroup4.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded
         Me.RibbonPageGroup4.Text = "Reports"
         '
         'RibbonPage2
@@ -2916,16 +2941,15 @@ Partial Class DevelopmentStart
         '
         'RibbonPageGroup5
         '
-        Me.RibbonPageGroup5.AllowMinimize = false
         Me.RibbonPageGroup5.AllowTextClipping = false
         Me.RibbonPageGroup5.ItemLinks.Add(Me.ibMaintExit)
         Me.RibbonPageGroup5.Name = "RibbonPageGroup5"
         Me.RibbonPageGroup5.ShowCaptionButton = false
+        Me.RibbonPageGroup5.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded
         Me.RibbonPageGroup5.Text = "Home"
         '
         'RibbonPageGroup6
         '
-        Me.RibbonPageGroup6.AllowMinimize = false
         Me.RibbonPageGroup6.AllowTextClipping = false
         Me.RibbonPageGroup6.ItemLinks.Add(Me.ibOfficers)
         Me.RibbonPageGroup6.ItemLinks.Add(Me.ibLookupLists)
@@ -2933,6 +2957,7 @@ Partial Class DevelopmentStart
         Me.RibbonPageGroup6.ItemLinks.Add(Me.ibSection94RF)
         Me.RibbonPageGroup6.Name = "RibbonPageGroup6"
         Me.RibbonPageGroup6.ShowCaptionButton = false
+        Me.RibbonPageGroup6.State = DevExpress.XtraBars.Ribbon.RibbonPageGroupState.Expanded
         Me.RibbonPageGroup6.Text = "Actions"
         '
         'btnRetrieveProperty
@@ -7305,7 +7330,6 @@ Partial Class DevelopmentStart
         '
         'pnlBuildLetters
         '
-        Me.pnlBuildLetters.Controls.Add(Me.btnTest)
         Me.pnlBuildLetters.Controls.Add(Me.btnAddDefaultCondition)
         Me.pnlBuildLetters.Controls.Add(Me.cboAssessmentType)
         Me.pnlBuildLetters.Controls.Add(Me.btnSaveConsent)
@@ -7324,14 +7348,6 @@ Partial Class DevelopmentStart
         Me.pnlBuildLetters.Name = "pnlBuildLetters"
         Me.pnlBuildLetters.Size = New System.Drawing.Size(1423, 721)
         Me.pnlBuildLetters.TabIndex = 1
-        '
-        'btnTest
-        '
-        Me.btnTest.Location = New System.Drawing.Point(1282, 5)
-        Me.btnTest.Name = "btnTest"
-        Me.btnTest.Size = New System.Drawing.Size(106, 50)
-        Me.btnTest.TabIndex = 100
-        Me.btnTest.Text = "test"
         '
         'btnAddDefaultCondition
         '
@@ -8020,31 +8036,6 @@ Partial Class DevelopmentStart
         Me.cboSearch.Size = New System.Drawing.Size(182, 21)
         Me.cboSearch.TabIndex = 0
         '
-        'lupOccupancyStatus
-        '
-        Me.lupOccupancyStatus.Location = New System.Drawing.Point(473, 117)
-        Me.lupOccupancyStatus.Name = "lupOccupancyStatus"
-        Me.lupOccupancyStatus.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lupOccupancyStatus.Properties.DisplayMember = "DAClassification"
-        Me.lupOccupancyStatus.Properties.NullText = "[Ocupancy?]"
-        Me.lupOccupancyStatus.Properties.ReadOnly = true
-        Me.lupOccupancyStatus.Properties.ValueMember = "DAClassification"
-        Me.lupOccupancyStatus.Size = New System.Drawing.Size(77, 20)
-        Me.lupOccupancyStatus.TabIndex = 221
-        '
-        'RibbonPageGroup7
-        '
-        Me.RibbonPageGroup7.AllowTextClipping = false
-        Me.RibbonPageGroup7.ItemLinks.Add(Me.SkinDropDownButtonItem1)
-        Me.RibbonPageGroup7.Name = "RibbonPageGroup7"
-        Me.RibbonPageGroup7.ShowCaptionButton = false
-        Me.RibbonPageGroup7.Text = "Appearance"
-        '
-        'SkinDropDownButtonItem1
-        '
-        Me.SkinDropDownButtonItem1.Id = 101
-        Me.SkinDropDownButtonItem1.Name = "SkinDropDownButtonItem1"
-        '
         'DevelopmentStart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -8091,6 +8082,7 @@ Partial Class DevelopmentStart
         CType(Me.grpDescription,System.ComponentModel.ISupportInitialize).EndInit
         Me.grpDescription.ResumeLayout(false)
         Me.grpDescription.PerformLayout
+        CType(Me.lupOccupancyStatus.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.cboDAClass.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.cboAttachmentStatus.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.txtDemolishedDwelings.Properties,System.ComponentModel.ISupportInitialize).EndInit
@@ -8359,7 +8351,6 @@ Partial Class DevelopmentStart
         CType(Me.mskEndDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.mskStartDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.mskStartDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.lupOccupancyStatus.Properties,System.ComponentModel.ISupportInitialize).EndInit
         Me.ResumeLayout(false)
         Me.PerformLayout
 
@@ -8968,7 +8959,6 @@ End Sub
     Friend WithEvents btnRemoveSub As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnRemovePDF As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
-    Friend WithEvents btnTest As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents lblBuilderName As DevExpress.XtraEditors.LabelControl
     Friend WithEvents lblOwnerBuilder As DevExpress.XtraEditors.LabelControl
     Friend WithEvents lblOwnerBuilderNo As DevExpress.XtraEditors.LabelControl

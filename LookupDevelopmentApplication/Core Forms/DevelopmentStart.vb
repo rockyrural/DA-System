@@ -1987,7 +1987,7 @@ Public Class DevelopmentStart
 
 
             sUserID = My.User.Name.Substring(4)
-            'sUserID = "cbarton"
+            sUserID = "cbarton"
 
 #End If
 
@@ -2562,10 +2562,10 @@ Public Class DevelopmentStart
 
 
                 Select Case cb.Name
-                    Case "cboIntDevActs", "lupSection68"
+                    Case "cboIntDevActs", "lupSection68"',"cboReferralsIntProvision","cboRefCodeId",
                         cb.ReadOnly = False
                     Case Else
-                        cb.Enabled = Not bLock
+                        cb.ReadOnly = Not bLock
 
 
                 End Select
@@ -12040,25 +12040,25 @@ Public Class DevelopmentStart
 
 
 
-    Private Sub btnTest_Click(sender As Object, e As EventArgs) Handles btnTest.Click
+    'Private Sub btnTest_Click(sender As Object, e As EventArgs) 
 
-        SplashScreenManager.ShowDefaultWaitForm()
+    '    SplashScreenManager.ShowDefaultWaitForm()
 
-        For i As Integer = 0 To 100
+    '    For i As Integer = 0 To 100
 
-            Thread.Sleep(100)
+    '        Thread.Sleep(100)
 
 
-        Next
+    '    Next
 
-        SplashScreenManager.CloseForm()
-    End Sub
+    '    SplashScreenManager.CloseForm()
+    'End Sub
 
 
 
     Private Sub BiMyOSDas_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiMyOSDas.ItemClick
         With My.Forms.MyOutstandingDAs
-            .Show()
+                .Show()
         End With
     End Sub
 

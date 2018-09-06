@@ -18,6 +18,7 @@
               <xs:element name="DADetermDt" type="xs:dateTime" minOccurs="0" />
               <xs:element name="DevType" type="xs:string" minOccurs="0" />
               <xs:element name="NetworkUser" type="xs:string" minOccurs="0" />
+              <xs:element name="DAFileNo" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
