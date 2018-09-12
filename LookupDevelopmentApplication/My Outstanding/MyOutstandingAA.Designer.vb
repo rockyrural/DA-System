@@ -24,6 +24,7 @@ Partial Public Class MyOutstandingAA
         Dim QueryParameter1 As DevExpress.DataAccess.Sql.QueryParameter = New DevExpress.DataAccess.Sql.QueryParameter()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MyOutstandingAA))
         Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
+        Me.XrLabel17 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel16 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel15 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel14 = New DevExpress.XtraReports.UI.XRLabel()
@@ -35,6 +36,7 @@ Partial Public Class MyOutstandingAA
         Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
         Me.SqlDataSource1 = New DevExpress.DataAccess.Sql.SqlDataSource(Me.components)
         Me.PageHeader = New DevExpress.XtraReports.UI.PageHeaderBand()
+        Me.XrLabel18 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel9 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel8 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel7 = New DevExpress.XtraReports.UI.XRLabel()
@@ -43,12 +45,9 @@ Partial Public Class MyOutstandingAA
         Me.XrLabel4 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrLabel3 = New DevExpress.XtraReports.UI.XRLabel()
         Me.XrPageInfo1 = New DevExpress.XtraReports.UI.XRPageInfo()
-        Me.XrLabel2 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel1 = New DevExpress.XtraReports.UI.XRLabel()
+        Me.lblTitle = New DevExpress.XtraReports.UI.XRLabel()
         Me.PageFooter = New DevExpress.XtraReports.UI.PageFooterBand()
         Me.XrPageInfo2 = New DevExpress.XtraReports.UI.XRPageInfo()
-        Me.XrLabel17 = New DevExpress.XtraReports.UI.XRLabel()
-        Me.XrLabel18 = New DevExpress.XtraReports.UI.XRLabel()
         CType(Me,System.ComponentModel.ISupportInitialize).BeginInit
         '
         'Detail
@@ -58,6 +57,16 @@ Partial Public Class MyOutstandingAA
         Me.Detail.Name = "Detail"
         Me.Detail.Padding = New DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100!)
         Me.Detail.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft
+        '
+        'XrLabel17
+        '
+        Me.XrLabel17.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AAFileNo]")})
+        Me.XrLabel17.LocationFloat = New DevExpress.Utils.PointFloat(64.58334!, 0!)
+        Me.XrLabel17.Multiline = true
+        Me.XrLabel17.Name = "XrLabel17"
+        Me.XrLabel17.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
+        Me.XrLabel17.SizeF = New System.Drawing.SizeF(136.4583!, 23!)
+        Me.XrLabel17.Text = "XrLabel17"
         '
         'XrLabel16
         '
@@ -152,9 +161,21 @@ Partial Public Class MyOutstandingAA
         '
         'PageHeader
         '
-        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel18, Me.XrLabel9, Me.XrLabel8, Me.XrLabel7, Me.XrLabel6, Me.XrLabel5, Me.XrLabel4, Me.XrLabel3, Me.XrPageInfo1, Me.XrLabel2, Me.XrLabel1})
+        Me.PageHeader.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.XrLabel18, Me.XrLabel9, Me.XrLabel8, Me.XrLabel7, Me.XrLabel6, Me.XrLabel5, Me.XrLabel4, Me.XrLabel3, Me.XrPageInfo1, Me.lblTitle})
         Me.PageHeader.HeightF = 73.95834!
         Me.PageHeader.Name = "PageHeader"
+        '
+        'XrLabel18
+        '
+        Me.XrLabel18.Borders = DevExpress.XtraPrinting.BorderSide.Bottom
+        Me.XrLabel18.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
+        Me.XrLabel18.LocationFloat = New DevExpress.Utils.PointFloat(64.58334!, 46.16666!)
+        Me.XrLabel18.Name = "XrLabel18"
+        Me.XrLabel18.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
+        Me.XrLabel18.SizeF = New System.Drawing.SizeF(136.4583!, 23!)
+        Me.XrLabel18.StylePriority.UseBorders = false
+        Me.XrLabel18.StylePriority.UseFont = false
+        Me.XrLabel18.Text = "File No"
         '
         'XrLabel9
         '
@@ -248,26 +269,15 @@ Partial Public Class MyOutstandingAA
         Me.XrPageInfo1.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime
         Me.XrPageInfo1.SizeF = New System.Drawing.SizeF(189.1667!, 23!)
         '
-        'XrLabel2
+        'lblTitle
         '
-        Me.XrLabel2.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[usp_ToDoListAAs.NetworkUser]")})
-        Me.XrLabel2.Font = New System.Drawing.Font("Calibri", 12!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel2.LocationFloat = New DevExpress.Utils.PointFloat(163.5417!, 4.166667!)
-        Me.XrLabel2.Name = "XrLabel2"
-        Me.XrLabel2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
-        Me.XrLabel2.SizeF = New System.Drawing.SizeF(145.8333!, 23!)
-        Me.XrLabel2.StylePriority.UseFont = false
-        Me.XrLabel2.Text = "XrLabel2"
-        '
-        'XrLabel1
-        '
-        Me.XrLabel1.Font = New System.Drawing.Font("Calibri", 12!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel1.LocationFloat = New DevExpress.Utils.PointFloat(2.083333!, 4.166667!)
-        Me.XrLabel1.Name = "XrLabel1"
-        Me.XrLabel1.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
-        Me.XrLabel1.SizeF = New System.Drawing.SizeF(151.0417!, 23!)
-        Me.XrLabel1.StylePriority.UseFont = false
-        Me.XrLabel1.Text = "My Oustanding AAs"
+        Me.lblTitle.Font = New System.Drawing.Font("Calibri", 12!, System.Drawing.FontStyle.Bold)
+        Me.lblTitle.LocationFloat = New DevExpress.Utils.PointFloat(2.083333!, 4.166667!)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
+        Me.lblTitle.SizeF = New System.Drawing.SizeF(841.6666!, 23!)
+        Me.lblTitle.StylePriority.UseFont = false
+        Me.lblTitle.Text = "My Oustanding AAs"
         '
         'PageFooter
         '
@@ -282,28 +292,6 @@ Partial Public Class MyOutstandingAA
         Me.XrPageInfo2.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
         Me.XrPageInfo2.SizeF = New System.Drawing.SizeF(100!, 23!)
         Me.XrPageInfo2.TextFormatString = "Page {0} of {1}"
-        '
-        'XrLabel17
-        '
-        Me.XrLabel17.ExpressionBindings.AddRange(New DevExpress.XtraReports.UI.ExpressionBinding() {New DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AAFileNo]")})
-        Me.XrLabel17.LocationFloat = New DevExpress.Utils.PointFloat(64.58334!, 0!)
-        Me.XrLabel17.Multiline = true
-        Me.XrLabel17.Name = "XrLabel17"
-        Me.XrLabel17.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 96!)
-        Me.XrLabel17.SizeF = New System.Drawing.SizeF(136.4583!, 23!)
-        Me.XrLabel17.Text = "XrLabel17"
-        '
-        'XrLabel18
-        '
-        Me.XrLabel18.Borders = DevExpress.XtraPrinting.BorderSide.Bottom
-        Me.XrLabel18.Font = New System.Drawing.Font("Calibri", 9.75!, System.Drawing.FontStyle.Bold)
-        Me.XrLabel18.LocationFloat = New DevExpress.Utils.PointFloat(64.58334!, 46.16666!)
-        Me.XrLabel18.Name = "XrLabel18"
-        Me.XrLabel18.Padding = New DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100!)
-        Me.XrLabel18.SizeF = New System.Drawing.SizeF(136.4583!, 23!)
-        Me.XrLabel18.StylePriority.UseBorders = false
-        Me.XrLabel18.StylePriority.UseFont = false
-        Me.XrLabel18.Text = "File No"
         '
         'MyOutstandingAA
         '
@@ -330,8 +318,7 @@ End Sub
     Friend WithEvents XrLabel4 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrLabel3 As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents XrPageInfo1 As DevExpress.XtraReports.UI.XRPageInfo
-    Friend WithEvents XrLabel2 As DevExpress.XtraReports.UI.XRLabel
-    Friend WithEvents XrLabel1 As DevExpress.XtraReports.UI.XRLabel
+    Friend WithEvents lblTitle As DevExpress.XtraReports.UI.XRLabel
     Friend WithEvents PageFooter As DevExpress.XtraReports.UI.PageFooterBand
     Friend WithEvents XrPageInfo2 As DevExpress.XtraReports.UI.XRPageInfo
     Friend WithEvents XrLabel16 As DevExpress.XtraReports.UI.XRLabel

@@ -604,6 +604,8 @@ Public Class MyOutstandingDAs
 
                             Dim rept As New MyOutstandingDA
                             rept.DataSource = objDT
+                            rept.lblTitle.Text = "Outstanding DA's for " & lupOfficers.Text
+
                             rept.CreateDocument()
 
 
@@ -623,6 +625,9 @@ Public Class MyOutstandingDAs
                             Dim rept As New MyOutstandingCC
 
                             rept.DataSource = objDT
+
+                            rept.lblTitle.Text = "Outstanding CC's for " & lupOfficers.Text
+
                             rept.CreateDocument()
 
                             Using printTool As New ReportPrintTool(rept)
@@ -639,6 +644,10 @@ Public Class MyOutstandingDAs
 
                             Dim rept As New MyReferrals
                             rept.DataSource = objDT
+
+                            rept.lblTitle.Text = "Outstanding referrals for " & lupOfficers.Text
+
+
                             rept.CreateDocument()
 
                             Using printTool As New ReportPrintTool(rept)
@@ -656,6 +665,9 @@ Public Class MyOutstandingDAs
 
                             Dim rept As New MyOutstandingAA
                             rept.DataSource = objDT
+                            rept.lblTitle.Text = "Outstanding AA's for " & lupOfficers.Text
+
+
                             rept.CreateDocument()
 
                             Using printTool As New ReportPrintTool(rept)
@@ -673,6 +685,9 @@ Public Class MyOutstandingDAs
 
                             Dim rept As New MyAAreferrals
                             rept.DataSource = objDT
+                            rept.lblTitle.Text = "Outstanding AA referrals for " & lupOfficers.Text
+
+
                             rept.CreateDocument()
 
                             Using printTool As New ReportPrintTool(rept)
@@ -715,12 +730,12 @@ Public Class MyOutstandingDAs
                 With btnPrint
                     .Enabled = True
                     .Tag = "DA"
-                    .Text = "Print my DAs list"
+                    .Text = "Print " & vbCrLf & "DAs list"
                 End With
                 With btnExportExcel
                     .Enabled = True
                     .Tag = "DA"
-                    .Text = "Export DAs list"
+                    .Text = "Export" & vbCrLf & " DAs list"
                 End With
 
             Case 2
@@ -728,49 +743,49 @@ Public Class MyOutstandingDAs
                 With btnPrint
                     .Enabled = False
                     .Tag = ""
-                    .Text = "Nothing to print"
+                    .Text = "Nothing" & vbCrLf & " to print"
                 End With
                 With btnExportExcel
                     .Enabled = False
                     .Tag = ""
-                    .Text = "Nothing to export"
+                    .Text = "Nothing" & vbCrLf & " to export"
                 End With
 
             Case 3
                 With btnPrint
                     .Enabled = True
                     .Tag = "CC"
-                    .Text = "Print my CCs list"
+                    .Text = "Print " & vbCrLf & " CCs list"
                 End With
                 With btnExportExcel
                     .Enabled = True
                     .Tag = "CC"
-                    .Text = "Export CCs list"
+                    .Text = "Export " & vbCrLf & "CCs list"
                 End With
 
             Case 4
                 With btnPrint
                     .Enabled = True
                     .Tag = "REFER"
-                    .Text = "Print my referrals"
+                    .Text = "Print " & vbCrLf & " referrals"
                 End With
                 With btnExportExcel
                     .Enabled = True
                     .Tag = "REFER"
-                    .Text = "Export CCs referrals"
+                    .Text = "Export " & vbCrLf & "CCs referrals"
                 End With
 
             Case 5
                 With btnPrint
                     .Enabled = True
                     .Tag = "AA"
-                    .Text = "Print my AAs list"
+                    .Text = "Print " & vbCrLf & " AAs list"
                 End With
 
                 With btnExportExcel
                     .Enabled = True
                     .Tag = "AA"
-                    .Text = "Export AAs list"
+                    .Text = "Export " & vbCrLf & " AAs list"
                 End With
 
 
@@ -778,12 +793,12 @@ Public Class MyOutstandingDAs
                 With btnPrint
                     .Enabled = True
                     .Tag = "AAREFER"
-                    .Text = "Print my AAs referrals"
+                    .Text = "Print " & vbCrLf & "AAs referrals"
                 End With
                 With btnExportExcel
                     .Enabled = True
                     .Tag = "AAREFER"
-                    .Text = "Export AAs referrals"
+                    .Text = "Export" & vbCrLf & "AAs referrals"
                 End With
 
 

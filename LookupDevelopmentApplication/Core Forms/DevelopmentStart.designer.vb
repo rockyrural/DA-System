@@ -22,7 +22,6 @@ Partial Class DevelopmentStart
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Dim CurrentLandUseLabel As System.Windows.Forms.Label
         Dim Label27 As System.Windows.Forms.Label
         Dim OfficerLabel As System.Windows.Forms.Label
@@ -34,13 +33,13 @@ Partial Class DevelopmentStart
         Dim ConsentPlanNumberLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DevelopmentStart))
         Dim GridLevelNode1 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
-        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ImageList3 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ImageList4 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ImageList5 = New System.Windows.Forms.ImageList(Me.components)
-        Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
-        Me.imgSmll = New System.Windows.Forms.ImageList(Me.components)
-        Me.imlNavigation = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList1 = New System.Windows.Forms.ImageList()
+        Me.ImageList3 = New System.Windows.Forms.ImageList()
+        Me.ImageList4 = New System.Windows.Forms.ImageList()
+        Me.ImageList5 = New System.Windows.Forms.ImageList()
+        Me.ImageList2 = New System.Windows.Forms.ImageList()
+        Me.imgSmll = New System.Windows.Forms.ImageList()
+        Me.imlNavigation = New System.Windows.Forms.ImageList()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.tabPanels = New DevExpress.XtraTab.XtraTabControl()
         Me.tpgApplication = New DevExpress.XtraTab.XtraTabPage()
@@ -741,6 +740,10 @@ Partial Class DevelopmentStart
         Me.Label48 = New System.Windows.Forms.Label()
         Me.cboSearch = New System.Windows.Forms.ComboBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.btnUse = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnKeep = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnUse2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnKeep2 = New DevExpress.XtraEditors.SimpleButton()
         CurrentLandUseLabel = New System.Windows.Forms.Label()
         Label27 = New System.Windows.Forms.Label()
         OfficerLabel = New System.Windows.Forms.Label()
@@ -1462,6 +1465,8 @@ Partial Class DevelopmentStart
         '
         'grpOwner
         '
+        Me.grpOwner.Controls.Add(Me.btnUse2)
+        Me.grpOwner.Controls.Add(Me.btnKeep2)
         Me.grpOwner.Controls.Add(Me.txtDAOwnersPcode)
         Me.grpOwner.Controls.Add(Me.Label23)
         Me.grpOwner.Controls.Add(Me.Label24)
@@ -1474,7 +1479,7 @@ Partial Class DevelopmentStart
         Me.grpOwner.GroupStyle = DevExpress.Utils.GroupStyle.Title
         Me.grpOwner.Location = New System.Drawing.Point(597, 206)
         Me.grpOwner.Name = "grpOwner"
-        Me.grpOwner.Size = New System.Drawing.Size(398, 184)
+        Me.grpOwner.Size = New System.Drawing.Size(398, 210)
         Me.grpOwner.TabIndex = 159
         Me.grpOwner.Text = "Owners Details"
         '
@@ -1482,7 +1487,7 @@ Partial Class DevelopmentStart
         '
         Me.txtDAOwnersPcode.BackColor = System.Drawing.SystemColors.Info
         Me.txtDAOwnersPcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDAOwnersPcode.Location = New System.Drawing.Point(341, 116)
+        Me.txtDAOwnersPcode.Location = New System.Drawing.Point(297, 116)
         Me.txtDAOwnersPcode.Name = "txtDAOwnersPcode"
         Me.txtDAOwnersPcode.ReadOnly = true
         Me.txtDAOwnersPcode.Size = New System.Drawing.Size(35, 21)
@@ -1491,7 +1496,7 @@ Partial Class DevelopmentStart
         'Label23
         '
         Me.Label23.AutoSize = true
-        Me.Label23.Location = New System.Drawing.Point(14, 39)
+        Me.Label23.Location = New System.Drawing.Point(5, 39)
         Me.Label23.Name = "Label23"
         Me.Label23.Size = New System.Drawing.Size(38, 13)
         Me.Label23.TabIndex = 63
@@ -1500,7 +1505,7 @@ Partial Class DevelopmentStart
         'Label24
         '
         Me.Label24.AutoSize = true
-        Me.Label24.Location = New System.Drawing.Point(16, 83)
+        Me.Label24.Location = New System.Drawing.Point(7, 83)
         Me.Label24.Name = "Label24"
         Me.Label24.Size = New System.Drawing.Size(50, 13)
         Me.Label24.TabIndex = 64
@@ -1509,7 +1514,7 @@ Partial Class DevelopmentStart
         'Label25
         '
         Me.Label25.AutoSize = true
-        Me.Label25.Location = New System.Drawing.Point(16, 119)
+        Me.Label25.Location = New System.Drawing.Point(7, 119)
         Me.Label25.Name = "Label25"
         Me.Label25.Size = New System.Drawing.Size(37, 13)
         Me.Label25.TabIndex = 65
@@ -1518,7 +1523,7 @@ Partial Class DevelopmentStart
         'Label26
         '
         Me.Label26.AutoSize = true
-        Me.Label26.Location = New System.Drawing.Point(16, 146)
+        Me.Label26.Location = New System.Drawing.Point(7, 146)
         Me.Label26.Name = "Label26"
         Me.Label26.Size = New System.Drawing.Size(41, 13)
         Me.Label26.TabIndex = 66
@@ -1528,39 +1533,39 @@ Partial Class DevelopmentStart
         '
         Me.txtDAOwnersName.BackColor = System.Drawing.Color.FromArgb(CType(CType(255,Byte),Integer), CType(CType(255,Byte),Integer), CType(CType(215,Byte),Integer))
         Me.txtDAOwnersName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDAOwnersName.Location = New System.Drawing.Point(68, 38)
+        Me.txtDAOwnersName.Location = New System.Drawing.Point(59, 38)
         Me.txtDAOwnersName.Multiline = true
         Me.txtDAOwnersName.Name = "txtDAOwnersName"
         Me.txtDAOwnersName.ReadOnly = true
-        Me.txtDAOwnersName.Size = New System.Drawing.Size(308, 38)
+        Me.txtDAOwnersName.Size = New System.Drawing.Size(273, 38)
         Me.txtDAOwnersName.TabIndex = 59
         '
         'txtDAOwnersAddress
         '
         Me.txtDAOwnersAddress.BackColor = System.Drawing.SystemColors.Info
         Me.txtDAOwnersAddress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDAOwnersAddress.Location = New System.Drawing.Point(68, 75)
+        Me.txtDAOwnersAddress.Location = New System.Drawing.Point(59, 75)
         Me.txtDAOwnersAddress.Multiline = true
         Me.txtDAOwnersAddress.Name = "txtDAOwnersAddress"
         Me.txtDAOwnersAddress.ReadOnly = true
-        Me.txtDAOwnersAddress.Size = New System.Drawing.Size(308, 42)
+        Me.txtDAOwnersAddress.Size = New System.Drawing.Size(273, 42)
         Me.txtDAOwnersAddress.TabIndex = 60
         '
         'txtDAOwnersTown
         '
         Me.txtDAOwnersTown.BackColor = System.Drawing.SystemColors.Info
         Me.txtDAOwnersTown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDAOwnersTown.Location = New System.Drawing.Point(68, 116)
+        Me.txtDAOwnersTown.Location = New System.Drawing.Point(59, 116)
         Me.txtDAOwnersTown.Name = "txtDAOwnersTown"
         Me.txtDAOwnersTown.ReadOnly = true
-        Me.txtDAOwnersTown.Size = New System.Drawing.Size(267, 21)
+        Me.txtDAOwnersTown.Size = New System.Drawing.Size(216, 21)
         Me.txtDAOwnersTown.TabIndex = 61
         '
         'txtDAOwnersPhone
         '
         Me.txtDAOwnersPhone.BackColor = System.Drawing.SystemColors.Info
         Me.txtDAOwnersPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtDAOwnersPhone.Location = New System.Drawing.Point(68, 142)
+        Me.txtDAOwnersPhone.Location = New System.Drawing.Point(59, 142)
         Me.txtDAOwnersPhone.Name = "txtDAOwnersPhone"
         Me.txtDAOwnersPhone.ReadOnly = true
         Me.txtDAOwnersPhone.Size = New System.Drawing.Size(123, 21)
@@ -3319,6 +3324,8 @@ Partial Class DevelopmentStart
         '
         'grpDetails
         '
+        Me.grpDetails.Controls.Add(Me.btnUse)
+        Me.grpDetails.Controls.Add(Me.btnKeep)
         Me.grpDetails.Controls.Add(Me.Label19)
         Me.grpDetails.Controls.Add(Me.txtAppemail)
         Me.grpDetails.Controls.Add(Me.Label12)
@@ -3370,7 +3377,7 @@ Partial Class DevelopmentStart
         Me.txtAppemail.Location = New System.Drawing.Point(629, 154)
         Me.txtAppemail.Name = "txtAppemail"
         Me.txtAppemail.ReadOnly = true
-        Me.txtAppemail.Size = New System.Drawing.Size(329, 21)
+        Me.txtAppemail.Size = New System.Drawing.Size(273, 21)
         Me.txtAppemail.TabIndex = 180
         '
         'Label12
@@ -3423,7 +3430,7 @@ Partial Class DevelopmentStart
         '
         Me.txtAppPcode.BackColor = System.Drawing.SystemColors.Window
         Me.txtAppPcode.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.txtAppPcode.Location = New System.Drawing.Point(919, 110)
+        Me.txtAppPcode.Location = New System.Drawing.Point(863, 110)
         Me.txtAppPcode.Name = "txtAppPcode"
         Me.txtAppPcode.ReadOnly = true
         Me.txtAppPcode.Size = New System.Drawing.Size(39, 21)
@@ -3436,7 +3443,7 @@ Partial Class DevelopmentStart
         Me.txtAppTown.Location = New System.Drawing.Point(629, 110)
         Me.txtAppTown.Name = "txtAppTown"
         Me.txtAppTown.ReadOnly = true
-        Me.txtAppTown.Size = New System.Drawing.Size(272, 21)
+        Me.txtAppTown.Size = New System.Drawing.Size(216, 21)
         Me.txtAppTown.TabIndex = 178
         '
         'txtAppAddress
@@ -3447,7 +3454,7 @@ Partial Class DevelopmentStart
         Me.txtAppAddress.Multiline = true
         Me.txtAppAddress.Name = "txtAppAddress"
         Me.txtAppAddress.ReadOnly = true
-        Me.txtAppAddress.Size = New System.Drawing.Size(329, 36)
+        Me.txtAppAddress.Size = New System.Drawing.Size(273, 36)
         Me.txtAppAddress.TabIndex = 177
         '
         'txtAppName
@@ -3458,7 +3465,7 @@ Partial Class DevelopmentStart
         Me.txtAppName.Multiline = true
         Me.txtAppName.Name = "txtAppName"
         Me.txtAppName.ReadOnly = true
-        Me.txtAppName.Size = New System.Drawing.Size(329, 45)
+        Me.txtAppName.Size = New System.Drawing.Size(273, 45)
         Me.txtAppName.TabIndex = 176
         '
         'txtOfficer
@@ -8036,6 +8043,42 @@ Partial Class DevelopmentStart
         Me.cboSearch.Size = New System.Drawing.Size(182, 21)
         Me.cboSearch.TabIndex = 0
         '
+        'btnUse
+        '
+        Me.btnUse.ImageOptions.Image = CType(resources.GetObject("btnUse.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnUse.Location = New System.Drawing.Point(910, 68)
+        Me.btnUse.Name = "btnUse"
+        Me.btnUse.Size = New System.Drawing.Size(65, 31)
+        Me.btnUse.TabIndex = 188
+        Me.btnUse.Text = "Use"
+        '
+        'btnKeep
+        '
+        Me.btnKeep.ImageOptions.Image = CType(resources.GetObject("btnKeep.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnKeep.Location = New System.Drawing.Point(910, 31)
+        Me.btnKeep.Name = "btnKeep"
+        Me.btnKeep.Size = New System.Drawing.Size(65, 31)
+        Me.btnKeep.TabIndex = 187
+        Me.btnKeep.Text = "&Keep"
+        '
+        'btnUse2
+        '
+        Me.btnUse2.ImageOptions.Image = CType(resources.GetObject("btnUse2.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnUse2.Location = New System.Drawing.Point(338, 108)
+        Me.btnUse2.Name = "btnUse2"
+        Me.btnUse2.Size = New System.Drawing.Size(59, 31)
+        Me.btnUse2.TabIndex = 69
+        Me.btnUse2.Text = "Use"
+        '
+        'btnKeep2
+        '
+        Me.btnKeep2.ImageOptions.Image = CType(resources.GetObject("btnKeep2.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnKeep2.Location = New System.Drawing.Point(338, 38)
+        Me.btnKeep2.Name = "btnKeep2"
+        Me.btnKeep2.Size = New System.Drawing.Size(59, 31)
+        Me.btnKeep2.TabIndex = 68
+        Me.btnKeep2.Text = "&Keep"
+        '
         'DevelopmentStart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -9115,4 +9158,8 @@ End Sub
     Friend WithEvents lupOccupancyStatus As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents SkinDropDownButtonItem1 As DevExpress.XtraBars.SkinDropDownButtonItem
     Friend WithEvents RibbonPageGroup7 As DevExpress.XtraBars.Ribbon.RibbonPageGroup
+    Friend WithEvents btnUse2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnKeep2 As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnUse As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents btnKeep As DevExpress.XtraEditors.SimpleButton
 End Class

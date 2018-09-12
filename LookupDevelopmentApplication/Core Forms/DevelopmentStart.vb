@@ -4,7 +4,6 @@ Imports System.Deployment.Application
 Imports System.IO
 Imports System.Runtime.InteropServices
 Imports System.Text
-Imports System.Threading
 Imports CrystalDecisions.CrystalReports.Engine
 Imports DevExpress.LookAndFeel
 Imports DevExpress.XtraBars
@@ -2562,7 +2561,7 @@ Public Class DevelopmentStart
 
 
                 Select Case cb.Name
-                    Case "cboIntDevActs", "lupSection68"',"cboReferralsIntProvision","cboRefCodeId",
+                    Case "cboIntDevActs", "lupSection68" ',"cboReferralsIntProvision","cboRefCodeId",
                         cb.ReadOnly = False
                     Case Else
                         cb.ReadOnly = Not bLock
@@ -12058,7 +12057,7 @@ Public Class DevelopmentStart
 
     Private Sub BiMyOSDas_ItemClick(sender As Object, e As DevExpress.XtraBars.ItemClickEventArgs) Handles BiMyOSDas.ItemClick
         With My.Forms.MyOutstandingDAs
-                .Show()
+            .Show()
         End With
     End Sub
 
@@ -13494,6 +13493,91 @@ Public Class DevelopmentStart
 
 #Enable Warning BC42025 ' Access of shared member, constant member, enum member or nested type through an instance
 
+    End Sub
+
+    Private Sub btnKeep_Click(sender As Object, e As EventArgs) Handles btnKeep.Click
+
+        Dim objStreamWriter As StreamWriter
+
+        'Pass the file path and the file name to the StreamWriter constructor.
+        objStreamWriter = New StreamWriter(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\da.tmp", False)
+        'Write a line of text.
+        objStreamWriter.WriteLine(Me.txtAppName.Text)
+        objStreamWriter.WriteLine(Me.txtAppAddress.Text)
+        objStreamWriter.WriteLine(Me.txtAppTown.Text)
+        objStreamWriter.WriteLine(Me.txtAppPcode.Text)
+        objStreamWriter.WriteLine(Me.txtAppPhone.Text)
+
+
+        'Close the file.
+        objStreamWriter.Close()
+
+    End Sub
+    Private Sub btnUse_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnUse.Click
+        Dim objStreamReader As StreamReader
+        Dim strLine As String
+        objStreamReader = New StreamReader(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\da.tmp")
+
+        strLine = objStreamReader.ReadLine
+        txtAppName.Text = strLine
+
+        strLine = objStreamReader.ReadLine
+        txtAppAddress.Text = strLine
+
+        strLine = objStreamReader.ReadLine
+        txtAppTown.Text = strLine
+
+        strLine = objStreamReader.ReadLine
+        txtAppPcode.Text = strLine
+
+        strLine = objStreamReader.ReadLine
+        txtAppPhone.Text = strLine
+
+
+        objStreamReader.Close()
+
+    End Sub
+
+    Private Sub btnKeep2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnKeep2.Click
+        Dim objStreamWriter As StreamWriter
+
+        'Pass the file path and the file name to the StreamWriter constructor.
+        objStreamWriter = New StreamWriter(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\da.tmp", False)
+        'Write a line of text.
+        objStreamWriter.WriteLine(txtDAOwnersName.Text)
+        objStreamWriter.WriteLine(txtDAOwnersAddress.Text)
+        objStreamWriter.WriteLine(txtDAOwnersTown.Text)
+        objStreamWriter.WriteLine(txtDAOwnersPcode.Text)
+        objStreamWriter.WriteLine(txtDAOwnersPhone.Text)
+
+
+        'Close the file.
+        objStreamWriter.Close()
+
+    End Sub
+
+    Private Sub btnUse2_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnUse2.Click
+        Dim objStreamReader As StreamReader
+        Dim strLine As String
+        objStreamReader = New StreamReader(My.Computer.FileSystem.SpecialDirectories.MyDocuments & "\da.tmp")
+
+        strLine = objStreamReader.ReadLine
+        txtDAOwnersName.Text = strLine
+
+        strLine = objStreamReader.ReadLine
+        txtDAOwnersAddress.Text = strLine
+
+        strLine = objStreamReader.ReadLine
+        txtDAOwnersTown.Text = strLine
+
+        strLine = objStreamReader.ReadLine
+        txtDAOwnersPcode.Text = strLine
+
+        strLine = objStreamReader.ReadLine
+        txtDAOwnersPhone.Text = strLine
+
+
+        objStreamReader.Close()
     End Sub
 
 
