@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="SqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InVzcF9ycHRfQ0NzX0FsbG9jYXRlZF9ieU9mZmljZXIoQFNUQVJULCBARU5EKSI+PEZpZWxkIE5hbWU9Ik9mZmljZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGV2VHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb3VudCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkNDVG93biIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InVzcF9ycHRfQ0NXaXRob3V0T2NjQ2VydCI+PEZpZWxkIE5hbWU9IkNvUENBbmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEQU5vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNDQXBwTm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ0NEZXNpc2lvbklkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkNDRGV0cm1pbmVkRHQiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJDb0luc3BEdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkRBQ2xhc3NpZmljYXRpb24iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
   </data>
   <data name="$this.DataSourceSchema" xml:space="preserve">
     <value>&lt;?xml version="1.0"?&gt;
@@ -129,13 +129,16 @@
   &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
     &lt;xs:complexType&gt;
       &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
-        &lt;xs:element name="occupCert"&gt;
+        &lt;xs:element name="CCWithoutOccCert"&gt;
           &lt;xs:complexType&gt;
             &lt;xs:sequence&gt;
-              &lt;xs:element name="Officer" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="DevType" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="Count" type="xs:int" minOccurs="0" /&gt;
-              &lt;xs:element name="CCTown" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="CoPCAname" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DANo" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="CCAppNo" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="CCDesisionId" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="CCDetrminedDt" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="CoInspDt" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="DAClassification" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;

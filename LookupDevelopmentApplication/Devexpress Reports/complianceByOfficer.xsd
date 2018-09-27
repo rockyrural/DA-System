@@ -3,13 +3,14 @@
   <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="occupCert">
+        <xs:element name="complianceByOfficer">
           <xs:complexType>
             <xs:sequence>
+              <xs:element name="CoType" type="xs:string" minOccurs="0" />
+              <xs:element name="CoNo" type="xs:string" minOccurs="0" />
               <xs:element name="Officer" type="xs:string" minOccurs="0" />
-              <xs:element name="DevType" type="xs:string" minOccurs="0" />
-              <xs:element name="Count" type="xs:int" minOccurs="0" />
-              <xs:element name="CCTown" type="xs:string" minOccurs="0" />
+              <xs:element name="CoInspDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Locality" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>

@@ -22,6 +22,7 @@ Partial Class DevelopmentStart
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
         Dim CurrentLandUseLabel As System.Windows.Forms.Label
         Dim Label27 As System.Windows.Forms.Label
         Dim OfficerLabel As System.Windows.Forms.Label
@@ -32,14 +33,14 @@ Partial Class DevelopmentStart
         Dim Label5 As System.Windows.Forms.Label
         Dim ConsentPlanNumberLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DevelopmentStart))
-        Dim GridLevelNode1 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
-        Me.ImageList1 = New System.Windows.Forms.ImageList()
-        Me.ImageList3 = New System.Windows.Forms.ImageList()
-        Me.ImageList4 = New System.Windows.Forms.ImageList()
-        Me.ImageList5 = New System.Windows.Forms.ImageList()
-        Me.ImageList2 = New System.Windows.Forms.ImageList()
-        Me.imgSmll = New System.Windows.Forms.ImageList()
-        Me.imlNavigation = New System.Windows.Forms.ImageList()
+        Dim GridLevelNode2 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
+        Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList3 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList4 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList5 = New System.Windows.Forms.ImageList(Me.components)
+        Me.ImageList2 = New System.Windows.Forms.ImageList(Me.components)
+        Me.imgSmll = New System.Windows.Forms.ImageList(Me.components)
+        Me.imlNavigation = New System.Windows.Forms.ImageList(Me.components)
         Me.Button1 = New System.Windows.Forms.Button()
         Me.tabPanels = New DevExpress.XtraTab.XtraTabControl()
         Me.tpgApplication = New DevExpress.XtraTab.XtraTabPage()
@@ -65,6 +66,8 @@ Partial Class DevelopmentStart
         Me.lblDesignated = New System.Windows.Forms.Label()
         Me.lblAdvertising = New System.Windows.Forms.Label()
         Me.grpOwner = New DevExpress.XtraEditors.GroupControl()
+        Me.btnUse2 = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnKeep2 = New DevExpress.XtraEditors.SimpleButton()
         Me.txtDAOwnersPcode = New System.Windows.Forms.TextBox()
         Me.Label23 = New System.Windows.Forms.Label()
         Me.Label24 = New System.Windows.Forms.Label()
@@ -266,6 +269,8 @@ Partial Class DevelopmentStart
         Me.DADecisionTextBox = New System.Windows.Forms.TextBox()
         Me.CCAppNoTextBox = New System.Windows.Forms.TextBox()
         Me.grpDetails = New DevExpress.XtraEditors.GroupControl()
+        Me.btnUse = New DevExpress.XtraEditors.SimpleButton()
+        Me.btnKeep = New DevExpress.XtraEditors.SimpleButton()
         Me.Label19 = New System.Windows.Forms.Label()
         Me.txtAppemail = New System.Windows.Forms.TextBox()
         Me.Label12 = New System.Windows.Forms.Label()
@@ -580,6 +585,7 @@ Partial Class DevelopmentStart
         Me.GridColumn10 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GridColumn11 = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.GroupBox31 = New System.Windows.Forms.GroupBox()
+        Me.chkUseEmail = New DevExpress.XtraEditors.CheckEdit()
         Me.btnRemoveSub = New DevExpress.XtraEditors.SimpleButton()
         Me.Label30 = New System.Windows.Forms.Label()
         Me.txtAuthorEmail = New System.Windows.Forms.TextBox()
@@ -740,10 +746,6 @@ Partial Class DevelopmentStart
         Me.Label48 = New System.Windows.Forms.Label()
         Me.cboSearch = New System.Windows.Forms.ComboBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.btnUse = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnKeep = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnUse2 = New DevExpress.XtraEditors.SimpleButton()
-        Me.btnKeep2 = New DevExpress.XtraEditors.SimpleButton()
         CurrentLandUseLabel = New System.Windows.Forms.Label()
         Label27 = New System.Windows.Forms.Label()
         OfficerLabel = New System.Windows.Forms.Label()
@@ -952,6 +954,7 @@ Partial Class DevelopmentStart
         CType(Me.grdSubmissionandObjections,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.gvwSubmissionandObjections,System.ComponentModel.ISupportInitialize).BeginInit
         Me.GroupBox31.SuspendLayout
+        CType(Me.chkUseEmail.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.cboSubmissionType.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.SubRecdDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.SubRecdDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
@@ -1482,6 +1485,24 @@ Partial Class DevelopmentStart
         Me.grpOwner.Size = New System.Drawing.Size(398, 210)
         Me.grpOwner.TabIndex = 159
         Me.grpOwner.Text = "Owners Details"
+        '
+        'btnUse2
+        '
+        Me.btnUse2.ImageOptions.Image = CType(resources.GetObject("btnUse2.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnUse2.Location = New System.Drawing.Point(338, 108)
+        Me.btnUse2.Name = "btnUse2"
+        Me.btnUse2.Size = New System.Drawing.Size(59, 31)
+        Me.btnUse2.TabIndex = 69
+        Me.btnUse2.Text = "Use"
+        '
+        'btnKeep2
+        '
+        Me.btnKeep2.ImageOptions.Image = CType(resources.GetObject("btnKeep2.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnKeep2.Location = New System.Drawing.Point(338, 38)
+        Me.btnKeep2.Name = "btnKeep2"
+        Me.btnKeep2.Size = New System.Drawing.Size(59, 31)
+        Me.btnKeep2.TabIndex = 68
+        Me.btnKeep2.Text = "&Keep"
         '
         'txtDAOwnersPcode
         '
@@ -2721,18 +2742,21 @@ Partial Class DevelopmentStart
         Me.ibInspectOfficerAndType.Caption = "Totals by Officer and Type"
         Me.ibInspectOfficerAndType.Id = 91
         Me.ibInspectOfficerAndType.Name = "ibInspectOfficerAndType"
+        Me.ibInspectOfficerAndType.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'ibInspectOfficerSummary
         '
         Me.ibInspectOfficerSummary.Caption = "By Officer Summary"
         Me.ibInspectOfficerSummary.Id = 92
         Me.ibInspectOfficerSummary.Name = "ibInspectOfficerSummary"
+        Me.ibInspectOfficerSummary.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'ibInspectFileNumber
         '
         Me.ibInspectFileNumber.Caption = "By File Number"
         Me.ibInspectFileNumber.Id = 93
         Me.ibInspectFileNumber.Name = "ibInspectFileNumber"
+        Me.ibInspectFileNumber.Visibility = DevExpress.XtraBars.BarItemVisibility.Never
         '
         'ibApprovalsByTown
         '
@@ -2816,7 +2840,6 @@ Partial Class DevelopmentStart
         '
         Me.ibTotalNoDACC.Caption = "Total Number of DAs and CCs posted"
         Me.ibTotalNoDACC.Id = 74
-        Me.ibTotalNoDACC.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.BarButtonItem8)})
         Me.ibTotalNoDACC.Name = "ibTotalNoDACC"
         '
         'BarButtonItem8
@@ -3360,6 +3383,24 @@ Partial Class DevelopmentStart
         Me.grpDetails.Name = "grpDetails"
         Me.grpDetails.Size = New System.Drawing.Size(980, 183)
         Me.grpDetails.TabIndex = 152
+        '
+        'btnUse
+        '
+        Me.btnUse.ImageOptions.Image = CType(resources.GetObject("btnUse.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnUse.Location = New System.Drawing.Point(910, 68)
+        Me.btnUse.Name = "btnUse"
+        Me.btnUse.Size = New System.Drawing.Size(65, 31)
+        Me.btnUse.TabIndex = 188
+        Me.btnUse.Text = "Use"
+        '
+        'btnKeep
+        '
+        Me.btnKeep.ImageOptions.Image = CType(resources.GetObject("btnKeep.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnKeep.Location = New System.Drawing.Point(910, 31)
+        Me.btnKeep.Name = "btnKeep"
+        Me.btnKeep.Size = New System.Drawing.Size(65, 31)
+        Me.btnKeep.TabIndex = 187
+        Me.btnKeep.Text = "&Keep"
         '
         'Label19
         '
@@ -4706,8 +4747,8 @@ Partial Class DevelopmentStart
         '
         'dgvLoadListReferrals
         '
-        GridLevelNode1.RelationName = "Level1"
-        Me.dgvLoadListReferrals.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode1})
+        GridLevelNode2.RelationName = "Level1"
+        Me.dgvLoadListReferrals.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode2})
         Me.dgvLoadListReferrals.Location = New System.Drawing.Point(22, 31)
         Me.dgvLoadListReferrals.MainView = Me.gvwLoadListReferrals
         Me.dgvLoadListReferrals.Name = "dgvLoadListReferrals"
@@ -5121,7 +5162,7 @@ Partial Class DevelopmentStart
         Me.grpAssessment.Controls.Add(Me.RefToPlanCom)
         Me.grpAssessment.Location = New System.Drawing.Point(26, 20)
         Me.grpAssessment.Name = "grpAssessment"
-        Me.grpAssessment.Size = New System.Drawing.Size(229, 184)
+        Me.grpAssessment.Size = New System.Drawing.Size(229, 121)
         Me.grpAssessment.TabIndex = 84
         Me.grpAssessment.Text = "Assessment"
         '
@@ -5133,6 +5174,7 @@ Partial Class DevelopmentStart
         Me.Label72.Size = New System.Drawing.Size(51, 13)
         Me.Label72.TabIndex = 11
         Me.Label72.Text = "To Typist"
+        Me.Label72.Visible = false
         '
         'Label71
         '
@@ -5142,6 +5184,7 @@ Partial Class DevelopmentStart
         Me.Label71.Size = New System.Drawing.Size(94, 13)
         Me.Label71.TabIndex = 10
         Me.Label71.Text = "Ref to Plan Cmtee"
+        Me.Label71.Visible = false
         '
         'Label70
         '
@@ -5180,6 +5223,7 @@ Partial Class DevelopmentStart
         Me.DAToTypingDt.Properties.ReadOnly = true
         Me.DAToTypingDt.Size = New System.Drawing.Size(100, 20)
         Me.DAToTypingDt.TabIndex = 100
+        Me.DAToTypingDt.Visible = false
         '
         'DAToPlannerDt
         '
@@ -5224,6 +5268,7 @@ Partial Class DevelopmentStart
         Me.RefToPlanCom.Properties.ReadOnly = true
         Me.RefToPlanCom.Size = New System.Drawing.Size(100, 20)
         Me.RefToPlanCom.TabIndex = 99
+        Me.RefToPlanCom.Visible = false
         '
         'grpNotification
         '
@@ -5462,6 +5507,7 @@ Partial Class DevelopmentStart
         Me.DAFreeTreeDt.Properties.ReadOnly = true
         Me.DAFreeTreeDt.Size = New System.Drawing.Size(100, 20)
         Me.DAFreeTreeDt.TabIndex = 104
+        Me.DAFreeTreeDt.Visible = false
         '
         'Label58
         '
@@ -5576,6 +5622,7 @@ Partial Class DevelopmentStart
         Me.Label76.Size = New System.Drawing.Size(99, 13)
         Me.Label76.TabIndex = 13
         Me.Label76.Text = "Tree Voucher Sent "
+        Me.Label76.Visible = false
         '
         'Label75
         '
@@ -6454,6 +6501,7 @@ Partial Class DevelopmentStart
         '
         'GroupBox31
         '
+        Me.GroupBox31.Controls.Add(Me.chkUseEmail)
         Me.GroupBox31.Controls.Add(Me.btnRemoveSub)
         Me.GroupBox31.Controls.Add(Me.Label30)
         Me.GroupBox31.Controls.Add(Me.txtAuthorEmail)
@@ -6485,6 +6533,16 @@ Partial Class DevelopmentStart
         Me.GroupBox31.Size = New System.Drawing.Size(1145, 181)
         Me.GroupBox31.TabIndex = 2
         Me.GroupBox31.TabStop = false
+        '
+        'chkUseEmail
+        '
+        Me.chkUseEmail.EditValue = true
+        Me.chkUseEmail.Location = New System.Drawing.Point(551, 30)
+        Me.chkUseEmail.MenuManager = Me.RibbonControl
+        Me.chkUseEmail.Name = "chkUseEmail"
+        Me.chkUseEmail.Properties.Caption = "Use Email Address"
+        Me.chkUseEmail.Size = New System.Drawing.Size(123, 19)
+        Me.chkUseEmail.TabIndex = 63
         '
         'btnRemoveSub
         '
@@ -8043,42 +8101,6 @@ Partial Class DevelopmentStart
         Me.cboSearch.Size = New System.Drawing.Size(182, 21)
         Me.cboSearch.TabIndex = 0
         '
-        'btnUse
-        '
-        Me.btnUse.ImageOptions.Image = CType(resources.GetObject("btnUse.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnUse.Location = New System.Drawing.Point(910, 68)
-        Me.btnUse.Name = "btnUse"
-        Me.btnUse.Size = New System.Drawing.Size(65, 31)
-        Me.btnUse.TabIndex = 188
-        Me.btnUse.Text = "Use"
-        '
-        'btnKeep
-        '
-        Me.btnKeep.ImageOptions.Image = CType(resources.GetObject("btnKeep.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnKeep.Location = New System.Drawing.Point(910, 31)
-        Me.btnKeep.Name = "btnKeep"
-        Me.btnKeep.Size = New System.Drawing.Size(65, 31)
-        Me.btnKeep.TabIndex = 187
-        Me.btnKeep.Text = "&Keep"
-        '
-        'btnUse2
-        '
-        Me.btnUse2.ImageOptions.Image = CType(resources.GetObject("btnUse2.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnUse2.Location = New System.Drawing.Point(338, 108)
-        Me.btnUse2.Name = "btnUse2"
-        Me.btnUse2.Size = New System.Drawing.Size(59, 31)
-        Me.btnUse2.TabIndex = 69
-        Me.btnUse2.Text = "Use"
-        '
-        'btnKeep2
-        '
-        Me.btnKeep2.ImageOptions.Image = CType(resources.GetObject("btnKeep2.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnKeep2.Location = New System.Drawing.Point(338, 38)
-        Me.btnKeep2.Name = "btnKeep2"
-        Me.btnKeep2.Size = New System.Drawing.Size(59, 31)
-        Me.btnKeep2.TabIndex = 68
-        Me.btnKeep2.Text = "&Keep"
-        '
         'DevelopmentStart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -8320,6 +8342,7 @@ Partial Class DevelopmentStart
         CType(Me.gvwSubmissionandObjections,System.ComponentModel.ISupportInitialize).EndInit
         Me.GroupBox31.ResumeLayout(false)
         Me.GroupBox31.PerformLayout
+        CType(Me.chkUseEmail.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.cboSubmissionType.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.SubRecdDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.SubRecdDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
@@ -9162,4 +9185,5 @@ End Sub
     Friend WithEvents btnKeep2 As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnUse As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnKeep As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents chkUseEmail As DevExpress.XtraEditors.CheckEdit
 End Class

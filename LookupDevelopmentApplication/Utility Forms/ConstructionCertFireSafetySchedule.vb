@@ -110,11 +110,7 @@ Public Class ConstructionCertFireSafetySchedule
 
     End Sub
 
-    Private Sub ConstructionCertFireSafetySchedule_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        If Me.txtSchedule.Text <> String.Empty Then
-            If MessageBox.Show("It appears you have entered some data, do you want to save this schedule before closing?", "Save Schedule?", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.Yes Then SaveSchedule()
-        End If
-    End Sub
+    
     Private Sub ConstructionCertFireSafetySchedule_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         CheckForExistingCondition()
     End Sub
@@ -173,5 +169,10 @@ Public Class ConstructionCertFireSafetySchedule
             End Try
         End Using
 
+    End Sub
+
+    Private Sub btnOK_Click(sender As Object, e As EventArgs) Handles btnOK.Click
+        SaveSchedule()
+        DialogResult=DialogResult.OK
     End Sub
 End Class

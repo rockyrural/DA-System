@@ -4,7 +4,7 @@ Imports System.Deployment.Application
 Imports System.IO
 Imports System.Runtime.InteropServices
 Imports System.Text
-Imports CrystalDecisions.CrystalReports.Engine
+'Imports CrystalDecisions.CrystalReports.Engine
 Imports DevExpress.LookAndFeel
 Imports DevExpress.XtraBars
 Imports DevExpress.XtraEditors
@@ -2598,7 +2598,15 @@ Public Class DevelopmentStart
 
             ElseIf TypeOf ctrl Is CheckEdit Then
                 Dim tb As CheckEdit = DirectCast(ctrl, CheckEdit)
-                tb.ReadOnly = Not bLock
+
+                If tb.Name = "chkUseEmail" Then
+
+                    tb.ReadOnly = False
+                Else
+
+                    tb.ReadOnly = Not bLock
+
+                End If
 
 
             ElseIf TypeOf ctrl Is DevExpress.XtraEditors.DateEdit Then
@@ -5312,7 +5320,7 @@ Public Class DevelopmentStart
                     Dim OwnerName As String = String.Empty
                     Dim OwnerAddress As String = String.Empty
                     Dim FileNo As String = String.Empty
-                    Dim rptDocument As New ReportDocument
+                    'Dim rptDocument As New ReportDocument
 
 
                     If objDT.Rows.Count > 0 Then
@@ -5346,38 +5354,6 @@ Public Class DevelopmentStart
                     End Using
 
 
-                    'Try
-
-                    '    'Pass the reportname to string variable 
-                    '    Dim strReportPath As String = My.Settings.ReportLocation & "ReferralResponse.rpt"
-
-                    '    'Check file exists
-                    '    If Not IO.File.Exists(strReportPath) Then
-                    '        Throw (New Exception("Unable to locate report file:" & vbCrLf & strReportPath))
-                    '    End If
-
-                    '    Dim myPrintOptions As PrintOptions = rptDocument.PrintOptions
-                    '    myPrintOptions.PrinterName = My.Settings.DefaultPrinter
-                    '    myPrintOptions.PrinterDuplex = CrystalDecisions.Shared.PrinterDuplex.Default
-                    '    myPrintOptions.CustomPaperSource = GetSelectedSecondPaperSource()
-
-
-                    '    With rptDocument
-                    '        .Load(strReportPath)
-                    '        .SetDataSource(objDT)
-                    '        .VerifyDatabase()
-                    '    End With
-
-
-                    '    rptDocument.PrintToPrinter(1, False, 1, 1)
-
-
-                    'Catch ex As Exception
-                    '    MessageBox.Show(ex.Message & " in function btnReferral_Click")
-                    'Finally
-                    '    rptDocument.Close()
-
-                    'End Try
 
 
 
@@ -7909,8 +7885,6 @@ Public Class DevelopmentStart
 
             End Try
 
-            Dim strReportPath As String = My.Settings.ReportLocation & "NoticeOfAdvertising.rpt"
-
             Try
 
                 Using cmd As New SqlCommand
@@ -8021,13 +7995,6 @@ Public Class DevelopmentStart
 
 
 
-                'Dim fViewer As New AddAdvertPrinter
-                'With fViewer
-                '    .objDataTable = objDT
-                '    .ReportName = "advertsign_designated.rpt"
-                '    .ShowDialog()
-                '    .Dispose()
-                'End With
 
             Catch ex As SqlException
                 MessageBox.Show(ex.Message, " in btnPrintAdvNotice_Click routine ")
@@ -8092,13 +8059,7 @@ Public Class DevelopmentStart
                     printTool.ShowPreview(UserLookAndFeel.Default)
                 End Using
 
-                'Dim fViewer As New AddAdvertPrinter
-                'With fViewer
-                '    .objDataTable = objDT
-                '    .ReportName = "advertsign_designatedAndIntegrated.rpt"
-                '    .ShowDialog()
-                '    .Dispose()
-                'End With
+
 
             Catch ex As SqlException
                 MessageBox.Show(ex.Message, " in btnPrintAdvNotice_Click routine ")
@@ -8603,7 +8564,7 @@ Public Class DevelopmentStart
                     End Using
 
 
-                    PrintObjectorsMailMerge(txtDANo.Text, objDT)
+                    PrintObjectorsMailMerge(txtDANo.Text, objDT, chkUseEmail.Checked)
 
                 End Using
 
@@ -11377,7 +11338,7 @@ Public Class DevelopmentStart
         If myobj.Row.Item("DraftDocPath").ToString = String.Empty Then Return
 
 
-        With My.Forms.SendEmail
+        With My.Forms.SendAckToSubmissionEmail
 
             .EmailAddress = txtAuthorEmail.Text
 
@@ -12550,43 +12511,7 @@ Public Class DevelopmentStart
                 End Using
 
 
-                'Dim strReportPath As String = My.Settings.ReportLocation & "DACert.rpt"
-                'Try
 
-                '    If Not IO.File.Exists(strReportPath) Then
-                '        Throw (New Exception("Unable to locate report file:" & vbCrLf & strReportPath))
-
-                '    End If
-
-                '    Dim myPrintOptions As PrintOptions = rptDocument.PrintOptions
-                '    myPrintOptions.PrinterName = My.Settings.DefaultPrinter
-                '    myPrintOptions.PrinterDuplex = CrystalDecisions.Shared.PrinterDuplex.Vertical
-                '    'myPrintOptions.CustomPaperSource = GetSelectedPaperSource()
-
-                '    With rptDocument
-                '        .Load(strReportPath)
-                '        .SetDataSource(objDT)
-                '        .VerifyDatabase()
-                '        .PrintToPrinter(1, False, 1, 99)
-                '    End With
-                'Catch ex As SqlException
-                '    MessageBox.Show(ex.Message, " in mnuPrintFileCoverSheet_Click routine ")
-                'End Try
-
-
-                '    Dim fViewer As New AddAdvertPrinter
-                '    With fViewer
-                '        .objDataTable = objDT
-                '        If Modification Then
-                '            .ReportName = "DAAssessmentMod.rpt"
-
-                '        Else
-                '            .ReportName = "DAAssessment.rpt"
-
-                '        End If
-                '        .ShowDialog()
-                '        .Dispose()
-                '    End With
 
             Catch ex As SqlException
                 MessageBox.Show(ex.Message, " in mnuPreviewAssessment_Click routine ")
@@ -12769,7 +12694,7 @@ Public Class DevelopmentStart
     End Sub
 
     Private Sub ibConsentAdvert_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibConsentAdvert.ItemClick
-        Dim rptDocument As New ReportDocument
+        'Dim rptDocument As New ReportDocument
 
         Dim objDT As New DataTable
 
@@ -12907,8 +12832,13 @@ Public Class DevelopmentStart
     Private Sub ibSepticByTown_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibSepticByTown.ItemClick
         Dim reptview As New reportSetupApprovals
 
+        Dim rept As New SepticApprovalsByTownAndType
+
         With reptview
-            .ReportToPrint = "SepticApprovalsByTownAndType.rpt"
+            .ReportToPrint = rept
+            '.XSDName ="SepticAppls"
+            .ReportTitle = "Septic Approvals by Town and Type"
+
             .StoredProcedureName = "usp_rpt_SepticApprovalsByTownAndType"
             '.StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -12920,8 +12850,12 @@ Public Class DevelopmentStart
     Private Sub ibAppliByOfficer_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibAppliByOfficer.ItemClick
         Dim reptview As New reportSetupApprovals
 
+        Dim rept As New ApplicationsRegisteredByOfficer
+
         With reptview
-            .ReportToPrint = "ApplicationsRegisteredByOfficer.rpt"
+            .ReportToPrint = rept
+            '.XSDName ="AppsRegistered"
+            .ReportTitle = "Applications Registered by Officer"
             .StoredProcedureName = "usp_rpt_ApplicationsRegisteredBY"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -12992,8 +12926,13 @@ Public Class DevelopmentStart
     Private Sub ibApprovalsByTown_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibApprovalsByTown.ItemClick
         Dim reptview As New reportSetupApprovals
 
+        Dim rept As New ApprovalsByTownAndType
+
         With reptview
-            .ReportToPrint = "ApprovalsByTownAndType.rpt"
+            .ReportToPrint = rept
+            '.XSDName ="ApplsByTown"
+            .ReportTitle = "Approvals by Town"
+
             .StoredProcedureName = "usp_rpt_ApprovalsByTownByTypebyDateRange"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -13079,8 +13018,12 @@ Public Class DevelopmentStart
 
     Private Sub ibTotalNoDACC_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibTotalNoDACC.ItemClick
         Dim daResults As New reportSetupApprovals
+        Dim rept As New NumberOfDaCCapprovedSummary
+
         With daResults
-            .ReportToPrint = "NumberOfDaCCapprovedSummary.rpt"
+            .ReportToPrint = rept
+            '.XSDName ="NumDAAppd"
+            .ReportTitle = "Inspections by officer summary"
             .StoredProcedureName = "usp_rpt_NumberDAsApprovedSummary"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -13100,7 +13043,7 @@ Public Class DevelopmentStart
 
         Dim reptview As New reportSetupMayoral
         With reptview
-            .ReportToPrint = "DAMayoralSummaryDeterm.rpt"
+            .ReportToPrint = "DAMayoralSummaryDeterm"
             .StoredProcedureName = "usp_rpt_DADetermSummary"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -13112,7 +13055,7 @@ Public Class DevelopmentStart
     Private Sub ibMayoralRecd_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibMayoralRecd.ItemClick
         Dim reptview As New reportSetupMayoral
         With reptview
-            .ReportToPrint = "DAMayoralSummaryRecv.rpt"
+            .ReportToPrint = "DAMayoralSummaryRecv"
             .StoredProcedureName = "usp_rpt_DARecvSummary"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -13123,8 +13066,13 @@ Public Class DevelopmentStart
 
     Private Sub ibCCwithoutOC_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibCCwithoutOC.ItemClick
         Dim reptview As New reportSetupApprovals
+
+        Dim rept As New CCwithoutOccupationCertificate
+
         With reptview
-            .ReportToPrint = "CCWithoutOccCert.rpt"
+            .ReportToPrint = rept
+            '.XSDName ="CCWithoutOccCert"
+            .ReportTitle = "Construction Certificates without Occupation Certificate"
             .StoredProcedureName = "usp_rpt_CCWithoutOccCert"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -13133,8 +13081,13 @@ Public Class DevelopmentStart
     End Sub
 
     Private Sub ibExpiredIOC_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibExpiredIOC.ItemClick
+
+        Dim rept As New CCwithExpiredInterimOccupationCertificate
+
         With My.Forms.reportSetupApprovals
-            .ReportToPrint = "CCWithOutstandingInterimOccCert.rpt"
+            .ReportToPrint = rept
+            '.XSDName ="CCExpiredInterimOC"
+            .ReportTitle = "Construction Certificates with expired Occupation Certificate"
             .StoredProcedureName = "usp_rpt_CCExpiredInterimOC"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -13235,9 +13188,7 @@ Public Class DevelopmentStart
         End Using
     End Sub
 
-    Private Sub ibAppdDelegation_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibAppdDelegation.ItemClick
 
-    End Sub
 
     Private Sub ibLEPRegister_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibLEPRegister.ItemClick
 
@@ -13251,22 +13202,26 @@ Public Class DevelopmentStart
 
     End Sub
 
-    Private Sub ibInspectFileNumber_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibInspectFileNumber.ItemClick
-        Dim reptview As New reportSetupApprovals
-        With reptview
-            .ReportToPrint = "InspectionsByFileNo.rpt"
-            .StoredProcedureName = "usp_rpt_InspectByFileNo"
-            .StartPosition = FormStartPosition.CenterParent
-            .ShowDialog()
-            .Dispose()
-        End With
-    End Sub
+    'Private Sub ibInspectFileNumber_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibInspectFileNumber.ItemClick
+    '    Dim reptview As New reportSetupApprovals
+    '    With reptview
+    '        .ReportToPrint = "InspectionsByFileNo.rpt"
+    '        .StoredProcedureName = "usp_rpt_InspectByFileNo"
+    '        .StartPosition = FormStartPosition.CenterParent
+    '        .ShowDialog()
+    '        .Dispose()
+    '    End With
+    'End Sub
 
     Private Sub ibInspectionByOfficer_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibInspectionByOfficer.ItemClick
         Dim reptview As New reportSetupApprovals
 
+        Dim rept As New ComplianceInspectionsByOfficer
+
         With reptview
-            .ReportToPrint = "ComplianceInspectionsByOfficer.rpt"
+            .ReportToPrint = rept
+            .XSDName = "complianceByOfficer"
+            .ReportTitle = "Compliance Inspections"
             .StoredProcedureName = "usp_rpt_ComplianceInspectionsByOfficer"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -13279,7 +13234,7 @@ Public Class DevelopmentStart
         Dim reptview As New reportSetupApprovals
 
         With reptview
-            .ReportToPrint = "InspectionsByOfficerXtab.rpt"
+            '.ReportToPrint = "InspectionsByOfficerXtab.rpt"
             .StoredProcedureName = "usp_rpt_ComplianceInspectionsByOfficer"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -13292,7 +13247,7 @@ Public Class DevelopmentStart
     Private Sub ibInspectOfficerSummary_ItemClick(sender As Object, e As ItemClickEventArgs) Handles ibInspectOfficerSummary.ItemClick
         Dim reptview As New reportSetupApprovals
         With reptview
-            .ReportToPrint = "InspectionsByOfficerXtabSummary.rpt"
+            '.ReportToPrint = "InspectionsByOfficerXtabSummary.rpt"
             .StoredProcedureName = "usp_rpt_ComplianceInspectionsByOfficer"
             .StartPosition = FormStartPosition.CenterParent
             .ShowDialog()
@@ -13581,374 +13536,5 @@ Public Class DevelopmentStart
     End Sub
 
 
-#Region "Redundant"
-
-    'Private Sub LoadLetterTypeCombo()
-
-
-    '    Using cn As New SqlConnection(My.Settings.connectionString)
-    '        Try
-    '            cn.Open()
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in DALookup_Load routine - form " & Me.Name)
-
-    '        End Try
-
-
-    '        Try
-
-    '            Using cmd As New SqlCommand
-
-    '                With cmd
-    '                    .Connection = cn
-    '                    .CommandType = CommandType.StoredProcedure
-    '                    .CommandText = "usp_LoadCreateLetterListBox"
-    '                    .Parameters.Add("@TYPE", SqlDbType.NVarChar).Value = "DA"
-
-    '                End With
-
-    '                cboLetterType.Items.Clear()
-
-    '                Using objDataReader As SqlDataReader = cmd.ExecuteReader
-    '                    Do While objDataReader.Read
-    '                        cboLetterType.Items.Add(New DocumentTypeListing(objDataReader("DocumentType").ToString, objDataReader("DocumentDescription").ToString, objDataReader("ReportName").ToString))
-    '                    Loop
-    '                End Using
-
-
-
-    '            End Using
-
-
-
-
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in DALookup_Load routine - form " & Me.Name)
-
-    '        End Try
-    '    End Using
-
-
-    'End Sub
-
-    'Private Sub txtDANo_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
-    '    lblapplicationNo.Text = txtDANo.Text
-    'End Sub
-
-
-    'Private Sub ReferralsByOfficerDateToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    Dim reptview As New ReportSetupReferralsByOfficer
-
-    '    With reptview
-    '        .ShowDialog()
-    '        .Dispose()
-    '    End With
-
-
-    'End Sub
-
-
-    'Private Sub OSDAsByOfficerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-
-    '    Dim objDT As New DataTable
-
-    '    Using cn As New SqlConnection(My.Settings.connectionString)
-    '        Try
-    '            cn.Open()
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in OSDAsByOfficerToolStripMenuItem_Click routine - form " & Me.Name)
-
-    '        End Try
-
-
-    '        Try
-
-    '            Using cmd As New SqlCommand
-
-    '                With cmd
-    '                    .Connection = cn
-    '                    .CommandType = CommandType.StoredProcedure
-    '                    .CommandText = "usp_rpt_DAToDoList"
-
-    '                End With
-
-
-
-    '                Using objDataReader As SqlDataReader = cmd.ExecuteReader
-    '                    objDT.Load(objDataReader)
-    '                End Using
-
-
-    '            End Using
-
-
-
-
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in OSDAsByOfficerToolStripMenuItem_Click routine - form " & Me.Name)
-
-    '        End Try
-    '    End Using
-
-
-
-
-    '    Dim reptviewer As New AddAdvertPrinter
-
-
-    '    With reptviewer
-
-    '        .objDataTable = objDT
-    '        .ReportName = "DA_ToDoList.rpt"
-    '        .ShowDialog()
-    '        .Dispose()
-
-    '    End With
-
-    'End Sub
-
-    'Private Sub OutstandingCCToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    Dim rptDocument As New ReportDocument
-
-    '    Dim objDT As New DataTable
-
-    '    'Check file exists
-
-    '    Using cn As New SqlConnection(My.Settings.connectionString)
-    '        Try
-    '            cn.Open()
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in PrintTheReport routine")
-
-    '        End Try
-
-
-    '        Try
-
-    '            Using cmd As New SqlCommand
-
-    '                With cmd
-    '                    .Connection = cn
-    '                    .CommandType = CommandType.StoredProcedure
-    '                    .CommandText = "usp_rpt_OutstandingCC"
-    '                End With
-
-
-
-    '                Using objDataReader As SqlDataReader = cmd.ExecuteReader
-    '                    objDT.Load(objDataReader)
-    '                End Using
-
-
-
-    '            End Using
-
-
-    '            'Dim strReportPath As String = My.Settings.ReportLocation & "OutstandingCCs.rpt"
-
-    '            Dim reptviewer As New AddAdvertPrinter
-    '            With reptviewer
-    '                .ReportName = "OutstandingCCs.rpt"
-    '                .objDataTable = objDT
-    '                .ShowDialog()
-    '                .Dispose()
-    '            End With
-
-    '            'Try
-
-    '            '    If Not IO.File.Exists(strReportPath) Then
-    '            '        Throw (New Exception("Unable to locate report file:" & vbCrLf & strReportPath))
-
-    '            '    End If
-
-    '            '    Dim myPrintOptions As PrintOptions = rptDocument.PrintOptions
-    '            '    myPrintOptions.PrinterName = My.Settings.DefaultPrinter
-    '            '    myPrintOptions.PrinterDuplex = CrystalDecisions.Shared.PrinterDuplex.Vertical
-
-    '            '    With rptDocument
-    '            '        .Load(strReportPath)
-    '            '        .SetDataSource(objDT)
-    '            '        .VerifyDatabase()
-
-    '            '        .PrintToPrinter(1, False, 1, 99)
-    '            '    End With
-
-
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in PrintTheReport routine ")
-    '        End Try
-
-
-    '        'Catch ex As SqlException
-    '        '    MessageBox.Show(ex.Message, " in PrintTheReport routine ")
-    '        'End Try
-    '    End Using
-    'End Sub
-
-    'Private Sub SepticsOutstandingByOfficerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    Dim rptDocument As New ReportDocument
-
-    '    Dim objDT As New DataTable
-
-    '    'Check file exists
-
-    '    Using cn As New SqlConnection(My.Settings.connectionString)
-    '        Try
-    '            cn.Open()
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in PrintTheReport routine")
-
-    '        End Try
-
-
-    '        Try
-
-    '            Using cmd As New SqlCommand
-
-    '                With cmd
-    '                    .Connection = cn
-    '                    .CommandType = CommandType.StoredProcedure
-    '                    .CommandText = "usp_rpt_OutstandingSepticTanks"
-    '                End With
-
-
-
-    '                Using objDataReader As SqlDataReader = cmd.ExecuteReader
-    '                    objDT.Load(objDataReader)
-    '                End Using
-
-
-
-    '            End Using
-
-
-    '            Dim strReportPath As String = My.Settings.ReportLocation & "OutstandingSeptics.rpt"
-    '            Try
-
-    '                If Not IO.File.Exists(strReportPath) Then
-    '                    Throw (New Exception("Unable to locate report file:" & vbCrLf & strReportPath))
-
-    '                End If
-
-    '                Dim myPrintOptions As PrintOptions = rptDocument.PrintOptions
-    '                myPrintOptions.PrinterName = My.Settings.DefaultPrinter
-    '                myPrintOptions.PrinterDuplex = CrystalDecisions.Shared.PrinterDuplex.Vertical
-
-    '                With rptDocument
-    '                    .Load(strReportPath)
-    '                    .SetDataSource(objDT)
-    '                    .VerifyDatabase()
-
-    '                    .PrintToPrinter(1, False, 1, 99)
-    '                End With
-    '            Catch ex As SqlException
-    '                MessageBox.Show(ex.Message, " in PrintTheReport routine ")
-    '            End Try
-
-
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in PrintTheReport routine ")
-    '        End Try
-    '    End Using
-    'End Sub
-
-    'Private Sub SewerConnectionsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    Dim freportSetup As New ReportSetupSewerConnections
-
-    '    With freportSetup
-    '        .ShowDialog()
-    '        .Dispose()
-    '    End With
-    'End Sub
-
-    'Private Sub BASIXCompleteNotifyToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    Dim freportSetup As New ReportSetupBasixComplete
-
-    '    With freportSetup
-    '        .ShowDialog()
-    '        .Dispose()
-    '    End With
-    'End Sub
-
-    'Private Sub DAsAllocatedByOfficerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    Dim reptview As New ReportSetupDAAllocatedToOfficers
-
-    '    With reptview
-    '        .ShowDialog()
-    '        .Dispose()
-    '    End With
-
-
-    'End Sub
-
-    'Private Sub CCsAllocatedByOfficerToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    Dim reptview As New reportSetupApprovals
-    '    With reptview
-    '        .ReportToPrint = "CCs_AllocatedByOfficer.rpt"
-    '        .StoredProcedureName = "usp_rpt_CCs_Allocated_ByOfficer"
-    '        .StartPosition = FormStartPosition.CenterParent
-    '        .ShowDialog()
-    '        .Dispose()
-    '    End With
-
-    'End Sub
-
-    'Private Sub OutstandingReferralsToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-    '    Dim objDT As New DataTable
-
-    '    Using cn As New SqlConnection(My.Settings.connectionString)
-    '        Try
-    '            cn.Open()
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in OutstandingReferralsToolStripMenuItem_Click routine - form " & Me.Name)
-
-    '        End Try
-
-
-    '        Try
-
-    '            Using cmd As New SqlCommand
-
-    '                With cmd
-    '                    .Connection = cn
-    '                    .CommandType = CommandType.StoredProcedure
-    '                    .CommandText = "usp_rpt_OutstandingReferrals"
-
-    '                    '.Parameters.Add("@PINNUM", SqlDbType.Int).Value = mdl_PIN
-    '                End With
-
-
-
-    '                Using objDataReader As SqlDataReader = cmd.ExecuteReader
-    '                    objDT.Load(objDataReader)
-    '                End Using
-
-
-    '            End Using
-
-
-
-
-    '        Catch ex As SqlException
-    '            MessageBox.Show(ex.Message, " in OutstandingReferralsToolStripMenuItem_Click routine - form " & Me.Name)
-
-    '        End Try
-    '    End Using
-
-
-    '    Dim reptViewer As New AddAdvertPrinter
-    '    With reptViewer
-    '        .ReportName = "OutstandingReferrals.rpt"
-    '        .objDataTable = objDT
-    '        .ShowDialog()
-    '        .Dispose()
-
-    '    End With
-
-
-
-
-    'End Sub
-#End Region
 
 End Class

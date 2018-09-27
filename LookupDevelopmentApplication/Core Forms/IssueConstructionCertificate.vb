@@ -636,7 +636,7 @@ Public Class IssueConstructionCertificate
 
                 Dim cb As SimpleButton = DirectCast(ctrl, SimpleButton)
                 Select Case cb.Name
-                    Case "btnViewOfficers", "btnAddFee", "btnAddRefund", "btnAddNote", "btnEditStatus","btnViewBldgSolutions"
+                    Case "btnViewOfficers", "btnAddFee", "btnAddRefund", "btnAddNote", "btnEditStatus", "btnViewBldgSolutions"
                         cb.Enabled = True
 
                     Case "btnEditPayment", "btnRemoveFee", "btnEditRefund", "btnRemoveRefund"
@@ -6670,7 +6670,7 @@ Public Class IssueConstructionCertificate
 
                 .DANumber = txtDANo.Text
 
-                .EditForm=false
+                .EditForm = False
 
                 .ShowDialog()
 
@@ -6690,7 +6690,7 @@ Public Class IssueConstructionCertificate
 
             .DANumber = txtDANo.Text
 
-            .EditForm=True
+            .EditForm = True
 
             .ShowDialog()
 

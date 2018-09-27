@@ -160,13 +160,13 @@ Module CreateWordDocuments
     End Sub
 
 
-    Friend Sub PrintObjectorsMailMerge(AppNo As String, ObjDt As DataTable)
+    Friend Sub PrintObjectorsMailMerge(AppNo As String, ObjDt As DataTable, email As Boolean)
 
 
 
 
 
-        BuildObjectorMergeFile(ObjDt)
+        BuildObjectorMergeFile(ObjDt, email)
 
         BuildMailMergeDocuments(AppNo, "OAK", "H:\DB\Development\ConditionDocs\ObjectorSubmissionAcknowledgment.dotx", 54)
 
@@ -175,7 +175,7 @@ Module CreateWordDocuments
 
     End Sub
 
-    Friend Sub BuildObjectorMergeFile(ByVal objDt As DataTable)
+    Friend Sub BuildObjectorMergeFile(ByVal objDt As DataTable, email As Boolean)
 
         'Dim objDataRow As DataRow = objDt.Rows.Item(0)
 
@@ -189,16 +189,43 @@ Module CreateWordDocuments
         objStreamWriter.WriteLine("""DANO"",""DAFileNo"",""ObjectorName"",""ObjectorAddress1"",""ObjectorAddress2"",""ObjectorPostcode"",""Developmentdesc"",""PropertyDesc"",""DPNO"",""LotNo"",""Phone"",""FullName"",""Officer"",""Title""")
 
 
-        For Each objDataRow As DataRow In objDt.Rows
-
-            objStreamWriter.WriteLine("""" & objDataRow.Item("DANo").ToString & """,""" & objDataRow.Item("DAFileNo").ToString & """,""" & objDataRow.Item("ObjectorName").ToString & """,""" &
-                                       objDataRow.Item("AuthorAddressLine1").ToString & """,""" & objDataRow.Item("AuthorAddressLine2").ToString & """,""" &
-                                       objDataRow.Item("AuthorPCode").ToString & """,""" & objDataRow.Item("DADesc").ToString & """,""" &
-                                       objDataRow.Item("AddressFormatted").ToString & """,""" & objDataRow.Item("DADP").ToString & """,""" & objDataRow.Item("DALot").ToString &
-                                       """,""" & objDataRow.Item("Phone").ToString & """,""" & objDataRow.Item("FullName").ToString & """,""" & objDataRow.Item("Officer").ToString & """,""" & objDataRow.Item("Title").ToString & """")
+        If email Then
 
 
-        Next
+            For Each objDataRow As DataRow In objDt.Rows
+
+                If objDataRow.Item("emailAddress").ToString <> "" Then
+
+                    objStreamWriter.WriteLine("""" & objDataRow.Item("DANo").ToString & """,""" & objDataRow.Item("DAFileNo").ToString & """,""" & objDataRow.Item("ObjectorName").ToString & ""","""  & objDataRow.Item("emailAddress").ToString & ""","""","""",""" & objDataRow.Item("DADesc").ToString & """,""" &
+                                              objDataRow.Item("AddressFormatted").ToString & """,""" & objDataRow.Item("DADP").ToString & """,""" & objDataRow.Item("DALot").ToString &
+                                              """,""" & objDataRow.Item("Phone").ToString & """,""" & objDataRow.Item("FullName").ToString & """,""" & objDataRow.Item("Officer").ToString & """,""" & objDataRow.Item("Title").ToString & """")
+                Else
+                    objStreamWriter.WriteLine("""" & objDataRow.Item("DANo").ToString & """,""" & objDataRow.Item("DAFileNo").ToString & """,""" & objDataRow.Item("ObjectorName").ToString & """,""" &
+                                              objDataRow.Item("AuthorAddressLine1").ToString & """,""" & objDataRow.Item("AuthorAddressLine2").ToString & """,""" &
+                                              objDataRow.Item("AuthorPCode").ToString & """,""" & objDataRow.Item("DADesc").ToString & """,""" &
+                                              objDataRow.Item("AddressFormatted").ToString & """,""" & objDataRow.Item("DADP").ToString & """,""" & objDataRow.Item("DALot").ToString &
+                                              """,""" & objDataRow.Item("Phone").ToString & """,""" & objDataRow.Item("FullName").ToString & """,""" & objDataRow.Item("Officer").ToString & """,""" & objDataRow.Item("Title").ToString & """")
+
+                End If
+
+            Next
+
+        Else
+
+            For Each objDataRow As DataRow In objDt.Rows
+
+                objStreamWriter.WriteLine("""" & objDataRow.Item("DANo").ToString & """,""" & objDataRow.Item("DAFileNo").ToString & """,""" & objDataRow.Item("ObjectorName").ToString & """,""" &
+                                          objDataRow.Item("AuthorAddressLine1").ToString & """,""" & objDataRow.Item("AuthorAddressLine2").ToString & """,""" &
+                                          objDataRow.Item("AuthorPCode").ToString & """,""" & objDataRow.Item("DADesc").ToString & """,""" &
+                                          objDataRow.Item("AddressFormatted").ToString & """,""" & objDataRow.Item("DADP").ToString & """,""" & objDataRow.Item("DALot").ToString &
+                                          """,""" & objDataRow.Item("Phone").ToString & """,""" & objDataRow.Item("FullName").ToString & """,""" & objDataRow.Item("Officer").ToString & """,""" & objDataRow.Item("Title").ToString & """")
+
+
+            Next
+
+        End If
+
+
 
 
 

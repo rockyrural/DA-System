@@ -121,7 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <data name="SqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InVzcF9ycHRfQ0NzX0FsbG9jYXRlZF9ieU9mZmljZXIoQFNUQVJULCBARU5EKSI+PEZpZWxkIE5hbWU9Ik9mZmljZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGV2VHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJDb3VudCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkNDVG93biIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InVzcF9ycHRfQXBwcm92YWxzQnlUb3duQnlUeXBlYnlEYXRlUmFuZ2UiPjxGaWVsZCBOYW1lPSJObyBBcHBscyIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkxvY2FsaXR5Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEZXZUeXBlIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
   </data>
   <data name="$this.DataSourceSchema" xml:space="preserve">
     <value>&lt;?xml version="1.0"?&gt;
@@ -129,13 +129,12 @@
   &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
     &lt;xs:complexType&gt;
       &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
-        &lt;xs:element name="occupCert"&gt;
+        &lt;xs:element name="ApplsByTown"&gt;
           &lt;xs:complexType&gt;
             &lt;xs:sequence&gt;
-              &lt;xs:element name="Officer" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="No_x0020_Appls" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="LocalityCode" type="xs:string" minOccurs="0" /&gt;
               &lt;xs:element name="DevType" type="xs:string" minOccurs="0" /&gt;
-              &lt;xs:element name="Count" type="xs:int" minOccurs="0" /&gt;
-              &lt;xs:element name="CCTown" type="xs:string" minOccurs="0" /&gt;
             &lt;/xs:sequence&gt;
           &lt;/xs:complexType&gt;
         &lt;/xs:element&gt;

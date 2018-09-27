@@ -1,7 +1,7 @@
 
-Imports CrystalDecisions.CrystalReports.Engine
-Imports CrystalDecisions.ReportSource
-Imports CrystalDecisions.Shared
+'Imports CrystalDecisions.CrystalReports.Engine
+'Imports CrystalDecisions.ReportSource
+'Imports CrystalDecisions.Shared
 Imports System.Data.SqlClient
 Public Class ReportSetupAverageInspectTimes
 
@@ -18,7 +18,7 @@ Public Class ReportSetupAverageInspectTimes
     End Sub
 
     Private Sub PrintTheReport()
-        Dim rptDocument As New ReportDocument
+        'Dim rptDocument As New ReportDocument
 
         Dim objDT As New DataTable
 

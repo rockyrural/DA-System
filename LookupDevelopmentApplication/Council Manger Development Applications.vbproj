@@ -41,7 +41,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>5</ApplicationRevision>
+    <ApplicationRevision>9</ApplicationRevision>
     <ApplicationVersion>2.2.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -72,7 +72,7 @@
     <WarningsAsErrors>
     </WarningsAsErrors>
     <PlatformTarget>AnyCPU</PlatformTarget>
-    <Prefer32Bit>true</Prefer32Bit>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
@@ -497,6 +497,18 @@
     <Compile Include="Devexpress Reports\AdvertisingSign.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Devexpress Reports\ApplicationsRegisteredByOfficer.Designer.vb">
+      <DependentUpon>ApplicationsRegisteredByOfficer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devexpress Reports\ApplicationsRegisteredByOfficer.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Devexpress Reports\ApprovalsByTownAndType.Designer.vb">
+      <DependentUpon>ApprovalsByTownAndType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devexpress Reports\ApprovalsByTownAndType.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Devexpress Reports\ApprovalsReport.Designer.vb">
       <DependentUpon>ApprovalsReport.vb</DependentUpon>
     </Compile>
@@ -525,6 +537,24 @@
       <DependentUpon>CCAddressPropertyByPCA.vb</DependentUpon>
     </Compile>
     <Compile Include="Devexpress Reports\CCAddressPropertyByPCA.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Devexpress Reports\CCwithExpiredInterimOccupationCertificate.Designer.vb">
+      <DependentUpon>CCwithExpiredInterimOccupationCertificate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devexpress Reports\CCwithExpiredInterimOccupationCertificate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Devexpress Reports\CCwithoutOccupationCertificate.Designer.vb">
+      <DependentUpon>CCwithoutOccupationCertificate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devexpress Reports\CCwithoutOccupationCertificate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Devexpress Reports\ComplianceInspectionsByOfficer.Designer.vb">
+      <DependentUpon>ComplianceInspectionsByOfficer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devexpress Reports\ComplianceInspectionsByOfficer.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Devexpress Reports\ConstructionCertificatesByOfficer.Designer.vb">
@@ -581,6 +611,12 @@
     <Compile Include="Devexpress Reports\MayoralReceived.vb">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Devexpress Reports\NumberOfDaCCapprovedSummary.Designer.vb">
+      <DependentUpon>NumberOfDaCCapprovedSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devexpress Reports\NumberOfDaCCapprovedSummary.vb">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Devexpress Reports\OutstandingConstructionCertificates.Designer.vb">
       <DependentUpon>OutstandingConstructionCertificates.vb</DependentUpon>
     </Compile>
@@ -615,6 +651,12 @@
       <DependentUpon>ReferralsByOfficerAndDate.vb</DependentUpon>
     </Compile>
     <Compile Include="Devexpress Reports\ReferralsByOfficerAndDate.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Devexpress Reports\SepticApprovalsByTownAndType.Designer.vb">
+      <DependentUpon>SepticApprovalsByTownAndType.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Devexpress Reports\SepticApprovalsByTownAndType.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="EASE modules\InsertEASEdocument.Designer.vb">
@@ -1219,6 +1261,12 @@
     <Compile Include="Utility Forms\Sec9464contributions.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Utility Forms\SendAckToSubmissionEmail.designer.vb">
+      <DependentUpon>SendAckToSubmissionEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Utility Forms\SendAckToSubmissionEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Utility Forms\SendEmail.designer.vb">
       <DependentUpon>SendEmail.vb</DependentUpon>
     </Compile>
@@ -1374,6 +1422,12 @@
     <EmbeddedResource Include="Devexpress Reports\AdvertisingSign.resx">
       <DependentUpon>AdvertisingSign.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Devexpress Reports\ApplicationsRegisteredByOfficer.resx">
+      <DependentUpon>ApplicationsRegisteredByOfficer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devexpress Reports\ApprovalsByTownAndType.resx">
+      <DependentUpon>ApprovalsByTownAndType.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Devexpress Reports\ApprovalsReport.resx">
       <DependentUpon>ApprovalsReport.vb</DependentUpon>
     </EmbeddedResource>
@@ -1388,6 +1442,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Devexpress Reports\CCAddressPropertyByPCA.resx">
       <DependentUpon>CCAddressPropertyByPCA.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devexpress Reports\CCwithExpiredInterimOccupationCertificate.resx">
+      <DependentUpon>CCwithExpiredInterimOccupationCertificate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devexpress Reports\CCwithoutOccupationCertificate.resx">
+      <DependentUpon>CCwithoutOccupationCertificate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devexpress Reports\ComplianceInspectionsByOfficer.resx">
+      <DependentUpon>ComplianceInspectionsByOfficer.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Devexpress Reports\ConstructionCertificatesByOfficer.resx">
       <DependentUpon>ConstructionCertificatesByOfficer.vb</DependentUpon>
@@ -1416,6 +1479,9 @@
     <EmbeddedResource Include="Devexpress Reports\MayoralReceived.resx">
       <DependentUpon>MayoralReceived.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Devexpress Reports\NumberOfDaCCapprovedSummary.resx">
+      <DependentUpon>NumberOfDaCCapprovedSummary.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Devexpress Reports\OutstandingConstructionCertificates.resx">
       <DependentUpon>OutstandingConstructionCertificates.vb</DependentUpon>
     </EmbeddedResource>
@@ -1433,6 +1499,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Devexpress Reports\ReferralsByOfficerAndDate.resx">
       <DependentUpon>ReferralsByOfficerAndDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Devexpress Reports\SepticApprovalsByTownAndType.resx">
+      <DependentUpon>SepticApprovalsByTownAndType.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EASE modules\InsertEASEdocument.resx">
       <DependentUpon>InsertEASEdocument.vb</DependentUpon>
@@ -1707,6 +1776,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Utility Forms\Sec9464contributions.resx">
       <DependentUpon>Sec9464contributions.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Utility Forms\SendAckToSubmissionEmail.resx">
+      <DependentUpon>SendAckToSubmissionEmail.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Utility Forms\SendEmail.resx">
       <DependentUpon>SendEmail.vb</DependentUpon>

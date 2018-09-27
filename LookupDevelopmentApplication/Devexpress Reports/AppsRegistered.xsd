@@ -3,13 +3,17 @@
   <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="occupCert">
+        <xs:element name="AppsRegistered">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="Officer" type="xs:string" minOccurs="0" />
+              <xs:element name="DANo" type="xs:string" minOccurs="0" />
+              <xs:element name="CreatedDate" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CreatedBy" type="xs:string" minOccurs="0" />
+              <xs:element name="AppType" type="xs:string" minOccurs="0" />
               <xs:element name="DevType" type="xs:string" minOccurs="0" />
-              <xs:element name="Count" type="xs:int" minOccurs="0" />
-              <xs:element name="CCTown" type="xs:string" minOccurs="0" />
+              <xs:element name="DevUse" type="xs:string" minOccurs="0" />
+              <xs:element name="DADesc" type="xs:string" minOccurs="0" />
+              <xs:element name="Notification" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
