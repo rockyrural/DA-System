@@ -18,12 +18,12 @@ Public Class reportSetupApprovals
         End Set
     End Property
 
-    Private _xsdName As String
-    Public WriteOnly Property XSDName() As String
-        Set(ByVal value As String)
-            _xsdName = value
-        End Set
-    End Property
+    'Private _xsdName As String
+    'Public WriteOnly Property XSDName() As String
+    '    Set(ByVal value As String)
+    '        _xsdName = value
+    '    End Set
+    'End Property
 
     Private _reportTitle As String
     Public WriteOnly Property ReportTitle() As String
@@ -87,11 +87,11 @@ Public Class reportSetupApprovals
                         objDT.Load(objDataReader)
                     End Using
 
-                    Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
-                    Dim mylist As DataSet = New DataSet
-                    adapter.Fill(mylist, _xsdName)
+                    'Dim adapter As SqlDataAdapter = New SqlDataAdapter(cmd)
+                    'Dim mylist As DataSet = New DataSet
+                    'adapter.Fill(mylist, _xsdName)
 
-                    mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\Devexpress Reports\" & _xsdName & ".xsd")
+                    'mylist.WriteXmlSchema("D:\Development\DA System\LookupDevelopmentApplication\Devexpress Reports\" & _xsdName & ".xsd")
 
                 End Using
 
