@@ -2266,7 +2266,7 @@ Public Class NewAssessmentForm
 
 
 
-        If lupConflict.Text="" Then
+        If lupConflict.Text = "" Then
             With ErrorProvider
                 .SetIconAlignment(lupConflict, ErrorIconAlignment.MiddleRight)
                 .SetError(lupConflict, "You MUST select either Yes or No!")
@@ -4556,7 +4556,7 @@ Public Class NewAssessmentForm
         End With
 
         btnPDF.Enabled = True
-
+        btnRemovePlan.Enabled=true
 
 
     End Sub
@@ -4633,7 +4633,70 @@ Public Class NewAssessmentForm
 
     End Sub
 
-    Private Sub lupConflict_EditValueChanged(sender As Object, e As EventArgs) Handles lupConflict.EditValueChanged
+    Private Sub removePlan(myObj As DataRowView)
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in removePlan routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_DELETE_ApplicationPlan"
+
+                        .Parameters.Add("@INDEXID", SqlDbType.Int).Value = CType(myObj.Row.Item("PlanIDX"), Integer)
+
+                        .ExecuteNonQuery()
+
+
+                    End With
+
+
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in removePlan routine - form " & Me.Name)
+
+            End Try
+        End Using
+
+    End Sub
+
+
+    Private Sub btnRemovePlan_Click(sender As Object, e As EventArgs) Handles btnRemovePlan.Click
+
+        Dim myobj As DataRowView = CType(gvwPlans.GetFocusedRow, DataRowView)
+
+        Dim EASEed As Boolean = CBool(myobj.Row.Item("InEASE"))
+        Dim PDFDocumentName As String = myobj.Row.Item("PlanName").ToString
+
+
+        If MessageBox.Show("Remove " & PDFDocumentName & "?", "REMOVE PLAN", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = DialogResult.No Then Return
+
+        removePlan(myobj)
+
+        If EASEed = False Then
+
+            Dim fileToRemove = My.Settings.PlanLocation & PDFDocumentName
+
+            My.Computer.FileSystem.DeleteFile(fileToRemove)
+
+
+        End If
+
+        LoadPlansToView()
 
     End Sub
 End Class

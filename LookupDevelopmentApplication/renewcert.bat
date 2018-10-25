@@ -1,0 +1,1 @@
+renewcert LookupDevelopmentApplication_TemporaryKey.pfx dev2014.pfx "CN=itd" 

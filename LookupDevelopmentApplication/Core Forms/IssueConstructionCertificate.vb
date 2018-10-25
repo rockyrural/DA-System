@@ -2353,7 +2353,7 @@ Public Class IssueConstructionCertificate
                         .CommandType = CommandType.StoredProcedure
                         .CommandText = "usp_SELECT_RetrieveHistoricalDevDocuments"
 
-                        .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = txtCCno.Text
+                        .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = txtDANo.Text
                         .Parameters.Add("@APPTYPE", SqlDbType.NVarChar).Value = "CC"
                     End With
 
@@ -2384,51 +2384,51 @@ Public Class IssueConstructionCertificate
 
     End Sub
 
-    Private Sub btnSaveTheNote_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles btnSaveTheNote.Click
+    'Private Sub btnSaveTheNote_Click(ByVal sender As Object, ByVal e As System.EventArgs) 
 
-        If MessageBox.Show("Update note?", "Add amend doc note", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.No Then Exit Sub
+    '    If MessageBox.Show("Update note?", "Add amend doc note", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = Windows.Forms.DialogResult.No Then Exit Sub
 
-        Dim myobj As DataRowView = CType(gvwDocumentsList.GetFocusedRow, DataRowView)
-
-
-        Using cn As New SqlConnection(My.Settings.connectionString)
-            Try
-                cn.Open()
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in btnDocNote_Click routine - form " & Me.Name)
-
-            End Try
+    '    Dim myobj As DataRowView = CType(gvwDocumentsList.GetFocusedRow, DataRowView)
 
 
-            Try
+    '    Using cn As New SqlConnection(My.Settings.connectionString)
+    '        Try
+    '            cn.Open()
+    '        Catch ex As SqlException
+    '            MessageBox.Show(ex.Message, " in btnDocNote_Click routine - form " & Me.Name)
 
-                Using cmd As New SqlCommand
+    '        End Try
 
-                    With cmd
-                        .Connection = cn
-                        .CommandType = CommandType.StoredProcedure
-                        .CommandText = "usp_UpdateDocumentNote"
-                        .Parameters.Add("@NOTES", SqlDbType.NText).Value = Me.txtDocNote.Text
-                        .Parameters.Add("@DOCID", SqlDbType.Int).Value = CInt(myobj.Row.Item("DocId"))
-                        .ExecuteNonQuery()
-                    End With
 
-                End Using
+    '        Try
 
-            Catch ex As SqlException
-                MessageBox.Show(ex.Message, " in btnDocNote_Click routine - form " & Me.Name)
+    '            Using cmd As New SqlCommand
 
-            End Try
-        End Using
-        'reload file numbers
-        txtDocNote.Text = String.Empty
-        Try
-            LoadHistoricalDocuments()
-        Catch ex As System.Exception
-            System.Windows.Forms.MessageBox.Show(ex.Message)
-        End Try
+    '                With cmd
+    '                    .Connection = cn
+    '                    .CommandType = CommandType.StoredProcedure
+    '                    .CommandText = "usp_UpdateDocumentNote"
+    '                    .Parameters.Add("@NOTES", SqlDbType.NText).Value = Me.txtDocNote.Text
+    '                    .Parameters.Add("@DOCID", SqlDbType.Int).Value = CInt(myobj.Row.Item("DocId"))
+    '                    .ExecuteNonQuery()
+    '                End With
 
-    End Sub
+    '            End Using
+
+    '        Catch ex As SqlException
+    '            MessageBox.Show(ex.Message, " in btnDocNote_Click routine - form " & Me.Name)
+
+    '        End Try
+    '    End Using
+    '    'reload file numbers
+    '    txtDocNote.Text = String.Empty
+    '    Try
+    '        LoadHistoricalDocuments()
+    '    Catch ex As System.Exception
+    '        System.Windows.Forms.MessageBox.Show(ex.Message)
+    '    End Try
+
+    'End Sub
 
     Private Sub btnViewWord_Click(sender As Object, e As EventArgs) Handles btnViewWord.Click
 
@@ -2627,7 +2627,7 @@ Public Class IssueConstructionCertificate
 
         Dim myobj As DataRowView = CType(gvwDocumentsList.GetFocusedRow, DataRowView)
 
-        txtDocNote.Text = myobj.Row.Item("notes").ToString
+        'txtDocNote.Text = myobj.Row.Item("notes").ToString
 
         btnRemoveDocument.Enabled = True
         btnViewPDF.Enabled = True
@@ -2635,7 +2635,9 @@ Public Class IssueConstructionCertificate
 
 
 
-        btnViewWord.Enabled = myobj.Row.Item("WORDDOC").ToString <> "N"
+        btnRemoveDocument.Visible = myobj.Row.Item("WORDDOC").ToString <> "N"
+        btnViewWord.Visible = myobj.Row.Item("WORDDOC").ToString <> "N"
+        btnViewPDF.Visible = myobj.Row.Item("WORDDOC").ToString = "N"
 
 
 
@@ -6699,6 +6701,10 @@ Public Class IssueConstructionCertificate
         End With
 
 
+    End Sub
+
+    Private Sub gvwDocumentsList_DoubleClick(sender As Object, e As EventArgs) Handles gvwDocumentsList.DoubleClick
+        DisplayPDFdocument()
     End Sub
 
 

@@ -1,0 +1,40 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CCCert">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CCAppNo" type="xs:string" minOccurs="0" />
+              <xs:element name="DANo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCRegoDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CCAppType" type="xs:string" minOccurs="0" />
+              <xs:element name="CCOwnerBuilderNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCLicBuilderName" type="xs:string" minOccurs="0" />
+              <xs:element name="CCLicBuilderNo" type="xs:string" minOccurs="0" />
+              <xs:element name="CCInsuranceNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Insurance" type="xs:string" minOccurs="0" />
+              <xs:element name="CCtoOfficerDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CCDetrminedDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="CCInformedDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="Officer" type="xs:string" minOccurs="0" />
+              <xs:element name="LocalityCode" type="xs:string" minOccurs="0" />
+              <xs:element name="CCValue" type="xs:decimal" minOccurs="0" />
+              <xs:element name="CCDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="CCName" type="xs:string" minOccurs="0" />
+              <xs:element name="CCStreet" type="xs:string" minOccurs="0" />
+              <xs:element name="CCTown" type="xs:string" minOccurs="0" />
+              <xs:element name="CCPhone" type="xs:string" minOccurs="0" />
+              <xs:element name="DALot" type="xs:string" minOccurs="0" />
+              <xs:element name="DADP" type="xs:string" minOccurs="0" />
+              <xs:element name="DASection" type="xs:string" minOccurs="0" />
+              <xs:element name="DAStreetNo" type="xs:string" minOccurs="0" />
+              <xs:element name="DAStreet" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

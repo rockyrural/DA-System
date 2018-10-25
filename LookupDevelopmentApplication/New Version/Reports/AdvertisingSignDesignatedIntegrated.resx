@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="XrLabel10.Text" xml:space="preserve">
+    <value>ANY PERSON MAY MAKE A SUBMISSION TO COUNCIL AND IF DOING SO MUST DISCLOSE ANY REPORTABLE POLITICAL DONATIONS OR GIFTS. WHERE THE SUBMISSION IS AN OBJECTION THE GROUNDS OF OBJECTION MUST BE SPECIFIED. WRITTEN SUBMISSIONS MUST BE RECEIVED AT COUNCIL BY</value>
+  </data>
+  <metadata name="SqlDataSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <data name="SqlDataSource1.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iU3FsRGF0YVNvdXJjZTEiPjxWaWV3IE5hbWU9InVzcF9ycHRfQWR2ZXJ0U2lnbnMiPjxGaWVsZCBOYW1lPSJEQU5vIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBQXBwTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEQURlc2MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iREFMb3QiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iREFEUCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEQVNlY3Rpb24iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3RyZWV0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkRBQ29tbUR0IiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iREFDb21wbGV0ZWREdCIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkxvY2FsaXR5Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJsQVBTRURBWVMiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJBZHZlcnRTaWduRGVwb3RUZXh0IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik9mZmljZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iREFGaWxlTm8iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWR2ZXJ0U2lnbkludERldGFpbHMiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+  <data name="$this.DataSourceSchema" xml:space="preserve">
+    <value>&lt;?xml version="1.0"?&gt;
+&lt;xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata"&gt;
+  &lt;xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true"&gt;
+    &lt;xs:complexType&gt;
+      &lt;xs:choice minOccurs="0" maxOccurs="unbounded"&gt;
+        &lt;xs:element name="Advertising"&gt;
+          &lt;xs:complexType&gt;
+            &lt;xs:sequence&gt;
+              &lt;xs:element name="DANo" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DAAppName" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DADesc" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DALot" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DADP" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DASection" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="Street" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DACommDt" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="DACompletedDt" type="xs:dateTime" minOccurs="0" /&gt;
+              &lt;xs:element name="LocalityCode" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="lAPSEDAYS" type="xs:int" minOccurs="0" /&gt;
+              &lt;xs:element name="AdvertSignDepotText" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="Officer" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="DAFileNo" type="xs:string" minOccurs="0" /&gt;
+              &lt;xs:element name="AdvertSignIntDetails" type="xs:string" minOccurs="0" /&gt;
+            &lt;/xs:sequence&gt;
+          &lt;/xs:complexType&gt;
+        &lt;/xs:element&gt;
+      &lt;/xs:choice&gt;
+    &lt;/xs:complexType&gt;
+  &lt;/xs:element&gt;
+&lt;/xs:schema&gt;</value>
+  </data>
+</root>

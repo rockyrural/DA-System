@@ -1,0 +1,24 @@
+<?xml version="1.0" standalone="yes"?>
+<xs:schema id="NewDataSet" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xs:element name="NewDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Records">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="CCAppNo" type="xs:string" minOccurs="0" />
+              <xs:element name="Lapsed" type="xs:int" minOccurs="0" />
+              <xs:element name="DaysFromDA" type="xs:int" minOccurs="0" />
+              <xs:element name="Location" type="xs:string" minOccurs="0" />
+              <xs:element name="CCDesc" type="xs:string" minOccurs="0" />
+              <xs:element name="CCRegoDt" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="DANo" type="xs:string" minOccurs="0" />
+              <xs:element name="NetworkUser" type="xs:string" minOccurs="0" />
+              <xs:element name="OfficersComment" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

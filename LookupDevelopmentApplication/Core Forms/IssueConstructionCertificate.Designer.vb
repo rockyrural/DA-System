@@ -53,8 +53,8 @@ Partial Class IssueConstructionCertificate
         Dim CCMatW4Label As System.Windows.Forms.Label
         Dim CCMatW2Label As System.Windows.Forms.Label
         Dim CCMatW1Label As System.Windows.Forms.Label
+        Dim GridLevelNode2 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IssueConstructionCertificate))
-        Dim GridLevelNode1 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
         Me.tabConstCert = New DevExpress.XtraTab.XtraTabControl()
         Me.tpgDetails = New DevExpress.XtraTab.XtraTabPage()
         Me.pnlApplication = New DevExpress.XtraEditors.PanelControl()
@@ -376,7 +376,6 @@ Partial Class IssueConstructionCertificate
         Me.Label118 = New System.Windows.Forms.Label()
         Me.tpgDocuments = New DevExpress.XtraTab.XtraTabPage()
         Me.GroupBox32 = New DevExpress.XtraEditors.GroupControl()
-        Me.btnSaveTheNote = New DevExpress.XtraEditors.SimpleButton()
         Me.btnRemoveDocument = New DevExpress.XtraEditors.SimpleButton()
         Me.btnViewPDF = New DevExpress.XtraEditors.SimpleButton()
         Me.btnViewWord = New DevExpress.XtraEditors.SimpleButton()
@@ -395,7 +394,6 @@ Partial Class IssueConstructionCertificate
         Me.colWORDDOC = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.RepositoryItemPictureEdit1 = New DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit()
         Me.Label102 = New System.Windows.Forms.Label()
-        Me.txtDocNote = New DevExpress.XtraEditors.TextEdit()
         Me.tpgBuildDocument = New DevExpress.XtraTab.XtraTabPage()
         Me.PanelControl4 = New DevExpress.XtraEditors.PanelControl()
         Me.btnProduceSubConstCert = New DevExpress.XtraEditors.SimpleButton()
@@ -662,7 +660,6 @@ Partial Class IssueConstructionCertificate
         CType(Me.grdDocumentsList,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.gvwDocumentsList,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.RepositoryItemPictureEdit1,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.txtDocNote.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         Me.tpgBuildDocument.SuspendLayout
         CType(Me.PanelControl4,System.ComponentModel.ISupportInitialize).BeginInit
         Me.PanelControl4.SuspendLayout
@@ -1733,7 +1730,7 @@ Partial Class IssueConstructionCertificate
         '
         'btnViewBldgSolutions
         '
-        Me.btnViewBldgSolutions.ImageOptions.Image = CType(resources.GetObject("SimpleButton1.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnViewBldgSolutions.ImageOptions.Image = CType(resources.GetObject("btnViewBldgSolutions.ImageOptions.Image"),System.Drawing.Image)
         Me.btnViewBldgSolutions.Location = New System.Drawing.Point(502, 200)
         Me.btnViewBldgSolutions.Name = "btnViewBldgSolutions"
         Me.btnViewBldgSolutions.Size = New System.Drawing.Size(73, 31)
@@ -3651,8 +3648,8 @@ Partial Class IssueConstructionCertificate
         '
         'grdLoadListReferrals
         '
-        GridLevelNode1.RelationName = "Level1"
-        Me.grdLoadListReferrals.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode1})
+        GridLevelNode2.RelationName = "Level1"
+        Me.grdLoadListReferrals.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode2})
         Me.grdLoadListReferrals.Location = New System.Drawing.Point(12, 19)
         Me.grdLoadListReferrals.MainView = Me.gvwLoadListReferrals
         Me.grdLoadListReferrals.Name = "grdLoadListReferrals"
@@ -4125,13 +4122,11 @@ Partial Class IssueConstructionCertificate
         '
         'GroupBox32
         '
-        Me.GroupBox32.Controls.Add(Me.btnSaveTheNote)
         Me.GroupBox32.Controls.Add(Me.btnRemoveDocument)
         Me.GroupBox32.Controls.Add(Me.btnViewPDF)
         Me.GroupBox32.Controls.Add(Me.btnViewWord)
         Me.GroupBox32.Controls.Add(Me.grdDocumentsList)
         Me.GroupBox32.Controls.Add(Me.Label102)
-        Me.GroupBox32.Controls.Add(Me.txtDocNote)
         Me.GroupBox32.Dock = System.Windows.Forms.DockStyle.Fill
         Me.GroupBox32.Location = New System.Drawing.Point(0, 0)
         Me.GroupBox32.Name = "GroupBox32"
@@ -4139,30 +4134,22 @@ Partial Class IssueConstructionCertificate
         Me.GroupBox32.TabIndex = 33
         Me.GroupBox32.Text = "Historical Documents"
         '
-        'btnSaveTheNote
-        '
-        Me.btnSaveTheNote.ImageOptions.Image = CType(resources.GetObject("btnSaveTheNote.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnSaveTheNote.Location = New System.Drawing.Point(365, 621)
-        Me.btnSaveTheNote.Name = "btnSaveTheNote"
-        Me.btnSaveTheNote.Size = New System.Drawing.Size(111, 35)
-        Me.btnSaveTheNote.TabIndex = 10
-        Me.btnSaveTheNote.Text = "Save Note"
-        '
         'btnRemoveDocument
         '
         Me.btnRemoveDocument.Enabled = false
         Me.btnRemoveDocument.ImageOptions.Image = CType(resources.GetObject("btnRemoveDocument.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnRemoveDocument.Location = New System.Drawing.Point(559, 621)
+        Me.btnRemoveDocument.Location = New System.Drawing.Point(943, 434)
         Me.btnRemoveDocument.Name = "btnRemoveDocument"
         Me.btnRemoveDocument.Size = New System.Drawing.Size(111, 35)
         Me.btnRemoveDocument.TabIndex = 9
         Me.btnRemoveDocument.Text = "Remove"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Document"
+        Me.btnRemoveDocument.Visible = false
         '
         'btnViewPDF
         '
         Me.btnViewPDF.Enabled = false
         Me.btnViewPDF.ImageOptions.Image = CType(resources.GetObject("btnViewPDF.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnViewPDF.Location = New System.Drawing.Point(676, 621)
+        Me.btnViewPDF.Location = New System.Drawing.Point(943, 33)
         Me.btnViewPDF.Name = "btnViewPDF"
         Me.btnViewPDF.Size = New System.Drawing.Size(111, 35)
         Me.btnViewPDF.TabIndex = 8
@@ -4172,19 +4159,20 @@ Partial Class IssueConstructionCertificate
         '
         Me.btnViewWord.Enabled = false
         Me.btnViewWord.ImageOptions.Image = CType(resources.GetObject("btnViewWord.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnViewWord.Location = New System.Drawing.Point(799, 621)
+        Me.btnViewWord.Location = New System.Drawing.Point(943, 74)
         Me.btnViewWord.Name = "btnViewWord"
         Me.btnViewWord.Size = New System.Drawing.Size(111, 35)
         Me.btnViewWord.TabIndex = 7
         Me.btnViewWord.Text = "Open "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Word Doc"
+        Me.btnViewWord.Visible = false
         '
         'grdDocumentsList
         '
-        Me.grdDocumentsList.Location = New System.Drawing.Point(20, 33)
+        Me.grdDocumentsList.Location = New System.Drawing.Point(9, 33)
         Me.grdDocumentsList.MainView = Me.gvwDocumentsList
         Me.grdDocumentsList.Name = "grdDocumentsList"
         Me.grdDocumentsList.RepositoryItems.AddRange(New DevExpress.XtraEditors.Repository.RepositoryItem() {Me.RepositoryItemPictureEdit1})
-        Me.grdDocumentsList.Size = New System.Drawing.Size(928, 582)
+        Me.grdDocumentsList.Size = New System.Drawing.Size(928, 607)
         Me.grdDocumentsList.TabIndex = 6
         Me.grdDocumentsList.ViewCollection.AddRange(New DevExpress.XtraGrid.Views.Base.BaseView() {Me.gvwDocumentsList})
         '
@@ -4195,7 +4183,6 @@ Partial Class IssueConstructionCertificate
         Me.gvwDocumentsList.Name = "gvwDocumentsList"
         Me.gvwDocumentsList.OptionsBehavior.Editable = false
         Me.gvwDocumentsList.OptionsBehavior.ReadOnly = true
-        Me.gvwDocumentsList.OptionsFind.AlwaysVisible = true
         Me.gvwDocumentsList.OptionsView.ShowGroupPanel = false
         '
         'colApNo
@@ -4221,8 +4208,6 @@ Partial Class IssueConstructionCertificate
         Me.colFullname.Caption = "Author"
         Me.colFullname.FieldName = "Fullname"
         Me.colFullname.Name = "colFullname"
-        Me.colFullname.Visible = true
-        Me.colFullname.VisibleIndex = 0
         Me.colFullname.Width = 117
         '
         'colDocumentDesc
@@ -4231,7 +4216,7 @@ Partial Class IssueConstructionCertificate
         Me.colDocumentDesc.FieldName = "DocumentDesc"
         Me.colDocumentDesc.Name = "colDocumentDesc"
         Me.colDocumentDesc.Visible = true
-        Me.colDocumentDesc.VisibleIndex = 1
+        Me.colDocumentDesc.VisibleIndex = 0
         Me.colDocumentDesc.Width = 177
         '
         'colDateCreated
@@ -4240,7 +4225,7 @@ Partial Class IssueConstructionCertificate
         Me.colDateCreated.FieldName = "DateCreated"
         Me.colDateCreated.Name = "colDateCreated"
         Me.colDateCreated.Visible = true
-        Me.colDateCreated.VisibleIndex = 2
+        Me.colDateCreated.VisibleIndex = 1
         Me.colDateCreated.Width = 89
         '
         'colDocnotes
@@ -4249,7 +4234,7 @@ Partial Class IssueConstructionCertificate
         Me.colDocnotes.FieldName = "notes"
         Me.colDocnotes.Name = "colDocnotes"
         Me.colDocnotes.Visible = true
-        Me.colDocnotes.VisibleIndex = 3
+        Me.colDocnotes.VisibleIndex = 2
         Me.colDocnotes.Width = 527
         '
         'colDocMTH
@@ -4289,13 +4274,6 @@ Partial Class IssueConstructionCertificate
         Me.Label102.Size = New System.Drawing.Size(34, 13)
         Me.Label102.TabIndex = 2
         Me.Label102.Text = "Note:"
-        '
-        'txtDocNote
-        '
-        Me.txtDocNote.Location = New System.Drawing.Point(22, 629)
-        Me.txtDocNote.Name = "txtDocNote"
-        Me.txtDocNote.Size = New System.Drawing.Size(331, 20)
-        Me.txtDocNote.TabIndex = 1
         '
         'tpgBuildDocument
         '
@@ -4874,7 +4852,6 @@ Partial Class IssueConstructionCertificate
         CType(Me.grdDocumentsList,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.gvwDocumentsList,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.RepositoryItemPictureEdit1,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.txtDocNote.Properties,System.ComponentModel.ISupportInitialize).EndInit
         Me.tpgBuildDocument.ResumeLayout(false)
         CType(Me.PanelControl4,System.ComponentModel.ISupportInitialize).EndInit
         Me.PanelControl4.ResumeLayout(false)
@@ -5245,7 +5222,6 @@ End Sub
     Friend WithEvents txtNoteDetails As DevExpress.XtraEditors.MemoEdit
     Friend WithEvents Label118 As Label
     Friend WithEvents GroupBox32 As DevExpress.XtraEditors.GroupControl
-    Friend WithEvents btnSaveTheNote As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnRemoveDocument As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnViewPDF As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnViewWord As DevExpress.XtraEditors.SimpleButton
@@ -5264,7 +5240,6 @@ End Sub
     Friend WithEvents colWORDDOC As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents RepositoryItemPictureEdit1 As DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit
     Friend WithEvents Label102 As Label
-    Friend WithEvents txtDocNote As DevExpress.XtraEditors.TextEdit
     Friend WithEvents btnViewOfficers As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents colCCClassId As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colCCAppNo As DevExpress.XtraGrid.Columns.GridColumn

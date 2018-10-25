@@ -33,7 +33,7 @@ Partial Class DevelopmentStart
         Dim Label5 As System.Windows.Forms.Label
         Dim ConsentPlanNumberLabel As System.Windows.Forms.Label
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(DevelopmentStart))
-        Dim GridLevelNode2 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
+        Dim GridLevelNode1 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
         Me.ImageList1 = New System.Windows.Forms.ImageList(Me.components)
         Me.ImageList3 = New System.Windows.Forms.ImageList(Me.components)
         Me.ImageList4 = New System.Windows.Forms.ImageList(Me.components)
@@ -2867,7 +2867,7 @@ Partial Class DevelopmentStart
         '
         'ibIntraMaps
         '
-        Me.ibIntraMaps.Caption = "IntraMaps"
+        Me.ibIntraMaps.Caption = "G.I.S."
         Me.ibIntraMaps.Enabled = false
         Me.ibIntraMaps.Id = 99
         Me.ibIntraMaps.ImageOptions.LargeImage = Global.LookupDevelopmentApplication.My.Resources.Resources.intramaps
@@ -4747,8 +4747,8 @@ Partial Class DevelopmentStart
         '
         'dgvLoadListReferrals
         '
-        GridLevelNode2.RelationName = "Level1"
-        Me.dgvLoadListReferrals.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode2})
+        GridLevelNode1.RelationName = "Level1"
+        Me.dgvLoadListReferrals.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode1})
         Me.dgvLoadListReferrals.Location = New System.Drawing.Point(22, 31)
         Me.dgvLoadListReferrals.MainView = Me.gvwLoadListReferrals
         Me.dgvLoadListReferrals.Name = "dgvLoadListReferrals"
@@ -7901,7 +7901,7 @@ Partial Class DevelopmentStart
         Me.tpgEnlighten.Name = "tpgEnlighten"
         Me.tpgEnlighten.PageVisible = false
         Me.tpgEnlighten.Size = New System.Drawing.Size(1423, 721)
-        Me.tpgEnlighten.Text = "Enlighten Map"
+        Me.tpgEnlighten.Text = "GIS Map"
         '
         'pnlDisplayEnlighten
         '
@@ -7923,9 +7923,9 @@ Partial Class DevelopmentStart
         Me.btnClearEnlightenMap.ImageList = Me.ImageList3
         Me.btnClearEnlightenMap.Location = New System.Drawing.Point(1016, 63)
         Me.btnClearEnlightenMap.Name = "btnClearEnlightenMap"
-        Me.btnClearEnlightenMap.Size = New System.Drawing.Size(149, 40)
+        Me.btnClearEnlightenMap.Size = New System.Drawing.Size(128, 40)
         Me.btnClearEnlightenMap.TabIndex = 10
-        Me.btnClearEnlightenMap.Text = "Clear Enlighten Map"
+        Me.btnClearEnlightenMap.Text = "Clear GIS Map"
         Me.btnClearEnlightenMap.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnClearEnlightenMap.UseVisualStyleBackColor = true
         '
@@ -7937,9 +7937,9 @@ Partial Class DevelopmentStart
         Me.btnSaveEnlighten.ImageList = Me.ImageList4
         Me.btnSaveEnlighten.Location = New System.Drawing.Point(1016, 109)
         Me.btnSaveEnlighten.Name = "btnSaveEnlighten"
-        Me.btnSaveEnlighten.Size = New System.Drawing.Size(149, 40)
+        Me.btnSaveEnlighten.Size = New System.Drawing.Size(128, 40)
         Me.btnSaveEnlighten.TabIndex = 9
-        Me.btnSaveEnlighten.Text = "Save Enlighten Map"
+        Me.btnSaveEnlighten.Text = "Save GIS Map"
         Me.btnSaveEnlighten.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnSaveEnlighten.UseVisualStyleBackColor = true
         '
@@ -7950,9 +7950,9 @@ Partial Class DevelopmentStart
         Me.btnInsertEnlightenMap.ImageList = Me.ImageList3
         Me.btnInsertEnlightenMap.Location = New System.Drawing.Point(1016, 17)
         Me.btnInsertEnlightenMap.Name = "btnInsertEnlightenMap"
-        Me.btnInsertEnlightenMap.Size = New System.Drawing.Size(149, 40)
+        Me.btnInsertEnlightenMap.Size = New System.Drawing.Size(128, 40)
         Me.btnInsertEnlightenMap.TabIndex = 8
-        Me.btnInsertEnlightenMap.Text = "Insert Enlighten Map"
+        Me.btnInsertEnlightenMap.Text = "Insert GIS Map"
         Me.btnInsertEnlightenMap.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         Me.btnInsertEnlightenMap.UseVisualStyleBackColor = true
         '

@@ -62,7 +62,7 @@ Public Class ImportAdjacentPropertiesForMailMerge
     Private Sub InsertMapMergData()
         Dim Ok As Boolean = True ' Assume success
 
-        Dim CadId As String=string.empty
+        Dim CadId As String = String.Empty
         Dim PIN As Integer
         Dim PropertyAddress As String = String.Empty
         Dim Lot As String = String.Empty
@@ -77,14 +77,14 @@ Public Class ImportAdjacentPropertiesForMailMerge
         Dim address As String = String.Empty
         Dim town As String = String.Empty
 
- 
+
         Dim csvData As String = File.ReadAllText(bedtMergeFile.Text)
 
         For Each row As String In csvData.Split(ControlChars.Lf)
 
             If Not String.IsNullOrEmpty(row) And row.Trim <> ",,,,,,,," Then
 
-                If row.Substring(0, 3) <> "Cad" Then
+                If row.Substring(1, 3) <> "Cad" Then
 
 
                     Dim i As Integer = 1
@@ -93,31 +93,31 @@ Public Class ImportAdjacentPropertiesForMailMerge
 
                         Select Case i
 
-                            Case 1:CadId=cell
+                            Case 1 : CadId = cell.Replace("""", "")
 
-                            Case 2:PIN=cell
+                            Case 2 : PIN = cell.Replace("""", "")
 
-                            Case 3:PropertyAddress=cell.Replace("""","")
+                            Case 3 : PropertyAddress = cell.Replace("""", "")
 
-                            Case 4:Lot=cell.Replace("""","")
+                            Case 4 : Lot = cell.Replace("""", "")
 
-                            Case 5:Section=cell.Replace("""","")
+                            Case 5 : Section = cell.Replace("""", "")
 
-                            Case 6:DP=cell.Replace("""","")
+                            Case 6 : DP = cell.Replace("""", "")
 
-                            Case 7:StreetNo=cell.Replace("""","")
+                            Case 7 : StreetNo = cell.Replace("""", "")
 
-                            Case 8:Street=cell.Replace("""","")
+                            Case 8 : Street = cell.Replace("""", "")
 
-                            Case 9:Suburb=cell.Replace("""","")
+                            Case 9 : Suburb = cell.Replace("""", "")
 
-                            Case 10:postcode=cell.Replace("""","")
+                            Case 10 : postcode = cell.Replace("""", "")
 
-                            Case 11:Owner=cell.Replace("""","")
+                            Case 11 : Owner = cell.Replace("""", "")
 
-                            Case 12 : address=cell.Replace("""","")
+                            Case 12 : address = cell.Replace("""", "")
 
-                            Case 13 : town=cell.Replace("""","")
+                            Case 13 : town = cell.Replace("""", "")
 
                         End Select
 
@@ -125,7 +125,7 @@ Public Class ImportAdjacentPropertiesForMailMerge
 
                     Next
 
-                    InsertMapMergDataExtracted(Owner, address, town, pin)
+                    InsertMapMergDataExtracted(Owner, address, town, PIN)
 
                 End If
 
@@ -164,7 +164,7 @@ Public Class ImportAdjacentPropertiesForMailMerge
                         .Parameters.Add("@DANO", SqlDbType.NVarChar).Value = DANo
                         .Parameters.Add("@NAME", SqlDbType.NVarChar).Value = name
                         .Parameters.Add("@ADDRS", SqlDbType.NVarChar).Value = address
-                        .Parameters.Add("@TOWN", SqlDbType.NVarChar).Value = town'.substring(0,town.length-1)
+                        .Parameters.Add("@TOWN", SqlDbType.NVarChar).Value = town '.substring(0,town.length-1)
                         .Parameters.Add("@TAG", SqlDbType.Int).Value = tag
                         .ExecuteNonQuery()
 
@@ -214,7 +214,7 @@ Public Class ImportAdjacentPropertiesForMailMerge
         InsertMapMergData()
         MapMergeRan = True
 
-        DialogResult=DialogResult.OK
+        DialogResult = DialogResult.OK
 
     End Sub
 End Class

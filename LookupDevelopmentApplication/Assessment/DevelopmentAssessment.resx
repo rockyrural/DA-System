@@ -1,0 +1,916 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <metadata name="EngDueReturnDateLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="RFSSubLotsLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="EngInternalCommentsLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label66.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label65.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label90.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label96.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Sepp71LikelyImpactsLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="DACompletedDtLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="DaysElapsedLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label64.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="RefResponseLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="RefCommLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="RefCodeIdLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="RefRetDtLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="RefdtLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Over200LetterBDateLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Over200LetterADateLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Over100LetterDateLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="AICommentLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="DaysTakenLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="AIReceivedDtLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="AIRequestDtLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label122.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label120.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="AssessmentSheetCodeLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label1.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ConsentPlanNumberLabel1.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="CurrentLandUseLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label21.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ActedOnLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="CommentLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModDetailsLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModReasonLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModSect96Label.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Modsect79cYNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModSect79cCommentLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModSect94YNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModSect94CommentLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModSubstSameYNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="ModSubstSameYNLabel.Text" xml:space="preserve">
+    <value>(a) Is the development to which the consent as modified relates substantially the same development as the development for which the consent was originally granted and before that consent as originally granted was modified (if at all) under this section?</value>
+  </data>
+  <metadata name="ModSubStSameCommentLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModNotificationYNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="ModNotificationYNLabel.Text" xml:space="preserve">
+    <value>(b) Does the application require notification in accordance with:
+ (i) the regulations, if the regulations so require, or
+ (ii) a development control plan, if Council that has made a development control plan under Section 72 that requires the notification or advertising of applications for modification of a development consent.</value>
+  </data>
+  <metadata name="ModSubmConsYNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModMinEnvImpactYNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModMinEnvImpCommentLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModConsMinisterYNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <data name="ModConsMinisterYNLabel.Text" xml:space="preserve">
+    <value>(d) Has Council consulted with the relevant Minister, public authority or approval body(within the meaning of Division 5) in respect of a condition imposed as a requirement of a concurrence to the consent or in accordance with the general terms of an approval proposed to be granted by the approval body?</value>
+  </data>
+  <metadata name="ModMinisterOBjYNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModMinisterCommentLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModThreatSpecYNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModThreatComplYNLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ModThreatCommentLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ComplianceStatProvCommentsLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ReferralsYesNoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ComplianceStatProvYesNoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="VariationsYesNoLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label81.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label83.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="AssessmentDecisionLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label95.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label128.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="Label20.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="DevHistoryCommentLabel.GenerateMember" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>False</value>
+  </metadata>
+  <metadata name="ReferalInfoBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="DAdatasets.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>195, 17</value>
+  </metadata>
+  <metadata name="ReferralCodeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>302, 17</value>
+  </metadata>
+  <metadata name="VariationResultBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>707, 17</value>
+  </metadata>
+  <metadata name="DelegatedAuthorityBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>489, 17</value>
+  </metadata>
+  <metadata name="LoadVariationResultOfficersRecomComboBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1184, 720</value>
+  </metadata>
+  <metadata name="AssessmentData.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>222, 498</value>
+  </metadata>
+  <metadata name="VariationBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>904, 17</value>
+  </metadata>
+  <metadata name="RetrieveVariationsForDAAssessmentBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>340, 757</value>
+  </metadata>
+  <metadata name="LoadReferralsIntProvisionListBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1070, 17</value>
+  </metadata>
+  <metadata name="DevelopmentDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 794</value>
+  </metadata>
+  <metadata name="ReferralsIntegratedProvisionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1337, 17</value>
+  </metadata>
+  <metadata name="id.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="FileNo.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="SubmissionandObjectionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 54</value>
+  </metadata>
+  <metadata name="DADecisionBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>266, 54</value>
+  </metadata>
+  <metadata name="DAAuthorityBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>450, 54</value>
+  </metadata>
+  <metadata name="REASON_DA_APPL_40DAYSBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>632, 54</value>
+  </metadata>
+  <metadata name="ProgressCodeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>894, 54</value>
+  </metadata>
+  <metadata name="LoadListReferralsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1084, 54</value>
+  </metadata>
+  <metadata name="RequestForAdditionalInfoDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1292, 54</value>
+  </metadata>
+  <metadata name="RetrieveListOfReferralsbySystemBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 91</value>
+  </metadata>
+  <metadata name="Column1.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="ListofConditionsByLetterTypeBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>939, 757</value>
+  </metadata>
+  <metadata name="LoadUpConditionListBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>301, 91</value>
+  </metadata>
+  <metadata name="DraftDocId.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DraftDocPath.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DisplayListOfDraftDocumentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>525, 91</value>
+  </metadata>
+  <metadata name="LocalityCodeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>793, 91</value>
+  </metadata>
+  <metadata name="DADecisionTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>973, 91</value>
+  </metadata>
+  <metadata name="OfficerTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1147, 91</value>
+  </metadata>
+  <metadata name="CensusCodeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1298, 91</value>
+  </metadata>
+  <metadata name="DAAppTypeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 128</value>
+  </metadata>
+  <metadata name="Da_DocType_WordTemplateBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>193, 128</value>
+  </metadata>
+  <metadata name="DADecisionBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>458, 128</value>
+  </metadata>
+  <metadata name="ListofConditionsByLetterTypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>642, 128</value>
+  </metadata>
+  <metadata name="AssessmentSheetTypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>909, 128</value>
+  </metadata>
+  <metadata name="UniqueId.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LoadOneUpConditionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1143, 128</value>
+  </metadata>
+  <metadata name="OtherDocTypesListBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1375, 128</value>
+  </metadata>
+  <metadata name="LoadUpConditionListTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 165</value>
+  </metadata>
+  <metadata name="OtherDocTypesListTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>236, 165</value>
+  </metadata>
+  <metadata name="AssessmentSheetTypeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>447, 165</value>
+  </metadata>
+  <metadata name="LoadListReferralsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>676, 165</value>
+  </metadata>
+  <metadata name="DisplayListOfDraftDocumentsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>879, 165</value>
+  </metadata>
+  <metadata name="LoadOneUpConditionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1142, 165</value>
+  </metadata>
+  <metadata name="OneOffCondPriorToCCReleaseTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 202</value>
+  </metadata>
+  <metadata name="FileNoteTypeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>284, 202</value>
+  </metadata>
+  <metadata name="RetrieveFileNotesTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>467, 202</value>
+  </metadata>
+  <metadata name="Da_DocType_WordTemplateTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>671, 202</value>
+  </metadata>
+  <metadata name="STDCondPrioerToCCReleaseTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>932, 202</value>
+  </metadata>
+  <metadata name="RetrieveListOfReferralsbySystemTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1190, 202</value>
+  </metadata>
+  <metadata name="DASummaryDataTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 239</value>
+  </metadata>
+  <metadata name="ProgressCodeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>220, 239</value>
+  </metadata>
+  <metadata name="Property_NumbersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>406, 239</value>
+  </metadata>
+  <metadata name="RetrieveDAFileNumbersTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>617, 239</value>
+  </metadata>
+  <metadata name="CCSummaryDataTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>852, 239</value>
+  </metadata>
+  <metadata name="ConsentTypeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1054, 239</value>
+  </metadata>
+  <metadata name="DevUseTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1237, 239</value>
+  </metadata>
+  <metadata name="DevTypeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1392, 239</value>
+  </metadata>
+  <metadata name="REASON_DA_APPL_40DAYSTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 276</value>
+  </metadata>
+  <metadata name="DAAuthorityTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>274, 276</value>
+  </metadata>
+  <metadata name="DAClassificationTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>452, 276</value>
+  </metadata>
+  <metadata name="PaymentsReceivedTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>648, 276</value>
+  </metadata>
+  <metadata name="VariationResultTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>859, 276</value>
+  </metadata>
+  <metadata name="VariationTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1052, 276</value>
+  </metadata>
+  <metadata name="RetrieveHistoricalDocumentsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1214, 276</value>
+  </metadata>
+  <metadata name="SubmissionandObjectionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 313</value>
+  </metadata>
+  <metadata name="DelegatedAuthorityTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>262, 313</value>
+  </metadata>
+  <metadata name="ReferalInfoTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>476, 313</value>
+  </metadata>
+  <metadata name="RequestForAdditionalInfoDataTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>649, 313</value>
+  </metadata>
+  <metadata name="DARefundsPaidTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>916, 313</value>
+  </metadata>
+  <metadata name="LoadReferralsIntProvisionListTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1110, 313</value>
+  </metadata>
+  <metadata name="ReferralsIntegratedProvisionTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 350</value>
+  </metadata>
+  <metadata name="ReferralCodeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>276, 350</value>
+  </metadata>
+  <metadata name="OfficerBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>458, 350</value>
+  </metadata>
+  <metadata name="FileNoteTypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>620, 350</value>
+  </metadata>
+  <metadata name="btnPDFviewer.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DocId.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="RetrieveHistoricalDocumentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>807, 350</value>
+  </metadata>
+  <metadata name="RetrieveFileNotesBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1072, 350</value>
+  </metadata>
+  <metadata name="DataGridViewTextBoxColumn61.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Mark.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="OneOffCondPriorToCCReleaseBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1281, 350</value>
+  </metadata>
+  <metadata name="CCMetDate.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="Completed.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="STDCondPrioerToCCReleaseBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 387</value>
+  </metadata>
+  <metadata name="DASummaryDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>279, 387</value>
+  </metadata>
+  <metadata name="CCSummaryDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>486, 387</value>
+  </metadata>
+  <metadata name="Property_NumbersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>693, 387</value>
+  </metadata>
+  <metadata name="DAAssessmentDataBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>284, 535</value>
+  </metadata>
+  <metadata name="AAdata.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1235, 498</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 572</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1305, 535</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1034, 535</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>509, 535</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormBindingSource6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>830, 572</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormBindingSource5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>559, 572</value>
+  </metadata>
+  <metadata name="CensusCodeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>908, 387</value>
+  </metadata>
+  <metadata name="LocalityCodeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1091, 387</value>
+  </metadata>
+  <metadata name="DADecisionBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1276, 387</value>
+  </metadata>
+  <metadata name="OfficerBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1454, 387</value>
+  </metadata>
+  <metadata name="RetrieveDAFileNumbersBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 424</value>
+  </metadata>
+  <metadata name="DevTypeBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>257, 424</value>
+  </metadata>
+  <metadata name="DevTypeBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>429, 424</value>
+  </metadata>
+  <metadata name="DevTypeBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>601, 424</value>
+  </metadata>
+  <metadata name="DAClassificationBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>773, 424</value>
+  </metadata>
+  <metadata name="DAClassificationBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>980, 424</value>
+  </metadata>
+  <metadata name="DAClassificationBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1187, 424</value>
+  </metadata>
+  <metadata name="DAClassificationBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1394, 424</value>
+  </metadata>
+  <metadata name="ConsentTypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 461</value>
+  </metadata>
+  <metadata name="DevUseBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>204, 461</value>
+  </metadata>
+  <metadata name="DevTypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>364, 461</value>
+  </metadata>
+  <metadata name="DevelopmentDataBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>435, 794</value>
+  </metadata>
+  <metadata name="Retrieve_DAHistoryCommentsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1322, 498</value>
+  </metadata>
+  <metadata name="ShowHistoricalDABindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1394, 461</value>
+  </metadata>
+  <metadata name="LoadS94TypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>558, 646</value>
+  </metadata>
+  <metadata name="LoadSection94TypeComboBoxBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 646</value>
+  </metadata>
+  <metadata name="LoadGridforProposedBondContributionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>954, 609</value>
+  </metadata>
+  <metadata name="LoadGridforProposedSect94ContributionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>305, 609</value>
+  </metadata>
+  <metadata name="LoadGridforProposedContributionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1101, 572</value>
+  </metadata>
+  <metadata name="AssReasons.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="AssResult.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LoadAuthorityComboBoxBindingSource3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>268, 683</value>
+  </metadata>
+  <metadata name="DataGridViewTextBoxColumn80.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="LoadConclusionRecomendationComboBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>324, 720</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormBindingSource8.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>913, 720</value>
+  </metadata>
+  <metadata name="GenericAnswersToQuestionsBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>759, 683</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormBindingSource7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>642, 720</value>
+  </metadata>
+  <metadata name="DataGridViewTextBoxColumn77.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <data name="lblRecommendTwo.Text" xml:space="preserve">
+    <value>="THAT the application pursuant to Section 96 of Environmental Planning and Assessment Amendment Act 1997 for modification of the consent granted in respect of Development Application Number " &amp; [ModifiedAppNo] &amp; " be:"</value>
+  </data>
+  <data name="lblRecommendation.Text" xml:space="preserve">
+    <value>="THAT the application pursuant to Section 96 of Environmental Planning and Assessment Amendment Act 1997 for modification of the consent granted in respect of Development Application Number " &amp; [ModifiedAppNo] &amp; " be:"</value>
+  </data>
+  <metadata name="RefundTypeId.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="RefundIDX.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="DARefundsPaidBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>692, 461</value>
+  </metadata>
+  <metadata name="PaymentId.UserAddedColumn" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="PaymentsReceivedBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>890, 461</value>
+  </metadata>
+  <metadata name="OfficerBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>530, 461</value>
+  </metadata>
+  <metadata name="DAAssessmentDataBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>802, 498</value>
+  </metadata>
+  <metadata name="DAAppTypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1105, 461</value>
+  </metadata>
+  <metadata name="DA_AssessmentTypeBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>355, 498</value>
+  </metadata>
+  <metadata name="MenuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1286, 461</value>
+  </metadata>
+  <metadata name="ShowHistoricalDATableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 498</value>
+  </metadata>
+  <metadata name="DA_AssessmentTypeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>581, 498</value>
+  </metadata>
+  <metadata name="DAAssessmentDataTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1021, 498</value>
+  </metadata>
+  <metadata name="Retrieve_DAHistoryCommentsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 535</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>774, 535</value>
+  </metadata>
+  <metadata name="GenericAnswersForModFormBindingSource4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>288, 572</value>
+  </metadata>
+  <metadata name="LoadGridforProposedContributionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 609</value>
+  </metadata>
+  <metadata name="LoadGridforProposedSect94ContributionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>632, 609</value>
+  </metadata>
+  <metadata name="LoadGridforProposedBondContributionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1272, 609</value>
+  </metadata>
+  <metadata name="LoadSection94TypeComboBoxTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>290, 646</value>
+  </metadata>
+  <metadata name="LoadS94TypeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>747, 646</value>
+  </metadata>
+  <metadata name="LoadAuthorityComboBoxBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>932, 646</value>
+  </metadata>
+  <metadata name="LoadAuthorityComboBoxBindingSource1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1177, 646</value>
+  </metadata>
+  <metadata name="LoadAuthorityComboBoxBindingSource2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 683</value>
+  </metadata>
+  <metadata name="LoadAuthorityComboBoxTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>519, 683</value>
+  </metadata>
+  <metadata name="GenericAnswersToQuestionsTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1023, 683</value>
+  </metadata>
+  <metadata name="LoadConclusionRecomendationComboBindingSource.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1282, 683</value>
+  </metadata>
+  <metadata name="LoadConclusionRecomendationComboTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 720</value>
+  </metadata>
+  <metadata name="LoadVariationResultOfficersRecomComboTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 757</value>
+  </metadata>
+  <metadata name="RetrieveVariationsForDAAssessmentTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>642, 757</value>
+  </metadata>
+  <metadata name="ListofConditionsByLetterTypeTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1212, 757</value>
+  </metadata>
+  <metadata name="ImageList1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>1475, 757</value>
+  </metadata>
+  <data name="ImageList1.ImageStream" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACZTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5JbWFnZUxpc3RTdHJlYW1lcgEAAAAERGF0YQcCAgAAAAkDAAAADwMAAAB+
+        BgAAAk1TRnQBSQFMAwEBAAHsAQAB7AEAARABAAEQAQAE/wEhAQAI/wFCAU0BNgcAATYDAAEoAwABQAMA
+        ARADAAEBAQABIAYAARASAAMQAf8BIAEaAYEB/wEqASEBtAH/ASoBIQGzAf8BJwEeAZsB/wEbARcBXQH/
+        AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/8AAAxAB/wEvASMB1gH/ATABJAHf
+        Af8BMAEkAd8B/wEtASMBywH/ASYBHgGaAf8BIQEbAYEB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQ
+        Af8DEAH/AxAB/8AAATABJAHfAf8BMAEkAd8B/wE0ASoB4QH/ATMBKQHhAf8BMAEkAd8B/wEuASIBzAH/
+        AScBHwGfAf8BHwEaAYEB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/wAABMAEkAd8B/wEy
+        AScB4AH/AVYBYgHuAf8BSAFLAegB/wEwASQB3wH/ATABJAHfAf8BLwEjAdUB/wEmAR4BmwH/ASYBHgGa
+        Af8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/wAABMAEkAd8B/wFCAUAB5gH/AoEB9gH/AVABVwHr
+        Af8BMAEkAd8B/wEwASQB3wH/ATABJAHfAf8BLQEjAckB/wEmAR4BmwH/ARcBFQFAAf8DEAH/AxAB/wMQ
+        Af8DEAH/AxAB/wMQAf/AAAEwASQB3wH/AVIBWgHsAf8CgQH2Af8BPAE3AeMB/wEwASQB3wH/ATABJAHf
+        Af8BMAEkAd8B/wEwASQB3wH/AS0BIgHJAf8BJgEeAZoB/wEWARQBNwH/AxAB/wMQAf8DEAH/AxAB/wMQ
+        Af/AAAEwASQB3wH/AVwBgQHwAf8CgQH2Af8BMQEmAeAB/wEuASMB0QH/ASABGgGBAf8BMAEkAd8B/wEw
+        ASQB3wH/ATABJAHfAf8BKwEhAbwB/wEmAR4BmwH/ARoBFgFUAf8DEAH/AxAB/wMQAf8DEAH/wAABMAEk
+        Ad8B/wFeAYEB8AH/AoEB9gH/ATABJAHfAf8BKAEgAasB/wMQAf8BGAEVAUgB/wEwASQB3wH/ATABJAHf
+        Af8BMAEkAd8B/wEqASABrwH/ASYBHgGaAf8DEAH/AxAB/wMQAf8DEAH/wAABMAEkAd8B/wFOAVQB6wH/
+        AoEB9AH/ATEBJgHdAf8BHAEXAV4B/wMQAf8DEAH/ASABGgGBAf8BMAEkAd8B/wEwASQB3wH/ATABJAHe
+        Af8BKQEgAa4B/wEhARsBgQH/ARIBEQEaAf8DEAH/AxAB/8AAATABJAHfAf8BNAEpAeAB/wFAAT8B5QH/
+        AS8BJAHZAf8BGwEXAV0B/wMQAf8DEAH/AxAB/wEwASQB3wH/ATABJAHfAf8BMAEkAd8B/wEwASQB3gH/
+        AScBHwGiAf8BJgEeAZoB/wMQAf8DEAH/wAADEAH/ASYBHgGaAf8BMAEkAd8B/wEvASMB1AH/ARYBFAE3
+        Af8DEAH/AxAB/wMQAf8DEAH/ASYBHgGaAf8BMAEkAd8B/wEwASQB3wH/AS8BJAHWAf8BJwEfAaEB/wEk
+        AR0BhwH/AxAB/8AAAxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wEoAR8BpwH/
+        ATABJAHfAf8BMAEkAd8B/wEvASQB2wH/ASYBHgGaAf8BGAEVAUoB/8AAAxAB/wMQAf8DEAH/AxAB/wMQ
+        Af8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8BMAEkAd8B/wEwASQB3wH/ATABJAHfAf8BLgEjAcsB/wEm
+        AR4BnAH/wAADEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8BMAEk
+        Ad8B/wEwASQB3wH/ATABJAHfAf8BKgEhAbQB/8AAAxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQ
+        Af8DEAH/AxAB/wMQAf8DEAH/ARgBFQFIAf8BLgEjAdEB/wEwASQB3wH/AS8BIwHUAf/AAAMQAf8DEAH/
+        AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/AxAB/wMQAf8DEAH/ATABJAHfAf8BLwEj
+        AdkB/8AAAUIBTQE+BwABPgMAASgDAAFAAwABEAMAAQEBAAEBBQABgBcAA/+BAAs=
+</value>
+  </data>
+  <metadata name="DevelopmentDataTableAdapter.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>228, 794</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>212</value>
+  </metadata>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAICAAAAEACACoCAAAJgAAABAQAAABAAgAaAUAAM4IAAAoAAAAIAAAAEAAAAABAAgAAAAAAAAE
+        AAAAAAAAAAAAAAABAAAAAAAA////AMv+/wCZ/v8AZf7/ADP+/wAA/f0A/sv/AMvL/wCZy/8AZcv/ADPM
+        /wAAy/0A/pn/AMuZ/wCZmf8AZZj/ADOY/wAAmP0A/mX/AMtl/wCYZf8AZWX/ADNl/wAAZf0A/jP/AMsz
+        /wCYM/8AZTP/ADMz/wAAMv0A/QD9AMsA/QCYAP0AZQD9ADIA/QAAAP0A///LAMv/ywCZ/8wAZf/LADP/
+        zAAA/csA/8vLAMzMzACYy8sAZsvMADLLywAAy8wA/5nLAMuYywCYmMsAZpjMADKYywAAmcwA/2XLAMtm
+        zACYZswAZmbMADJlywAAZcwA/zPLAMsyywCYMssAZTLLADIyywAAMswA/QDLAMsAzACYAMwAZQDMADIA
+        zAAAAMwA//+ZAMv/mQCZ/5kAZf+YADP/mQAA/ZgA/8yZAMvLmACYy5gAZsyZADLLmAAAzJkA/5mZAMuY
+        mACZmZkAZZiYADOYmQAAl5gA/2WYAMxmmACYZZgAZWWYADNlmQAAZZgA/zOYAMsymACYM5kAZTOZADMz
+        mQAAMpgA/QCYAMwAmACXAJgAZQCYADIAmAAAAJgA//9lAMv/ZQCY/2UAZf9lADP/ZgAA/WUA/8tlAMzM
+        ZgCYzGYAZsxmADLLZQAAzGYA/5hlAMyZZgCYmGUAZZhlADOZZgAAmGUA/2VlAMxmZgCYZWUAZmZmADJl
+        ZQAAZWYA/zNlAMsyZQCZM2UAZTJlADIyZQAAMmYA/QBlAMwAZQCYAGUAZQBmADIAZgAAAGYA//8zAMz/
+        MwCY/zMAZv8zADP/MwAA/TIA/8wzAMvLMgCYyzIAZcsyADLLMgAAzDMA/5kzAMuYMgCZmTMAZZkzADOZ
+        MwAAmDIA/2YzAMtlMgCZZjMAZWUyADJlMgAAZjMA/zMzAMsyMgCZMzMAZTIyADMzMwAAMTIA/QAyAMwA
+        MgCYADIAZgAyADEAMgAAADIA/f0AAMv9AACY/QAAZf0AADL9AAAA/QAA/csAAMzMAACZzAAAZcwAADPM
+        AAAAzAAA/ZgAAMyZAACYmAAAZZgAADKYAAAAmAAA/WUAAMxmAACYZQAAZmYAADJmAAAAZgAA/TIAAMwz
+        AACYMgAAZjMAADIyAAAAMgAA/QAAAMwAAACYAAAAZgAAADIAAAAAAO4AAADcAAAAugAAAKoAAACIAAAA
+        dgAAAFQAAABEAAAAIgAAABAAAO4AAADcAAAAugAAAKoAAACIAAAAdgAAAFQAAABEAAAAIgAAABAAAO4A
+        AADcAAAAugAAAKoAAACIAAAAdgAAAFQAAABEAAAAIgAAABAAAADu7u4A3d3dALu7uwCqqqoAiIiIAHd3
+        dwBVVVUAREREACIiIgAREREAAAAAAP//////////////////////////////////////////////////
+        ////////XjP//////////////////////////////////////zP//17/////////////////////////
+        ////////Xv8z/////17/////////////////////////////XjP//zP/////Xv//////////////////
+        ////////XjP//zP/Xv////9e/////17//////////////////17//zMz//9e/zNe/17/////Xv9e//z/
+        ////////////M/8z//////8z//9e//////9e//////z///////////8z//8zM///M/////9e//9e/17/
+        Xv/8//z//////////zP/////M/8z/////17/Xv//Xv9e/////15e////////M////////17/////Xv//
+        //9e/////zMz//9eXv////8z/////15e////Xv9e/17//17/Xv8z//9eXv///////zP//15e//9eM///
+        Xv///15e//////8zM///Xl7/////Xv9e////M///////Xv///////17/M///MzP///////9e//9eM///
+        M/////9e/////17/Xv//MzP////8////////M///////M/9eM/9e////Xv//Xv///15e///8//9eM///
+        M/////8z/////17/////Xl7//zMz/////P//M///////M/9eM/8z/////17//17//zMz///8//z/////
+        M/////8z/////zP//////15e/zMz/////P/8////////M/9eM/8z/////zP/////Xv8z////////////
+        //////8z/////zP///////8zM/////////////////////////8z/////zP///8zM///////////////
+        /////////////zP///////8zM////////////////////////////////zP///8zM///////////////
+        //////////////////////8zM///////////////////////////////////////M///////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////////////////////////////////////////////////
+        ////////////////////////////////////8////8D///8Af//8DH//8Ax3/8AAYf/AAGB/wIBAv8AM
+        AEfEDACBxwAgAMQAAAHAAAAAwAxAAcAIYAXAwCACAIAgBQwDAAuIA4BXwDAB/8A4B//jAH//44H///AH
+        ///4D///+H////3//////////////////////////////ygAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAA
+        AAAAAAAAAAEAAAAAAAD///8Ay/7/AJn+/wBl/v8AM/7/AAD9/QD+y/8Ay8v/AJnL/wBly/8AM8z/AADL
+        /QD+mf8Ay5n/AJmZ/wBlmP8AM5j/AACY/QD+Zf8Ay2X/AJhl/wBlZf8AM2X/AABl/QD+M/8AyzP/AJgz
+        /wBlM/8AMzP/AAAy/QD9AP0AywD9AJgA/QBlAP0AMgD9AAAA/QD//8sAy//LAJn/zABl/8sAM//MAAD9
+        ywD/y8sAzMzMAJjLywBmy8wAMsvLAADLzAD/mcsAy5jLAJiYywBmmMwAMpjLAACZzAD/ZcsAy2bMAJhm
+        zABmZswAMmXLAABlzAD/M8sAyzLLAJgyywBlMssAMjLLAAAyzAD9AMsAywDMAJgAzABlAMwAMgDMAAAA
+        zAD//5kAy/+ZAJn/mQBl/5gAM/+ZAAD9mAD/zJkAy8uYAJjLmABmzJkAMsuYAADMmQD/mZkAy5iYAJmZ
+        mQBlmJgAM5iZAACXmAD/ZZgAzGaYAJhlmABlZZgAM2WZAABlmAD/M5gAyzKYAJgzmQBlM5kAMzOZAAAy
+        mAD9AJgAzACYAJcAmABlAJgAMgCYAAAAmAD//2UAy/9lAJj/ZQBl/2UAM/9mAAD9ZQD/y2UAzMxmAJjM
+        ZgBmzGYAMstlAADMZgD/mGUAzJlmAJiYZQBlmGUAM5lmAACYZQD/ZWUAzGZmAJhlZQBmZmYAMmVlAABl
+        ZgD/M2UAyzJlAJkzZQBlMmUAMjJlAAAyZgD9AGUAzABlAJgAZQBlAGYAMgBmAAAAZgD//zMAzP8zAJj/
+        MwBm/zMAM/8zAAD9MgD/zDMAy8syAJjLMgBlyzIAMssyAADMMwD/mTMAy5gyAJmZMwBlmTMAM5kzAACY
+        MgD/ZjMAy2UyAJlmMwBlZTIAMmUyAABmMwD/MzMAyzIyAJkzMwBlMjIAMzMzAAAxMgD9ADIAzAAyAJgA
+        MgBmADIAMQAyAAAAMgD9/QAAy/0AAJj9AABl/QAAMv0AAAD9AAD9ywAAzMwAAJnMAABlzAAAM8wAAADM
+        AAD9mAAAzJkAAJiYAABlmAAAMpgAAACYAAD9ZQAAzGYAAJhlAABmZgAAMmYAAABmAAD9MgAAzDMAAJgy
+        AABmMwAAMjIAAAAyAAD9AAAAzAAAAJgAAABmAAAAMgAAAAAA7gAAANwAAAC6AAAAqgAAAIgAAAB2AAAA
+        VAAAAEQAAAAiAAAAEAAA7gAAANwAAAC6AAAAqgAAAIgAAAB2AAAAVAAAAEQAAAAiAAAAEAAA7gAAANwA
+        AAC6AAAAqgAAAIgAAAB2AAAAVAAAAEQAAAAiAAAAEAAAAO7u7gDd3d0Au7u7AKqqqgCIiIgAd3d3AFVV
+        VQBEREQAIiIiABEREQAAAAAA/////////////////////////17/////////Xv////////8z////////
+        /zP/////////M/////////8z/////////zP/////////M/////////8z/////////zP/////////Xv8z
+        MzMzM/9e//////9e/17/////////Xv9e////M17/////M/////9eM/////8zXv///zP///9eM///////
+        /zNe//9e//9eM///////////M17/Xv9eM/////////////8zXv9eM////////////////zNeM///////
+        ////////////M////////////////////////////////8fHAADHxwAAx8cAAMfHAADHxwAAwAcAAIAD
+        AAAAAQAABEEAAIRDAADABwAA4A8AAPAfAAD4PwAA/H8AAP7/AAA=
+</value>
+  </data>
+</root>

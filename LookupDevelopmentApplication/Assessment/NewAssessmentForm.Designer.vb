@@ -252,39 +252,6 @@ Partial Class NewAssessmentForm
         Me.Label16 = New System.Windows.Forms.Label()
         Me.scrolMainConclusion = New DevExpress.XtraEditors.XtraScrollableControl()
         Me.pnlConclusion = New DevExpress.XtraEditors.PanelControl()
-        Me.lupConflict = New DevExpress.XtraEditors.LookUpEdit()
-        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
-        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
-        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
-        Me.PdfFileOpenBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFileOpenBarItem()
-        Me.PdfFileSaveAsBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFileSaveAsBarItem()
-        Me.PdfFilePrintBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFilePrintBarItem()
-        Me.PdfPreviousPageBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfPreviousPageBarItem()
-        Me.PdfNextPageBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfNextPageBarItem()
-        Me.PdfFindTextBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFindTextBarItem()
-        Me.PdfZoomOutBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoomOutBarItem()
-        Me.PdfZoomInBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoomInBarItem()
-        Me.PdfExactZoomListBarSubItem1 = New DevExpress.XtraPdfViewer.Bars.PdfExactZoomListBarSubItem()
-        Me.PdfZoom10CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom10CheckItem()
-        Me.PdfZoom25CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom25CheckItem()
-        Me.PdfZoom50CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom50CheckItem()
-        Me.PdfZoom75CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom75CheckItem()
-        Me.PdfZoom100CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom100CheckItem()
-        Me.PdfZoom125CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom125CheckItem()
-        Me.PdfZoom150CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom150CheckItem()
-        Me.PdfZoom200CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom200CheckItem()
-        Me.PdfZoom400CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom400CheckItem()
-        Me.PdfZoom500CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom500CheckItem()
-        Me.PdfSetActualSizeZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetActualSizeZoomModeCheckItem()
-        Me.PdfSetPageLevelZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetPageLevelZoomModeCheckItem()
-        Me.PdfSetFitWidthZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetFitWidthZoomModeCheckItem()
-        Me.PdfSetFitVisibleZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetFitVisibleZoomModeCheckItem()
-        Me.PdfExportFormDataBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfExportFormDataBarItem()
-        Me.PdfImportFormDataBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfImportFormDataBarItem()
-        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication = New DevExpress.XtraEditors.LabelControl()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.dteConclusionDate = New DevExpress.XtraEditors.DateEdit()
         Me.dgvConditionText = New DevExpress.XtraGrid.GridControl()
         Me.gvwOneUpConditions = New DevExpress.XtraGrid.Views.Grid.GridView()
@@ -329,7 +296,40 @@ Partial Class NewAssessmentForm
         Me.cboVariationsYesNo = New DevExpress.XtraEditors.LookUpEdit()
         Me.cboApplicationConclResult = New DevExpress.XtraEditors.LookUpEdit()
         Me.pnlLabel = New DevExpress.XtraEditors.PanelControl()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lupConflict = New DevExpress.XtraEditors.LookUpEdit()
+        Me.BarManager1 = New DevExpress.XtraBars.BarManager(Me.components)
+        Me.barDockControlTop = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlBottom = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlLeft = New DevExpress.XtraBars.BarDockControl()
+        Me.barDockControlRight = New DevExpress.XtraBars.BarDockControl()
+        Me.PdfFileOpenBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFileOpenBarItem()
+        Me.PdfFileSaveAsBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFileSaveAsBarItem()
+        Me.PdfFilePrintBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFilePrintBarItem()
+        Me.PdfPreviousPageBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfPreviousPageBarItem()
+        Me.PdfNextPageBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfNextPageBarItem()
+        Me.PdfFindTextBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfFindTextBarItem()
+        Me.PdfZoomOutBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoomOutBarItem()
+        Me.PdfZoomInBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoomInBarItem()
+        Me.PdfExactZoomListBarSubItem1 = New DevExpress.XtraPdfViewer.Bars.PdfExactZoomListBarSubItem()
+        Me.PdfZoom10CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom10CheckItem()
+        Me.PdfZoom25CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom25CheckItem()
+        Me.PdfZoom50CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom50CheckItem()
+        Me.PdfZoom75CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom75CheckItem()
+        Me.PdfZoom100CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom100CheckItem()
+        Me.PdfZoom125CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom125CheckItem()
+        Me.PdfZoom150CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom150CheckItem()
+        Me.PdfZoom200CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom200CheckItem()
+        Me.PdfZoom400CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom400CheckItem()
+        Me.PdfZoom500CheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfZoom500CheckItem()
+        Me.PdfSetActualSizeZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetActualSizeZoomModeCheckItem()
+        Me.PdfSetPageLevelZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetPageLevelZoomModeCheckItem()
+        Me.PdfSetFitWidthZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetFitWidthZoomModeCheckItem()
+        Me.PdfSetFitVisibleZoomModeCheckItem1 = New DevExpress.XtraPdfViewer.Bars.PdfSetFitVisibleZoomModeCheckItem()
+        Me.PdfExportFormDataBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfExportFormDataBarItem()
+        Me.PdfImportFormDataBarItem1 = New DevExpress.XtraPdfViewer.Bars.PdfImportFormDataBarItem()
         Me.btnUpdateConclusion = New DevExpress.XtraEditors.SimpleButton()
+        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication = New DevExpress.XtraEditors.LabelControl()
         Me.lblConclusion = New System.Windows.Forms.Label()
         Me.pnlModificationConclusion = New DevExpress.XtraEditors.PanelControl()
         Me.dteProposedDetermDate = New DevExpress.XtraEditors.DateEdit()
@@ -408,7 +408,8 @@ Partial Class NewAssessmentForm
         Me.btnFindPlan = New DevExpress.XtraEditors.SimpleButton()
         Me.FormAssistant1 = New DevExpress.XtraBars.FormAssistant()
         Me.DefaultLookAndFeel1 = New DevExpress.LookAndFeel.DefaultLookAndFeel(Me.components)
-        Me.PdfBarController1 = New DevExpress.XtraPdfViewer.Bars.PdfBarController()
+        Me.PdfBarController1 = New DevExpress.XtraPdfViewer.Bars.PdfBarController(Me.components)
+        Me.btnRemovePlan = New DevExpress.XtraEditors.SimpleButton()
         Label20 = New System.Windows.Forms.Label()
         DevHistoryCommentLabel = New System.Windows.Forms.Label()
         CommentLabel = New System.Windows.Forms.Label()
@@ -566,8 +567,6 @@ Partial Class NewAssessmentForm
         Me.scrolMainConclusion.SuspendLayout
         CType(Me.pnlConclusion,System.ComponentModel.ISupportInitialize).BeginInit
         Me.pnlConclusion.SuspendLayout
-        CType(Me.lupConflict.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.BarManager1,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.dteConclusionDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.dteConclusionDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.dgvConditionText,System.ComponentModel.ISupportInitialize).BeginInit
@@ -588,6 +587,8 @@ Partial Class NewAssessmentForm
         CType(Me.cboApplicationConclResult.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.pnlLabel,System.ComponentModel.ISupportInitialize).BeginInit
         Me.pnlLabel.SuspendLayout
+        CType(Me.lupConflict.Properties,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.BarManager1,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.pnlModificationConclusion,System.ComponentModel.ISupportInitialize).BeginInit
         Me.pnlModificationConclusion.SuspendLayout
         CType(Me.dteProposedDetermDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
@@ -3004,210 +3005,6 @@ Partial Class NewAssessmentForm
         Me.pnlConclusion.Size = New System.Drawing.Size(1366, 817)
         Me.pnlConclusion.TabIndex = 103
         '
-        'lupConflict
-        '
-        Me.lupConflict.Location = New System.Drawing.Point(1189, 10)
-        Me.lupConflict.MenuManager = Me.BarManager1
-        Me.lupConflict.Name = "lupConflict"
-        Me.lupConflict.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.lupConflict.Properties.NullText = "[Select]"
-        Me.lupConflict.Size = New System.Drawing.Size(65, 20)
-        Me.lupConflict.TabIndex = 111
-        '
-        'BarManager1
-        '
-        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
-        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
-        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
-        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
-        Me.BarManager1.Form = Me
-        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.PdfFileOpenBarItem1, Me.PdfFileSaveAsBarItem1, Me.PdfFilePrintBarItem1, Me.PdfPreviousPageBarItem1, Me.PdfNextPageBarItem1, Me.PdfFindTextBarItem1, Me.PdfZoomOutBarItem1, Me.PdfZoomInBarItem1, Me.PdfExactZoomListBarSubItem1, Me.PdfZoom10CheckItem1, Me.PdfZoom25CheckItem1, Me.PdfZoom50CheckItem1, Me.PdfZoom75CheckItem1, Me.PdfZoom100CheckItem1, Me.PdfZoom125CheckItem1, Me.PdfZoom150CheckItem1, Me.PdfZoom200CheckItem1, Me.PdfZoom400CheckItem1, Me.PdfZoom500CheckItem1, Me.PdfSetActualSizeZoomModeCheckItem1, Me.PdfSetPageLevelZoomModeCheckItem1, Me.PdfSetFitWidthZoomModeCheckItem1, Me.PdfSetFitVisibleZoomModeCheckItem1, Me.PdfExportFormDataBarItem1, Me.PdfImportFormDataBarItem1})
-        Me.BarManager1.MaxItemId = 25
-        '
-        'barDockControlTop
-        '
-        Me.barDockControlTop.CausesValidation = false
-        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
-        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlTop.Manager = Me.BarManager1
-        Me.barDockControlTop.Size = New System.Drawing.Size(1395, 0)
-        '
-        'barDockControlBottom
-        '
-        Me.barDockControlBottom.CausesValidation = false
-        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
-        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 855)
-        Me.barDockControlBottom.Manager = Me.BarManager1
-        Me.barDockControlBottom.Size = New System.Drawing.Size(1395, 0)
-        '
-        'barDockControlLeft
-        '
-        Me.barDockControlLeft.CausesValidation = false
-        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
-        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
-        Me.barDockControlLeft.Manager = Me.BarManager1
-        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 855)
-        '
-        'barDockControlRight
-        '
-        Me.barDockControlRight.CausesValidation = false
-        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
-        Me.barDockControlRight.Location = New System.Drawing.Point(1395, 0)
-        Me.barDockControlRight.Manager = Me.BarManager1
-        Me.barDockControlRight.Size = New System.Drawing.Size(0, 855)
-        '
-        'PdfFileOpenBarItem1
-        '
-        Me.PdfFileOpenBarItem1.Id = 24
-        Me.PdfFileOpenBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O))
-        Me.PdfFileOpenBarItem1.Name = "PdfFileOpenBarItem1"
-        '
-        'PdfFileSaveAsBarItem1
-        '
-        Me.PdfFileSaveAsBarItem1.Id = 0
-        Me.PdfFileSaveAsBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S))
-        Me.PdfFileSaveAsBarItem1.Name = "PdfFileSaveAsBarItem1"
-        '
-        'PdfFilePrintBarItem1
-        '
-        Me.PdfFilePrintBarItem1.Id = 1
-        Me.PdfFilePrintBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P))
-        Me.PdfFilePrintBarItem1.Name = "PdfFilePrintBarItem1"
-        '
-        'PdfPreviousPageBarItem1
-        '
-        Me.PdfPreviousPageBarItem1.Id = 2
-        Me.PdfPreviousPageBarItem1.Name = "PdfPreviousPageBarItem1"
-        '
-        'PdfNextPageBarItem1
-        '
-        Me.PdfNextPageBarItem1.Id = 3
-        Me.PdfNextPageBarItem1.Name = "PdfNextPageBarItem1"
-        '
-        'PdfFindTextBarItem1
-        '
-        Me.PdfFindTextBarItem1.Id = 4
-        Me.PdfFindTextBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F))
-        Me.PdfFindTextBarItem1.Name = "PdfFindTextBarItem1"
-        '
-        'PdfZoomOutBarItem1
-        '
-        Me.PdfZoomOutBarItem1.Id = 5
-        Me.PdfZoomOutBarItem1.Name = "PdfZoomOutBarItem1"
-        '
-        'PdfZoomInBarItem1
-        '
-        Me.PdfZoomInBarItem1.Id = 6
-        Me.PdfZoomInBarItem1.Name = "PdfZoomInBarItem1"
-        '
-        'PdfExactZoomListBarSubItem1
-        '
-        Me.PdfExactZoomListBarSubItem1.Id = 7
-        Me.PdfExactZoomListBarSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom10CheckItem1, true), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom25CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom50CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom75CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom100CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom125CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom150CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom200CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom400CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom500CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfSetActualSizeZoomModeCheckItem1, true), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfSetPageLevelZoomModeCheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfSetFitWidthZoomModeCheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfSetFitVisibleZoomModeCheckItem1)})
-        Me.PdfExactZoomListBarSubItem1.Name = "PdfExactZoomListBarSubItem1"
-        Me.PdfExactZoomListBarSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
-        '
-        'PdfZoom10CheckItem1
-        '
-        Me.PdfZoom10CheckItem1.Id = 8
-        Me.PdfZoom10CheckItem1.Name = "PdfZoom10CheckItem1"
-        '
-        'PdfZoom25CheckItem1
-        '
-        Me.PdfZoom25CheckItem1.Id = 9
-        Me.PdfZoom25CheckItem1.Name = "PdfZoom25CheckItem1"
-        '
-        'PdfZoom50CheckItem1
-        '
-        Me.PdfZoom50CheckItem1.Id = 10
-        Me.PdfZoom50CheckItem1.Name = "PdfZoom50CheckItem1"
-        '
-        'PdfZoom75CheckItem1
-        '
-        Me.PdfZoom75CheckItem1.Id = 11
-        Me.PdfZoom75CheckItem1.Name = "PdfZoom75CheckItem1"
-        '
-        'PdfZoom100CheckItem1
-        '
-        Me.PdfZoom100CheckItem1.Id = 12
-        Me.PdfZoom100CheckItem1.Name = "PdfZoom100CheckItem1"
-        '
-        'PdfZoom125CheckItem1
-        '
-        Me.PdfZoom125CheckItem1.Id = 13
-        Me.PdfZoom125CheckItem1.Name = "PdfZoom125CheckItem1"
-        '
-        'PdfZoom150CheckItem1
-        '
-        Me.PdfZoom150CheckItem1.Id = 14
-        Me.PdfZoom150CheckItem1.Name = "PdfZoom150CheckItem1"
-        '
-        'PdfZoom200CheckItem1
-        '
-        Me.PdfZoom200CheckItem1.Id = 15
-        Me.PdfZoom200CheckItem1.Name = "PdfZoom200CheckItem1"
-        '
-        'PdfZoom400CheckItem1
-        '
-        Me.PdfZoom400CheckItem1.Id = 16
-        Me.PdfZoom400CheckItem1.Name = "PdfZoom400CheckItem1"
-        '
-        'PdfZoom500CheckItem1
-        '
-        Me.PdfZoom500CheckItem1.Id = 17
-        Me.PdfZoom500CheckItem1.Name = "PdfZoom500CheckItem1"
-        '
-        'PdfSetActualSizeZoomModeCheckItem1
-        '
-        Me.PdfSetActualSizeZoomModeCheckItem1.Id = 18
-        Me.PdfSetActualSizeZoomModeCheckItem1.Name = "PdfSetActualSizeZoomModeCheckItem1"
-        '
-        'PdfSetPageLevelZoomModeCheckItem1
-        '
-        Me.PdfSetPageLevelZoomModeCheckItem1.Id = 19
-        Me.PdfSetPageLevelZoomModeCheckItem1.Name = "PdfSetPageLevelZoomModeCheckItem1"
-        '
-        'PdfSetFitWidthZoomModeCheckItem1
-        '
-        Me.PdfSetFitWidthZoomModeCheckItem1.Id = 20
-        Me.PdfSetFitWidthZoomModeCheckItem1.Name = "PdfSetFitWidthZoomModeCheckItem1"
-        '
-        'PdfSetFitVisibleZoomModeCheckItem1
-        '
-        Me.PdfSetFitVisibleZoomModeCheckItem1.Id = 21
-        Me.PdfSetFitVisibleZoomModeCheckItem1.Name = "PdfSetFitVisibleZoomModeCheckItem1"
-        '
-        'PdfExportFormDataBarItem1
-        '
-        Me.PdfExportFormDataBarItem1.Id = 22
-        Me.PdfExportFormDataBarItem1.Name = "PdfExportFormDataBarItem1"
-        '
-        'PdfImportFormDataBarItem1
-        '
-        Me.PdfImportFormDataBarItem1.Id = 23
-        Me.PdfImportFormDataBarItem1.Name = "PdfImportFormDataBarItem1"
-        '
-        'lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication
-        '
-        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.Location = New System.Drawing.Point(1003, 8)
-        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.Name = "lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication"
-        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.Size = New System.Drawing.Size(171, 26)
-        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.TabIndex = 110
-        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.Text = "I confirm that I have no conflict of "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"interest in assessing this application"
-        '
-        'Label1
-        '
-        Me.Label1.BackColor = System.Drawing.Color.Black
-        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
-        Me.Label1.ForeColor = System.Drawing.Color.White
-        Me.Label1.Location = New System.Drawing.Point(850, 11)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(147, 23)
-        Me.Label1.TabIndex = 109
-        Me.Label1.Text = "Conflict Of Interest"
-        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'dteConclusionDate
         '
         Me.dteConclusionDate.EditValue = Nothing
@@ -3641,6 +3438,202 @@ Partial Class NewAssessmentForm
         Me.pnlLabel.Size = New System.Drawing.Size(1385, 39)
         Me.pnlLabel.TabIndex = 12
         '
+        'Label1
+        '
+        Me.Label1.BackColor = System.Drawing.Color.Black
+        Me.Label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
+        Me.Label1.Location = New System.Drawing.Point(850, 11)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(147, 23)
+        Me.Label1.TabIndex = 109
+        Me.Label1.Text = "Conflict Of Interest"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'lupConflict
+        '
+        Me.lupConflict.Location = New System.Drawing.Point(1189, 10)
+        Me.lupConflict.MenuManager = Me.BarManager1
+        Me.lupConflict.Name = "lupConflict"
+        Me.lupConflict.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.lupConflict.Properties.NullText = "[Select]"
+        Me.lupConflict.Size = New System.Drawing.Size(65, 20)
+        Me.lupConflict.TabIndex = 111
+        '
+        'BarManager1
+        '
+        Me.BarManager1.DockControls.Add(Me.barDockControlTop)
+        Me.BarManager1.DockControls.Add(Me.barDockControlBottom)
+        Me.BarManager1.DockControls.Add(Me.barDockControlLeft)
+        Me.BarManager1.DockControls.Add(Me.barDockControlRight)
+        Me.BarManager1.Form = Me
+        Me.BarManager1.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.PdfFileOpenBarItem1, Me.PdfFileSaveAsBarItem1, Me.PdfFilePrintBarItem1, Me.PdfPreviousPageBarItem1, Me.PdfNextPageBarItem1, Me.PdfFindTextBarItem1, Me.PdfZoomOutBarItem1, Me.PdfZoomInBarItem1, Me.PdfExactZoomListBarSubItem1, Me.PdfZoom10CheckItem1, Me.PdfZoom25CheckItem1, Me.PdfZoom50CheckItem1, Me.PdfZoom75CheckItem1, Me.PdfZoom100CheckItem1, Me.PdfZoom125CheckItem1, Me.PdfZoom150CheckItem1, Me.PdfZoom200CheckItem1, Me.PdfZoom400CheckItem1, Me.PdfZoom500CheckItem1, Me.PdfSetActualSizeZoomModeCheckItem1, Me.PdfSetPageLevelZoomModeCheckItem1, Me.PdfSetFitWidthZoomModeCheckItem1, Me.PdfSetFitVisibleZoomModeCheckItem1, Me.PdfExportFormDataBarItem1, Me.PdfImportFormDataBarItem1})
+        Me.BarManager1.MaxItemId = 25
+        '
+        'barDockControlTop
+        '
+        Me.barDockControlTop.CausesValidation = false
+        Me.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top
+        Me.barDockControlTop.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlTop.Manager = Me.BarManager1
+        Me.barDockControlTop.Size = New System.Drawing.Size(1395, 0)
+        '
+        'barDockControlBottom
+        '
+        Me.barDockControlBottom.CausesValidation = false
+        Me.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom
+        Me.barDockControlBottom.Location = New System.Drawing.Point(0, 855)
+        Me.barDockControlBottom.Manager = Me.BarManager1
+        Me.barDockControlBottom.Size = New System.Drawing.Size(1395, 0)
+        '
+        'barDockControlLeft
+        '
+        Me.barDockControlLeft.CausesValidation = false
+        Me.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left
+        Me.barDockControlLeft.Location = New System.Drawing.Point(0, 0)
+        Me.barDockControlLeft.Manager = Me.BarManager1
+        Me.barDockControlLeft.Size = New System.Drawing.Size(0, 855)
+        '
+        'barDockControlRight
+        '
+        Me.barDockControlRight.CausesValidation = false
+        Me.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right
+        Me.barDockControlRight.Location = New System.Drawing.Point(1395, 0)
+        Me.barDockControlRight.Manager = Me.BarManager1
+        Me.barDockControlRight.Size = New System.Drawing.Size(0, 855)
+        '
+        'PdfFileOpenBarItem1
+        '
+        Me.PdfFileOpenBarItem1.Id = 24
+        Me.PdfFileOpenBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O))
+        Me.PdfFileOpenBarItem1.Name = "PdfFileOpenBarItem1"
+        '
+        'PdfFileSaveAsBarItem1
+        '
+        Me.PdfFileSaveAsBarItem1.Id = 0
+        Me.PdfFileSaveAsBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S))
+        Me.PdfFileSaveAsBarItem1.Name = "PdfFileSaveAsBarItem1"
+        '
+        'PdfFilePrintBarItem1
+        '
+        Me.PdfFilePrintBarItem1.Id = 1
+        Me.PdfFilePrintBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.P))
+        Me.PdfFilePrintBarItem1.Name = "PdfFilePrintBarItem1"
+        '
+        'PdfPreviousPageBarItem1
+        '
+        Me.PdfPreviousPageBarItem1.Id = 2
+        Me.PdfPreviousPageBarItem1.Name = "PdfPreviousPageBarItem1"
+        '
+        'PdfNextPageBarItem1
+        '
+        Me.PdfNextPageBarItem1.Id = 3
+        Me.PdfNextPageBarItem1.Name = "PdfNextPageBarItem1"
+        '
+        'PdfFindTextBarItem1
+        '
+        Me.PdfFindTextBarItem1.Id = 4
+        Me.PdfFindTextBarItem1.ItemShortcut = New DevExpress.XtraBars.BarShortcut((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.F))
+        Me.PdfFindTextBarItem1.Name = "PdfFindTextBarItem1"
+        '
+        'PdfZoomOutBarItem1
+        '
+        Me.PdfZoomOutBarItem1.Id = 5
+        Me.PdfZoomOutBarItem1.Name = "PdfZoomOutBarItem1"
+        '
+        'PdfZoomInBarItem1
+        '
+        Me.PdfZoomInBarItem1.Id = 6
+        Me.PdfZoomInBarItem1.Name = "PdfZoomInBarItem1"
+        '
+        'PdfExactZoomListBarSubItem1
+        '
+        Me.PdfExactZoomListBarSubItem1.Id = 7
+        Me.PdfExactZoomListBarSubItem1.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom10CheckItem1, true), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom25CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom50CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom75CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom100CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom125CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom150CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom200CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom400CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfZoom500CheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfSetActualSizeZoomModeCheckItem1, true), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfSetPageLevelZoomModeCheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfSetFitWidthZoomModeCheckItem1), New DevExpress.XtraBars.LinkPersistInfo(Me.PdfSetFitVisibleZoomModeCheckItem1)})
+        Me.PdfExactZoomListBarSubItem1.Name = "PdfExactZoomListBarSubItem1"
+        Me.PdfExactZoomListBarSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionInMenu
+        '
+        'PdfZoom10CheckItem1
+        '
+        Me.PdfZoom10CheckItem1.Id = 8
+        Me.PdfZoom10CheckItem1.Name = "PdfZoom10CheckItem1"
+        '
+        'PdfZoom25CheckItem1
+        '
+        Me.PdfZoom25CheckItem1.Id = 9
+        Me.PdfZoom25CheckItem1.Name = "PdfZoom25CheckItem1"
+        '
+        'PdfZoom50CheckItem1
+        '
+        Me.PdfZoom50CheckItem1.Id = 10
+        Me.PdfZoom50CheckItem1.Name = "PdfZoom50CheckItem1"
+        '
+        'PdfZoom75CheckItem1
+        '
+        Me.PdfZoom75CheckItem1.Id = 11
+        Me.PdfZoom75CheckItem1.Name = "PdfZoom75CheckItem1"
+        '
+        'PdfZoom100CheckItem1
+        '
+        Me.PdfZoom100CheckItem1.Id = 12
+        Me.PdfZoom100CheckItem1.Name = "PdfZoom100CheckItem1"
+        '
+        'PdfZoom125CheckItem1
+        '
+        Me.PdfZoom125CheckItem1.Id = 13
+        Me.PdfZoom125CheckItem1.Name = "PdfZoom125CheckItem1"
+        '
+        'PdfZoom150CheckItem1
+        '
+        Me.PdfZoom150CheckItem1.Id = 14
+        Me.PdfZoom150CheckItem1.Name = "PdfZoom150CheckItem1"
+        '
+        'PdfZoom200CheckItem1
+        '
+        Me.PdfZoom200CheckItem1.Id = 15
+        Me.PdfZoom200CheckItem1.Name = "PdfZoom200CheckItem1"
+        '
+        'PdfZoom400CheckItem1
+        '
+        Me.PdfZoom400CheckItem1.Id = 16
+        Me.PdfZoom400CheckItem1.Name = "PdfZoom400CheckItem1"
+        '
+        'PdfZoom500CheckItem1
+        '
+        Me.PdfZoom500CheckItem1.Id = 17
+        Me.PdfZoom500CheckItem1.Name = "PdfZoom500CheckItem1"
+        '
+        'PdfSetActualSizeZoomModeCheckItem1
+        '
+        Me.PdfSetActualSizeZoomModeCheckItem1.Id = 18
+        Me.PdfSetActualSizeZoomModeCheckItem1.Name = "PdfSetActualSizeZoomModeCheckItem1"
+        '
+        'PdfSetPageLevelZoomModeCheckItem1
+        '
+        Me.PdfSetPageLevelZoomModeCheckItem1.Id = 19
+        Me.PdfSetPageLevelZoomModeCheckItem1.Name = "PdfSetPageLevelZoomModeCheckItem1"
+        '
+        'PdfSetFitWidthZoomModeCheckItem1
+        '
+        Me.PdfSetFitWidthZoomModeCheckItem1.Id = 20
+        Me.PdfSetFitWidthZoomModeCheckItem1.Name = "PdfSetFitWidthZoomModeCheckItem1"
+        '
+        'PdfSetFitVisibleZoomModeCheckItem1
+        '
+        Me.PdfSetFitVisibleZoomModeCheckItem1.Id = 21
+        Me.PdfSetFitVisibleZoomModeCheckItem1.Name = "PdfSetFitVisibleZoomModeCheckItem1"
+        '
+        'PdfExportFormDataBarItem1
+        '
+        Me.PdfExportFormDataBarItem1.Id = 22
+        Me.PdfExportFormDataBarItem1.Name = "PdfExportFormDataBarItem1"
+        '
+        'PdfImportFormDataBarItem1
+        '
+        Me.PdfImportFormDataBarItem1.Id = 23
+        Me.PdfImportFormDataBarItem1.Name = "PdfImportFormDataBarItem1"
+        '
         'btnUpdateConclusion
         '
         Me.btnUpdateConclusion.Dock = System.Windows.Forms.DockStyle.Right
@@ -3650,6 +3643,14 @@ Partial Class NewAssessmentForm
         Me.btnUpdateConclusion.Size = New System.Drawing.Size(117, 35)
         Me.btnUpdateConclusion.TabIndex = 12
         Me.btnUpdateConclusion.Text = "Update "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"Conclusion"
+        '
+        'lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication
+        '
+        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.Location = New System.Drawing.Point(1003, 8)
+        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.Name = "lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication"
+        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.Size = New System.Drawing.Size(171, 26)
+        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.TabIndex = 110
+        Me.lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication.Text = "I confirm that I have no conflict of "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"interest in assessing this application"
         '
         'lblConclusion
         '
@@ -3987,6 +3988,7 @@ Partial Class NewAssessmentForm
         '
         'PanelControl2
         '
+        Me.PanelControl2.Controls.Add(Me.btnRemovePlan)
         Me.PanelControl2.Controls.Add(Me.btnFinalisePlan)
         Me.PanelControl2.Controls.Add(Me.PanelControl3)
         Me.PanelControl2.Controls.Add(Me.btnSavePlan)
@@ -4003,7 +4005,7 @@ Partial Class NewAssessmentForm
         '
         Me.btnFinalisePlan.Enabled = false
         Me.btnFinalisePlan.ImageOptions.Image = CType(resources.GetObject("btnFinalisePlan.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnFinalisePlan.Location = New System.Drawing.Point(152, 306)
+        Me.btnFinalisePlan.Location = New System.Drawing.Point(147, 304)
         Me.btnFinalisePlan.Name = "btnFinalisePlan"
         Me.btnFinalisePlan.Size = New System.Drawing.Size(108, 37)
         Me.btnFinalisePlan.TabIndex = 29
@@ -4205,7 +4207,7 @@ Partial Class NewAssessmentForm
         'GroupControl1
         '
         Me.GroupControl1.Controls.Add(Me.grdPlans)
-        Me.GroupControl1.Location = New System.Drawing.Point(11, 60)
+        Me.GroupControl1.Location = New System.Drawing.Point(11, 57)
         Me.GroupControl1.Name = "GroupControl1"
         Me.GroupControl1.Size = New System.Drawing.Size(251, 241)
         Me.GroupControl1.TabIndex = 4
@@ -4260,7 +4262,7 @@ Partial Class NewAssessmentForm
         '
         Me.btnPDF.Enabled = false
         Me.btnPDF.ImageOptions.Image = Global.LookupDevelopmentApplication.My.Resources.Resources.Adobe_Acrobat_Reader
-        Me.btnPDF.Location = New System.Drawing.Point(11, 307)
+        Me.btnPDF.Location = New System.Drawing.Point(11, 304)
         Me.btnPDF.Name = "btnPDF"
         Me.btnPDF.Size = New System.Drawing.Size(115, 36)
         Me.btnPDF.TabIndex = 2
@@ -4327,6 +4329,16 @@ Partial Class NewAssessmentForm
         Me.PdfBarController1.BarItems.Add(Me.PdfExportFormDataBarItem2)
         Me.PdfBarController1.BarItems.Add(Me.PdfImportFormDataBarItem2)
         Me.PdfBarController1.Control = Me.PdfViewer
+        '
+        'btnRemovePlan
+        '
+        Me.btnRemovePlan.Enabled = false
+        Me.btnRemovePlan.ImageOptions.Image = CType(resources.GetObject("btnRemovePlan.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnRemovePlan.Location = New System.Drawing.Point(69, 357)
+        Me.btnRemovePlan.Name = "btnRemovePlan"
+        Me.btnRemovePlan.Size = New System.Drawing.Size(115, 36)
+        Me.btnRemovePlan.TabIndex = 30
+        Me.btnRemovePlan.Text = "Remove Plan"
         '
         'NewAssessmentForm
         '
@@ -4487,8 +4499,6 @@ Partial Class NewAssessmentForm
         CType(Me.pnlConclusion,System.ComponentModel.ISupportInitialize).EndInit
         Me.pnlConclusion.ResumeLayout(false)
         Me.pnlConclusion.PerformLayout
-        CType(Me.lupConflict.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.BarManager1,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.dteConclusionDate.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.dteConclusionDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.dgvConditionText,System.ComponentModel.ISupportInitialize).EndInit
@@ -4510,6 +4520,8 @@ Partial Class NewAssessmentForm
         CType(Me.pnlLabel,System.ComponentModel.ISupportInitialize).EndInit
         Me.pnlLabel.ResumeLayout(false)
         Me.pnlLabel.PerformLayout
+        CType(Me.lupConflict.Properties,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.BarManager1,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.pnlModificationConclusion,System.ComponentModel.ISupportInitialize).EndInit
         Me.pnlModificationConclusion.ResumeLayout(false)
         Me.pnlModificationConclusion.PerformLayout
@@ -4902,4 +4914,5 @@ End Sub
     Friend WithEvents lupConflict As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents lblIConfirmThatIHaveNoConflictOfInterestInAssessingThisApplication As DevExpress.XtraEditors.LabelControl
     Friend WithEvents Label1 As Label
+    Friend WithEvents btnRemovePlan As DevExpress.XtraEditors.SimpleButton
 End Class

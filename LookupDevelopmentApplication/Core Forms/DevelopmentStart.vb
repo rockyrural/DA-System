@@ -4421,6 +4421,11 @@ Public Class DevelopmentStart
 
             InsertWordDocumentIntoTable(FileToDelete, NewRecordID)
 
+        ElseIf DocumentType = "Modification Of Consent" Then
+
+            InsertWordDocumentIntoTable(FileToDelete, NewRecordID)
+
+
         End If
 
 
@@ -13385,7 +13390,7 @@ Public Class DevelopmentStart
 
         Else
 
-            Dim EnlightenURL As String = "https://esct1prodgis01v.esc.nsw.gov.au/IntraMaps80/?project=EUROBODALLA&module=PROPERTY%20&layer=REGISTERED%20PARCELS&mapkey=" & cadId
+            Dim EnlightenURL As String = "https://esct1prodgis01v.esc.nsw.gov.au/IntraMaps90/?project=EUROBODALLA&module=PROPERTY%20&layer=REGISTERED%20PARCELS&mapkey=" & cadId
             Process.Start(EnlightenURL)
 
         End If
