@@ -53,8 +53,8 @@ Partial Class IssueConstructionCertificate
         Dim CCMatW4Label As System.Windows.Forms.Label
         Dim CCMatW2Label As System.Windows.Forms.Label
         Dim CCMatW1Label As System.Windows.Forms.Label
-        Dim GridLevelNode2 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(IssueConstructionCertificate))
+        Dim GridLevelNode1 As DevExpress.XtraGrid.GridLevelNode = New DevExpress.XtraGrid.GridLevelNode()
         Me.tabConstCert = New DevExpress.XtraTab.XtraTabControl()
         Me.tpgDetails = New DevExpress.XtraTab.XtraTabPage()
         Me.pnlApplication = New DevExpress.XtraEditors.PanelControl()
@@ -1227,7 +1227,7 @@ Partial Class IssueConstructionCertificate
         '
         'txtDAApplicantNotified
         '
-        Me.txtDAApplicantNotified.Location = New System.Drawing.Point(702, 89)
+        Me.txtDAApplicantNotified.Location = New System.Drawing.Point(607, 91)
         Me.txtDAApplicantNotified.Name = "txtDAApplicantNotified"
         Me.txtDAApplicantNotified.Properties.ReadOnly = true
         Me.txtDAApplicantNotified.Size = New System.Drawing.Size(74, 20)
@@ -1235,7 +1235,7 @@ Partial Class IssueConstructionCertificate
         '
         'LabelControl26
         '
-        Me.LabelControl26.Location = New System.Drawing.Point(702, 69)
+        Me.LabelControl26.Location = New System.Drawing.Point(607, 71)
         Me.LabelControl26.Name = "LabelControl26"
         Me.LabelControl26.Size = New System.Drawing.Size(88, 13)
         Me.LabelControl26.TabIndex = 97
@@ -1243,7 +1243,7 @@ Partial Class IssueConstructionCertificate
         '
         'txtDADetermined
         '
-        Me.txtDADetermined.Location = New System.Drawing.Point(622, 91)
+        Me.txtDADetermined.Location = New System.Drawing.Point(527, 93)
         Me.txtDADetermined.Name = "txtDADetermined"
         Me.txtDADetermined.Properties.ReadOnly = true
         Me.txtDADetermined.Size = New System.Drawing.Size(74, 20)
@@ -1251,7 +1251,7 @@ Partial Class IssueConstructionCertificate
         '
         'LabelControl25
         '
-        Me.LabelControl25.Location = New System.Drawing.Point(622, 71)
+        Me.LabelControl25.Location = New System.Drawing.Point(527, 73)
         Me.LabelControl25.Name = "LabelControl25"
         Me.LabelControl25.Size = New System.Drawing.Size(59, 13)
         Me.LabelControl25.TabIndex = 95
@@ -1259,7 +1259,7 @@ Partial Class IssueConstructionCertificate
         '
         'txtSubmClose
         '
-        Me.txtSubmClose.Location = New System.Drawing.Point(539, 90)
+        Me.txtSubmClose.Location = New System.Drawing.Point(444, 92)
         Me.txtSubmClose.Name = "txtSubmClose"
         Me.txtSubmClose.Properties.ReadOnly = true
         Me.txtSubmClose.Size = New System.Drawing.Size(74, 20)
@@ -1267,7 +1267,7 @@ Partial Class IssueConstructionCertificate
         '
         'LabelControl24
         '
-        Me.LabelControl24.Location = New System.Drawing.Point(539, 70)
+        Me.LabelControl24.Location = New System.Drawing.Point(444, 72)
         Me.LabelControl24.Name = "LabelControl24"
         Me.LabelControl24.Size = New System.Drawing.Size(78, 13)
         Me.LabelControl24.TabIndex = 93
@@ -1275,19 +1275,21 @@ Partial Class IssueConstructionCertificate
         '
         'txtDAClassification
         '
-        Me.txtDAClassification.Location = New System.Drawing.Point(457, 90)
+        Me.txtDAClassification.Location = New System.Drawing.Point(719, 27)
         Me.txtDAClassification.Name = "txtDAClassification"
         Me.txtDAClassification.Properties.ReadOnly = true
         Me.txtDAClassification.Size = New System.Drawing.Size(57, 20)
         Me.txtDAClassification.TabIndex = 92
+        Me.txtDAClassification.Visible = false
         '
         'LabelControl23
         '
-        Me.LabelControl23.Location = New System.Drawing.Point(457, 72)
+        Me.LabelControl23.Location = New System.Drawing.Point(719, 29)
         Me.LabelControl23.Name = "LabelControl23"
         Me.LabelControl23.Size = New System.Drawing.Size(66, 13)
         Me.LabelControl23.TabIndex = 91
         Me.LabelControl23.Text = "Classification:"
+        Me.LabelControl23.Visible = false
         '
         'txtDAEstimateCost
         '
@@ -3648,8 +3650,8 @@ Partial Class IssueConstructionCertificate
         '
         'grdLoadListReferrals
         '
-        GridLevelNode2.RelationName = "Level1"
-        Me.grdLoadListReferrals.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode2})
+        GridLevelNode1.RelationName = "Level1"
+        Me.grdLoadListReferrals.LevelTree.Nodes.AddRange(New DevExpress.XtraGrid.GridLevelNode() {GridLevelNode1})
         Me.grdLoadListReferrals.Location = New System.Drawing.Point(12, 19)
         Me.grdLoadListReferrals.MainView = Me.gvwLoadListReferrals
         Me.grdLoadListReferrals.Name = "grdLoadListReferrals"

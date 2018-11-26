@@ -182,6 +182,15 @@ Public Class DevelopmentStart
 
         End If
 
+        'For Each argument As String In My.Application.CommandLineArgs
+
+
+        '    cmdArg = argument.ToString.Replace("-", "/")
+
+        'Next
+
+
+
         My.Computer.Registry.SetValue("HKEY_CURRENT_USER\software\ESC\DA\", "ExecLocation", Application.ExecutablePath)
 
         cboSearchType.SelectedIndex = 0
@@ -1982,11 +1991,13 @@ Public Class DevelopmentStart
             'sUserID = "cdavey"
 
 #Else
-
-
+            
 
             sUserID = My.User.Name.Substring(4)
             sUserID = "cbarton"
+
+            messagebox.show("You are in debug mode, ring Bob!","DEBUG MODE", MessageBoxButtons.OK, MessageBoxIcon.Information   )
+
 
 #End If
 
@@ -3169,10 +3180,18 @@ Public Class DevelopmentStart
                             With fMapMerge
                                 .DAnumber = txtDANo.Text
                                 .ShowDialog()
-                                MapMergeCompleted = .FileGenerated
+
+                                If .DialogResult = DialogResult.OK Then
+
+                                    MapMergeCompleted = .FileGenerated
+
+
+                                End If
+
                                 .Dispose()
 
                             End With
+
 
                             If Not MapMergeCompleted Then
                                 MessageBox.Show("Unable to proceed as these letters require MAPmerge data from Enlighten", "Unable to Generate", MessageBoxButtons.OK)
@@ -4758,8 +4777,8 @@ Public Class DevelopmentStart
                         .Parameters.Add("@ENDRETDTE", SqlDbType.SmallDateTime)
                         If IsDate(Me.EngDueReturnDate.Text) Then .Parameters("@ENDRETDTE").Value = Format(CDate(EngDueReturnDate.EditValue), "dd/MM/yyyy")
 
-                        If Not cboIntDevYN.EditValue Is Nothing Then .Parameters.Add("@INTDEVYN", SqlDbType.NVarChar).Value = Me.cboIntDevYN.EditValue.ToString
-                        If Not cboDesignatedYN.EditValue Is Nothing Then .Parameters.Add("@DESIGYN", SqlDbType.NVarChar).Value = cboDesignatedYN.EditValue.ToString
+                        'If Not cboIntDevYN.EditValue Is Nothing Then .Parameters.Add("@INTDEVYN", SqlDbType.NVarChar).Value = Me.cboIntDevYN.EditValue.ToString
+                        'If Not cboDesignatedYN.EditValue Is Nothing Then .Parameters.Add("@DESIGYN", SqlDbType.NVarChar).Value = cboDesignatedYN.EditValue.ToString
 
 
                         .Parameters.Add("@SYSID", SqlDbType.NVarChar).Value = "DA"
@@ -9323,10 +9342,14 @@ Public Class DevelopmentStart
 
                             Dim editor As DevExpress.XtraEditors.LookUpEdit = CType(cboDevType, DevExpress.XtraEditors.LookUpEdit)
                             Dim row As DataRowView = CType(editor.Properties.GetDataSourceRowByKeyValue(editor.EditValue), DataRowView)
-                            Dim value As Object = row("NewDwellingsReports")
+                            Dim isReport As Boolean = False
+                            If Not IsNothing(row) Then
 
-                            Dim isReport As Boolean = CType(value, Boolean)
+                                Dim value As Object = row("NewDwellingsReports")
+                                isReport = CType(value, Boolean)
 
+
+                            End If
                             nudDwellings.Visible = isReport
                             lblNoDwellings.Visible = isReport
 
@@ -9341,6 +9364,9 @@ Public Class DevelopmentStart
 
                             lupOccupancyStatus.Visible = isReport
                             lblOccupancy.Visible = isReport
+
+
+
 
                         Else
 
@@ -10083,6 +10109,11 @@ Public Class DevelopmentStart
                         '.Parameters.Add("@occupancyStatus", SqlDbType.Int).Value = radOccupancy.EditValue
                         If lupOccupancyStatus.EditValue Is Nothing Then .Parameters.Add("@occupancyStatus", SqlDbType.Int).Value = CInt(lupOccupancyStatus.EditValue)
 
+                        If Not cboIntDevYN.EditValue Is Nothing Then .Parameters.Add("@INTDEVYN", SqlDbType.NVarChar).Value = cboIntDevYN.EditValue.ToString
+                        If Not cboDesignatedYN.EditValue Is Nothing Then .Parameters.Add("@DESIGYN", SqlDbType.NVarChar).Value = cboDesignatedYN.EditValue.ToString
+
+
+
 
                         .ExecuteNonQuery()
 
@@ -10647,6 +10678,7 @@ Public Class DevelopmentStart
 
     Private Sub DAApplication_Shown(sender As Object, e As System.EventArgs) Handles Me.Shown
         If Not String.IsNullOrEmpty(cmdArg) Then
+
 
             PopulateForm(cmdArg)
 
@@ -12236,7 +12268,7 @@ Public Class DevelopmentStart
         LockTheForm(grpBasix, True)
         LockTheForm(grpFileNumber, True)
         LockTheForm(grpCCSum, True)
-
+        LockTheForm(grpSepp71, True)
 
         txtCCno.ReadOnly = Not Administration
         chkSec94.Enabled = Administration
@@ -13539,7 +13571,6 @@ Public Class DevelopmentStart
 
         objStreamReader.Close()
     End Sub
-
 
 
 End Class

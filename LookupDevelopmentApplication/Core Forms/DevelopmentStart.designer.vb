@@ -338,6 +338,11 @@ Partial Class DevelopmentStart
         Me.colPaymentId = New DevExpress.XtraGrid.Columns.GridColumn()
         Me.tpgSection68 = New DevExpress.XtraTab.XtraTabPage()
         Me.pnlDisplaySect68IntDev = New DevExpress.XtraEditors.PanelControl()
+        Me.grpSepp71 = New DevExpress.XtraEditors.PanelControl()
+        Me.cboDesignatedYN = New DevExpress.XtraEditors.LookUpEdit()
+        Me.cboIntDevYN = New DevExpress.XtraEditors.LookUpEdit()
+        Me.Label28 = New System.Windows.Forms.Label()
+        Me.Label29 = New System.Windows.Forms.Label()
         Me.grp68 = New DevExpress.XtraEditors.GroupControl()
         Me.btnRemove68 = New DevExpress.XtraEditors.SimpleButton()
         Me.grdSection68 = New DevExpress.XtraGrid.GridControl()
@@ -363,6 +368,7 @@ Partial Class DevelopmentStart
         Me.tpgReferrals = New DevExpress.XtraTab.XtraTabPage()
         Me.pnlDisplayReferrals = New DevExpress.XtraEditors.PanelControl()
         Me.grpMain = New DevExpress.XtraEditors.GroupControl()
+        Me.chksepp71 = New DevExpress.XtraEditors.CheckEdit()
         Me.btnRemovePDF = New DevExpress.XtraEditors.SimpleButton()
         Me.btnAddPDF = New DevExpress.XtraEditors.SimpleButton()
         Me.lblReferralID = New System.Windows.Forms.Label()
@@ -399,12 +405,6 @@ Partial Class DevelopmentStart
         Me.EngDueReturnDate = New DevExpress.XtraEditors.DateEdit()
         Me.txtEngInternalComments = New DevExpress.XtraEditors.TextEdit()
         Me.txtRefComm = New DevExpress.XtraEditors.TextEdit()
-        Me.grpSepp71 = New DevExpress.XtraEditors.PanelControl()
-        Me.chksepp71 = New DevExpress.XtraEditors.CheckEdit()
-        Me.cboDesignatedYN = New DevExpress.XtraEditors.LookUpEdit()
-        Me.cboIntDevYN = New DevExpress.XtraEditors.LookUpEdit()
-        Me.Label28 = New System.Windows.Forms.Label()
-        Me.Label29 = New System.Windows.Forms.Label()
         Me.pnlButtons = New DevExpress.XtraEditors.PanelControl()
         Me.btnMailResponse = New DevExpress.XtraEditors.SimpleButton()
         Me.btnReferral = New DevExpress.XtraEditors.SimpleButton()
@@ -820,6 +820,10 @@ Partial Class DevelopmentStart
         Me.tpgSection68.SuspendLayout
         CType(Me.pnlDisplaySect68IntDev,System.ComponentModel.ISupportInitialize).BeginInit
         Me.pnlDisplaySect68IntDev.SuspendLayout
+        CType(Me.grpSepp71,System.ComponentModel.ISupportInitialize).BeginInit
+        Me.grpSepp71.SuspendLayout
+        CType(Me.cboDesignatedYN.Properties,System.ComponentModel.ISupportInitialize).BeginInit
+        CType(Me.cboIntDevYN.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.grp68,System.ComponentModel.ISupportInitialize).BeginInit
         Me.grp68.SuspendLayout
         CType(Me.grdSection68,System.ComponentModel.ISupportInitialize).BeginInit
@@ -837,6 +841,7 @@ Partial Class DevelopmentStart
         Me.pnlDisplayReferrals.SuspendLayout
         CType(Me.grpMain,System.ComponentModel.ISupportInitialize).BeginInit
         Me.grpMain.SuspendLayout
+        CType(Me.chksepp71.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.DaysElapsedTextBox.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.cboRefCodeId.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.RefRetDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).BeginInit
@@ -856,11 +861,6 @@ Partial Class DevelopmentStart
         CType(Me.EngDueReturnDate.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.txtEngInternalComments.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.txtRefComm.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.grpSepp71,System.ComponentModel.ISupportInitialize).BeginInit
-        Me.grpSepp71.SuspendLayout
-        CType(Me.chksepp71.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboDesignatedYN.Properties,System.ComponentModel.ISupportInitialize).BeginInit
-        CType(Me.cboIntDevYN.Properties,System.ComponentModel.ISupportInitialize).BeginInit
         CType(Me.pnlButtons,System.ComponentModel.ISupportInitialize).BeginInit
         Me.pnlButtons.SuspendLayout
         CType(Me.dgvLoadListReferrals,System.ComponentModel.ISupportInitialize).BeginInit
@@ -4029,10 +4029,11 @@ Partial Class DevelopmentStart
         Me.tpgSection68.ImageOptions.Image = CType(resources.GetObject("tpgSection68.ImageOptions.Image"),System.Drawing.Image)
         Me.tpgSection68.Name = "tpgSection68"
         Me.tpgSection68.Size = New System.Drawing.Size(1423, 721)
-        Me.tpgSection68.Text = "Section 69 (Int. Dev.)"
+        Me.tpgSection68.Text = "INTEGRATED DEV."
         '
         'pnlDisplaySect68IntDev
         '
+        Me.pnlDisplaySect68IntDev.Controls.Add(Me.grpSepp71)
         Me.pnlDisplaySect68IntDev.Controls.Add(Me.grp68)
         Me.pnlDisplaySect68IntDev.Controls.Add(Me.GroupBox9)
         Me.pnlDisplaySect68IntDev.Dock = System.Windows.Forms.DockStyle.Fill
@@ -4041,13 +4042,70 @@ Partial Class DevelopmentStart
         Me.pnlDisplaySect68IntDev.Size = New System.Drawing.Size(1423, 721)
         Me.pnlDisplaySect68IntDev.TabIndex = 3
         '
+        'grpSepp71
+        '
+        Me.grpSepp71.Controls.Add(Me.cboDesignatedYN)
+        Me.grpSepp71.Controls.Add(Me.cboIntDevYN)
+        Me.grpSepp71.Controls.Add(Me.Label28)
+        Me.grpSepp71.Controls.Add(Me.Label29)
+        Me.grpSepp71.Location = New System.Drawing.Point(16, 17)
+        Me.grpSepp71.Name = "grpSepp71"
+        Me.grpSepp71.Size = New System.Drawing.Size(670, 104)
+        Me.grpSepp71.TabIndex = 100
+        '
+        'cboDesignatedYN
+        '
+        Me.cboDesignatedYN.Location = New System.Drawing.Point(561, 66)
+        Me.cboDesignatedYN.Name = "cboDesignatedYN"
+        Me.cboDesignatedYN.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.cboDesignatedYN.Properties.Appearance.Options.UseFont = true
+        Me.cboDesignatedYN.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cboDesignatedYN.Properties.NullText = "[Select]"
+        Me.cboDesignatedYN.Properties.ReadOnly = true
+        Me.cboDesignatedYN.Size = New System.Drawing.Size(87, 26)
+        Me.cboDesignatedYN.TabIndex = 70
+        '
+        'cboIntDevYN
+        '
+        Me.cboIntDevYN.Location = New System.Drawing.Point(561, 15)
+        Me.cboIntDevYN.Name = "cboIntDevYN"
+        Me.cboIntDevYN.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.cboIntDevYN.Properties.Appearance.Options.UseFont = true
+        Me.cboIntDevYN.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.cboIntDevYN.Properties.NullText = "[Select]"
+        Me.cboIntDevYN.Properties.ReadOnly = true
+        Me.cboIntDevYN.Size = New System.Drawing.Size(87, 26)
+        Me.cboIntDevYN.TabIndex = 71
+        '
+        'Label28
+        '
+        Me.Label28.AutoSize = true
+        Me.Label28.Font = New System.Drawing.Font("Tahoma", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(192,Byte),Integer))
+        Me.Label28.Location = New System.Drawing.Point(21, 69)
+        Me.Label28.Name = "Label28"
+        Me.Label28.Size = New System.Drawing.Size(533, 19)
+        Me.Label28.TabIndex = 71
+        Me.Label28.Text = "Is the proposal DESIGNATED under Schedule 3 of the EP&&A Act of 1979?"
+        '
+        'Label29
+        '
+        Me.Label29.AutoSize = true
+        Me.Label29.Font = New System.Drawing.Font("Tahoma", 12!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0,Byte))
+        Me.Label29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(192,Byte),Integer))
+        Me.Label29.Location = New System.Drawing.Point(21, 18)
+        Me.Label29.Name = "Label29"
+        Me.Label29.Size = New System.Drawing.Size(481, 19)
+        Me.Label29.TabIndex = 70
+        Me.Label29.Text = "Is the proposal INTEGRATED under s91 of the EP&&A Act of 1979?"
+        '
         'grp68
         '
         Me.grp68.Controls.Add(Me.btnRemove68)
         Me.grp68.Controls.Add(Me.grdSection68)
         Me.grp68.Controls.Add(Me.lupSection68)
         Me.grp68.Controls.Add(Me.btnInsert68)
-        Me.grp68.Location = New System.Drawing.Point(16, 5)
+        Me.grp68.Location = New System.Drawing.Point(849, 17)
         Me.grp68.Name = "grp68"
         Me.grp68.Size = New System.Drawing.Size(554, 267)
         Me.grp68.TabIndex = 99
@@ -4125,11 +4183,11 @@ Partial Class DevelopmentStart
         Me.GroupBox9.Controls.Add(Me.mskDateAct)
         Me.GroupBox9.Controls.Add(Me.Label49)
         Me.GroupBox9.Controls.Add(Me.Label7)
-        Me.GroupBox9.Location = New System.Drawing.Point(16, 291)
+        Me.GroupBox9.Location = New System.Drawing.Point(16, 143)
         Me.GroupBox9.Name = "GroupBox9"
         Me.GroupBox9.Size = New System.Drawing.Size(786, 374)
         Me.GroupBox9.TabIndex = 98
-        Me.GroupBox9.Text = "Integrated Development"
+        Me.GroupBox9.Text = "Integrated Development Check List"
         '
         'grdIntDev
         '
@@ -4268,6 +4326,7 @@ Partial Class DevelopmentStart
         '
         'grpMain
         '
+        Me.grpMain.Controls.Add(Me.chksepp71)
         Me.grpMain.Controls.Add(Me.btnRemovePDF)
         Me.grpMain.Controls.Add(Me.btnAddPDF)
         Me.grpMain.Controls.Add(Me.lblReferralID)
@@ -4291,7 +4350,6 @@ Partial Class DevelopmentStart
         Me.grpMain.Controls.Add(Me.grpRFS)
         Me.grpMain.Controls.Add(Me.grpEngineers)
         Me.grpMain.Controls.Add(Me.txtRefComm)
-        Me.grpMain.Controls.Add(Me.grpSepp71)
         Me.grpMain.Controls.Add(Me.pnlButtons)
         Me.grpMain.Controls.Add(Me.dgvLoadListReferrals)
         Me.grpMain.Controls.Add(Me.txtRefResponse)
@@ -4300,6 +4358,15 @@ Partial Class DevelopmentStart
         Me.grpMain.Name = "grpMain"
         Me.grpMain.Size = New System.Drawing.Size(1419, 717)
         Me.grpMain.TabIndex = 1
+        '
+        'chksepp71
+        '
+        Me.chksepp71.Location = New System.Drawing.Point(904, 127)
+        Me.chksepp71.Name = "chksepp71"
+        Me.chksepp71.Properties.Caption = "Integrated Development?"
+        Me.chksepp71.Properties.ReadOnly = true
+        Me.chksepp71.Size = New System.Drawing.Size(161, 19)
+        Me.chksepp71.TabIndex = 70
         '
         'btnRemovePDF
         '
@@ -4646,67 +4713,6 @@ Partial Class DevelopmentStart
         Me.txtRefComm.Properties.ReadOnly = true
         Me.txtRefComm.Size = New System.Drawing.Size(615, 21)
         Me.txtRefComm.TabIndex = 5
-        '
-        'grpSepp71
-        '
-        Me.grpSepp71.Controls.Add(Me.chksepp71)
-        Me.grpSepp71.Controls.Add(Me.cboDesignatedYN)
-        Me.grpSepp71.Controls.Add(Me.cboIntDevYN)
-        Me.grpSepp71.Controls.Add(Me.Label28)
-        Me.grpSepp71.Controls.Add(Me.Label29)
-        Me.grpSepp71.Location = New System.Drawing.Point(653, 335)
-        Me.grpSepp71.Name = "grpSepp71"
-        Me.grpSepp71.Size = New System.Drawing.Size(551, 104)
-        Me.grpSepp71.TabIndex = 4
-        '
-        'chksepp71
-        '
-        Me.chksepp71.Location = New System.Drawing.Point(23, 18)
-        Me.chksepp71.Name = "chksepp71"
-        Me.chksepp71.Properties.Caption = "Integrated Development?"
-        Me.chksepp71.Properties.ReadOnly = true
-        Me.chksepp71.Size = New System.Drawing.Size(161, 19)
-        Me.chksepp71.TabIndex = 70
-        '
-        'cboDesignatedYN
-        '
-        Me.cboDesignatedYN.Location = New System.Drawing.Point(387, 78)
-        Me.cboDesignatedYN.Name = "cboDesignatedYN"
-        Me.cboDesignatedYN.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cboDesignatedYN.Properties.NullText = "[Select]"
-        Me.cboDesignatedYN.Properties.ReadOnly = true
-        Me.cboDesignatedYN.Size = New System.Drawing.Size(87, 20)
-        Me.cboDesignatedYN.TabIndex = 70
-        '
-        'cboIntDevYN
-        '
-        Me.cboIntDevYN.Location = New System.Drawing.Point(387, 43)
-        Me.cboIntDevYN.Name = "cboIntDevYN"
-        Me.cboIntDevYN.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.cboIntDevYN.Properties.NullText = "[Select]"
-        Me.cboIntDevYN.Properties.ReadOnly = true
-        Me.cboIntDevYN.Size = New System.Drawing.Size(87, 20)
-        Me.cboIntDevYN.TabIndex = 71
-        '
-        'Label28
-        '
-        Me.Label28.AutoSize = true
-        Me.Label28.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(192,Byte),Integer))
-        Me.Label28.Location = New System.Drawing.Point(22, 81)
-        Me.Label28.Name = "Label28"
-        Me.Label28.Size = New System.Drawing.Size(356, 13)
-        Me.Label28.TabIndex = 71
-        Me.Label28.Text = "Is the proposal DESIGNATED under Schedule 3 of the EP&&A Act of 1979?"
-        '
-        'Label29
-        '
-        Me.Label29.AutoSize = true
-        Me.Label29.ForeColor = System.Drawing.Color.FromArgb(CType(CType(0,Byte),Integer), CType(CType(0,Byte),Integer), CType(CType(192,Byte),Integer))
-        Me.Label29.Location = New System.Drawing.Point(22, 46)
-        Me.Label29.Name = "Label29"
-        Me.Label29.Size = New System.Drawing.Size(321, 13)
-        Me.Label29.TabIndex = 70
-        Me.Label29.Text = "Is the proposal INTEGRATED under s91 of the EP&&A Act of 1979?"
         '
         'pnlButtons
         '
@@ -8193,6 +8199,11 @@ Partial Class DevelopmentStart
         Me.tpgSection68.ResumeLayout(false)
         CType(Me.pnlDisplaySect68IntDev,System.ComponentModel.ISupportInitialize).EndInit
         Me.pnlDisplaySect68IntDev.ResumeLayout(false)
+        CType(Me.grpSepp71,System.ComponentModel.ISupportInitialize).EndInit
+        Me.grpSepp71.ResumeLayout(false)
+        Me.grpSepp71.PerformLayout
+        CType(Me.cboDesignatedYN.Properties,System.ComponentModel.ISupportInitialize).EndInit
+        CType(Me.cboIntDevYN.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.grp68,System.ComponentModel.ISupportInitialize).EndInit
         Me.grp68.ResumeLayout(false)
         CType(Me.grdSection68,System.ComponentModel.ISupportInitialize).EndInit
@@ -8212,6 +8223,7 @@ Partial Class DevelopmentStart
         CType(Me.grpMain,System.ComponentModel.ISupportInitialize).EndInit
         Me.grpMain.ResumeLayout(false)
         Me.grpMain.PerformLayout
+        CType(Me.chksepp71.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.DaysElapsedTextBox.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.cboRefCodeId.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.RefRetDt.Properties.CalendarTimeProperties,System.ComponentModel.ISupportInitialize).EndInit
@@ -8233,12 +8245,6 @@ Partial Class DevelopmentStart
         CType(Me.EngDueReturnDate.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.txtEngInternalComments.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.txtRefComm.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.grpSepp71,System.ComponentModel.ISupportInitialize).EndInit
-        Me.grpSepp71.ResumeLayout(false)
-        Me.grpSepp71.PerformLayout
-        CType(Me.chksepp71.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboDesignatedYN.Properties,System.ComponentModel.ISupportInitialize).EndInit
-        CType(Me.cboIntDevYN.Properties,System.ComponentModel.ISupportInitialize).EndInit
         CType(Me.pnlButtons,System.ComponentModel.ISupportInitialize).EndInit
         Me.pnlButtons.ResumeLayout(false)
         CType(Me.dgvLoadListReferrals,System.ComponentModel.ISupportInitialize).EndInit
@@ -8928,7 +8934,6 @@ End Sub
     Friend WithEvents EngDueReturnDate As DevExpress.XtraEditors.DateEdit
     Friend WithEvents txtEngInternalComments As DevExpress.XtraEditors.TextEdit
     Friend WithEvents txtRefComm As DevExpress.XtraEditors.TextEdit
-    Friend WithEvents grpSepp71 As DevExpress.XtraEditors.PanelControl
     Friend WithEvents pnlButtons As DevExpress.XtraEditors.PanelControl
     Friend WithEvents btnMailResponse As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnReferral As DevExpress.XtraEditors.SimpleButton
@@ -8939,10 +8944,6 @@ End Sub
     Friend WithEvents colRefdt As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents colReferralCode As DevExpress.XtraGrid.Columns.GridColumn
     Friend WithEvents btnAddPDF As DevExpress.XtraEditors.SimpleButton
-    Friend WithEvents Label28 As Label
-    Friend WithEvents Label29 As Label
-    Friend WithEvents cboDesignatedYN As DevExpress.XtraEditors.LookUpEdit
-    Friend WithEvents cboIntDevYN As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents cboAdvertSignDepot As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents cboProgressCode As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents cboReasonOver40 As DevExpress.XtraEditors.LookUpEdit
@@ -9186,4 +9187,9 @@ End Sub
     Friend WithEvents btnUse As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents btnKeep As DevExpress.XtraEditors.SimpleButton
     Friend WithEvents chkUseEmail As DevExpress.XtraEditors.CheckEdit
+    Friend WithEvents grpSepp71 As DevExpress.XtraEditors.PanelControl
+    Friend WithEvents cboDesignatedYN As DevExpress.XtraEditors.LookUpEdit
+    Friend WithEvents cboIntDevYN As DevExpress.XtraEditors.LookUpEdit
+    Friend WithEvents Label28 As Label
+    Friend WithEvents Label29 As Label
 End Class

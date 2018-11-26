@@ -208,13 +208,123 @@ Public Class ImportAdjacentPropertiesForMailMerge
 
     End Sub
 
+    Private Sub LoadMapMergeData()
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadMapMergeData routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_SELECT_MapMergeDataForDA"
+
+                        .Parameters.Add("@DANO", SqlDbType.VarChar).Value = DANo
+
+
+                    End With
+
+                    Dim objDT As New DataTable
+
+
+                    Using objDataReader As SqlDataReader = cmd.ExecuteReader
+                        objDT.Load(objDataReader)
+                    End Using
+
+                    grdAdjacentProperties.DataSource = objDT
+
+
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in LoadMapMergeData routine - form " & Me.Name)
+
+            End Try
+        End Using
+
+
+    End Sub
+
     Private Sub btnRun_Click(sender As Object, e As EventArgs) Handles btnRun.Click
 
         RemoveOldMapData()
         InsertMapMergData()
         MapMergeRan = True
 
-        DialogResult = DialogResult.OK
+        LoadMapMergeData()
+
+        btnOk.Enabled=true
+
+        'DialogResult = DialogResult.OK
 
     End Sub
+
+    Private Sub gvwProperties_RowClick(sender As Object, e As DevExpress.XtraGrid.Views.Grid.RowClickEventArgs) Handles gvwProperties.RowClick
+        btnRemove.Enabled = True
+    End Sub
+
+    Private Sub btnRemove_Click(sender As Object, e As EventArgs) Handles btnRemove.Click
+
+
+
+        Dim myobj As DataRowView = CType(gvwProperties.GetFocusedRow, DataRowView)
+
+
+        Dim key As Integer = CInt(myobj.Row.Item("idxKey"))
+
+        If MessageBox.Show("Remove " & myobj.Row.Item("Owners_Name") & " from list?", "REMOVE PROPERTY", MessageBoxButtons.YesNo, MessageBoxIcon.Question, MessageBoxDefaultButton.Button2) = DialogResult.No Then Return
+
+        Using cn As New SqlConnection(My.Settings.connectionString)
+            Try
+                cn.Open()
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in btnRemove_Click routine - form " & Me.Name)
+
+            End Try
+
+
+            Try
+
+                Using cmd As New SqlCommand
+
+                    With cmd
+                        .Connection = cn
+                        .CommandType = CommandType.StoredProcedure
+                        .CommandText = "usp_DELETE_MapMergeDataForDA"
+
+                        .Parameters.Add("@KEY", SqlDbType.Int).Value = key
+
+                        .ExecuteNonQuery()
+
+                    End With
+
+
+
+
+                End Using
+
+
+
+            Catch ex As SqlException
+                MessageBox.Show(ex.Message, " in btnRemove_Click routine - form " & Me.Name)
+
+            End Try
+        End Using
+
+        LoadMapMergeData()
+    End Sub
+
+
 End Class
