@@ -3894,6 +3894,19 @@ Public Class NewAssessmentForm
 
 
 
+        Dim InsertDocData As New InsertDocumentData
+
+        With InsertDocData
+            .ApplicationType = "DA"
+            .DocumentType = "ASSESS"
+            .ApplicationNo = lblapplicationNo.Text
+            .TheAuthor = MyUserId
+            .TheImageName = sDocumentNo.Replace(".", "_")
+            .Notes = summary
+            .InsertDocumentsIntoDAsystem()
+
+        End With
+
         Using cn As New SqlConnection(My.Settings.connectionString)
             Try
                 cn.Open()
@@ -4556,7 +4569,7 @@ Public Class NewAssessmentForm
         End With
 
         btnPDF.Enabled = True
-        btnRemovePlan.Enabled=true
+        btnRemovePlan.Enabled = True
 
 
     End Sub

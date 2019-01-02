@@ -746,6 +746,7 @@ Partial Class DevelopmentStart
         Me.Label48 = New System.Windows.Forms.Label()
         Me.cboSearch = New System.Windows.Forms.ComboBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.btnAddExistingRecordDocument = New DevExpress.XtraEditors.SimpleButton()
         CurrentLandUseLabel = New System.Windows.Forms.Label()
         Label27 = New System.Windows.Forms.Label()
         OfficerLabel = New System.Windows.Forms.Label()
@@ -5679,6 +5680,7 @@ Partial Class DevelopmentStart
         '
         Me.pnlDisplayDocs.Appearance.BackColor = System.Drawing.SystemColors.Control
         Me.pnlDisplayDocs.Appearance.Options.UseBackColor = true
+        Me.pnlDisplayDocs.Controls.Add(Me.btnAddExistingRecordDocument)
         Me.pnlDisplayDocs.Controls.Add(Me.GroupBox32)
         Me.pnlDisplayDocs.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pnlDisplayDocs.Location = New System.Drawing.Point(0, 0)
@@ -5783,8 +5785,6 @@ Partial Class DevelopmentStart
         Me.colFullname.Caption = "Author"
         Me.colFullname.FieldName = "Fullname"
         Me.colFullname.Name = "colFullname"
-        Me.colFullname.Visible = true
-        Me.colFullname.VisibleIndex = 0
         Me.colFullname.Width = 117
         '
         'colDocumentDesc
@@ -5793,7 +5793,7 @@ Partial Class DevelopmentStart
         Me.colDocumentDesc.FieldName = "DocumentDesc"
         Me.colDocumentDesc.Name = "colDocumentDesc"
         Me.colDocumentDesc.Visible = true
-        Me.colDocumentDesc.VisibleIndex = 1
+        Me.colDocumentDesc.VisibleIndex = 0
         Me.colDocumentDesc.Width = 177
         '
         'colDateCreated
@@ -5802,7 +5802,7 @@ Partial Class DevelopmentStart
         Me.colDateCreated.FieldName = "DateCreated"
         Me.colDateCreated.Name = "colDateCreated"
         Me.colDateCreated.Visible = true
-        Me.colDateCreated.VisibleIndex = 2
+        Me.colDateCreated.VisibleIndex = 1
         Me.colDateCreated.Width = 89
         '
         'colDocnotes
@@ -5811,7 +5811,7 @@ Partial Class DevelopmentStart
         Me.colDocnotes.FieldName = "notes"
         Me.colDocnotes.Name = "colDocnotes"
         Me.colDocnotes.Visible = true
-        Me.colDocnotes.VisibleIndex = 3
+        Me.colDocnotes.VisibleIndex = 2
         Me.colDocnotes.Width = 527
         '
         'colDocMTH
@@ -8107,6 +8107,15 @@ Partial Class DevelopmentStart
         Me.cboSearch.Size = New System.Drawing.Size(182, 21)
         Me.cboSearch.TabIndex = 0
         '
+        'btnAddExistingRecordDocument
+        '
+        Me.btnAddExistingRecordDocument.ImageOptions.Image = CType(resources.GetObject("btnAddExistingRecordDocument.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddExistingRecordDocument.Location = New System.Drawing.Point(1005, 13)
+        Me.btnAddExistingRecordDocument.Name = "btnAddExistingRecordDocument"
+        Me.btnAddExistingRecordDocument.Size = New System.Drawing.Size(154, 52)
+        Me.btnAddExistingRecordDocument.TabIndex = 33
+        Me.btnAddExistingRecordDocument.Text = "Add existing EASE "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"document from File to"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" this application"
+        '
         'DevelopmentStart
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6!, 13!)
@@ -9192,4 +9201,5 @@ End Sub
     Friend WithEvents cboIntDevYN As DevExpress.XtraEditors.LookUpEdit
     Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
+    Friend WithEvents btnAddExistingRecordDocument As DevExpress.XtraEditors.SimpleButton
 End Class

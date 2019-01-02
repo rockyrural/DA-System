@@ -7606,7 +7606,9 @@ Public Class DevelopmentStart
                     Using objDataReader As SqlDataReader = cmd.ExecuteReader
                         objDT.Load(objDataReader)
                     End Using
+
                     With cboIntDevActs.Properties
+                        .Columns.Clear()
                         .DataSource = objDT
                         .DisplayMember = "DescriptionOfAct"
                         .ValueMember = "id"
@@ -9795,7 +9797,7 @@ Public Class DevelopmentStart
         LockTheForm(pnlButtons, False)
         'LockTheForm(pnlEditButtons, False)
 
-
+        btnAddExistingRecordDocument.Enabled = True
 
         LoadingForm = False
 
@@ -13572,5 +13574,17 @@ Public Class DevelopmentStart
         objStreamReader.Close()
     End Sub
 
+    Private Sub btnAddExistingRecordDocument_Click(sender As Object, e As EventArgs) Handles btnAddExistingRecordDocument.Click
 
+        With My.Forms.DisplayListOfDocuments
+            .ApplicationID = txtDANo.Text
+            .FileNumber = txtFileNo.Text
+            .ShowDialog()
+
+            .Dispose()
+        End With
+
+        LoadHistoricalDocuments()
+
+    End Sub
 End Class

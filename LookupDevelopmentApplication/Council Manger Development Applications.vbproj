@@ -41,7 +41,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>29</ApplicationRevision>
+    <ApplicationRevision>31</ApplicationRevision>
     <ApplicationVersion>2.3.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -392,6 +392,12 @@
       <DependentUpon>DevelopmentStart.vb</DependentUpon>
     </Compile>
     <Compile Include="Core Forms\DevelopmentStart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Core Forms\DisplayListOfDocuments.Designer.vb">
+      <DependentUpon>DisplayListOfDocuments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Core Forms\DisplayListOfDocuments.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Core Forms\DraftConditions.Designer.vb">
@@ -1376,6 +1382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Core Forms\DevelopmentStart.resx">
       <DependentUpon>DevelopmentStart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Core Forms\DisplayListOfDocuments.resx">
+      <DependentUpon>DisplayListOfDocuments.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Core Forms\DraftConditions.resx">
       <DependentUpon>DraftConditions.vb</DependentUpon>
