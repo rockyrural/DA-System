@@ -498,6 +498,7 @@ Partial Class DevelopmentStart
         Me.txtProgressComment = New System.Windows.Forms.TextBox()
         Me.tpgDocuments = New DevExpress.XtraTab.XtraTabPage()
         Me.pnlDisplayDocs = New DevExpress.XtraEditors.PanelControl()
+        Me.btnAddExistingRecordDocument = New DevExpress.XtraEditors.SimpleButton()
         Me.GroupBox32 = New DevExpress.XtraEditors.GroupControl()
         Me.btnSaveTheNote = New DevExpress.XtraEditors.SimpleButton()
         Me.btnRemoveDocument = New DevExpress.XtraEditors.SimpleButton()
@@ -746,7 +747,7 @@ Partial Class DevelopmentStart
         Me.Label48 = New System.Windows.Forms.Label()
         Me.cboSearch = New System.Windows.Forms.ComboBox()
         Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
-        Me.btnAddExistingRecordDocument = New DevExpress.XtraEditors.SimpleButton()
+        Me.bbiPaymentTypes = New DevExpress.XtraBars.BarButtonItem()
         CurrentLandUseLabel = New System.Windows.Forms.Label()
         Label27 = New System.Windows.Forms.Label()
         OfficerLabel = New System.Windows.Forms.Label()
@@ -2288,9 +2289,9 @@ Partial Class DevelopmentStart
         'RibbonControl
         '
         Me.RibbonControl.ExpandCollapseItem.Id = 0
-        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.ibExit, Me.BiSection94, Me.BiCompliance, Me.BiConstructionCert, Me.BiEngineerConsent, Me.BiAssessment, Me.BiMyOSDas, Me.BiAddDA, Me.BiEditDA, Me.BiSaveDA, Me.ibImages, Me.ibOldSystemImages, Me.ibCurrentImages, Me.ibVideos, Me.ibPrintCoverSheet, Me.ibCreateTemplate, Me.ibRptsExit, Me.ibMaintExit, Me.ibOfficers, Me.ibLookupLists, Me.ibSection94Codes, Me.ibSection94RF, Me.ibDevelopmentTypes, Me.ibPCAbuilders, Me.ibAuthorities, Me.ibDAUsers, Me.ibReferralList, Me.ibSEPPcodes, Me.ibDCPtypes, Me.ibDCPGuidlines, Me.ibInspectionTypes, Me.ibStdCondCodes, Me.ibInsuranceCoy, Me.ibConsentAdvert, Me.ibABSStats, Me.ibNavision, Me.ibAppCounters, Me.BarButtonItem4, Me.ibAllResults, Me.ibDAresults, Me.ibCDresults, Me.ibCCresults, Me.ibReports, Me.ibApprovals, Me.ibOfficerAllocations, Me.ibDevelopmentApps, Me.ibConstructionCertificates, Me.ibReferrrals, Me.ibMayoral, Me.ibDAreceived, Me.ibCCreceived, Me.ibOutstandingDA, Me.ibDAdetermined, Me.ibCCdetermined, Me.ibInspections, Me.ibApprovalsByTown, Me.ibOccupByTown, Me.ibSepticByTown, Me.ibAppliByOfficer, Me.ibTotalNoDACC, Me.ibStatutoryTime, Me.ibCCwithoutOC, Me.ibExpiredIOC, Me.ibNumberDwellingsAppd, Me.ibOutstandCC, Me.ibAppdDelegation, Me.ibLTW, Me.ibAverageTime, Me.ibLEPRegister, Me.ibMayoralRecd, Me.ibOSreferrals, Me.ibReferralsByOfficer, Me.ibMayoralDetermined, Me.ibCCOwner, Me.ibCCPCA, Me.ibInspectionByOfficer, Me.ibInspectOfficerAndType, Me.ibInspectOfficerSummary, Me.ibInspectFileNumber, Me.BarButtonItem8, Me.ibAdditionalIfo, Me.ibLinked, Me.ibIntraMaps, Me.ibGoogleMaps, Me.SkinDropDownButtonItem1})
+        Me.RibbonControl.Items.AddRange(New DevExpress.XtraBars.BarItem() {Me.RibbonControl.ExpandCollapseItem, Me.ibExit, Me.BiSection94, Me.BiCompliance, Me.BiConstructionCert, Me.BiEngineerConsent, Me.BiAssessment, Me.BiMyOSDas, Me.BiAddDA, Me.BiEditDA, Me.BiSaveDA, Me.ibImages, Me.ibOldSystemImages, Me.ibCurrentImages, Me.ibVideos, Me.ibPrintCoverSheet, Me.ibCreateTemplate, Me.ibRptsExit, Me.ibMaintExit, Me.ibOfficers, Me.ibLookupLists, Me.ibSection94Codes, Me.ibSection94RF, Me.ibDevelopmentTypes, Me.ibPCAbuilders, Me.ibAuthorities, Me.ibDAUsers, Me.ibReferralList, Me.ibSEPPcodes, Me.ibDCPtypes, Me.ibDCPGuidlines, Me.ibInspectionTypes, Me.ibStdCondCodes, Me.ibInsuranceCoy, Me.ibConsentAdvert, Me.ibABSStats, Me.ibNavision, Me.ibAppCounters, Me.BarButtonItem4, Me.ibAllResults, Me.ibDAresults, Me.ibCDresults, Me.ibCCresults, Me.ibReports, Me.ibApprovals, Me.ibOfficerAllocations, Me.ibDevelopmentApps, Me.ibConstructionCertificates, Me.ibReferrrals, Me.ibMayoral, Me.ibDAreceived, Me.ibCCreceived, Me.ibOutstandingDA, Me.ibDAdetermined, Me.ibCCdetermined, Me.ibInspections, Me.ibApprovalsByTown, Me.ibOccupByTown, Me.ibSepticByTown, Me.ibAppliByOfficer, Me.ibTotalNoDACC, Me.ibStatutoryTime, Me.ibCCwithoutOC, Me.ibExpiredIOC, Me.ibNumberDwellingsAppd, Me.ibOutstandCC, Me.ibAppdDelegation, Me.ibLTW, Me.ibAverageTime, Me.ibLEPRegister, Me.ibMayoralRecd, Me.ibOSreferrals, Me.ibReferralsByOfficer, Me.ibMayoralDetermined, Me.ibCCOwner, Me.ibCCPCA, Me.ibInspectionByOfficer, Me.ibInspectOfficerAndType, Me.ibInspectOfficerSummary, Me.ibInspectFileNumber, Me.BarButtonItem8, Me.ibAdditionalIfo, Me.ibLinked, Me.ibIntraMaps, Me.ibGoogleMaps, Me.SkinDropDownButtonItem1, Me.bbiPaymentTypes})
         Me.RibbonControl.Location = New System.Drawing.Point(0, 0)
-        Me.RibbonControl.MaxItemId = 102
+        Me.RibbonControl.MaxItemId = 103
         Me.RibbonControl.Name = "RibbonControl"
         Me.RibbonControl.Pages.AddRange(New DevExpress.XtraBars.Ribbon.RibbonPage() {Me.RibbonPage1, Me.rpgReports, Me.RibbonPage2})
         Me.RibbonControl.ShowApplicationButton = DevExpress.Utils.DefaultBoolean.[False]
@@ -2463,7 +2464,7 @@ Partial Class DevelopmentStart
         Me.ibLookupLists.Id = 33
         Me.ibLookupLists.ImageOptions.Image = CType(resources.GetObject("ibLookupLists.ImageOptions.Image"),System.Drawing.Image)
         Me.ibLookupLists.ImageOptions.LargeImage = CType(resources.GetObject("ibLookupLists.ImageOptions.LargeImage"),System.Drawing.Image)
-        Me.ibLookupLists.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ibDevelopmentTypes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibPCAbuilders), New DevExpress.XtraBars.LinkPersistInfo(Me.ibAuthorities), New DevExpress.XtraBars.LinkPersistInfo(Me.ibDAUsers), New DevExpress.XtraBars.LinkPersistInfo(Me.ibReferralList), New DevExpress.XtraBars.LinkPersistInfo(Me.ibSEPPcodes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibDCPtypes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibDCPGuidlines), New DevExpress.XtraBars.LinkPersistInfo(Me.ibInspectionTypes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibStdCondCodes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibInsuranceCoy)})
+        Me.ibLookupLists.LinksPersistInfo.AddRange(New DevExpress.XtraBars.LinkPersistInfo() {New DevExpress.XtraBars.LinkPersistInfo(Me.ibDevelopmentTypes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibPCAbuilders), New DevExpress.XtraBars.LinkPersistInfo(Me.ibAuthorities), New DevExpress.XtraBars.LinkPersistInfo(Me.ibDAUsers), New DevExpress.XtraBars.LinkPersistInfo(Me.ibReferralList), New DevExpress.XtraBars.LinkPersistInfo(Me.ibSEPPcodes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibDCPtypes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibDCPGuidlines), New DevExpress.XtraBars.LinkPersistInfo(Me.ibInspectionTypes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibStdCondCodes), New DevExpress.XtraBars.LinkPersistInfo(Me.ibInsuranceCoy), New DevExpress.XtraBars.LinkPersistInfo(Me.bbiPaymentTypes)})
         Me.ibLookupLists.Name = "ibLookupLists"
         '
         'ibDevelopmentTypes
@@ -5688,6 +5689,15 @@ Partial Class DevelopmentStart
         Me.pnlDisplayDocs.Size = New System.Drawing.Size(1423, 721)
         Me.pnlDisplayDocs.TabIndex = 21
         '
+        'btnAddExistingRecordDocument
+        '
+        Me.btnAddExistingRecordDocument.ImageOptions.Image = CType(resources.GetObject("btnAddExistingRecordDocument.ImageOptions.Image"),System.Drawing.Image)
+        Me.btnAddExistingRecordDocument.Location = New System.Drawing.Point(1005, 13)
+        Me.btnAddExistingRecordDocument.Name = "btnAddExistingRecordDocument"
+        Me.btnAddExistingRecordDocument.Size = New System.Drawing.Size(154, 52)
+        Me.btnAddExistingRecordDocument.TabIndex = 33
+        Me.btnAddExistingRecordDocument.Text = "Add existing EASE "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"document from File to"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" this application"
+        '
         'GroupBox32
         '
         Me.GroupBox32.Controls.Add(Me.btnSaveTheNote)
@@ -8107,14 +8117,11 @@ Partial Class DevelopmentStart
         Me.cboSearch.Size = New System.Drawing.Size(182, 21)
         Me.cboSearch.TabIndex = 0
         '
-        'btnAddExistingRecordDocument
+        'bbiPaymentTypes
         '
-        Me.btnAddExistingRecordDocument.ImageOptions.Image = CType(resources.GetObject("btnAddExistingRecordDocument.ImageOptions.Image"),System.Drawing.Image)
-        Me.btnAddExistingRecordDocument.Location = New System.Drawing.Point(1005, 13)
-        Me.btnAddExistingRecordDocument.Name = "btnAddExistingRecordDocument"
-        Me.btnAddExistingRecordDocument.Size = New System.Drawing.Size(154, 52)
-        Me.btnAddExistingRecordDocument.TabIndex = 33
-        Me.btnAddExistingRecordDocument.Text = "Add existing EASE "&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&"document from File to"&Global.Microsoft.VisualBasic.ChrW(13)&Global.Microsoft.VisualBasic.ChrW(10)&" this application"
+        Me.bbiPaymentTypes.Caption = "Maintain Payment Types"
+        Me.bbiPaymentTypes.Id = 102
+        Me.bbiPaymentTypes.Name = "bbiPaymentTypes"
         '
         'DevelopmentStart
         '
@@ -9202,4 +9209,5 @@ End Sub
     Friend WithEvents Label28 As Label
     Friend WithEvents Label29 As Label
     Friend WithEvents btnAddExistingRecordDocument As DevExpress.XtraEditors.SimpleButton
+    Friend WithEvents bbiPaymentTypes As DevExpress.XtraBars.BarButtonItem
 End Class

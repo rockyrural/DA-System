@@ -41,7 +41,7 @@
     <CreateWebPageOnPublish>true</CreateWebPageOnPublish>
     <WebPage>publish.htm</WebPage>
     <TrustUrlParameters>true</TrustUrlParameters>
-    <ApplicationRevision>32</ApplicationRevision>
+    <ApplicationRevision>33</ApplicationRevision>
     <ApplicationVersion>2.3.0.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <CreateDesktopShortcut>true</CreateDesktopShortcut>
@@ -675,6 +675,12 @@
       <DependentUpon>OutwardEaseCorro.vb</DependentUpon>
     </Compile>
     <Compile Include="EASE modules\OutwardEaseCorro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MaintenanceMods\maintainFeeTypes.Designer.vb">
+      <DependentUpon>maintainFeeTypes.vb</DependentUpon>
+    </Compile>
+    <Compile Include="MaintenanceMods\maintainFeeTypes.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="My Outstanding\MyAAreferrals.Designer.vb">
@@ -1517,6 +1523,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EASE modules\OutwardEaseCorro.resx">
       <DependentUpon>OutwardEaseCorro.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MaintenanceMods\maintainFeeTypes.resx">
+      <DependentUpon>maintainFeeTypes.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Outstanding\MyAAreferrals.resx">
       <DependentUpon>MyAAreferrals.vb</DependentUpon>

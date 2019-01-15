@@ -9189,7 +9189,7 @@ Public Class DevelopmentStart
 
     Public Sub PopulateForm(ByVal DANo As String)
 
-        If DANo.Length > 10 Then Return
+        'If DANo.Length > 10 Then Return
 
         LoadingForm = True
 
@@ -13585,6 +13585,17 @@ Public Class DevelopmentStart
         End With
 
         LoadHistoricalDocuments()
+
+    End Sub
+
+    Private Sub bbiPaymentTypes_ItemClick(sender As Object, e As ItemClickEventArgs) Handles bbiPaymentTypes.ItemClick
+
+        with my.Forms.maintainFeeTypes
+
+            .ShowDialog()
+            .Dispose()
+
+        End With
 
     End Sub
 End Class
